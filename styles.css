@@ -801,6 +801,40 @@ tr:last-child td { border-bottom: none; }
     .route-tab { font-size: 0.8rem; padding: 1rem; }
 }
 
+/* Blog Name Modal */
+#blog-name-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    padding: 1rem;
+}
+
+#blog-name-modal input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--mountain-gradient);
+    border: 1px solid rgba(255, 79, 64, 0.3);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+#blog-name-modal input:focus {
+    outline: none;
+    border-color: var(--accent);
+    border-left-width: 4px;
+    box-shadow: 0 0 0 3px rgba(255, 79, 64, 0.1);
+}
+
 /* Sync Status Indicators */
 .sync-status {
     display: inline-flex;

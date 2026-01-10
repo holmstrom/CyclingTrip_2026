@@ -15,15 +15,60 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentUserInitials = localStorage.getItem('blog_user_initials') || 'A';
     let selectedImage = null;
     
-    // Get user name on first use
+    // Get user name on first use - Mobile-friendly modal instead of prompt
+    function showNameModal() {
+        const modal = document.createElement('div');
+        modal.id = 'blog-name-modal';
+        modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; align-items: center; z-index: 10000; padding: 1rem;';
+        
+        modal.innerHTML = `
+            <div style="background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255, 79, 64, 0.3); max-width: 400px; width: 100%; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);">
+                <h2 style="margin-bottom: 1rem; color: var(--text-primary);">Hvad er dit navn?</h2>
+                <p class="text-secondary" style="margin-bottom: 1.5rem;">Dit navn bruges til blog posts og kommentarer</p>
+                <input type="text" id="blog-name-input" placeholder="Dit navn" autocomplete="name" style="width: 100%; padding: 0.75rem 1rem; margin-bottom: 1rem; border: 1px solid rgba(255, 79, 64, 0.3); border-left: 3px solid var(--accent); border-radius: 8px; background: var(--mountain-gradient); color: var(--text-primary); font-size: 1rem; transition: all 0.2s;">
+                <div style="display: flex; gap: 0.5rem;">
+                    <button id="blog-name-submit" class="btn btn-primary" style="flex: 1; padding: 0.75rem;">Gem</button>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        const input = document.getElementById('blog-name-input');
+        const submitBtn = document.getElementById('blog-name-submit');
+        
+        input.focus();
+        
+        const handleSubmit = () => {
+            const userName = input.value.trim();
+            if (userName) {
+                currentUser = userName;
+                currentUserInitials = userName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+                localStorage.setItem('blog_user_name', userName);
+                localStorage.setItem('blog_user_initials', currentUserInitials);
+                
+                // Update create post author
+                const createAvatar = document.getElementById('blog-create-avatar');
+                const createAuthor = document.getElementById('blog-create-author');
+                if (createAvatar) createAvatar.textContent = currentUserInitials;
+                if (createAuthor) createAuthor.textContent = currentUser;
+                
+                document.body.removeChild(modal);
+            }
+        };
+        
+        submitBtn.addEventListener('click', handleSubmit);
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSubmit();
+            }
+        });
+    }
+    
+    // Show name modal on first use
     if (!localStorage.getItem('blog_user_name')) {
-        const userName = prompt('Hvad er dit navn? (Bruges til blog posts)');
-        if (userName) {
-            currentUser = userName;
-            currentUserInitials = userName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
-            localStorage.setItem('blog_user_name', userName);
-            localStorage.setItem('blog_user_initials', currentUserInitials);
-        }
+        // Wait a bit for page to load
+        setTimeout(showNameModal, 500);
     }
     
     // Update create post author
@@ -103,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             
             // Save to Firebase if available, otherwise localStorage
-            if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+            if (window.syncManager && window.syncManager.isFirebaseAvailable) {
                 await saveBlogPostToFirebase(post);
             } else {
                 saveBlogPostToLocalStorage(post);
@@ -145,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Load from Firebase
     async function loadBlogPostsFromFirebase() {
-        if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+        if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             try {
                 const doc = await window.db.collection('alps-2026').doc('blog_posts').get();
                 if (doc.exists) {
@@ -168,22 +213,31 @@ document.addEventListener('DOMContentLoaded', () => {
         let posts = [];
         
         // Try Firebase first
-        if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+        if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             posts = await loadBlogPostsFromFirebase();
             // Also sync to localStorage as backup
-            localStorage.setItem('blog_posts', JSON.stringify(posts));
-        } else {
+            if (posts.length > 0) {
+                localStorage.setItem('blog_posts', JSON.stringify(posts));
+            }
+        }
+        
+        // If no posts from Firebase, try localStorage
+        if (posts.length === 0) {
             posts = loadBlogPostsFromLocalStorage();
         }
         
-        // Render posts
-        if (blogContainer) {
+        // Render posts - find container dynamically in case it wasn't ready initially
+        const container = document.getElementById('blog-posts-container') || blogContainer;
+        if (container) {
             if (posts.length === 0) {
-                blogContainer.innerHTML = '<p class="text-secondary" style="text-align: center; padding: 2rem;">Ingen opdateringer endnu. Vær den første til at dele noget!</p>';
+                container.innerHTML = '<p class="text-secondary" style="text-align: center; padding: 2rem;">Ingen opdateringer endnu. Vær den første til at dele noget!</p>';
             } else {
-                blogContainer.innerHTML = '';
+                container.innerHTML = '';
                 posts.forEach(post => renderBlogPost(post));
             }
+        } else {
+            console.warn('Blog container not found - retrying in 1 second');
+            setTimeout(loadBlogPosts, 1000);
         }
     }
     
@@ -351,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Edit post
     async function editPost(postId) {
         let posts = [];
-        if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+        if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             posts = await loadBlogPostsFromFirebase();
         } else {
             posts = loadBlogPostsFromLocalStorage();
@@ -405,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 post.timestamp = Date.now(); // Update timestamp
                 
                 // Save
-                if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+                if (window.syncManager && window.syncManager.isFirebaseAvailable) {
                     await window.db.collection('alps-2026').doc('blog_posts').set({
                         posts: posts
                     });
@@ -430,7 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Delete post
     async function deletePost(postId) {
         let posts = [];
-        if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+        if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             posts = await loadBlogPostsFromFirebase();
         } else {
             posts = loadBlogPostsFromLocalStorage();
@@ -441,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
             posts.splice(index, 1);
             
             // Save
-            if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+            if (window.syncManager && window.syncManager.isFirebaseAvailable) {
                 await window.db.collection('alps-2026').doc('blog_posts').set({
                     posts: posts
                 });
@@ -457,7 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toggle like
     async function toggleLike(postId) {
         let posts = [];
-        if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+        if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             posts = await loadBlogPostsFromFirebase();
         } else {
             posts = loadBlogPostsFromLocalStorage();
@@ -476,7 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Save back
-        if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+        if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             await window.db.collection('alps-2026').doc('blog_posts').set({
                 posts: posts
             });
@@ -491,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add comment
     async function addComment(postId, text) {
         let posts = [];
-        if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+        if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             posts = await loadBlogPostsFromFirebase();
         } else {
             posts = loadBlogPostsFromLocalStorage();
@@ -510,7 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         // Save back
-        if (window.syncManager && window.syncManager.isFirebaseAvailable && window.syncManager.isAuthenticated) {
+        if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             await window.db.collection('alps-2026').doc('blog_posts').set({
                 posts: posts
             });
@@ -538,7 +592,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Load posts on page load
-    loadBlogPosts();
+    // Load posts after a short delay to ensure DOM is ready
+    setTimeout(() => {
+        loadBlogPosts();
+    }, 500);
     
     // Auto-refresh every 30 seconds
     setInterval(loadBlogPosts, 30000);
