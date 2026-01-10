@@ -18,19 +18,9 @@
     <script src="lang.js"></script> <!-- Load Danish Translations -->
     <!-- Load Website Content - Update version number when you change content.js -->
     <script src="content.js?v=1.0"></script>
+    <script src="program-editor.js"></script> <!-- Program Editor -->
 </head>
 <body>
-
-    <!-- Password Modal -->
-    <div id="password-modal" class="password-modal" style="display: none;">
-        <div class="password-modal-content">
-            <h2>Adgangskode Påkrævet</h2>
-            <p class="text-secondary" style="margin-bottom: 1.5rem;">Indtast adgangskoden for at få adgang til den delte plan.</p>
-            <input type="password" id="password-input" placeholder="Adgangskode" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-card); color: var(--text);">
-            <div id="password-error" style="color: #FF4F40; font-size: 0.9rem; margin-bottom: 1rem; display: none;"></div>
-            <button id="password-submit" class="btn btn-primary" style="width: 100%;">Log Ind</button>
-        </div>
-    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -173,46 +163,96 @@
                             <h2 data-content="sections.program.title">Program</h2>
                             <p class="text-secondary" data-content="sections.program.subtitle">Dag for dag oversigt.</p>
                         </div>
-                        <button id="print-btn" class="btn btn-outline" style="font-size: 0.9rem;">
-                            <i class="fas fa-print"></i> PDF
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button id="program-edit-toggle" class="btn btn-secondary" style="font-size: 0.9rem;">
+                                <i class="fas fa-edit"></i> Rediger
+                            </button>
+                            <button id="print-btn" class="btn btn-outline" style="font-size: 0.9rem;">
+                                <i class="fas fa-print"></i> PDF
+                            </button>
+                        </div>
+                    </div>
+                    <div id="program-add-day-container" style="display: none; margin-bottom: 1.5rem;">
+                        <button id="program-add-day" class="btn btn-primary" style="font-size: 0.9rem;">
+                            <i class="fas fa-plus"></i> Tilføj Dag
                         </button>
                     </div>
-                    <div class="timeline">
-                        <div class="timeline-item" data-program="arrival">
-                            <div class="timeline-date" data-content="program.arrival.date">3. Juni - Ankomst</div>
-                            <h3 data-content="program.arrival.title">Base Camp Etablering</h3>
-                            <p class="text-secondary" data-content="program.arrival.description">Ankomst til Bourg d'Oisans. Check-in, samling af cykler og let aftenrul. Middag på La Romanche.</p>
-                            <ul class="timeline-sub" data-content="program.arrival.items">
+                    <div class="timeline" id="program-timeline">
+                        <div class="timeline-item" data-program-id="arrival" data-program-index="0">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <div class="timeline-date" data-editable="date" contenteditable="false">3. Juni - Ankomst</div>
+                                <div class="program-actions" style="display: none; gap: 0.5rem;">
+                                    <button class="program-edit-btn" style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="program-delete-btn" style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <h3 data-editable="title" contenteditable="false">Base Camp Etablering</h3>
+                            <p class="text-secondary" data-editable="description" contenteditable="false">Ankomst til Bourg d'Oisans. Check-in, samling af cykler og let aftenrul. Middag på La Romanche.</p>
+                            <ul class="timeline-sub" data-editable="items">
                                 <li>14:00 - Ankomst & Check-in</li>
                                 <li>16:00 - Samling af cykler</li>
                                 <li>19:00 - Fælles middag</li>
                             </ul>
                         </div>
-                        <div class="timeline-item" data-program="day1">
-                            <div class="timeline-date" data-content="program.day1.date">4. Juni - Dag 1</div>
-                            <h3 data-content="program.day1.title">Alpe d'Huez</h3>
-                            <p class="text-secondary" data-content="program.day1.description">Morgenmad kl 08:00. Afgang kl 09:30. Vi starter med legenden. Frokost på toppen.</p>
-                            <ul class="timeline-sub" data-content="program.day1.items">
+                        <div class="timeline-item" data-program-id="day1" data-program-index="1">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <div class="timeline-date" data-editable="date" contenteditable="false">4. Juni - Dag 1</div>
+                                <div class="program-actions" style="display: none; gap: 0.5rem;">
+                                    <button class="program-edit-btn" style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="program-delete-btn" style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <h3 data-editable="title" contenteditable="false">Alpe d'Huez</h3>
+                            <p class="text-secondary" data-editable="description" contenteditable="false">Morgenmad kl 08:00. Afgang kl 09:30. Vi starter med legenden. Frokost på toppen.</p>
+                            <ul class="timeline-sub" data-editable="items">
                                 <li>09:30 - Afgang fra hotel</li>
                                 <li>12:00 - Kaffe på toppen</li>
                                 <li>15:00 - Retur til byen</li>
                             </ul>
                         </div>
-                        <div class="timeline-item" data-program="day2">
-                            <div class="timeline-date" data-content="program.day2.date">5. Juni - Dag 2</div>
-                            <h3 data-content="program.day2.title">Croix de Fer</h3>
-                            <p class="text-secondary" data-content="program.day2.description">Dronningetapen. Lang dag i sadlen med fantastisk natur. Middag på Le P'tit Polyte.</p>
-                            <ul class="timeline-sub" data-content="program.day2.items">
+                        <div class="timeline-item" data-program-id="day2" data-program-index="2">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <div class="timeline-date" data-editable="date" contenteditable="false">5. Juni - Dag 2</div>
+                                <div class="program-actions" style="display: none; gap: 0.5rem;">
+                                    <button class="program-edit-btn" style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="program-delete-btn" style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <h3 data-editable="title" contenteditable="false">Croix de Fer</h3>
+                            <p class="text-secondary" data-editable="description" contenteditable="false">Dronningetapen. Lang dag i sadlen med fantastisk natur. Middag på Le P'tit Polyte.</p>
+                            <ul class="timeline-sub" data-editable="items">
                                 <li>09:00 - Afgang mod Allemond</li>
                                 <li>13:00 - Frokoststop</li>
                                 <li>20:00 - Festmiddag</li>
                             </ul>
                         </div>
-                        <div class="timeline-item" data-program="day3">
-                            <div class="timeline-date" data-content="program.day3.date">6. Juni - Dag 3</div>
-                            <h3 data-content="program.day3.title">Galibier & Hjemrejse</h3>
-                            <p class="text-secondary" data-content="program.day3.description">Tidlig start. Vi kører op til taget af touren. Pakning og afrejse sen eftermiddag.</p>
-                            <ul class="timeline-sub" data-content="program.day3.items">
+                        <div class="timeline-item" data-program-id="day3" data-program-index="3">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <div class="timeline-date" data-editable="date" contenteditable="false">6. Juni - Dag 3</div>
+                                <div class="program-actions" style="display: none; gap: 0.5rem;">
+                                    <button class="program-edit-btn" style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="program-delete-btn" style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <h3 data-editable="title" contenteditable="false">Galibier & Hjemrejse</h3>
+                            <p class="text-secondary" data-editable="description" contenteditable="false">Tidlig start. Vi kører op til taget af touren. Pakning og afrejse sen eftermiddag.</p>
+                            <ul class="timeline-sub" data-editable="items">
                                 <li>08:30 - Van transport til Lautaret</li>
                                 <li>11:00 - Galibier topbillede</li>
                                 <li>16:00 - Afrejse mod lufthavn</li>

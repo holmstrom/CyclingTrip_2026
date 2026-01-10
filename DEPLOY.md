@@ -8,7 +8,7 @@ The password is stored in Firebase Firestore. See **`PASSWORD_GUIDE.md`** for de
 
 **Quick method**: Open `change-password.html` in your browser and follow the instructions.
 
-**Default password**: `alps2026`
+**Default password**: `Baddi`
 
 ---
 
@@ -22,6 +22,121 @@ The password is stored in Firebase Firestore. See **`PASSWORD_GUIDE.md`** for de
 4. **Optional**: Update the version number in `index.html` (line 19) from `?v=1.0` to `?v=1.1` to force browsers to reload the new content
 
 The website will automatically use the new content - no database or backend needed!
+
+---
+
+## Hosting Options
+
+### Option 1: Netlify (Free, Easy)
+
+**Fix the "main branch not found" error:**
+
+1. **In Netlify Dashboard:**
+   - Go to your site settings
+   - Click **"Build & deploy"** → **"Continuous Deployment"**
+   - Check **"Production branch"** - make sure it says `main` (not `master`)
+   - If it says `master`, change it to `main` and save
+
+2. **If still not working:**
+   - Go to **"Build & deploy"** → **"Deploy settings"**
+   - Under **"Branch deploys"**, make sure `main` is listed
+   - Click **"Trigger deploy"** → **"Clear cache and deploy site"**
+
+3. **Check Repository Connection:**
+   - Go to **"Site settings"** → **"Build & deploy"** → **"Link to Git provider"**
+   - Make sure your repository is properly connected
+   - Reconnect if needed
+
+**Deploy Steps:**
+1. Push your code to GitHub/GitLab/Bitbucket
+2. Connect repository to Netlify
+3. Netlify will auto-deploy on every push
+4. Your site will be live at `your-site-name.netlify.app`
+
+---
+
+### Option 2: Vercel (Free, Very Easy) ⭐ Recommended
+
+**Why Vercel:**
+- Automatic deployments from Git
+- Better error messages
+- Free SSL certificate
+- Global CDN
+- No build configuration needed for static sites
+
+**Steps:**
+1. Go to [vercel.com](https://vercel.com)
+2. Sign up with GitHub/GitLab/Bitbucket
+3. Click **"Add New Project"**
+4. Import your repository
+5. Click **"Deploy"** (no configuration needed!)
+6. Done! Your site is live
+
+**Update content:**
+- Just push to your `main` branch
+- Vercel auto-deploys in ~30 seconds
+
+---
+
+### Option 3: GitHub Pages (Free, Simple)
+
+**Steps:**
+1. Push your code to GitHub
+2. Go to repository **Settings** → **Pages**
+3. Under **"Source"**, select **"Deploy from a branch"**
+4. Select branch: `main` and folder: `/ (root)`
+5. Click **"Save"**
+6. Your site will be at `username.github.io/repository-name`
+
+**Note:** GitHub Pages doesn't support Firebase Hosting features, but your Firebase Firestore will still work.
+
+---
+
+### Option 4: Firebase Hosting (Free, Best for Firebase)
+
+**Why Firebase Hosting:**
+- Perfect integration with Firebase services
+- Free SSL
+- Global CDN
+- Easy deployment
+
+**Steps:**
+1. Install Firebase CLI: `npm install -g firebase-tools`
+2. Login: `firebase login`
+3. Initialize: `firebase init hosting`
+4. Deploy: `firebase deploy --only hosting`
+5. Your site will be at `your-project-id.web.app`
+
+**Update content:**
+- Run `firebase deploy --only hosting` after editing files
+- Or set up GitHub Actions for auto-deploy
+
+---
+
+### Option 5: Cloudflare Pages (Free, Fast)
+
+**Steps:**
+1. Go to [pages.cloudflare.com](https://pages.cloudflare.com)
+2. Sign up with GitHub/GitLab
+3. Connect your repository
+4. Click **"Begin setup"**
+5. Build settings: Leave default (no build needed for static site)
+6. Click **"Save and Deploy"**
+7. Done!
+
+---
+
+## Quick Comparison
+
+| Platform | Ease | Auto-Deploy | Firebase Support | Best For |
+|----------|------|-------------|------------------|----------|
+| **Vercel** | ⭐⭐⭐⭐⭐ | ✅ Yes | ✅ Yes | Easiest option |
+| **Netlify** | ⭐⭐⭐⭐ | ✅ Yes | ✅ Yes | Good alternative |
+| **Firebase Hosting** | ⭐⭐⭐ | ⚠️ Manual | ✅✅ Perfect | Firebase users |
+| **GitHub Pages** | ⭐⭐⭐ | ⚠️ Manual | ✅ Yes | Simple static sites |
+| **Cloudflare Pages** | ⭐⭐⭐⭐ | ✅ Yes | ✅ Yes | Fast global CDN |
+
+**My Recommendation:** Try **Vercel** first - it's the easiest and works great with Firebase!
 
 ---
 
@@ -79,7 +194,7 @@ const firebaseConfig = {
 
 6. **Set Default Password**:
    - The first time someone accesses the site, a default password will be created
-   - Default password: `alps2026` (change this in `script.js` if needed)
+   - Default password: `Baddi` (change this in `script.js` if needed)
    - Users will be prompted to enter this password on first visit
 
 ## Option 1: Netlify Drop (Easiest)

@@ -602,6 +602,36 @@ tr:last-child td { border-bottom: none; }
 .timeline-item {
     margin-bottom: 2rem;
     position: relative;
+    transition: background 0.2s;
+}
+
+.timeline-item.editing {
+    background: rgba(255, 79, 64, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 79, 64, 0.3);
+}
+
+.timeline-item [contenteditable="true"] {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+    padding: 0.25rem;
+    background: rgba(255, 79, 64, 0.1);
+}
+
+.timeline-item [contenteditable="true"]:focus {
+    background: rgba(255, 79, 64, 0.2);
+}
+
+.program-actions {
+    display: flex;
+    align-items: center;
+}
+
+.program-actions button:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
 }
 .timeline-item::before {
     content: '';
@@ -769,34 +799,6 @@ tr:last-child td { border-bottom: none; }
     .gallery-item { min-width: 250px; height: 300px; }
     .budget-row-input { grid-template-columns: 1fr; }
     .route-tab { font-size: 0.8rem; padding: 1rem; }
-}
-
-/* Password Modal */
-.password-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-}
-
-.password-modal-content {
-    background: var(--bg-card);
-    padding: 2.5rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    max-width: 400px;
-    width: 90%;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
-
-.password-modal-content h2 {
-    margin-bottom: 0.5rem;
 }
 
 /* Sync Status Indicators */

@@ -3,84 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Firebase Sync Manager ---
     const syncManager = {
         isFirebaseAvailable: false,
-        isAuthenticated: false,
         
         init: function() {
             // Check if Firebase is available
             if (typeof firebase !== 'undefined' && window.db) {
                 this.isFirebaseAvailable = true;
-                // Check if user is authenticated (password entered in session)
-                const authToken = sessionStorage.getItem('alps_auth_token');
-                if (authToken) {
-                    this.isAuthenticated = true;
-                }
-            }
-        },
-        
-        // Simple hash function for password (not cryptographically secure, but sufficient for basic protection)
-        hashPassword: function(password) {
-            let hash = 0;
-            for (let i = 0; i < password.length; i++) {
-                const char = password.charCodeAt(i);
-                hash = ((hash << 5) - hash) + char;
-                hash = hash & hash; // Convert to 32bit integer
-            }
-            return hash.toString();
-        },
-        
-        // Validate password against Firebase
-        validatePassword: async function(password) {
-            if (!this.isFirebaseAvailable) {
-                console.error('Firebase not available');
-                return false;
-            }
-            
-            if (!window.db) {
-                console.error('Firestore database not initialized');
-                return false;
-            }
-            
-            try {
-                const configDoc = await window.db.collection('alps-2026').doc('config').get();
-                if (!configDoc.exists) {
-                    // First time setup - create config with default password
-                    const defaultPassword = 'alps2026'; // Change this!
-                    const hashedPassword = this.hashPassword(defaultPassword);
-                    await window.db.collection('alps-2026').doc('config').set({
-                        password: hashedPassword
-                    });
-                    console.log('Config document created with default password');
-                    // Try again with provided password
-                    const isValid = this.hashPassword(password) === hashedPassword;
-                    console.log('Password validation result:', isValid);
-                    return isValid;
-                }
-                
-                const storedHash = configDoc.data().password;
-                const isValid = this.hashPassword(password) === storedHash;
-                console.log('Password validation result:', isValid);
-                return isValid;
-            } catch (error) {
-                console.error('Password validation error:', error);
-                console.error('Error details:', error.message, error.code);
-                // Show more helpful error
-                if (error.code === 'failed-precondition') {
-                    console.error('Firestore database not enabled. Please enable it in Firebase Console.');
-                } else if (error.code === 'permission-denied') {
-                    console.error('⚠️ PERMISSION DENIED - Firestore security rules are blocking access!');
-                    console.error('Go to Firebase Console -> Firestore Database -> Rules tab');
-                    console.error('Temporarily set rules to: allow read, write: if true;');
-                    console.error('Then click "Publish"');
-                } else if (error.code === 'unavailable') {
-                    console.error('Firestore service unavailable. Check your internet connection.');
-                }
-                return false;
             }
         },
         
         // Load data from Firebase (with localStorage fallback)
         loadData: async function(dataType) {
-            if (!this.isFirebaseAvailable || !this.isAuthenticated) {
+            if (!this.isFirebaseAvailable) {
                 // Fallback to localStorage
                 const key = `alps_${dataType}`;
                 const data = localStorage.getItem(key);
@@ -110,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Always save to localStorage as backup
             localStorage.setItem(`alps_${dataType}`, JSON.stringify(data));
             
-            if (!this.isFirebaseAvailable || !this.isAuthenticated) {
+            if (!this.isFirebaseAvailable) {
                 return false;
             }
             
@@ -156,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Upload GPX to Firebase Storage
         uploadGPX: async function(routeKey, gpxData, metadata) {
-            if (!this.isFirebaseAvailable || !this.isAuthenticated) {
+            if (!this.isFirebaseAvailable) {
                 return false;
             }
             
@@ -177,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Load GPX from Firebase
         loadGPX: async function(routeKey) {
-            if (!this.isFirebaseAvailable || !this.isAuthenticated) {
+            if (!this.isFirebaseAvailable) {
                 return null;
             }
             
@@ -216,69 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Firebase not available - check firebase-config.js');
     }
     
-    // --- Password System ---
-    const passwordModal = document.getElementById('password-modal');
-    const passwordInput = document.getElementById('password-input');
-    const passwordSubmit = document.getElementById('password-submit');
-    const passwordError = document.getElementById('password-error');
-    
-    // Check if already authenticated
-    if (!sessionStorage.getItem('alps_auth_token')) {
-        // Show password modal if Firebase is available
-        if (syncManager.isFirebaseAvailable) {
-            if (passwordModal) passwordModal.style.display = 'flex';
-        }
-    } else {
-        syncManager.isAuthenticated = true;
-    }
-    
-    // Password submit handler
-    if (passwordSubmit && passwordInput) {
-        const handlePasswordSubmit = async () => {
-            const password = passwordInput.value.trim();
-            if (!password) {
-                if (passwordError) {
-                    passwordError.textContent = 'Indtast venligst en adgangskode';
-                    passwordError.style.display = 'block';
-                }
-                return;
-            }
-            
-            try {
-                const isValid = await syncManager.validatePassword(password);
-                if (isValid) {
-                    sessionStorage.setItem('alps_auth_token', 'authenticated');
-                    syncManager.isAuthenticated = true;
-                    if (passwordModal) passwordModal.style.display = 'none';
-                    // Reload data from Firebase
-                    location.reload();
-                } else {
-                    if (passwordError) {
-                        passwordError.textContent = 'Forkert adgangskode. Prøv igen. (Standard: alps2026)';
-                        passwordError.style.display = 'block';
-                    }
-                    passwordInput.value = '';
-                }
-            } catch (error) {
-                console.error('Login error:', error);
-                if (passwordError) {
-                    let errorMsg = `Fejl: ${error.message || 'Ukendt fejl'}`;
-                    if (error.code === 'permission-denied') {
-                        errorMsg = 'Firestore sikkerhedsregler blokerer adgang. Gå til Firebase Console -> Firestore Database -> Rules og sæt: allow read, write: if true;';
-                    }
-                    passwordError.innerHTML = `${errorMsg} <br><small>Tjek browser console (F12) for detaljer.</small>`;
-                    passwordError.style.display = 'block';
-                }
-            }
-        };
-        
-        passwordSubmit.addEventListener('click', handlePasswordSubmit);
-        passwordInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                handlePasswordSubmit();
-            }
-        });
-    }
+    // Password protection removed - all users have full access
     
     // Make syncManager globally available
     window.syncManager = syncManager;

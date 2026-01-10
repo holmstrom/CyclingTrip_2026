@@ -295,58 +295,9 @@ function updatePageContent() {
     if (blogTitle) blogTitle.textContent = websiteContent.sections.blog.title;
     if (blogSubtitle) blogSubtitle.textContent = websiteContent.sections.blog.subtitle;
     
-    // Update Program
-    // Arrival Day
-    const arrivalDate = document.querySelector('[data-program="arrival"] .timeline-date');
-    const arrivalTitle = document.querySelector('[data-program="arrival"] h3');
-    const arrivalDesc = document.querySelector('[data-program="arrival"] .text-secondary');
-    const arrivalItems = document.querySelector('[data-program="arrival"] .timeline-sub');
-    
-    if (arrivalDate) arrivalDate.textContent = websiteContent.program.arrival.date;
-    if (arrivalTitle) arrivalTitle.textContent = websiteContent.program.arrival.title;
-    if (arrivalDesc) arrivalDesc.textContent = websiteContent.program.arrival.description;
-    if (arrivalItems) {
-        arrivalItems.innerHTML = websiteContent.program.arrival.items.map(item => `<li>${item}</li>`).join('');
-    }
-    
-    // Day 1
-    const day1Date = document.querySelector('[data-program="day1"] .timeline-date');
-    const day1Title = document.querySelector('[data-program="day1"] h3');
-    const day1Desc = document.querySelector('[data-program="day1"] .text-secondary');
-    const day1Items = document.querySelector('[data-program="day1"] .timeline-sub');
-    
-    if (day1Date) day1Date.textContent = websiteContent.program.day1.date;
-    if (day1Title) day1Title.textContent = websiteContent.program.day1.title;
-    if (day1Desc) day1Desc.textContent = websiteContent.program.day1.description;
-    if (day1Items) {
-        day1Items.innerHTML = websiteContent.program.day1.items.map(item => `<li>${item}</li>`).join('');
-    }
-    
-    // Day 2
-    const day2Date = document.querySelector('[data-program="day2"] .timeline-date');
-    const day2Title = document.querySelector('[data-program="day2"] h3');
-    const day2Desc = document.querySelector('[data-program="day2"] .text-secondary');
-    const day2Items = document.querySelector('[data-program="day2"] .timeline-sub');
-    
-    if (day2Date) day2Date.textContent = websiteContent.program.day2.date;
-    if (day2Title) day2Title.textContent = websiteContent.program.day2.title;
-    if (day2Desc) day2Desc.textContent = websiteContent.program.day2.description;
-    if (day2Items) {
-        day2Items.innerHTML = websiteContent.program.day2.items.map(item => `<li>${item}</li>`).join('');
-    }
-    
-    // Day 3
-    const day3Date = document.querySelector('[data-program="day3"] .timeline-date');
-    const day3Title = document.querySelector('[data-program="day3"] h3');
-    const day3Desc = document.querySelector('[data-program="day3"] .text-secondary');
-    const day3Items = document.querySelector('[data-program="day3"] .timeline-sub');
-    
-    if (day3Date) day3Date.textContent = websiteContent.program.day3.date;
-    if (day3Title) day3Title.textContent = websiteContent.program.day3.title;
-    if (day3Desc) day3Desc.textContent = websiteContent.program.day3.description;
-    if (day3Items) {
-        day3Items.innerHTML = websiteContent.program.day3.items.map(item => `<li>${item}</li>`).join('');
-    }
+    // Program is now handled by program-editor.js
+    // It loads from Firebase first, then falls back to content.js
+    // No need to update program here - program-editor.js handles it
     
     // Update Travel Section
     // Section Header

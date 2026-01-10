@@ -10,7 +10,7 @@ The password is stored in **Firebase Firestore** at: `alps-2026/config/password`
 4. **Navigate to**: `alps-2026` collection → `config` document
 5. **Find the `password` field** - it contains a hashed password (a number)
 6. **Delete the `password` field** (or the entire `config` document)
-7. **The next time someone logs in**, the system will create a new password with the default: `alps2026`
+7. **The next time someone logs in**, the system will create a new password with the default: `Baddi`
 
 **To set a custom password:**
 - Use the browser console method below (Method 2)
@@ -83,7 +83,7 @@ This is the easiest method if you're not comfortable with the console.
 
 ## Default Password
 
-The default password is: **`alps2026`**
+The default password is: **`Baddi`**
 
 This is set in `script.js` line 47. You can change this default, but it only applies when the config document doesn't exist yet (first-time setup).
 
