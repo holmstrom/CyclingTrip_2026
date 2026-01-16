@@ -774,6 +774,96 @@
         </div>
     </section>
 
+    <!-- Poem Section (Moved) -->
+    <section class="section"
+        style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div class="grid grid-2" style="gap: 2rem;">
+                <div class="poem-column">
+                    <p class="poem-text">
+                        "Det fandens San Marco Pas med bid<br>
+                        Var stejl og lang, en uendelig tid<br>
+                        Svedperler glitrer på panden som perler på snor<br>
+                        Mens benene blev til blød granit, en smerte ingen forstår<br><br>
+
+                        Alle pinsler nu bag os lagt<br>
+                        Bjergene besejret, men egoet stadig intakt<br>
+                        Kun vores eget selskab tilbage at bære<br>
+                        Otte mænd i lycra - et helved Dante ville ære<br><br>
+
+                        Musikkongens uægte søn med fart<br>
+                        Krebs gav dig stemmen, men Riis gav dig klatre art<br>
+                        Din mor har måske en fortid hun fortryder lidt<br>
+                        Tror både Poul og Bjarne har signeret dit cykelkit<br><br>
+
+                        Ø baronen i sit høje tårn<br>
+                        Med sin cevelo så smuk plantet på væggen<br>
+                        Kulstoframmen græder stille i natten<br>
+                        Når sofaen vægter tungere end hjulens sang på asfalten<br><br>
+
+                        Viby manden fra helved<br>
+                        Hvorfor har du trænet så meget op<br>
+                        Kunne det halve ikke have været nok?<br>
+                        Er der mon en skjult Riis metode i din krop?"
+                    </p>
+                </div>
+                <div class="poem-column">
+                    <p class="poem-text">
+                        "Ulrich Floyd, krop som en græsk gud<br>
+                        Søger stadig sin Afrodite på datingapps derud<br>
+                        Du beder kun om hele pakken<br>
+                        At få lov at være din hjælperytter, hvor er takken?<br><br>
+
+                        Manden uden fornavn på sin vej<br>
+                        Cykler afsted på spansk cykel med aero hår<br>
+                        Du træder så kraftigt med dine kæmpe lår<br>
+                        Selv Pogacar ville blive misundelig på dine kilometer i år<br><br>
+
+                        Den stolte søn af Esbjerg vender retur<br>
+                        Nu med barn og forlovede i dur<br>
+                        Er det søvnmangel, som giver dig kræfter?<br>
+                        Eller har du stjålet nogen af ralles safter?<br><br>
+
+                        PwCs's frafaldne, konsulentens exit<br>
+                        Fodboldstøvler byttet for at være cykel-fit<br>
+                        Nyt job, men hvad var det værd?<br>
+                        Drømmen om frihed blev til møder og besvær<br><br>
+
+                        Tak for denne tur - både bjerge og fest<br>
+                        Højdemeter om dagen - øl om aftenen måske bedst<br>
+                        Otte liderkarle på tur<br>
+                        Otte ryttere vender retur"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Huske liste Section (Moved) -->
+    <section id="huskeliste" class="section">
+        <div class="container">
+            <h2 id="huske-liste-title">Huske liste</h2>
+            <p class="text-secondary" style="margin-bottom: 2rem;">Vigtigt udstyr og personlige ting.</p>
+
+            <div class="card" style="max-width: 600px;">
+                <div class="card-padding">
+                    <h3><i class="fas fa-suitcase"></i> Pakkeliste</h3>
+                    <p class="text-secondary" style="margin-bottom: 1rem;">Gemmes automatisk i skyen.</p>
+
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <input type="text" id="new-pack-item" class="input-field" placeholder="Tilføj ting..."
+                            style="font-size: 0.9rem; padding: 0.5rem;">
+                        <button id="add-pack-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem;">+</button>
+                    </div>
+
+                    <div id="packing-list-container" class="checklist-container">
+                        <!-- JS injected checkboxes -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Accommodation & Food -->
     <section id="sleep" class="section">
         <div class="container">
@@ -967,27 +1057,11 @@
     <!-- Essentials: Packing List, Weather, Emergency -->
     <section id="essentials" class="section">
         <div class="container">
-            <h2>Udstyr & Info</h2>
-            <p class="text-secondary" style="margin-bottom: 2rem;">Huskeliste og vigtig viden.</p>
+            <h2>Vejr & Nødhjælp</h2>
+            <p class="text-secondary" style="margin-bottom: 2rem;">Vigtig info til turen.</p>
 
             <div class="grid grid-2">
-                <!-- Packing List -->
-                <div class="card">
-                    <div class="card-padding">
-                        <h3><i class="fas fa-suitcase"></i> Pakkeliste</h3>
-                        <p class="text-secondary" style="margin-bottom: 1rem;">Gemmes automatisk.</p>
 
-                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
-                            <input type="text" id="new-pack-item" class="input-field" placeholder="Tilføj ting..."
-                                style="font-size: 0.9rem; padding: 0.5rem;">
-                            <button id="add-pack-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem;">+</button>
-                        </div>
-
-                        <div id="packing-list-container" class="checklist-container">
-                            <!-- JS injected checkboxes -->
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Weather & Emergency -->
                 <div class="grid" style="gap: 1.5rem; align-content: start;">
@@ -1041,69 +1115,7 @@
     <!-- Route Viewer (New) -->
     <!-- Removed as it is now merged into #rides -->
 
-    <!-- Poem Section (Above Map) -->
-    <section class="section" style="background: var(--bg-card);">
-        <div class="container">
-            <div class="grid grid-2" style="gap: 2rem;">
-                <div class="poem-column">
-                    <p class="poem-text">
-                        "Det fandens San Marco Pas med bid<br>
-                        Var stejl og lang, en uendelig tid<br>
-                        Svedperler glitrer på panden som perler på snor<br>
-                        Mens benene blev til blød granit, en smerte ingen forstår<br><br>
 
-                        Alle pinsler nu bag os lagt<br>
-                        Bjergene besejret, men egoet stadig intakt<br>
-                        Kun vores eget selskab tilbage at bære<br>
-                        Otte mænd i lycra - et helved Dante ville ære<br><br>
-
-                        Musikkongens uægte søn med fart<br>
-                        Krebs gav dig stemmen, men Riis gav dig klatre art<br>
-                        Din mor har måske en fortid hun fortryder lidt<br>
-                        Tror både Poul og Bjarne har signeret dit cykelkit<br><br>
-
-                        Ø baronen i sit høje tårn<br>
-                        Med sin cevelo så smuk plantet på væggen<br>
-                        Kulstoframmen græder stille i natten<br>
-                        Når sofaen vægter tungere end hjulens sang på asfalten<br><br>
-
-                        Viby manden fra helved<br>
-                        Hvorfor har du trænet så meget op<br>
-                        Kunne det halve ikke have været nok?<br>
-                        Er der mon en skjult Riis metode i din krop?"
-                    </p>
-                </div>
-                <div class="poem-column">
-                    <p class="poem-text">
-                        "Ulrich Floyd, krop som en græsk gud<br>
-                        Søger stadig sin Afrodite på datingapps derud<br>
-                        Du beder kun om hele pakken<br>
-                        At få lov at være din hjælperytter, hvor er takken?<br><br>
-
-                        Manden uden fornavn på sin vej<br>
-                        Cykler afsted på spansk cykel med aero hår<br>
-                        Du træder så kraftigt med dine kæmpe lår<br>
-                        Selv Pogacar ville blive misundelig på dine kilometer i år<br><br>
-
-                        Den stolte søn af Esbjerg vender retur<br>
-                        Nu med barn og forlovede i dur<br>
-                        Er det søvnmangel, som giver dig kræfter?<br>
-                        Eller har du stjålet nogen af ralles safter?<br><br>
-
-                        PwCs's frafaldne, konsulentens exit<br>
-                        Fodboldstøvler byttet for at være cykel-fit<br>
-                        Nyt job, men hvad var det værd?<br>
-                        Drømmen om frihed blev til møder og besvær<br><br>
-
-                        Tak for denne tur - både bjerge og fest<br>
-                        Højdemeter om dagen - øl om aftenen måske bedst<br>
-                        Otte liderkarle på tur<br>
-                        Otte ryttere vender retur"
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Map Section (Moved to bottom & using Google Maps) -->
     <section id="map" class="section">
@@ -1122,7 +1134,7 @@
 
     <footer class="section" style="text-align: center; border-top: 1px solid var(--border); padding: 4rem 0;">
         <div class="container">
-            <p class="text-secondary">© 2026 Alps Expedition Team</p>
+            <p class="text-secondary">© 2026 Liderkarle og cykkelryttere</p>
         </div>
     </footer>
 

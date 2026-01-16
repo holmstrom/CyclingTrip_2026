@@ -17,7 +17,7 @@ const websiteContent = {
 
     // ===== NAVIGATION =====
     nav: {
-        logo: "5th! Tour",
+        logo: "5th Tour!",
         links: {
             updates: "Opdateringer",
             gallery: "Galleri",
