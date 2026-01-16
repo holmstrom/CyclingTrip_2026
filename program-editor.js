@@ -3,6 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
     let isEditMode = false;
     let programData = [];
     let editingItem = null;
+    let programSaveTimeout = null;
+
+    // Helper to update sync status
+    function updateProgramSyncStatus(status) {
+        let statusEl = document.getElementById('program-sync-status');
+        if (!statusEl) {
+            const programSection = document.getElementById('program');
+            if (programSection) {
+                statusEl = document.createElement('span');
+                statusEl.id = 'program-sync-status';
+                statusEl.className = 'sync-status';
+                const header = programSection.querySelector('h2');
+                if (header) header.appendChild(statusEl);
+            }
+        }
+        if (statusEl) {
+            statusEl.className = `sync-status ${status}`;
+            if (status === 'syncing') statusEl.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Synkroniserer...';
+            else if (status === 'synced') statusEl.innerHTML = '<i class="fas fa-check"></i> Synkroniseret';
+            else if (status === 'error') statusEl.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Fejl';
+        }
+    }
 
     // Initialize program editor
     async function initProgramEditor() {
@@ -15,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load program data
     async function loadProgramData() {
         // Try Firebase first
-        if (typeof syncManager !== 'undefined' && syncManager.isFirebaseAvailable && syncManager.isAuthenticated) {
+        if (typeof syncManager !== 'undefined' && syncManager.isFirebaseAvailable) {
             const data = await syncManager.loadData('program');
             if (data && Array.isArray(data)) {
                 programData = data;
@@ -35,12 +57,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Save program data
-    async function saveProgramData() {
-        if (typeof syncManager !== 'undefined' && syncManager.isFirebaseAvailable && syncManager.isAuthenticated) {
-            await syncManager.saveData('program', programData);
+    async function saveProgramData(immediate = false) {
+        if (programSaveTimeout) clearTimeout(programSaveTimeout);
+
+        const performSave = async () => {
+            updateProgramSyncStatus('syncing');
+            let success = false;
+
+            if (typeof syncManager !== 'undefined') {
+                success = await syncManager.saveData('program', programData);
+            } else {
+                localStorage.setItem('alps_program', JSON.stringify(programData));
+                success = true; // Local success
+            }
+
+            updateProgramSyncStatus(success ? 'synced' : 'error');
+
+            if (success) {
+                setTimeout(() => {
+                    const statusEl = document.getElementById('program-sync-status');
+                    if (statusEl) statusEl.style.opacity = '0.5';
+                }, 2000);
+            }
+        };
+
+        if (immediate) {
+            await performSave();
         } else {
-            // Fallback to localStorage
-            localStorage.setItem('alps_program', JSON.stringify(programData));
+            programSaveTimeout = setTimeout(performSave, 500);
         }
     }
 
@@ -264,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 saveDayData(index, item);
                 item.classList.remove('editing');
             });
+            saveProgramData(true); // Save immediately when closing edit mode
             editingItem = null;
             renderProgram(); // Re-render to remove edit mode styling
         }

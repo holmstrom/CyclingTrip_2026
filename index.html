@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    
+
     <!-- Leaflet CSS (Local) -->
     <link rel="stylesheet" href="leaflet.css" />
-    
+
     <!-- FontAwesome (Disabled for debugging) -->
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="lang.js"></script> <!-- Load Danish Translations -->
     <!-- Load Website Content - Update version number when you change content.js -->
     <script src="content.js?v=1.0"></script>
-    <script src="program-editor.js"></script> <!-- Program Editor -->
+
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -47,7 +50,8 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <svg class="mountain-silhouette" viewBox="0 0 1200 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="mountain-silhouette" viewBox="0 0 1200 400" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="mountainGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" style="stop-color:#1a2332;stop-opacity:0.6" />
@@ -59,14 +63,20 @@
                 </linearGradient>
             </defs>
             <!-- Back mountains -->
-            <path d="M0,400 L0,250 L150,200 L300,180 L450,150 L600,120 L750,140 L900,100 L1050,130 L1200,110 L1200,400 Z" fill="url(#mountainGrad2)" opacity="0.6"/>
+            <path
+                d="M0,400 L0,250 L150,200 L300,180 L450,150 L600,120 L750,140 L900,100 L1050,130 L1200,110 L1200,400 Z"
+                fill="url(#mountainGrad2)" opacity="0.6" />
             <!-- Front mountains -->
-            <path d="M0,400 L0,280 L200,220 L400,200 L600,180 L800,160 L1000,190 L1200,170 L1200,400 Z" fill="url(#mountainGrad1)" opacity="0.8"/>
+            <path d="M0,400 L0,280 L200,220 L400,200 L600,180 L800,160 L1000,190 L1200,170 L1200,400 Z"
+                fill="url(#mountainGrad1)" opacity="0.8" />
             <!-- Snow caps -->
-            <path d="M450,150 L500,140 L550,150 L600,120 L650,130 L700,120 L750,140 L800,130 L850,140 L900,100 L950,110 L1000,100 L1050,130 L1100,120 L1150,130 L1200,110" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none" opacity="0.5"/>
+            <path
+                d="M450,150 L500,140 L550,150 L600,120 L650,130 L700,120 L750,140 L800,130 L850,140 L900,100 L950,110 L1000,100 L1050,130 L1100,120 L1150,130 L1200,110"
+                stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none" opacity="0.5" />
         </svg>
         <div class="pill-badge" data-content="hero.dateBadge">3. Juni - 6. Juni, 2026</div>
-        <h1 data-content="hero.title">Bestig Bjerge<br><span class="text-accent" data-content="hero.titleAccent">Sammen.</span></h1>
+        <h1 data-content="hero.title">Bestig Bjerge<br><span class="text-accent"
+                data-content="hero.titleAccent">Sammen.</span></h1>
         <p data-content="hero.subtitle">8 Ryttere. 3 Legender. Le Bourg-d'Oisans.</p>
         <div class="cta-group">
             <a href="#rides" class="btn btn-primary" data-content="hero.buttonPrimary">Se Ruter</a>
@@ -82,9 +92,10 @@
                     <span data-content="sections.blog.title">Opdateringer</span>
                     <span style="font-size: 1.5rem;">🚴‍♂️</span>
                 </h2>
-                <p class="text-secondary" data-content="sections.blog.subtitle">Hold dig opdateret med de seneste nyheder og kommentarer fra holdet</p>
+                <p class="text-secondary" data-content="sections.blog.subtitle">Hold dig opdateret med de seneste
+                    nyheder og kommentarer fra holdet</p>
             </div>
-            
+
             <!-- Create New Post (Only if authenticated) -->
             <div id="blog-create-post" class="blog-create-post" style="display: none;">
                 <div class="blog-create-header">
@@ -100,10 +111,13 @@
                             <div class="blog-author-name" id="blog-create-author">Dit Navn</div>
                         </div>
                     </div>
-                    <textarea id="blog-post-text" placeholder="Hvad sker der?..." rows="6" style="width: 100%; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-dark); color: var(--text-primary); font-family: inherit; resize: vertical;"></textarea>
+                    <textarea id="blog-post-text" placeholder="Hvad sker der?..." rows="6"
+                        style="width: 100%; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-dark); color: var(--text-primary); font-family: inherit; resize: vertical;"></textarea>
                     <div id="blog-post-image-preview" style="margin-top: 1rem; display: none;">
-                        <img id="blog-post-image-preview-img" style="max-width: 100%; border-radius: 8px; max-height: 300px; object-fit: cover;">
-                        <button id="blog-post-image-remove" class="btn btn-secondary" style="margin-top: 0.5rem; padding: 0.5rem 1rem;">
+                        <img id="blog-post-image-preview-img"
+                            style="max-width: 100%; border-radius: 8px; max-height: 300px; object-fit: cover;">
+                        <button id="blog-post-image-remove" class="btn btn-secondary"
+                            style="margin-top: 0.5rem; padding: 0.5rem 1rem;">
                             <i class="fas fa-times"></i> Fjern Billede
                         </button>
                     </div>
@@ -118,14 +132,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- New Post Button -->
             <div style="text-align: center; margin-bottom: 2rem;">
                 <button id="blog-new-post-btn" class="btn btn-primary" style="padding: 0.75rem 2rem;">
                     <i class="fas fa-plus"></i> Opret Ny Opdatering
                 </button>
             </div>
-            
+
             <!-- Blog Posts Container -->
             <div id="blog-posts-container">
                 <!-- Posts will be dynamically loaded here -->
@@ -139,16 +153,27 @@
             <div class="section-header">
                 <div>
                     <h2 data-content="sections.previousRides.title">Tidligere Ture</h2>
-                    <p class="text-secondary" data-content="sections.previousRides.subtitle">Reklamebilleder fra tidligere ture</p>
+                    <p class="text-secondary" data-content="sections.previousRides.subtitle">Reklamebilleder fra
+                        tidligere ture</p>
                 </div>
             </div>
-            <div class="gallery-strip">
+            <div class="gallery-grid">
                 <div class="gallery-item"><img src="CyclingImages/IMG_0882.jpg" alt="Ride Moment 1"></div>
-                <div class="gallery-item"><img src="CyclingImages/IMG_2586.jpg" alt="Ride Moment 2"></div>
-                <div class="gallery-item"><img src="CyclingImages/IMG_2624.jpg" alt="Ride Moment 3"></div>
-                <div class="gallery-item"><img src="CyclingImages/IMG_7216.jpg" alt="Ride Moment 4"></div>
-                <div class="gallery-item"><img src="CyclingImages/hero-climb.jpg" alt="Climb"></div>
-                <div class="gallery-item"><img src="CyclingImages/group-ride.jpg" alt="Group"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_1291.JPEG" alt="Ride Moment 2"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_2482.jpg" alt="Ride Moment 3"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_2507.jpg" alt="Ride Moment 4"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_2557.jpg" alt="Ride Moment 5"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_2586.jpg" alt="Ride Moment 6"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_2624.jpg" alt="Ride Moment 7"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_6006.JPEG" alt="Ride Moment 8"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_6036.JPEG" alt="Ride Moment 9"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_6046.JPEG" alt="Ride Moment 10"></div>
+                <div class="gallery-item"><img src="CyclingImages/IMG_7216.jpg" alt="Ride Moment 11"></div>
+                <div class="gallery-item"><img src="CyclingImages/group-ride.jpg" alt="Group Ride"></div>
+                <div class="gallery-item"><img src="CyclingImages/hero-climb.jpg" alt="Hero Climb"></div>
+                <div class="gallery-item"><img src="CyclingImages/hotel-relax.jpg" alt="Hotel Relax"></div>
+                <div class="gallery-item"><img src="CyclingImages/mountain-pass.jpg" alt="Mountain Pass"></div>
+                <div class="gallery-item"><img src="CyclingImages/scenic-view.jpg" alt="Scenic View"></div>
             </div>
         </div>
     </section>
@@ -158,7 +183,8 @@
         <div class="container">
             <div class="grid grid-2">
                 <div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
                         <div>
                             <h2 data-content="sections.program.title">Program</h2>
                             <p class="text-secondary" data-content="sections.program.subtitle">Dag for dag oversigt.</p>
@@ -179,19 +205,24 @@
                     </div>
                     <div class="timeline" id="program-timeline">
                         <div class="timeline-item" data-program-id="arrival" data-program-index="0">
-                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-                                <div class="timeline-date" data-editable="date" contenteditable="false">3. Juni - Ankomst</div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <div class="timeline-date" data-editable="date" contenteditable="false">3. Juni -
+                                    Ankomst</div>
                                 <div class="program-actions" style="display: none; gap: 0.5rem;">
-                                    <button class="program-edit-btn" style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                    <button class="program-edit-btn"
+                                        style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                    <button class="program-delete-btn" style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                    <button class="program-delete-btn"
+                                        style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </div>
                             </div>
                             <h3 data-editable="title" contenteditable="false">Base Camp Etablering</h3>
-                            <p class="text-secondary" data-editable="description" contenteditable="false">Ankomst til Bourg d'Oisans. Check-in, samling af cykler og let aftenrul. Middag på La Romanche.</p>
+                            <p class="text-secondary" data-editable="description" contenteditable="false">Ankomst til
+                                Bourg d'Oisans. Check-in, samling af cykler og let aftenrul. Middag på La Romanche.</p>
                             <ul class="timeline-sub" data-editable="items">
                                 <li>14:00 - Ankomst & Check-in</li>
                                 <li>16:00 - Samling af cykler</li>
@@ -199,19 +230,24 @@
                             </ul>
                         </div>
                         <div class="timeline-item" data-program-id="day1" data-program-index="1">
-                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-                                <div class="timeline-date" data-editable="date" contenteditable="false">4. Juni - Dag 1</div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <div class="timeline-date" data-editable="date" contenteditable="false">4. Juni - Dag 1
+                                </div>
                                 <div class="program-actions" style="display: none; gap: 0.5rem;">
-                                    <button class="program-edit-btn" style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                    <button class="program-edit-btn"
+                                        style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                    <button class="program-delete-btn" style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                    <button class="program-delete-btn"
+                                        style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </div>
                             </div>
                             <h3 data-editable="title" contenteditable="false">Alpe d'Huez</h3>
-                            <p class="text-secondary" data-editable="description" contenteditable="false">Morgenmad kl 08:00. Afgang kl 09:30. Vi starter med legenden. Frokost på toppen.</p>
+                            <p class="text-secondary" data-editable="description" contenteditable="false">Morgenmad kl
+                                08:00. Afgang kl 09:30. Vi starter med legenden. Frokost på toppen.</p>
                             <ul class="timeline-sub" data-editable="items">
                                 <li>09:30 - Afgang fra hotel</li>
                                 <li>12:00 - Kaffe på toppen</li>
@@ -219,19 +255,24 @@
                             </ul>
                         </div>
                         <div class="timeline-item" data-program-id="day2" data-program-index="2">
-                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-                                <div class="timeline-date" data-editable="date" contenteditable="false">5. Juni - Dag 2</div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <div class="timeline-date" data-editable="date" contenteditable="false">5. Juni - Dag 2
+                                </div>
                                 <div class="program-actions" style="display: none; gap: 0.5rem;">
-                                    <button class="program-edit-btn" style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                    <button class="program-edit-btn"
+                                        style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                    <button class="program-delete-btn" style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                    <button class="program-delete-btn"
+                                        style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </div>
                             </div>
                             <h3 data-editable="title" contenteditable="false">Croix de Fer</h3>
-                            <p class="text-secondary" data-editable="description" contenteditable="false">Dronningetapen. Lang dag i sadlen med fantastisk natur. Middag på Le P'tit Polyte.</p>
+                            <p class="text-secondary" data-editable="description" contenteditable="false">
+                                Dronningetapen. Lang dag i sadlen med fantastisk natur. Middag på Le P'tit Polyte.</p>
                             <ul class="timeline-sub" data-editable="items">
                                 <li>09:00 - Afgang mod Allemond</li>
                                 <li>13:00 - Frokoststop</li>
@@ -239,19 +280,24 @@
                             </ul>
                         </div>
                         <div class="timeline-item" data-program-id="day3" data-program-index="3">
-                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-                                <div class="timeline-date" data-editable="date" contenteditable="false">6. Juni - Dag 3</div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <div class="timeline-date" data-editable="date" contenteditable="false">6. Juni - Dag 3
+                                </div>
                                 <div class="program-actions" style="display: none; gap: 0.5rem;">
-                                    <button class="program-edit-btn" style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                    <button class="program-edit-btn"
+                                        style="background: none; border: none; color: var(--accent); cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                    <button class="program-delete-btn" style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                    <button class="program-delete-btn"
+                                        style="background: none; border: none; color: #FF4F40; cursor: pointer; padding: 0.25rem 0.5rem; font-size: 0.8rem;">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </div>
                             </div>
                             <h3 data-editable="title" contenteditable="false">Galibier & Hjemrejse</h3>
-                            <p class="text-secondary" data-editable="description" contenteditable="false">Tidlig start. Vi kører op til taget af touren. Pakning og afrejse sen eftermiddag.</p>
+                            <p class="text-secondary" data-editable="description" contenteditable="false">Tidlig start.
+                                Vi kører op til taget af touren. Pakning og afrejse sen eftermiddag.</p>
                             <ul class="timeline-sub" data-editable="items">
                                 <li>08:30 - Van transport til Lautaret</li>
                                 <li>11:00 - Galibier topbillede</li>
@@ -262,7 +308,8 @@
                 </div>
                 <div>
                     <!-- Visual placeholder or map could go here -->
-                    <img src="CyclingImages/scenic-view.jpg" alt="Program Visual" style="height: 100%; object-fit: cover; min-height: 400px;">
+                    <img src="CyclingImages/scenic-view.jpg" alt="Program Visual"
+                        style="height: 100%; object-fit: cover; min-height: 400px;">
                 </div>
             </div>
         </div>
@@ -279,7 +326,8 @@
                 <div class="card" data-travel="flight">
                     <div class="card-padding">
                         <h3><i class="fas fa-plane"></i> <span data-content="travel.flight.title">Fly</span></h3>
-                        <p class="text-secondary" style="margin-top: 1rem;" data-content="travel.flight.route">København (CPH) -> Lyon (LYS)</p>
+                        <p class="text-secondary" style="margin-top: 1rem;" data-content="travel.flight.route">København
+                            (CPH) -> Lyon (LYS)</p>
                         <ul class="features" data-content="travel.flight.items">
                             <li>Afgang: 08:00 - 10:30</li>
                             <li>Hjemkomst: 20:00 - 22:30</li>
@@ -290,7 +338,8 @@
                 <div class="card" data-travel="car">
                     <div class="card-padding">
                         <h3><i class="fas fa-car"></i> <span data-content="travel.car.title">Billeje</span></h3>
-                        <p class="text-secondary" style="margin-top: 1rem;" data-content="travel.car.description">I kan sgu da leje en bil også!</p>
+                        <p class="text-secondary" style="margin-top: 1rem;" data-content="travel.car.description">I kan
+                            sgu da leje en bil også!</p>
                         <ul class="features" data-content="travel.car.items">
                             <li>Køretid: 1t 30m</li>
                             <li>Alternativt at vi henter ved lufthavnen</li>
@@ -300,7 +349,8 @@
                 <div class="card" data-travel="bike">
                     <div class="card-padding">
                         <h3><i class="fas fa-bicycle"></i> <span data-content="travel.bike.title">Cykelleje</span></h3>
-                        <p class="text-secondary" style="margin-top: 1rem;" data-content="travel.bike.description">Professionelle vejcykler tilgængelige</p>
+                        <p class="text-secondary" style="margin-top: 1rem;" data-content="travel.bike.description">
+                            Professionelle vejcykler tilgængelige</p>
                         <ul class="features" data-content="travel.bike.items">
                             <li>https://bcyclet.com/bike-rental/alps-bike-rental/bourg-d-oisans/</li>
                             <li>https://www.huezbikehire.com/en/rent-a-bike/</li>
@@ -319,12 +369,15 @@
             <div class="section-header">
                 <div>
                     <h2 data-content="sections.routes.title">Ruter</h2>
-                    <p class="text-secondary" data-content="sections.routes.subtitle">bjergpas efter bjergpas efter bjergpas</p>
+                    <p class="text-secondary" data-content="sections.routes.subtitle">bjergpas efter bjergpas efter
+                        bjergpas</p>
                 </div>
                 <!-- Global Input for Calculator -->
                 <div class="input-group">
-                    <input type="number" id="user-ftp" class="input-field" placeholder="FTP (Watt)" style="width: 120px; border-right: 1px solid var(--border);">
-                    <input type="number" id="user-weight" class="input-field" placeholder="Vægt (kg)" style="width: 120px;">
+                    <input type="number" id="user-ftp" class="input-field" placeholder="FTP (Watt)"
+                        style="width: 120px; border-right: 1px solid var(--border);">
+                    <input type="number" id="user-weight" class="input-field" placeholder="Vægt (kg)"
+                        style="width: 120px;">
                 </div>
             </div>
 
@@ -337,26 +390,31 @@
                         <button class="route-tab" data-route="croix">Croix de Fer</button>
                         <button class="route-tab" data-route="galibier">Galibier</button>
                     </div>
-                    
+
                     <!-- Viewer Container -->
                     <div class="route-frame-container">
                         <div id="route-map" style="width: 100%; height: 100%;"></div>
-                        
+
                         <!-- Control Overlay -->
-                        <div id="route-controls" class="route-placeholder" style="background: rgba(30,30,30,0.8); pointer-events: none;">
-                            <div style="pointer-events: auto; text-align: center; background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
-                                <p id="route-controls-text" style="margin-bottom: 1rem;">Har du en GPX fil for denne rute?</p>
+                        <div id="route-controls" class="route-placeholder"
+                            style="background: rgba(30,30,30,0.8); pointer-events: none;">
+                            <div
+                                style="pointer-events: auto; text-align: center; background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
+                                <p id="route-controls-text" style="margin-bottom: 1rem;">Har du en GPX fil for denne
+                                    rute?</p>
                                 <label class="btn btn-primary" style="cursor: pointer;">
                                     <i class="fas fa-file-upload"></i> <span id="upload-btn-text">Upload GPX</span>
                                     <input type="file" id="viewer-upload" accept=".gpx" style="display: none;">
                                 </label>
-                                <p id="viewer-status" class="text-secondary" style="font-size: 0.8rem; margin-top: 1rem;"></p>
+                                <p id="viewer-status" class="text-secondary"
+                                    style="font-size: 0.8rem; margin-top: 1rem;"></p>
                             </div>
                         </div>
-                        
+
                         <!-- Upload Button (Always Visible) -->
                         <div style="position: absolute; top: 1rem; right: 1rem; z-index: 1000;">
-                            <label class="btn btn-secondary" style="cursor: pointer; padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            <label class="btn btn-secondary"
+                                style="cursor: pointer; padding: 0.5rem 1rem; font-size: 0.9rem;">
                                 <i class="fas fa-sync-alt"></i> Erstat Rute
                                 <input type="file" id="viewer-upload-replace" accept=".gpx" style="display: none;">
                             </label>
@@ -373,11 +431,14 @@
                             <span class="ride-tag">Dag 1</span>
                             <h3 data-content="routes.alpeDhuez.name">Alpe d'Huez</h3>
                         </div>
-                        <p class="text-secondary" style="margin: 0.5rem 0 1rem 0; font-size: 0.9rem;" data-content="routes.alpeDhuez.description">De legendariske 21 hårnålesving. Den ultimative test.</p>
+                        <p class="text-secondary" style="margin: 0.5rem 0 1rem 0; font-size: 0.9rem;"
+                            data-content="routes.alpeDhuez.description">De legendariske 21 hårnålesving. Den ultimative
+                            test.</p>
                         <!-- Elevation Visual (SVG) -->
                         <div class="elevation-profile">
                             <svg viewBox="0 0 100 30" preserveAspectRatio="none">
-                                <path d="M0,30 L10,25 L20,28 L30,20 L40,15 L50,18 L60,10 L70,8 L80,5 L90,2 L100,0 V30 Z" fill="rgba(255, 79, 64, 0.2)" stroke="var(--accent)" stroke-width="2"/>
+                                <path d="M0,30 L10,25 L20,28 L30,20 L40,15 L50,18 L60,10 L70,8 L80,5 L90,2 L100,0 V30 Z"
+                                    fill="rgba(255, 79, 64, 0.2)" stroke="var(--accent)" stroke-width="2" />
                             </svg>
                         </div>
                         <div class="ride-stats">
@@ -401,13 +462,17 @@
                             <span>Est. Tid</span>
                             <span class="prediction-value">--:--</span>
                         </div>
-                        <a href="https://www.strava.com/segments/661401" target="_blank" class="btn btn-outline" style="margin-top: 1rem; width: 100%; justify-content: center;">
+                        <a href="https://www.strava.com/segments/661401" target="_blank" class="btn btn-outline"
+                            style="margin-top: 1rem; width: 100%; justify-content: center;">
                             <i class="fab fa-strava"></i> Download GPX
                         </a>
                         <!-- Upload for this mountain -->
                         <div style="margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
-                            <label class="text-secondary" style="font-size: 0.8rem; display: block; margin-bottom: 0.5rem;">Upload din version (.gpx)</label>
-                            <input type="file" class="input-field gpx-upload" data-mountain="alpe" accept=".gpx" style="font-size: 0.8rem; padding: 0.5rem;">
+                            <label class="text-secondary"
+                                style="font-size: 0.8rem; display: block; margin-bottom: 0.5rem;">Upload din version
+                                (.gpx)</label>
+                            <input type="file" class="input-field gpx-upload" data-mountain="alpe" accept=".gpx"
+                                style="font-size: 0.8rem; padding: 0.5rem;">
                             <div class="gpx-status text-accent" style="font-size: 0.8rem; margin-top: 0.5rem;"></div>
                         </div>
                     </div>
@@ -420,11 +485,14 @@
                             <span class="ride-tag">Dag 2</span>
                             <h3 data-content="routes.croixDeFer.name">Croix de Fer</h3>
                         </div>
-                        <p class="text-secondary" style="margin: 0.5rem 0 1rem 0; font-size: 0.9rem;" data-content="routes.croixDeFer.description">Ofte kaldt det smukkeste bjergpas i Alperne.</p>
+                        <p class="text-secondary" style="margin: 0.5rem 0 1rem 0; font-size: 0.9rem;"
+                            data-content="routes.croixDeFer.description">Ofte kaldt det smukkeste bjergpas i Alperne.
+                        </p>
                         <!-- Elevation Visual (SVG) -->
                         <div class="elevation-profile">
                             <svg viewBox="0 0 100 30" preserveAspectRatio="none">
-                                <path d="M0,30 L15,25 L30,20 L45,22 L60,15 L75,10 L90,5 L100,0 V30 Z" fill="rgba(255, 79, 64, 0.2)" stroke="var(--accent)" stroke-width="2"/>
+                                <path d="M0,30 L15,25 L30,20 L45,22 L60,15 L75,10 L90,5 L100,0 V30 Z"
+                                    fill="rgba(255, 79, 64, 0.2)" stroke="var(--accent)" stroke-width="2" />
                             </svg>
                         </div>
                         <div class="ride-stats">
@@ -448,13 +516,17 @@
                             <span>Est. Tid</span>
                             <span class="prediction-value">--:--</span>
                         </div>
-                        <a href="https://www.strava.com/segments/638894" target="_blank" class="btn btn-outline" style="margin-top: 1rem; width: 100%; justify-content: center;">
+                        <a href="https://www.strava.com/segments/638894" target="_blank" class="btn btn-outline"
+                            style="margin-top: 1rem; width: 100%; justify-content: center;">
                             <i class="fab fa-strava"></i> Download GPX
                         </a>
                         <!-- Upload for this mountain -->
                         <div style="margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
-                            <label class="text-secondary" style="font-size: 0.8rem; display: block; margin-bottom: 0.5rem;">Upload din version (.gpx)</label>
-                            <input type="file" class="input-field gpx-upload" data-mountain="croix" accept=".gpx" style="font-size: 0.8rem; padding: 0.5rem;">
+                            <label class="text-secondary"
+                                style="font-size: 0.8rem; display: block; margin-bottom: 0.5rem;">Upload din version
+                                (.gpx)</label>
+                            <input type="file" class="input-field gpx-upload" data-mountain="croix" accept=".gpx"
+                                style="font-size: 0.8rem; padding: 0.5rem;">
                             <div class="gpx-status text-accent" style="font-size: 0.8rem; margin-top: 0.5rem;"></div>
                         </div>
                     </div>
@@ -467,11 +539,13 @@
                             <span class="ride-tag">Dag 3</span>
                             <h3 data-content="routes.galibier.name">Galibier</h3>
                         </div>
-                        <p class="text-secondary" style="margin: 0.5rem 0 1rem 0; font-size: 0.9rem;" data-content="routes.galibier.description">Taget af Touren. Vi rører himlen ved 2,642m.</p>
+                        <p class="text-secondary" style="margin: 0.5rem 0 1rem 0; font-size: 0.9rem;"
+                            data-content="routes.galibier.description">Taget af Touren. Vi rører himlen ved 2,642m.</p>
                         <!-- Elevation Visual (SVG) -->
                         <div class="elevation-profile">
                             <svg viewBox="0 0 100 30" preserveAspectRatio="none">
-                                <path d="M0,30 L20,20 L40,15 L60,10 L80,5 L100,0 V30 Z" fill="rgba(255, 79, 64, 0.2)" stroke="var(--accent)" stroke-width="2"/>
+                                <path d="M0,30 L20,20 L40,15 L60,10 L80,5 L100,0 V30 Z" fill="rgba(255, 79, 64, 0.2)"
+                                    stroke="var(--accent)" stroke-width="2" />
                             </svg>
                         </div>
                         <div class="ride-stats">
@@ -495,13 +569,17 @@
                             <span>Est. Tid</span>
                             <span class="prediction-value">--:--</span>
                         </div>
-                        <a href="https://www.strava.com/segments/662586" target="_blank" class="btn btn-outline" style="margin-top: 1rem; width: 100%; justify-content: center;">
+                        <a href="https://www.strava.com/segments/662586" target="_blank" class="btn btn-outline"
+                            style="margin-top: 1rem; width: 100%; justify-content: center;">
                             <i class="fab fa-strava"></i> Download GPX
                         </a>
                         <!-- Upload for this mountain -->
                         <div style="margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
-                            <label class="text-secondary" style="font-size: 0.8rem; display: block; margin-bottom: 0.5rem;">Upload din version (.gpx)</label>
-                            <input type="file" class="input-field gpx-upload" data-mountain="galibier" accept=".gpx" style="font-size: 0.8rem; padding: 0.5rem;">
+                            <label class="text-secondary"
+                                style="font-size: 0.8rem; display: block; margin-bottom: 0.5rem;">Upload din version
+                                (.gpx)</label>
+                            <input type="file" class="input-field gpx-upload" data-mountain="galibier" accept=".gpx"
+                                style="font-size: 0.8rem; padding: 0.5rem;">
                             <div class="gpx-status text-accent" style="font-size: 0.8rem; margin-top: 0.5rem;"></div>
                         </div>
                     </div>
@@ -518,10 +596,12 @@
                     <h2>Alternative Ruter</h2>
                     <p class="text-secondary" style="margin-bottom: 2rem;">Upload GPX for andre bjerge.</p>
                     <div class="drag-drop-zone" id="alt-drop-zone">
-                        <i class="fas fa-cloud-upload-alt" style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent);"></i>
+                        <i class="fas fa-cloud-upload-alt"
+                            style="font-size: 2rem; margin-bottom: 1rem; color: var(--accent);"></i>
                         <p>Træk & Slip GPX fil her</p>
                         <p style="font-size: 0.8rem; margin: 0.5rem 0;">eller</p>
-                        <button class="btn btn-secondary" onclick="document.getElementById('alt-file-input').click()">Gennemse Filer</button>
+                        <button class="btn btn-secondary"
+                            onclick="document.getElementById('alt-file-input').click()">Gennemse Filer</button>
                         <input type="file" id="alt-file-input" accept=".gpx" style="display: none;">
                     </div>
                 </div>
@@ -532,40 +612,48 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Separate Viewer for Alternative Routes -->
             <div id="alt-route-viewer" style="margin-top: 2rem; display: none;">
                 <div class="card" style="padding: 0;">
                     <div class="card-padding" style="padding: 1.5rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                             <h3 id="alt-route-viewer-title">Rute Visning</h3>
-                            <button id="alt-route-viewer-close" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            <button id="alt-route-viewer-close" class="btn btn-secondary"
+                                style="padding: 0.5rem 1rem; font-size: 0.9rem;">
                                 <i class="fas fa-times"></i> Luk
                             </button>
                         </div>
                         <div class="route-frame-container">
                             <div id="alt-route-map" style="width: 100%; height: 500px;"></div>
-                            
+
                             <!-- Control Overlay -->
-                            <div id="alt-route-controls" class="route-placeholder" style="background: rgba(30,30,30,0.8); pointer-events: none;">
-                                <div style="pointer-events: auto; text-align: center; background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
+                            <div id="alt-route-controls" class="route-placeholder"
+                                style="background: rgba(30,30,30,0.8); pointer-events: none;">
+                                <div
+                                    style="pointer-events: auto; text-align: center; background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
                                     <p style="margin-bottom: 1rem;">Vælg en rute for at se den</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Download Button -->
-                            <div id="alt-download-gpx-btn" style="position: absolute; top: 1rem; right: 1rem; z-index: 1000; display: none;">
+                            <div id="alt-download-gpx-btn"
+                                style="position: absolute; top: 1rem; right: 1rem; z-index: 1000; display: none;">
                                 <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
                                     <i class="fas fa-download"></i> Download GPX
                                 </button>
                             </div>
                         </div>
-                        
+
                         <!-- Elevation Stats -->
-                        <div id="alt-route-elevation-stats" style="display: none; margin-top: 1rem; padding: 1rem; background: var(--bg-dark); border-radius: 8px; gap: 1rem; flex-wrap: wrap; flex-direction: row;"></div>
-                        
+                        <div id="alt-route-elevation-stats"
+                            style="display: none; margin-top: 1rem; padding: 1rem; background: var(--bg-dark); border-radius: 8px; gap: 1rem; flex-wrap: wrap; flex-direction: row;">
+                        </div>
+
                         <!-- Elevation Profile -->
-                        <div id="alt-route-elevation-profile" style="display: none; margin-top: 1rem; padding: 1rem; background: var(--bg-dark); border-radius: 8px;">
+                        <div id="alt-route-elevation-profile"
+                            style="display: none; margin-top: 1rem; padding: 1rem; background: var(--bg-dark); border-radius: 8px;">
                             <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">Højdeprofil</h4>
                             <div id="alt-elevation-profile-container"></div>
                         </div>
@@ -580,16 +668,21 @@
         <div class="container">
             <div style="max-width: 800px; margin: 0 auto;">
                 <h2 data-content="sections.forecast.title">Prognose & Vinderbud</h2>
-                <p class="text-secondary" style="margin-bottom: 2rem;" data-content="sections.forecast.subtitle">Tilføj ryttere for at simulere klassementet (GC).</p>
+                <p class="text-secondary" style="margin-bottom: 2rem;" data-content="sections.forecast.subtitle">Tilføj
+                    ryttere for at simulere klassementet (GC).</p>
 
                 <!-- Input Card -->
                 <div class="card" style="margin-bottom: 2rem;">
                     <div class="card-padding">
                         <div class="grid grid-4" style="gap: 1rem; align-items: center;">
-                            <input type="text" id="rider-name" class="input-field" placeholder="Rytter" style="background: rgba(255,255,255,0.05); border-radius: 8px;">
-                            <input type="number" id="rider-ftp" class="input-field" placeholder="FTP" style="background: rgba(255,255,255,0.05); border-radius: 8px;">
-                            <input type="number" id="rider-weight" class="input-field" placeholder="Vægt" style="background: rgba(255,255,255,0.05); border-radius: 8px;">
-                            <button id="add-rider-btn" class="btn btn-primary" style="width: 100%;">Tilføj Rytter</button>
+                            <input type="text" id="rider-name" class="input-field" placeholder="Rytter"
+                                style="background: rgba(255,255,255,0.05); border-radius: 8px;">
+                            <input type="number" id="rider-ftp" class="input-field" placeholder="FTP"
+                                style="background: rgba(255,255,255,0.05); border-radius: 8px;">
+                            <input type="number" id="rider-weight" class="input-field" placeholder="Vægt"
+                                style="background: rgba(255,255,255,0.05); border-radius: 8px;">
+                            <button id="add-rider-btn" class="btn btn-primary" style="width: 100%;">Tilføj
+                                Rytter</button>
                         </div>
                     </div>
                 </div>
@@ -626,20 +719,26 @@
                     <p class="text-secondary" data-content="sections.budget.subtitle">Fælles udgiftsstyring.</p>
                 </div>
                 <div class="input-group">
-                     <span class="text-secondary" style="font-size: 0.8rem; margin-right: 0.5rem;">Antal Personer:</span>
-                     <input type="number" id="budget-total-people" class="input-field" value="8" style="width: 60px; text-align: center; padding: 0.5rem;">
+                    <span class="text-secondary" style="font-size: 0.8rem; margin-right: 0.5rem;">Antal Personer:</span>
+                    <input type="number" id="budget-total-people" class="input-field" value="8"
+                        style="width: 60px; text-align: center; padding: 0.5rem;">
                 </div>
             </div>
-            
+
             <div class="card">
                 <div class="card-padding">
                     <div class="budget-row-input">
-                        <input type="text" id="expense-item" class="input-field" placeholder="Udgift (f.eks. Hotel)" style="background: rgba(255,255,255,0.05); border-radius: 8px;">
-                        <input type="number" id="expense-cost" class="input-field" placeholder="Pris (€)" style="background: rgba(255,255,255,0.05); border-radius: 8px;">
-                        <input type="text" id="expense-payer" class="input-field" placeholder="Betaler" style="background: rgba(255,255,255,0.05); border-radius: 8px;">
+                        <input type="text" id="expense-item" class="input-field" placeholder="Udgift (f.eks. Hotel)"
+                            style="background: rgba(255,255,255,0.05); border-radius: 8px;">
+                        <input type="number" id="expense-cost" class="input-field" placeholder="Pris (€)"
+                            style="background: rgba(255,255,255,0.05); border-radius: 8px;">
+                        <input type="text" id="expense-payer" class="input-field" placeholder="Betaler"
+                            style="background: rgba(255,255,255,0.05); border-radius: 8px;">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
-                             <input type="number" id="expense-split" class="input-field" placeholder="Del af" title="Antal personer der deler udgiften" value="8" style="background: rgba(255,255,255,0.05); border-radius: 8px; width: 60px;">
-                             <button id="add-expense-btn" class="btn btn-primary">+</button>
+                            <input type="number" id="expense-split" class="input-field" placeholder="Del af"
+                                title="Antal personer der deler udgiften" value="8"
+                                style="background: rgba(255,255,255,0.05); border-radius: 8px; width: 60px;">
+                            <button id="add-expense-btn" class="btn btn-primary">+</button>
                         </div>
                     </div>
 
@@ -665,7 +764,8 @@
                         <span>Total Tur Pris</span>
                         <span class="text-accent" id="total-cost-display">€0.00</span>
                     </div>
-                    <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; color: var(--text-secondary);">
+                    <div
+                        style="display: flex; justify-content: space-between; margin-top: 0.5rem; color: var(--text-secondary);">
                         <span>Pris Pr. Person</span>
                         <span id="pp-cost-display">€0.00</span>
                     </div>
@@ -679,11 +779,14 @@
         <div class="container">
             <h2>Base & Energi</h2>
             <p class="text-secondary" style="margin-bottom: 2rem;">Hoteller & Restauranter</p>
-            
+
             <div class="card" style="margin-bottom: 2rem; border-color: var(--accent);">
                 <div class="card-padding">
                     <h3 class="text-accent"><i class="fas fa-map-pin"></i> Anbefalet Base: Bourg d'Oisans</h3>
-                    <p style="margin-top: 0.5rem;">For at minimere kørsel og maksimere cykling, er <strong>Le Bourg-d'Oisans</strong> det absolutte centrum. Herfra starter Alpe d'Huez direkte fra byen. Croix de Fer (via Allemond) er en kort opvarmning væk, og Galibier (via Lautaret) er også tilgængeligt direkte fra dalen.</p>
+                    <p style="margin-top: 0.5rem;">For at minimere kørsel og maksimere cykling, er <strong>Le
+                            Bourg-d'Oisans</strong> det absolutte centrum. Herfra starter Alpe d'Huez direkte fra byen.
+                        Croix de Fer (via Allemond) er en kort opvarmning væk, og Galibier (via Lautaret) er også
+                        tilgængeligt direkte fra dalen.</p>
                 </div>
             </div>
 
@@ -695,20 +798,36 @@
                         <div class="card-padding" style="padding: 1.5rem;">
                             <ul class="pros-cons-list" style="margin: 0; font-size: 1rem;">
                                 <li style="margin-bottom: 1.5rem; display: block;">
-                                    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Chalet Ilfer (Vaujany)</strong>
-                                    <span class="text-secondary">High-End • Luksus hytte • <a href="https://www.chalet-ilfer.com" target="_blank" style="text-decoration: underline;">Book Her</a></span>
+                                    <strong
+                                        style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Chalet
+                                        Ilfer (Vaujany)</strong>
+                                    <span class="text-secondary">High-End • Luksus hytte • <a
+                                            href="https://www.chalet-ilfer.com" target="_blank"
+                                            style="text-decoration: underline;">Book Her</a></span>
                                 </li>
                                 <li style="margin-bottom: 1.5rem; display: block;">
-                                    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Hotel de Milan (Bourg d'Oisans)</strong>
-                                    <span class="text-secondary">Mellemklasse • Direkte ved start • <a href="https://www.booking.com/hotel/fr/de-milan-le-bourg-d-oisans.html" target="_blank" style="text-decoration: underline;">Book Her</a></span>
+                                    <strong
+                                        style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Hotel
+                                        de Milan (Bourg d'Oisans)</strong>
+                                    <span class="text-secondary">Mellemklasse • Direkte ved start • <a
+                                            href="https://www.booking.com/hotel/fr/de-milan-le-bourg-d-oisans.html"
+                                            target="_blank" style="text-decoration: underline;">Book Her</a></span>
                                 </li>
                                 <li style="margin-bottom: 1.5rem; display: block;">
-                                    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Camping La Cascade (Bourg d'Oisans)</strong>
-                                    <span class="text-secondary">Økonomi • Hytter & Natur • <a href="https://www.camping-lacascade.com/" target="_blank" style="text-decoration: underline;">Book Her</a></span>
+                                    <strong
+                                        style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Camping
+                                        La Cascade (Bourg d'Oisans)</strong>
+                                    <span class="text-secondary">Økonomi • Hytter & Natur • <a
+                                            href="https://www.camping-lacascade.com/" target="_blank"
+                                            style="text-decoration: underline;">Book Her</a></span>
                                 </li>
                                 <li style="display: block;">
-                                    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Best Western (St-Jean-de-Maurienne)</strong>
-                                    <span class="text-secondary">Alternativ Base • Nordsiden • <a href="https://www.hotel-coeurdemaurienne.com/en/" target="_blank" style="text-decoration: underline;">Book Her</a></span>
+                                    <strong
+                                        style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Best
+                                        Western (St-Jean-de-Maurienne)</strong>
+                                    <span class="text-secondary">Alternativ Base • Nordsiden • <a
+                                            href="https://www.hotel-coeurdemaurienne.com/en/" target="_blank"
+                                            style="text-decoration: underline;">Book Her</a></span>
                                 </li>
                             </ul>
                         </div>
@@ -722,19 +841,33 @@
                         <div class="card-padding" style="padding: 1.5rem;">
                             <ul class="pros-cons-list" style="margin: 0; font-size: 1rem;">
                                 <li style="margin-bottom: 1.5rem; display: block;">
-                                    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Le P'tit Polyte (Les Deux Alpes)</strong>
-                                    <span class="text-secondary">Michelin • High-End • <a href="https://www.chalet-mounier.com/en/restaurant-le-ptit-polyte/" target="_blank" style="text-decoration: underline;">Website</a></span>
+                                    <strong
+                                        style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Le
+                                        P'tit Polyte (Les Deux Alpes)</strong>
+                                    <span class="text-secondary">Michelin • High-End • <a
+                                            href="https://www.chalet-mounier.com/en/restaurant-le-ptit-polyte/"
+                                            target="_blank" style="text-decoration: underline;">Website</a></span>
                                 </li>
                                 <li style="margin-bottom: 1.5rem; display: block;">
-                                    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">La Romanche (Bourg d'Oisans)</strong>
-                                    <span class="text-secondary">Brasserie • Gode Bøffer • <a href="https://www.tripadvisor.com" target="_blank" style="text-decoration: underline;">Website</a></span>
+                                    <strong
+                                        style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">La
+                                        Romanche (Bourg d'Oisans)</strong>
+                                    <span class="text-secondary">Brasserie • Gode Bøffer • <a
+                                            href="https://www.tripadvisor.com" target="_blank"
+                                            style="text-decoration: underline;">Website</a></span>
                                 </li>
                                 <li style="margin-bottom: 1.5rem; display: block;">
-                                    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Le Tremplin (Alpe d'Huez)</strong>
-                                    <span class="text-secondary">Casual • Pizza/Burger • <a href="https://www.letremplin-alpedhuez.com/" target="_blank" style="text-decoration: underline;">Website</a></span>
+                                    <strong
+                                        style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Le
+                                        Tremplin (Alpe d'Huez)</strong>
+                                    <span class="text-secondary">Casual • Pizza/Burger • <a
+                                            href="https://www.letremplin-alpedhuez.com/" target="_blank"
+                                            style="text-decoration: underline;">Website</a></span>
                                 </li>
                                 <li style="display: block;">
-                                    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">La Grange (Bourg d'Oisans)</strong>
+                                    <strong
+                                        style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">La
+                                        Grange (Bourg d'Oisans)</strong>
                                     <span class="text-secondary">Lokal • Raclette/Fondue • Centrum</span>
                                 </li>
                             </ul>
@@ -753,7 +886,8 @@
                     <h2>Alternativ Base</h2>
                     <p class="text-secondary" style="margin-bottom: 2rem;">Andre muligheder i området.</p>
                     <h3>Saint-Jean-de-Maurienne</h3>
-                    <p class="text-secondary" style="margin-bottom: 1rem;">Beliggende på den nordlige side af bjergene. Kendt som 'Verdens cykelhovedstad'.</p>
+                    <p class="text-secondary" style="margin-bottom: 1rem;">Beliggende på den nordlige side af bjergene.
+                        Kendt som 'Verdens cykelhovedstad'.</p>
                     <ul class="pros-cons-list">
                         <li><i class="fas fa-check text-green"></i> Direkte adgang til Glandon/Galibier (Nord)</li>
                         <li><i class="fas fa-check text-green"></i> Lacets de Montvernier</li>
@@ -804,21 +938,24 @@
                     <p class="text-secondary">Søg hoteller tæt på bjergene.</p>
                 </div>
             </div>
-            
+
             <div class="card">
                 <div class="card-padding">
                     <div class="grid grid-3" style="gap: 1rem; align-items: end;">
                         <div style="flex-grow: 1;">
-                            <label for="stay-location" class="text-secondary" style="font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Lokation</label>
-                            <select id="stay-location" class="input-field" style="background: rgba(255,255,255,0.05); border-radius: 8px;">
+                            <label for="stay-location" class="text-secondary"
+                                style="font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Lokation</label>
+                            <select id="stay-location" class="input-field"
+                                style="background: rgba(255,255,255,0.05); border-radius: 8px;">
                                 <option value="alpe">Alpe d'Huez (Bourg d'Oisans)</option>
                                 <option value="galibier">Galibier (Valloire/Lautaret)</option>
                                 <option value="croix">Croix de Fer (Saint-Jean-de-Maurienne)</option>
                             </select>
                         </div>
                         <!-- Radius could be implemented as zoom level logic or just strict location query -->
-                        
-                        <a id="stay-search-btn" href="#" target="_blank" class="btn btn-primary" style="text-align: center;">
+
+                        <a id="stay-search-btn" href="#" target="_blank" class="btn btn-primary"
+                            style="text-align: center;">
                             <i class="fas fa-search"></i> Søg på Booking.com
                         </a>
                     </div>
@@ -839,9 +976,10 @@
                     <div class="card-padding">
                         <h3><i class="fas fa-suitcase"></i> Pakkeliste</h3>
                         <p class="text-secondary" style="margin-bottom: 1rem;">Gemmes automatisk.</p>
-                        
+
                         <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
-                            <input type="text" id="new-pack-item" class="input-field" placeholder="Tilføj ting..." style="font-size: 0.9rem; padding: 0.5rem;">
+                            <input type="text" id="new-pack-item" class="input-field" placeholder="Tilføj ting..."
+                                style="font-size: 0.9rem; padding: 0.5rem;">
                             <button id="add-pack-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem;">+</button>
                         </div>
 
@@ -859,22 +997,25 @@
                             <h3><i class="fas fa-cloud-sun"></i> Vejrudsigt</h3>
                             <p class="text-secondary" style="margin-bottom: 1rem;">Bjergvejr links.</p>
                             <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                <a href="https://www.meteoblue.com/en/weather/week/l%27alpe-d%27huez_france_3006246" target="_blank" class="btn btn-outline" style="justify-content: space-between;">
+                                <a href="https://www.meteoblue.com/en/weather/week/l%27alpe-d%27huez_france_3006246"
+                                    target="_blank" class="btn btn-outline" style="justify-content: space-between;">
                                     Alpe d'Huez <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://www.meteoblue.com/en/weather/week/col-du-galibier_france_3016466" target="_blank" class="btn btn-outline" style="justify-content: space-between;">
+                                <a href="https://www.meteoblue.com/en/weather/week/col-du-galibier_france_3016466"
+                                    target="_blank" class="btn btn-outline" style="justify-content: space-between;">
                                     Galibier <i class="fas fa-external-link-alt"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Emergency -->
                     <div class="card" style="border-color: var(--accent);">
                         <div class="card-padding">
                             <h3 class="text-accent"><i class="fas fa-first-aid"></i> Nødinfo</h3>
                             <div style="margin-top: 1rem;">
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 700;">
+                                <div
+                                    style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 700;">
                                     <span>Nødopkald (EU):</span>
                                     <span>112</span>
                                 </div>
@@ -899,65 +1040,65 @@
 
     <!-- Route Viewer (New) -->
     <!-- Removed as it is now merged into #rides -->
-    
+
     <!-- Poem Section (Above Map) -->
     <section class="section" style="background: var(--bg-card);">
         <div class="container">
             <div class="grid grid-2" style="gap: 2rem;">
                 <div class="poem-column">
                     <p class="poem-text">
-"Det fandens San Marco Pas med bid<br>
-Var stejl og lang, en uendelig tid<br>
-Svedperler glitrer på panden som perler på snor<br>
-Mens benene blev til blød granit, en smerte ingen forstår<br><br>
+                        "Det fandens San Marco Pas med bid<br>
+                        Var stejl og lang, en uendelig tid<br>
+                        Svedperler glitrer på panden som perler på snor<br>
+                        Mens benene blev til blød granit, en smerte ingen forstår<br><br>
 
-Alle pinsler nu bag os lagt<br>
-Bjergene besejret, men egoet stadig intakt<br>
-Kun vores eget selskab tilbage at bære<br>
-Otte mænd i lycra - et helved Dante ville ære<br><br>
+                        Alle pinsler nu bag os lagt<br>
+                        Bjergene besejret, men egoet stadig intakt<br>
+                        Kun vores eget selskab tilbage at bære<br>
+                        Otte mænd i lycra - et helved Dante ville ære<br><br>
 
-Musikkongens uægte søn med fart<br>
-Krebs gav dig stemmen, men Riis gav dig klatre art<br>
-Din mor har måske en fortid hun fortryder lidt<br>
-Tror både Poul og Bjarne har signeret dit cykelkit<br><br>
+                        Musikkongens uægte søn med fart<br>
+                        Krebs gav dig stemmen, men Riis gav dig klatre art<br>
+                        Din mor har måske en fortid hun fortryder lidt<br>
+                        Tror både Poul og Bjarne har signeret dit cykelkit<br><br>
 
-Ø baronen i sit høje tårn<br>
-Med sin cevelo så smuk plantet på væggen<br>
-Kulstoframmen græder stille i natten<br>
-Når sofaen vægter tungere end hjulens sang på asfalten<br><br>
+                        Ø baronen i sit høje tårn<br>
+                        Med sin cevelo så smuk plantet på væggen<br>
+                        Kulstoframmen græder stille i natten<br>
+                        Når sofaen vægter tungere end hjulens sang på asfalten<br><br>
 
-Viby manden fra helved<br>
-Hvorfor har du trænet så meget op<br>
-Kunne det halve ikke have været nok?<br>
-Er der mon en skjult Riis metode i din krop?"
+                        Viby manden fra helved<br>
+                        Hvorfor har du trænet så meget op<br>
+                        Kunne det halve ikke have været nok?<br>
+                        Er der mon en skjult Riis metode i din krop?"
                     </p>
                 </div>
                 <div class="poem-column">
                     <p class="poem-text">
-"Ulrich Floyd, krop som en græsk gud<br>
-Søger stadig sin Afrodite på datingapps derud<br>
-Du beder kun om hele pakken<br>
-At få lov at være din hjælperytter, hvor er takken?<br><br>
+                        "Ulrich Floyd, krop som en græsk gud<br>
+                        Søger stadig sin Afrodite på datingapps derud<br>
+                        Du beder kun om hele pakken<br>
+                        At få lov at være din hjælperytter, hvor er takken?<br><br>
 
-Manden uden fornavn på sin vej<br>
-Cykler afsted på spansk cykel med aero hår<br>
-Du træder så kraftigt med dine kæmpe lår<br>
-Selv Pogacar ville blive misundelig på dine kilometer i år<br><br>
+                        Manden uden fornavn på sin vej<br>
+                        Cykler afsted på spansk cykel med aero hår<br>
+                        Du træder så kraftigt med dine kæmpe lår<br>
+                        Selv Pogacar ville blive misundelig på dine kilometer i år<br><br>
 
-Den stolte søn af Esbjerg vender retur<br>
-Nu med barn og forlovede i dur<br>
-Er det søvnmangel, som giver dig kræfter?<br>
-Eller har du stjålet nogen af ralles safter?<br><br>
+                        Den stolte søn af Esbjerg vender retur<br>
+                        Nu med barn og forlovede i dur<br>
+                        Er det søvnmangel, som giver dig kræfter?<br>
+                        Eller har du stjålet nogen af ralles safter?<br><br>
 
-PwCs's frafaldne, konsulentens exit<br>
-Fodboldstøvler byttet for at være cykel-fit<br>
-Nyt job, men hvad var det værd?<br>
-Drømmen om frihed blev til møder og besvær<br><br>
+                        PwCs's frafaldne, konsulentens exit<br>
+                        Fodboldstøvler byttet for at være cykel-fit<br>
+                        Nyt job, men hvad var det værd?<br>
+                        Drømmen om frihed blev til møder og besvær<br><br>
 
-Tak for denne tur - både bjerge og fest<br>
-Højdemeter om dagen - øl om aftenen måske bedst<br>
-Otte liderkarle på tur<br>
-Otte ryttere vender retur"
+                        Tak for denne tur - både bjerge og fest<br>
+                        Højdemeter om dagen - øl om aftenen måske bedst<br>
+                        Otte liderkarle på tur<br>
+                        Otte ryttere vender retur"
                     </p>
                 </div>
             </div>
@@ -970,13 +1111,9 @@ Otte ryttere vender retur"
             <h2>Områdekort</h2>
             <p class="text-secondary">Oisans Dalen</p>
             <div class="map-container" style="height: 450px; border-radius: 12px; overflow: hidden;">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44795.37924716835!2d6.003678648618774!3d45.05437877909874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478a3c6c060d006d%3A0x408ab2ae4be7b70!2s38520%20Le%20Bourg-d&#39;Oisans%2C%20France!5e0!3m2!1sen!2sdk!4v1620000000000!5m2!1sen!2sdk" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44795.37924716835!2d6.003678648618774!3d45.05437877909874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478a3c6c060d006d%3A0x408ab2ae4be7b70!2s38520%20Le%20Bourg-d&#39;Oisans%2C%20France!5e0!3m2!1sen!2sdk!4v1620000000000!5m2!1sen!2sdk"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -993,16 +1130,18 @@ Otte ryttere vender retur"
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
-    
+
     <!-- Firebase Config -->
     <script src="firebase-config.js"></script>
-    
+
     <!-- Facebook Messenger Customer Chat Plugin -->
     <div id="fb-root"></div>
     <div id="fb-customer-chat" class="fb-customerchat"></div>
-    
+
     <!-- Fallback Messenger Button (shows if Facebook widget doesn't load) -->
-    <button class="messenger-fallback-btn" id="messenger-fallback" onclick="window.open('https://m.me/YOUR_PAGE_ID', '_blank')" title="Send os en besked på Messenger" style="display: none;">
+    <button class="messenger-fallback-btn" id="messenger-fallback"
+        onclick="window.open('https://m.me/YOUR_PAGE_ID', '_blank')" title="Send os en besked på Messenger"
+        style="display: none;">
         <i class="fab fa-facebook-messenger"></i>
     </button>
 
@@ -1014,26 +1153,26 @@ Otte ryttere vender retur"
         // Get it from: https://www.facebook.com/help/1503421039731588
         var chatbox = document.getElementById('fb-customer-chat');
         var fallbackBtn = document.getElementById('messenger-fallback');
-        
+
         if (chatbox) {
             chatbox.setAttribute("page_id", "YOUR_PAGE_ID");
             chatbox.setAttribute("attribution", "biz_inbox");
         }
-        
+
         // Update fallback button link
         if (fallbackBtn) {
-            fallbackBtn.onclick = function() {
+            fallbackBtn.onclick = function () {
                 window.open('https://m.me/YOUR_PAGE_ID', '_blank');
             };
         }
-        
-        window.fbAsyncInit = function() {
+
+        window.fbAsyncInit = function () {
             if (typeof FB !== 'undefined') {
                 FB.init({
                     xfbml: true,
                     version: 'v18.0'
                 });
-                
+
                 // Hide fallback if Facebook widget loads
                 if (fallbackBtn) fallbackBtn.style.display = 'none';
             } else {
@@ -1042,15 +1181,15 @@ Otte ryttere vender retur"
             }
         };
 
-        (function(d, s, id) {
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/da_DK/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-            
+
             // Show fallback after 3 seconds if widget doesn't appear
-            setTimeout(function() {
+            setTimeout(function () {
                 if (typeof FB === 'undefined' && fallbackBtn) {
                     fallbackBtn.style.display = 'flex';
                 }
@@ -1062,5 +1201,7 @@ Otte ryttere vender retur"
     <script src="leaflet.js"></script>
     <script src="script.js"></script>
     <script src="blog.js"></script>
+    <script src="program-editor.js"></script>
 </body>
+
 </html>

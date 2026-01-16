@@ -17,7 +17,7 @@ const websiteContent = {
 
     // ===== NAVIGATION =====
     nav: {
-        logo: "6th Tour",
+        logo: "5th! Tour",
         links: {
             updates: "Opdateringer",
             gallery: "Galleri",
@@ -113,7 +113,7 @@ const websiteContent = {
                 "12:30 - Retur til byen",
                 "14:00 - Frokost i byen",
                 "15:00 - Fadøl og champagne"
-            ]   
+            ]
         },
         day2: {
             date: "5. Juni - Dag 2",
@@ -183,7 +183,7 @@ function updatePageContent() {
     const heroSubtitle = document.querySelector('.hero p');
     const heroBtnPrimary = document.querySelector('.hero .btn-primary');
     const heroBtnSecondary = document.querySelector('.hero .btn-secondary');
-    
+
     if (heroDate) heroDate.textContent = websiteContent.hero.dateBadge;
     if (heroTitle) {
         heroTitle.innerHTML = `${websiteContent.hero.title}<br><span class="text-accent">${websiteContent.hero.titleAccent}</span>`;
@@ -191,13 +191,13 @@ function updatePageContent() {
     if (heroSubtitle) heroSubtitle.textContent = websiteContent.hero.subtitle;
     if (heroBtnPrimary) heroBtnPrimary.textContent = websiteContent.hero.buttonPrimary;
     if (heroBtnSecondary) heroBtnSecondary.textContent = websiteContent.hero.buttonSecondary;
-    
+
     // Navigation
     const navLogo = document.querySelector('.logo');
     if (navLogo && navLogo.textContent.includes('ALPS')) {
         navLogo.innerHTML = `<div class="logo-dot"></div>${websiteContent.nav.logo}`;
     }
-    
+
     // Update nav links
     const navLinks = document.querySelectorAll('.nav-links a');
     if (navLinks.length >= 7) {
@@ -209,7 +209,7 @@ function updatePageContent() {
         navLinks[5].textContent = websiteContent.nav.links.budget;
         navLinks[6].textContent = websiteContent.nav.links.logistics;
     }
-    
+
     // Update Routes
     // Alpe d'Huez
     const alpeName = document.querySelector('[data-content="routes.alpeDhuez.name"]');
@@ -217,39 +217,39 @@ function updatePageContent() {
     const alpeDist = document.querySelector('[data-route="alpeDhuez"] [data-content="routes.alpeDhuez.distance"]');
     const alpeElev = document.querySelector('[data-route="alpeDhuez"] [data-content="routes.alpeDhuez.elevation"]');
     const alpeDiff = document.querySelector('[data-route="alpeDhuez"] [data-content="routes.alpeDhuez.difficulty"]');
-    
+
     if (alpeName) alpeName.textContent = websiteContent.routes.alpeDhuez.name;
     if (alpeDesc) alpeDesc.textContent = websiteContent.routes.alpeDhuez.description;
     if (alpeDist) alpeDist.textContent = websiteContent.routes.alpeDhuez.distance;
     if (alpeElev) alpeElev.textContent = websiteContent.routes.alpeDhuez.elevation;
     if (alpeDiff) alpeDiff.textContent = websiteContent.routes.alpeDhuez.difficulty;
-    
+
     // Croix de Fer
     const croixName = document.querySelector('[data-content="routes.croixDeFer.name"]');
     const croixDesc = document.querySelector('[data-content="routes.croixDeFer.description"]');
     const croixDist = document.querySelector('[data-route="croixDeFer"] [data-content="routes.croixDeFer.distance"]');
     const croixElev = document.querySelector('[data-route="croixDeFer"] [data-content="routes.croixDeFer.elevation"]');
     const croixDiff = document.querySelector('[data-route="croixDeFer"] [data-content="routes.croixDeFer.difficulty"]');
-    
+
     if (croixName) croixName.textContent = websiteContent.routes.croixDeFer.name;
     if (croixDesc) croixDesc.textContent = websiteContent.routes.croixDeFer.description;
     if (croixDist) croixDist.textContent = websiteContent.routes.croixDeFer.distance;
     if (croixElev) croixElev.textContent = websiteContent.routes.croixDeFer.elevation;
     if (croixDiff) croixDiff.textContent = websiteContent.routes.croixDeFer.difficulty;
-    
+
     // Galibier
     const galibierName = document.querySelector('[data-content="routes.galibier.name"]');
     const galibierDesc = document.querySelector('[data-content="routes.galibier.description"]');
     const galibierDist = document.querySelector('[data-route="galibier"] [data-content="routes.galibier.distance"]');
     const galibierElev = document.querySelector('[data-route="galibier"] [data-content="routes.galibier.elevation"]');
     const galibierDiff = document.querySelector('[data-route="galibier"] [data-content="routes.galibier.difficulty"]');
-    
+
     if (galibierName) galibierName.textContent = websiteContent.routes.galibier.name;
     if (galibierDesc) galibierDesc.textContent = websiteContent.routes.galibier.description;
     if (galibierDist) galibierDist.textContent = websiteContent.routes.galibier.distance;
     if (galibierElev) galibierElev.textContent = websiteContent.routes.galibier.elevation;
     if (galibierDiff) galibierDiff.textContent = websiteContent.routes.galibier.difficulty;
-    
+
     // Update route tabs
     const routeTabs = document.querySelectorAll('.route-tab');
     if (routeTabs.length >= 3) {
@@ -257,55 +257,55 @@ function updatePageContent() {
         routeTabs[1].textContent = websiteContent.routes.croixDeFer.name;
         routeTabs[2].textContent = websiteContent.routes.galibier.name;
     }
-    
+
     // Update Section Headers
     // Previous Rides
     const prevRidesTitle = document.querySelector('[data-content="sections.previousRides.title"]');
     const prevRidesSubtitle = document.querySelector('[data-content="sections.previousRides.subtitle"]');
     if (prevRidesTitle) prevRidesTitle.textContent = websiteContent.sections.previousRides.title;
     if (prevRidesSubtitle) prevRidesSubtitle.textContent = websiteContent.sections.previousRides.subtitle;
-    
+
     // Program
     const programTitle = document.querySelector('[data-content="sections.program.title"]');
     const programSubtitle = document.querySelector('[data-content="sections.program.subtitle"]');
     if (programTitle) programTitle.textContent = websiteContent.sections.program.title;
     if (programSubtitle) programSubtitle.textContent = websiteContent.sections.program.subtitle;
-    
+
     // Routes
     const routesTitle = document.querySelector('[data-content="sections.routes.title"]');
     const routesSubtitle = document.querySelector('[data-content="sections.routes.subtitle"]');
     if (routesTitle) routesTitle.textContent = websiteContent.sections.routes.title;
     if (routesSubtitle) routesSubtitle.textContent = websiteContent.sections.routes.subtitle;
-    
+
     // Forecast
     const forecastTitle = document.querySelector('[data-content="sections.forecast.title"]');
     const forecastSubtitle = document.querySelector('[data-content="sections.forecast.subtitle"]');
     if (forecastTitle) forecastTitle.textContent = websiteContent.sections.forecast.title;
     if (forecastSubtitle) forecastSubtitle.textContent = websiteContent.sections.forecast.subtitle;
-    
+
     // Budget
     const budgetTitle = document.querySelector('[data-content="sections.budget.title"]');
     const budgetSubtitle = document.querySelector('[data-content="sections.budget.subtitle"]');
     if (budgetTitle) budgetTitle.textContent = websiteContent.sections.budget.title;
     if (budgetSubtitle) budgetSubtitle.textContent = websiteContent.sections.budget.subtitle;
-    
+
     // Blog/Updates
     const blogTitle = document.querySelector('[data-content="sections.blog.title"]');
     const blogSubtitle = document.querySelector('[data-content="sections.blog.subtitle"]');
     if (blogTitle) blogTitle.textContent = websiteContent.sections.blog.title;
     if (blogSubtitle) blogSubtitle.textContent = websiteContent.sections.blog.subtitle;
-    
+
     // Program is now handled by program-editor.js
     // It loads from Firebase first, then falls back to content.js
     // No need to update program here - program-editor.js handles it
-    
+
     // Update Travel Section
     // Section Header
     const travelTitle = document.querySelector('[data-content="travel.title"]');
     const travelSubtitle = document.querySelector('[data-content="travel.subtitle"]');
     if (travelTitle) travelTitle.textContent = websiteContent.travel.title;
     if (travelSubtitle) travelSubtitle.textContent = websiteContent.travel.subtitle;
-    
+
     // Flight Card
     const flightTitle = document.querySelector('[data-travel="flight"] [data-content="travel.flight.title"]');
     const flightRoute = document.querySelector('[data-travel="flight"] [data-content="travel.flight.route"]');
@@ -315,7 +315,7 @@ function updatePageContent() {
     if (flightItems) {
         flightItems.innerHTML = websiteContent.travel.flight.items.map(item => `<li>${item}</li>`).join('');
     }
-    
+
     // Car Card
     const carTitle = document.querySelector('[data-travel="car"] [data-content="travel.car.title"]');
     const carDesc = document.querySelector('[data-travel="car"] [data-content="travel.car.description"]');
@@ -325,7 +325,7 @@ function updatePageContent() {
     if (carItems) {
         carItems.innerHTML = websiteContent.travel.car.items.map(item => `<li>${item}</li>`).join('');
     }
-    
+
     // Bike Card
     const bikeTitle = document.querySelector('[data-travel="bike"] [data-content="travel.bike.title"]');
     const bikeDesc = document.querySelector('[data-travel="bike"] [data-content="travel.bike.description"]');
