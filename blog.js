@@ -10,17 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const postImagePreviewImg = document.getElementById('blog-post-image-preview-img');
     const postImageRemove = document.getElementById('blog-post-image-remove');
     const postSubmit = document.getElementById('blog-post-submit');
-    
+
     let currentUser = localStorage.getItem('blog_user_name') || 'Anonym';
     let currentUserInitials = localStorage.getItem('blog_user_initials') || 'A';
     let selectedImage = null;
-    
+
     // Get user name on first use - Mobile-friendly modal instead of prompt
     function showNameModal() {
         const modal = document.createElement('div');
         modal.id = 'blog-name-modal';
         modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; align-items: center; z-index: 10000; padding: 1rem;';
-        
+
         modal.innerHTML = `
             <div style="background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255, 79, 64, 0.3); max-width: 400px; width: 100%; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);">
                 <h2 style="margin-bottom: 1rem; color: var(--text-primary);">Hvad er dit navn?</h2>
@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         const input = document.getElementById('blog-name-input');
         const submitBtn = document.getElementById('blog-name-submit');
-        
+
         input.focus();
-        
+
         const handleSubmit = () => {
             const userName = input.value.trim();
             if (userName) {
@@ -46,17 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentUserInitials = userName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
                 localStorage.setItem('blog_user_name', userName);
                 localStorage.setItem('blog_user_initials', currentUserInitials);
-                
+
                 // Update create post author
                 const createAvatar = document.getElementById('blog-create-avatar');
                 const createAuthor = document.getElementById('blog-create-author');
                 if (createAvatar) createAvatar.textContent = currentUserInitials;
                 if (createAuthor) createAuthor.textContent = currentUser;
-                
+
                 document.body.removeChild(modal);
             }
         };
-        
+
         submitBtn.addEventListener('click', handleSubmit);
         input.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
@@ -64,19 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
+
     // Show name modal on first use
     if (!localStorage.getItem('blog_user_name')) {
         // Wait a bit for page to load
         setTimeout(showNameModal, 500);
     }
-    
+
     // Update create post author
     const createAvatar = document.getElementById('blog-create-avatar');
     const createAuthor = document.getElementById('blog-create-author');
     if (createAvatar) createAvatar.textContent = currentUserInitials;
     if (createAuthor) createAuthor.textContent = currentUser;
-    
+
     // New Post Button
     if (newPostBtn) {
         newPostBtn.addEventListener('click', () => {
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             createPostDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     }
-    
+
     // Close Create Post
     if (createPostClose) {
         createPostClose.addEventListener('click', () => {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             postImagePreview.style.display = 'none';
         });
     }
-    
+
     // Image Upload
     if (postImageInput) {
         postImageInput.addEventListener('change', (e) => {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
+
     // Remove Image
     if (postImageRemove) {
         postImageRemove.addEventListener('click', () => {
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (postImageInput) postImageInput.value = '';
         });
     }
-    
+
     // Submit Post
     if (postSubmit) {
         postSubmit.addEventListener('click', async () => {
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Indtast tekst eller tilføj et billede');
                 return;
             }
-            
+
             const post = {
                 id: Date.now().toString(),
                 author: currentUser,
@@ -138,34 +138,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 likes: [],
                 comments: [],
                 timestamp: Date.now(),
-                date: new Date().toLocaleDateString('da-DK', { 
-                    year: 'numeric', 
-                    month: 'long', 
+                date: new Date().toLocaleDateString('da-DK', {
+                    year: 'numeric',
+                    month: 'long',
                     day: 'numeric',
                     hour: '2-digit',
                     minute: '2-digit'
                 })
             };
-            
+
             // Save to Firebase if available, otherwise localStorage
             if (window.syncManager && window.syncManager.isFirebaseAvailable) {
                 await saveBlogPostToFirebase(post);
             } else {
                 saveBlogPostToLocalStorage(post);
             }
-            
+
             // Clear form
             postText.value = '';
             selectedImage = null;
             postImagePreview.style.display = 'none';
             if (postImageInput) postImageInput.value = '';
             if (createPostDiv) createPostDiv.style.display = 'none';
-            
+
             // Reload posts
             loadBlogPosts();
         });
     }
-    
+
     // Save to Firebase
     async function saveBlogPostToFirebase(post) {
         try {
@@ -180,14 +180,14 @@ document.addEventListener('DOMContentLoaded', () => {
             saveBlogPostToLocalStorage(post);
         }
     }
-    
+
     // Save to localStorage
     function saveBlogPostToLocalStorage(post) {
         const posts = JSON.parse(localStorage.getItem('blog_posts') || '[]');
         posts.unshift(post);
         localStorage.setItem('blog_posts', JSON.stringify(posts));
     }
-    
+
     // Load from Firebase
     async function loadBlogPostsFromFirebase() {
         if (window.syncManager && window.syncManager.isFirebaseAvailable) {
@@ -202,16 +202,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return [];
     }
-    
+
     // Load from localStorage
     function loadBlogPostsFromLocalStorage() {
         return JSON.parse(localStorage.getItem('blog_posts') || '[]');
     }
-    
+
     // Load all posts
     async function loadBlogPosts() {
         let posts = [];
-        
+
         // Try Firebase first
         if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             posts = await loadBlogPostsFromFirebase();
@@ -220,12 +220,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('blog_posts', JSON.stringify(posts));
             }
         }
-        
+
         // If no posts from Firebase, try localStorage
         if (posts.length === 0) {
             posts = loadBlogPostsFromLocalStorage();
         }
-        
+
         // Render posts - find container dynamically in case it wasn't ready initially
         const container = document.getElementById('blog-posts-container') || blogContainer;
         if (container) {
@@ -240,23 +240,26 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(loadBlogPosts, 1000);
         }
     }
-    
+
     // Render a blog post
     function renderBlogPost(post) {
         const postDiv = document.createElement('div');
         postDiv.className = 'blog-post';
         postDiv.dataset.postId = post.id;
-        
+
         const isLiked = post.likes && post.likes.includes(currentUser);
         const likeCount = post.likes ? post.likes.length : 0;
         const commentCount = post.comments ? post.comments.length : 0;
-        
-        // Format text with line breaks
-        const formattedText = post.text.split('\n').map(p => `<p>${p}</p>`).join('');
-        
+
+        // Format text: double newlines become paragraphs, single newlines become line breaks
+        const paragraphs = post.text.trim().split(/\n\s*\n/);
+        const formattedText = paragraphs
+            .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+            .join('');
+
         // Show comments by default if there are any
         const showCommentsByDefault = commentCount > 0;
-        
+
         postDiv.innerHTML = `
             <div class="blog-post-header">
                 <div class="blog-author">
@@ -324,15 +327,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `;
-        
+
         blogContainer.appendChild(postDiv);
-        
+
         // Add event listeners
         const likeBtn = postDiv.querySelector('.blog-like-btn');
         if (likeBtn) {
             likeBtn.addEventListener('click', () => toggleLike(post.id));
         }
-        
+
         const commentToggle = postDiv.querySelector('.blog-comment-toggle-btn');
         if (commentToggle) {
             commentToggle.addEventListener('click', () => {
@@ -342,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-        
+
         const commentInput = postDiv.querySelector('.blog-comment-text-input');
         if (commentInput) {
             commentInput.addEventListener('keypress', (e) => {
@@ -352,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-        
+
         // Menu toggle
         const menuBtn = postDiv.querySelector('.blog-action-menu-btn');
         const menu = postDiv.querySelector(`#menu-${post.id}`);
@@ -365,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
             });
-            
+
             // Close menu when clicking outside
             document.addEventListener('click', (e) => {
                 if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
@@ -373,13 +376,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-        
+
         // Edit button
         const editBtn = postDiv.querySelector('.blog-edit-btn');
         if (editBtn) {
             editBtn.addEventListener('click', () => editPost(post.id));
         }
-        
+
         // Delete button
         const deleteBtn = postDiv.querySelector('.blog-delete-btn');
         if (deleteBtn) {
@@ -389,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-        
+
         // Comments count click to toggle
         const commentsCount = postDiv.querySelector('.blog-comments-count');
         if (commentsCount) {
@@ -401,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
-    
+
     // Edit post
     async function editPost(postId) {
         let posts = [];
@@ -410,17 +413,17 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             posts = loadBlogPostsFromLocalStorage();
         }
-        
+
         const post = posts.find(p => p.id === postId);
         if (!post) return;
-        
+
         // Show edit form
         const postDiv = document.querySelector(`[data-post-id="${postId}"]`);
         if (!postDiv) return;
-        
+
         const contentDiv = postDiv.querySelector(`#content-${postId}`);
         if (!contentDiv) return;
-        
+
         // Create edit form
         const editForm = document.createElement('div');
         editForm.innerHTML = `
@@ -431,11 +434,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button id="cancel-edit-${postId}" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">Annuller</button>
             </div>
         `;
-        
+
         const originalContent = contentDiv.innerHTML;
         contentDiv.innerHTML = '';
         contentDiv.appendChild(editForm);
-        
+
         // Remove image
         const removeImgBtn = document.getElementById(`remove-img-${postId}`);
         if (removeImgBtn) {
@@ -444,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 editForm.querySelector('div').remove();
             });
         }
-        
+
         // Save
         const saveBtn = document.getElementById(`save-edit-${postId}`);
         if (saveBtn) {
@@ -454,10 +457,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert('Indtast tekst eller tilføj et billede');
                     return;
                 }
-                
+
                 post.text = newText;
                 post.timestamp = Date.now(); // Update timestamp
-                
+
                 // Save
                 if (window.syncManager && window.syncManager.isFirebaseAvailable) {
                     await window.db.collection('alps-2026').doc('blog_posts').set({
@@ -467,11 +470,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     localStorage.setItem('blog_posts', JSON.stringify(posts));
                 }
-                
+
                 loadBlogPosts();
             });
         }
-        
+
         // Cancel
         const cancelBtn = document.getElementById(`cancel-edit-${postId}`);
         if (cancelBtn) {
@@ -480,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
-    
+
     // Delete post
     async function deletePost(postId) {
         let posts = [];
@@ -489,11 +492,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             posts = loadBlogPostsFromLocalStorage();
         }
-        
+
         const index = posts.findIndex(p => p.id === postId);
         if (index > -1) {
             posts.splice(index, 1);
-            
+
             // Save
             if (window.syncManager && window.syncManager.isFirebaseAvailable) {
                 await window.db.collection('alps-2026').doc('blog_posts').set({
@@ -503,11 +506,11 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 localStorage.setItem('blog_posts', JSON.stringify(posts));
             }
-            
+
             loadBlogPosts();
         }
     }
-    
+
     // Toggle like
     async function toggleLike(postId) {
         let posts = [];
@@ -516,19 +519,19 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             posts = loadBlogPostsFromLocalStorage();
         }
-        
+
         const post = posts.find(p => p.id === postId);
         if (!post) return;
-        
+
         if (!post.likes) post.likes = [];
-        
+
         const index = post.likes.indexOf(currentUser);
         if (index > -1) {
             post.likes.splice(index, 1);
         } else {
             post.likes.push(currentUser);
         }
-        
+
         // Save back
         if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             await window.db.collection('alps-2026').doc('blog_posts').set({
@@ -538,10 +541,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             localStorage.setItem('blog_posts', JSON.stringify(posts));
         }
-        
+
         loadBlogPosts();
     }
-    
+
     // Add comment
     async function addComment(postId, text) {
         let posts = [];
@@ -550,19 +553,19 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             posts = loadBlogPostsFromLocalStorage();
         }
-        
+
         const post = posts.find(p => p.id === postId);
         if (!post) return;
-        
+
         if (!post.comments) post.comments = [];
-        
+
         post.comments.push({
             author: currentUser,
             authorInitials: currentUserInitials,
             text: text,
             timestamp: Date.now()
         });
-        
+
         // Save back
         if (window.syncManager && window.syncManager.isFirebaseAvailable) {
             await window.db.collection('alps-2026').doc('blog_posts').set({
@@ -572,10 +575,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             localStorage.setItem('blog_posts', JSON.stringify(posts));
         }
-        
+
         loadBlogPosts();
     }
-    
+
     // Format time ago
     function formatTimeAgo(timestamp) {
         const now = Date.now();
@@ -583,20 +586,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = Math.floor(diff / 60000);
         const hours = Math.floor(diff / 3600000);
         const days = Math.floor(diff / 86400000);
-        
+
         if (minutes < 1) return 'Lige nu';
         if (minutes < 60) return `${minutes} ${minutes === 1 ? 'minut' : 'minutter'} siden`;
         if (hours < 24) return `${hours} ${hours === 1 ? 'time' : 'timer'} siden`;
         if (days < 7) return `${days} ${days === 1 ? 'dag' : 'dage'} siden`;
         return new Date(timestamp).toLocaleDateString('da-DK');
     }
-    
+
     // Load posts on page load
     // Load posts after a short delay to ensure DOM is ready
     setTimeout(() => {
         loadBlogPosts();
     }, 500);
-    
+
     // Auto-refresh every 30 seconds
     setInterval(loadBlogPosts, 30000);
 });
