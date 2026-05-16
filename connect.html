@@ -171,6 +171,11 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
   <script src="firebase-config.js"></script>
 
+  <!-- Strava client ID set BEFORE main script so it's available at submit time -->
+  <script>
+    window.STRAVA_CLIENT_ID = '230786';
+  </script>
+
   <script>
     // Read query params (success/error from OAuth callback)
     const params = new URLSearchParams(window.location.search);
@@ -190,9 +195,7 @@
       msg.innerHTML = `<strong>Fejl:</strong> ${decodeURIComponent(error)}<br><br>Prøv igen eller skriv til Frederik.`;
     }
 
-    // Strava OAuth config — these need to be set in Vercel env vars
-    // For static deployment, the redirect_uri must match what's configured in Strava app settings.
-    const STRAVA_CLIENT_ID = window.STRAVA_CLIENT_ID || '';  // injected at build time or hardcoded
+    // Strava OAuth config
     const REDIRECT_URI = window.location.origin + '/api/strava-callback';
     const SCOPE = 'read,activity:read_all,profile:read_all';
 
@@ -202,6 +205,13 @@
       const weight = parseFloat(document.getElementById('rider-weight').value);
       const ftp = parseInt(document.getElementById('rider-ftp').value);
       if (!name || !weight || !ftp) return;
+
+      // Read client ID at submit time (not at script-load) so script-order doesn't matter
+      const clientId = window.STRAVA_CLIENT_ID || '';
+      if (!clientId) {
+        alert('Strava client ID ikke konfigureret. Frederik skal opdatere connect.html.');
+        return;
+      }
 
       // 1) Save the form data (weight + FTP) to Firebase BEFORE redirect
       try {
@@ -216,18 +226,10 @@
       }
 
       // 2) Redirect to Strava OAuth (state encodes rider name so callback knows who)
-      if (!STRAVA_CLIENT_ID) {
-        alert('Strava client ID ikke konfigureret endnu. Frederik skal sætte STRAVA_CLIENT_ID i Vercel env-vars.');
-        return;
-      }
       const state = encodeURIComponent(name);
-      const url = `https://www.strava.com/oauth/authorize?client_id=${STRAVA_CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=${SCOPE}&state=${state}&approval_prompt=auto`;
+      const url = `https://www.strava.com/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=${SCOPE}&state=${state}&approval_prompt=auto`;
       window.location.href = url;
     });
-  </script>
-  <!-- Strava client ID — public, fine to commit (secret is server-side only) -->
-  <script>
-    window.STRAVA_CLIENT_ID = '230786';
   </script>
 </body>
 </html>
