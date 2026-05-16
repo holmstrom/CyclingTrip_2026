@@ -1,0 +1,1313 @@
+{
+  "athlete": {
+    "id": 100103171,
+    "username": null,
+    "resource_state": 2,
+    "firstname": "Rasmus",
+    "lastname": "Jørgensen",
+    "bio": null,
+    "city": null,
+    "state": null,
+    "country": null,
+    "sex": "M",
+    "premium": true,
+    "summit": true,
+    "created_at": "2022-03-13T14:49:03Z",
+    "updated_at": "2026-05-09T04:11:00Z",
+    "badge_type_id": 1,
+    "profile_medium": "avatar/athlete/medium.png",
+    "profile": "avatar/athlete/large.png",
+    "friend": null,
+    "follower": null
+  },
+  "description": null,
+  "distance": 99275.55779154265,
+  "elevation_gain": 2790.4287681461697,
+  "id": 3486425940246209816,
+  "id_str": "3486425940246209816",
+  "map": {
+    "id": "r3486425940246209816",
+    "summary_polyline": "wx~qGelxc@i@p@sCqHdEaALgN{W_^GeHlQcMd\\{c@jc@yz@fiBq|A@wBuDiBuFuIq@{MpDkAvKxAfCyCx@iFcAgNu^ef@eAmQ_E}@gAkFeLkHeFvHyBR}Mo[VkIyCcIfL_LBmE~CmG_FyZZyE{Ear@mAoEuKuMOiQeNeGcCeJbFmArIj@`IpE`A|HhAED}AmDqJ{a@ua@vBoKxEsE`@wGmBcDqGsAmDa`@tKqb@hCyi@dDyAhAkGp@yPaByFjH{_@AsJ~DuGzNmj@K}\\jAmNiAiUlKik@{A}\\FoX{Cga@fAmNfKqZhAyKaCmLtAa\\_CsSGeNaFmU|@wU{@eS{EkSn@s`@sA}Ey@_c@mC_NuGuImGch@pAg]kDga@VcLuEoYdCwNv@eYgGmc@f@kXcDkLd@eRmGkHkAqMb@uIuNwUnGaJuBoJEoVlP{e@MmAgA|Bw@s@ZwM|TmVCeF_Ay@dD_BtAoD|D}T@mBaByB]fAQcDpAwL{AiJpAsZwAcLqDkJfMyNfBeK`EmFo@eM|GmEdI}TdBuUxBqDt@mLxIwYpCuVgFqGy@kFvDu_@wAiOVeMaEab@u@T`@{JeF}MuHfD{CrGsCJqCtKsKsCxNfRdEjAuCh_@qAcNuFsK_MyJaJsOkUvVgF`JuArJcFnESrGsJxNmAuBxCeMeGiLaAkGrAk\\m@wIaDiBJaH{HwWeGqAeB`CqL|DaGUaAsBPsK|B{H_@kAeEtK[~EqDbDlE|G}@bBgFmIBqEjCgHAyHcAxB@{CiIbVKcCd@~C~GwVTvCt@mCFhIkCfHCpEfFlI|@cBmE}GpDcDZ_FdEuK^jA}BzHQrK`ArB`GTpL}DdBaCdGpAzHvWK`H`DhBl@vIsAj\\`AjGdGhLyCdMlAtBrJyNRsGbFoEtAsJfFaJjUwV`JrO~LxJtFrKpAbNtCi_@yE_B_NeRtJpDhDaLrCK~BuFfG_FzHWhB`D}AjXxC~TJnWvAhOwDt_@x@jFxEhEYlLcMff@u@lLcH|JoMt^dANzKaQp@dAeI|T}GlEn@dMaElFgBdKgMxNpDjJvAbLqArZzAdIqA~L^~IaHrO}FzGsArOaH~EnJj@fDpFiBtDoGiCkElB[vMv@r@fA}BLlAmPze@DnVtBnJoG`JtNvUc@tIjApMlGjHiAhPvDvIWz\\fGlc@w@dYeCvNtEnYWbLjDfa@qAf]lGbh@tGtIlC~Mx@~b@rA|Eo@r`@zEjSz@dS}@vUhDhK~D|l@yAfZdCfNc@jGgKd[mBfRzCfa@GnXzA|\\iEnVz@eBvA~CkCjJMzGvCpM}Aje@bB~ScHlm@uCjGVlSgB|PvCzTw@zKdAvSi@rO}AtHmH`HjAfd@jFhRnE^iDlDaF_@_HnC~R|@vAuBc@bDiEvA~Gl@`GqJiE`ReHGgSfGd\\nAbKoCfHjR`LrOxClMcFjCy@dCgA`g@eMzw@dPze@kBzCjA|F{@pHrMxQlDf@jEwBvPjDfNrPs@xGmErDa@ta@_Isc@IdX{ByFuCaOlBgFkETaUwI}KPvC~At@pErE`Bp@hPdEhHrJvIzLbRbAfNuAxGwEhCoK{BuAtBx@rLtFtItDhBHbBsiBd}Akc@xz@w]pe@qOjJcBpG|Zt_@UtN|C]f@jEeEdC",
+    "resource_state": 3,
+    "polyline": "wx~qGelxc@i@p@}AkDu@eCzC_@`@SFMBU?m@LuCHqANyAAO[qAk@gA}CwD_EqEgFkG[c@mC}Ec@oAAWIUBy@N_ARm@h@_At@i@nGyCb@W~AiAxA}AlHyJvRaXh@_Ah[go@tB_E`BqB|~AmsAtHkGRWJSFm@CWM]WUsBs@SKUSeD{DoAyCSk@OeAUaH?_@Fg@J]V]RKTEbB@NB|CvAx@Tl@FT?r@Gv@Wz@m@n@{@Zo@ZeAPgAJ{AA{BGoCy@{EUa@aA_Ac@k@}AsAU]aA{BiCgFu@}@{FqEq@q@OUUg@cAeDY[w@]Ya@Io@A[N}B?s@UiEO{@Oe@Sc@g@_@g@O{AGSEYYOm@A_@@{@CWGUQYa@WeDy@c@S[Y_CyC]Q]?SHSXSh@_@zAc@`AgAjA_@Xc@NUA_@SMMWe@a@eAoAiDm@}BQc@sAcBa@q@g@sAm@kBy@sBKy@?i@Fy@XcC@i@SiAg@u@u@k@]e@Ou@D{@`@q@t@{@TSb@Qx@IZS|AgCb@e@h@e@RYFc@Aa@Mu@@i@Hg@LWt@o@jAwBHWDu@]{FSeBgAmFO{A[kAo@_BIa@?c@RgAFk@?aAKo@]aAIw@w@_QIq@e@qBMcAYyGDqBQyDKiAg@gCOc@Uc@sCgD[k@a@kAKOYS}@]e@[a@k@Wk@Me@Gg@E_A@k@Dg@`@gBHg@Bk@Ai@Ik@_@uAKQa@_@i@UaAWaBw@uE_BSMU[Qk@UkAeAgCC[FaAJOZS^IvCKrBCdEf@XFb@NlBlArBv@TNRRPVTt@PjAD|BDb@LXPLLBTCRSJi@Es@W{BSw@k@oA_@m@u@_AqBaCmAqAg@a@gBgAuAuAcKwIYc@_@w@g@qBa@k@WUg@YWIy@MOOKWCk@b@cC^gBv@wBRWv@[POr@mAZ[^SJQJ]TsBBeAC_AMo@[u@c@g@_@U_@MsEg@SMIOGUAgAGo@w@_CKq@YwJo@yCIs@C{CL{@fKu`@T{B|Aoa@Ds@NyAVs@\\_@XEr@LJ?TMN_@PcBf@gCh@kFFmISuAKUs@gAKYAk@D]^{@fByK`AoE\\gC|@oEDc@B{CE{@Ii@Cm@F_@jB_D~@qARc@J_@Ls@^iDTmAfDqINo@nAaIzAsD|@gCHa@H{AEu@YgBCk@J}BEsA@k@VsCBo@QgCCmAHiBZgCDwA^oB?s@]kJi@iCEcABoCLmApAgFJYd@{@JYJm@x@}LPsATeAnBaGJg@Ds@AcAyAyZEiELiO?{AyCm_@Ay@n@gJVeCd@yBxDsN^w@|@}@b@q@d@{AVeALgA`@gF@c@SuB]iCSo@We@Si@Om@Cy@v@_FZeD?}@O}ACs@TqDB_BIoAg@mEc@mCi@gFCiAFgDA_DIsA]{BMgCK_AS{@]w@cAcBYy@Ow@I_AAaALqJDi@b@kDFmAAsAy@qPWeBWiAkBmGi@yAUsBAa@@g@NcE@wAAaK@}@FgATmB?wAO}@{@sBGk@DsBGuBg@iJ]qDA_BVaEGwAwBcLU{@Sa@OQaCcBk@s@a@u@a@sAWsAcEa[q@mIEqABeAn@yGN_CPmF@gDMsCy@sGKqAIyACyDSgBk@{BIuA@u@^{BD}@OsDK{@_@uBk@eGQ_AiAuDUeAK{A?a@Fy@|B{KFgFJmBRiB?kCPyCA_BKwDM_CUuAu@cCQw@Y_Bw@mGu@sCGaA?}AGqB\\aFCwBLiCFwBCgAKgAYqAWs@Ym@gAgBRYQa@GeABI^m@@IOYJg@BgAIwA?u@NiCKe@KQwEqDQWKi@u@aHOmBEaADgCDw@XuBA_@O_@eMiQOYMa@Aq@Nm@\\_@hBuAVYfAiBVy@@[Cw@IWy@_AKYc@iDEcA?oAXoBHeA@wDIwAUcAEi@?g@Nw@|Ocd@D[?WGQKGS?MPI\\Gl@KVGFK@UGIIKc@FqHJcCFa@Tm@NSf@WJ]VWTKPg@POLENOJ?FKH?dBeAZMl@q@DOPJdAiAbBuCv@cBj@i@HWLcA_@YFs@C{@_Ay@p@oA`@@^Ip@GTeARo@j@y@fAcDAMPQH[JaCL_Bb@gBL_BNs@@mB{@c@QMMQEY?[Oz@MJQcDH_B|@kGHkACmAIi@aAuCK{AFw@F]Xw@Ry@Dq@E}DOqFFw@TiADgACWY{Am@eGKi@W_ASi@e@{@SY{@{@IOEUCc@Be@Vk@j@}@\\[XOvAe@ZUP[r@eBpCeDVo@x@}GTw@Ze@d@]lAeA^w@Pk@Da@F}CGk@u@mBIa@Ag@Ja@V]xA{@hBq@d@_@Za@Vk@xDkOZk@^]b@[R_@Bg@GWKKb@k@@u@O_B@GVWRgAZwDPSLIJ]AEOBICMMVQ@ICI@e@CKp@u@j@{@Z_AR_AP{ABk@B{DFi@xCsHv@oDfCsJjAeG\\iCPqBTsFC_@Ig@Sm@U[[YiBw@YWOUU{@YoBI_AA_AJaA~AuJR_Br@aJD{A?{@GgAgAeIG_A?aBVcG?_Bc@iISoBcBmJQsAOmCCwAUJKLSCJs@TgIq@cDYu@YcAKS@e@OUQT[T_@]Qc@KEDsAiAYOZQTiEnC[\\u@xAo@zBKPMLMFUDYCc@KSAMBOJIVqAlH[x@YTWJUBo@KeDwAYU_AeAYGKBILEP@`@JRRLv@Z\\\\lJtMRRZJ`@BfAA\\LNLP`@H`@Bf@A|BIdBS~A[nA{@hCS`AObELpBK^IHIBQGGICQF{A?m@[uFUcAuFsKW]iGoF]U_Bw@_@]yAwB{AwCUi@}@kC[u@MOUGW?QHY`@u@nBOPOHYF_AFYLuCtCcEvE{BrD{@hBg@z@_B~Bc@z@M`@OfAKrCEf@IZ[p@i@`AUZa@XeBr@SRGNIj@JxBAn@E`@MZMTmCxCOTYh@mBtEQ\\MPKBS?SIUQSWIWEi@BWFQv@oAJY`A_FDa@@o@E[KUmAcAKQSo@WyBO[}@q@_@i@Ou@q@uEEgAAuEN}GVcC`@sBNwA@_@k@sECc@@_BG_@S[QKy@L[CKGQc@EaATgBBiAGm@kB_HgAuBk@_Bs@sCg@mCMY[c@WM[Am@DyBIQBKFOPa@hAUXUJqBl@oAl@_Cj@yAh@_BTa@?c@G{Ac@SOWa@UaAPiD?iFHy@Nm@bBsEBe@IYOIIAMFGHK`@OrAMh@qAlCg@z@KXGh@BpBG`@O`@QXQNwAr@SNSVM\\Cl@BPLXRRd@Rn@b@XXj@x@Nb@@b@Ib@MRID]@SKkAiCQOe@Uk@u@Yk@Io@Bq@E_BD_AJ]h@o@l@wAT_APaAAeCOiB?QNw@EOE?GFO`@Kh@Ap@CDE@GCGo@P}AAGEEOFKZG\\[zCGVKZk@t@IPSzAQn@OTa@`@MVc@lCOn@KJKAMY@w@MkALjAAv@LXJ@JKNo@b@mCLW`@a@NUPo@R{AHQj@u@J[FWZ{CF]J[NGDD@FQ|AFn@FBDABE@q@Ji@Na@FGD?DNOv@?PNhB@dCQ`AU~@m@vAi@n@K\\E~@D~ACp@Hn@TfAtAn@PNjAhCRJ\\AHELSHc@Ac@Oc@k@y@YYo@c@e@SSSMYCQBm@L]RWROvAs@POPYNa@Fa@CqBFi@JYf@{@pAmCLi@NsAJa@FILGH@NHHXCd@cBrEOl@Ix@?hFQhDT`AV`@RNzAb@b@F`@?~AUxAi@~Bk@nAm@pBm@TKTY`@iANQJGPCxBHl@EZ@VLZb@LXf@lCr@rCj@~AfAtBjB~GFl@ChAUfBD`APb@JFZBx@MPJRZF^A~ABb@j@rEA^OvAa@rBWbCO|G@tEDfAp@tENt@^h@|@p@NZVxBRn@JPlAbAJTDZAn@E`@aA~EKXw@nAGPCVDh@HVRVTPRHR?JCLQP]lBuEXi@NUlCyCLUL[Da@@o@KyBHk@FORSdBs@`@YT[h@aAZq@H[Dg@JsCNgALa@b@{@~A_Cf@{@z@iBzBsDbEwEtCuCXM~@GXGNINQt@oBXa@PIV?TFLNZt@|@jCTh@zAvCxAvB^\\~Av@\\ThGnFV\\tFrKTbAZtF?l@GzABPFHPFHCHIJ_@MqBNcERaAz@iCZoAR_BHeB@}BCg@Ia@Qa@OM]MgA@a@C[KSSmJuM]]w@[SMKSAa@DQHMJCXF~@dAXTdDvAn@JTCVKXUZy@pAmHHWNKLCR@b@JXBTELGLMJQn@{Bt@yAZ]hEoCPUN[r@RtALPAXIp@]`@Op@?d@T`@b@LXJ^Fl@?x@qAfMKbBClBBvANlCPrAbBlJRnBb@hI?~AWbG?`BF~@fAdIFfA?z@EzAs@`JS~A_BtJK`A@~@H~@XnBTz@NTXVhBv@ZXTZRl@Hf@B^UrFQpB]hCkAdGgCrJw@nDyCrHGh@CzDCj@QzAS~@[~@k@z@yA~AoA|Aq@bAe@hAc@nAk@xBg@lAm@fAMd@OdASx@{@lCoC|EG\\@ZFNLLV@VOJ[N{@Vu@LUzCeDT[lA_C^c@x@w@LGR@JJFVCf@S^c@Z_@\\[j@yDjOWj@[`@e@^iBp@yAz@W\\K`@@f@H`@t@lBFj@G|CE`@Qj@_@v@mAdAe@\\[d@Uv@y@|GWn@qCdDs@dBQZ[TwAd@YN]Zk@|@Wj@Cd@Bb@DTHNz@z@RXd@z@Rh@V~@Jh@l@dGXzABVEfAUhAGv@NpFD|DEp@Sx@Yv@G\\Gv@JzA`AtCHh@Bh@InB}@jGIbA@jA^rFA^K|@k@lAw@zBY\\s@^YVMPc@jBWv@]d@sDlDk@fAa@zAKv@C~@CfEEl@WhAS`@o@~@a@f@[XULSF_BHONEJALJVRFhGQ`@Bd@JPJdCtDJZBRGh@k@zAU\\_@Pc@C_DmB[OQE]Ao@@i@Dc@Jg@VORUl@G`@KbCGpHJb@HHTFJAFGJWFm@H]LQR?JFFP?VEZ}Obd@Ov@?f@Dh@TbAHvAAvDIdAYnB?nADbAb@hDJXx@~@HVBv@AZWx@gAhBWXiBtA]^Ol@@p@L`@NXdMhQN^@^YtBEv@EfCD`ANlBt@`HJh@PVvEpDJPJd@OhC?t@HvACfAKf@q@bBC`@@ZN`@\\d@|@zAXl@Vr@XpAJfABfAGvBMhCBvB]`FFpB?|AF`At@rCv@lGX~APv@t@bCTtAL~BJvD@~AQxC?jCShBKlBGfF}BzKGx@?`@JzATdAhAtDP~@j@dG^tBJz@NrDE|@_@zBAt@HtAj@zBRfBBxDHxAJpAx@rGLrCAfDQlFO~Bo@xGCdADpAp@lIbE`[VrA`@rA`@t@j@r@`CbBNPR`@Tz@vBbLFvAW`E@~A\\pDf@hJFtBErBFj@z@rBN|@?vAUlBGfAA|@@`KAvAObEAf@@`@TrBh@xAjBlGVhAVdBx@pP@rAGlAc@jDEh@MpJ@`AH~@Nv@Xx@bAbB\\v@Rz@J~@LfC\\zBHrA@~CGfDBhAh@fFb@lCf@lEHnAC~AUpDBr@N|A?|@[dDw@~EBx@Nl@Rh@Vd@Rn@\\hCRtBAb@a@fFMfAWdAe@zAc@p@}@|@_@v@yDrNe@xBWdCo@fJ@x@xCl_@?zAMhODhExAxZ@bAEr@Kf@oB`GUdAQrA_@vFJE\\wAFGH?PP~@tADv@Cj@Ih@Uj@ERAf@CPELg@l@Ud@Wx@D`CAb@QzA?Xl@vATlA?bANh@X^Nf@XtB@bBF`BMxAm@`DOlC?lCB|BNpB?Z_@bDMh@ARB~BD\\LTDNNlCVvAJ`ABlAJ~@@d@IpBGf@Ub@aAvCKf@[zB_@`FWjCu@~FSfC?xBCj@Kv@IXOTELE\\KZKHWHo@r@GRGv@Fl@GrBMxAFr@EfA@fAFd@APMh@?PDRV\\FPBTe@lESv@G^WxDMz@?`@P`ACj@BX^vCTdAFlAj@rBZrCGz@[lAKn@Cf@BdCGr@@z@Rd@@TATUj@?VJlA?RGR?TXtB^zA?t@Fp@?b@Et@BfA_@h@UnABp@Nr@Wl@CP@NPp@@N[`B_@`AUrBK\\OTm@l@_@dAGF_@?k@L_@ZIBk@CIBGFENMhA\\pBCVILQj@CXBzAJbB@n@LhA@f@Cb@Qf@AXDx@@|@JvAPl@Ct@Nv@?x@TzAZbAf@lAR|Ar@bBRp@N~@h@hBDd@JRHHX?h@KZ?nAGJFDHBVSn@a@^g@PYVS`@]PWFYBmAEaBe@G@WNiAT_@j@{@j@mAHKDlAL^AvAY\\@t@JrBJl@FrB^z@HR?PEPMJONy@JUJAHFBL@^Ib@O`@Yf@[RmBLk@JMJEL?NDJNB\\OPCd@BzAd@ZDz@@j@KVQRYj@kAj@eB\\aBHw@LQPBFL@PATWbAKj@iAlIQl@Q`@u@|@i@\\a@H_@@[GeBk@[C[DsAx@m@T}Cb@uAh@uAJo@T_AV{@LKJCTHPR?d@S^G|DG~AP~@PxEDvDj@pAJd@AtDYRKt@IDEFo@H]LMZEZHTXFPT`BLb@N^tBrDPb@z@zCPd@`@p@XXpCxBh@l@bBrCdAjCxBjHV`AJn@Cn@GRMTOLiDbASN_@p@YrAWzB[hKYvDIxF@nEDjAFl@OHCREpAoBrGWjCO\\?|BU|Ca@lBw@xAUtAk@zBEbDMx@_@nDm@hD?f@Nt@^l@\\XTfAGf@TjAh@j@?b@fAlDl@^b@~@`@xAj@d@`@lAXjBR~@|@tBRj@@ZEX_@\\s@\\MNEX?PHXf@z@TxABz@WzAUr@KbAA|AF^p@|Af@PHFd@jAn@p@dAnBnAx@^Zp@~@Tl@RNxAJn@Rb@F^Q|AqAlASp@Hn@TfBbAZ@jAIdGnAdAf@l@h@`AdAj@x@RnA^~ATd@pBvAt@VRZErCm@dC]n@}@`@_AD]`@Sx@Gx@FhCEtE@jCQxABfAInDJnAGvBCNEDECeAkFe@wCmAoGy@wBw@cEJcBOmAIMKBAT@f@SxAErGFjGVvACPGBIG}@aCk@sB}@cEi@{Aa@yCKgAVsAxAcBFa@KMkETgAoAmACaBuAoAm@sG_BeB_@SCgFN}A@q@MQPAHdBb@`@VPXFTBVAz@@^Nl@XXRDzAFf@Nf@^Rb@Nd@Nz@ThE?r@O|B@ZHn@X`@v@\\XZbAdDTf@NTp@p@zFpEt@|@hCfF`AzBT\\|ArAb@j@`A~@T`@x@zEFnC@zBKzAQfA[dA[n@o@z@{@l@w@Vs@FU?m@Gy@U}CwAsBEUDSJW\\K\\Gf@?^T`HNdARj@nAxCdDzDTRRJrBr@VTL\\BVGl@KRSVuHjG}~AlsAaBpBuB~Di[fo@i@~@wR`XmHxJq@t@g@f@_BhAc@VoGxCu@h@_@\\Yj@a@hBSf@MFKPCVBVDHJJLDNEVLZVpC`FZb@fFjG~DpE|CvDj@fAZpA@NOxAIpAMtC?l@CTGLDFx@E|A_@VnBNzAgBl@a@T{@`A"
+  },
+  "map_urls": {
+    "url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/CZH4K54C5UY2W3ROYEWGPGWHZWNHTCOEYHECRCP63XJQXBOS52ZG6KP2NX4HPEZGBCK3DZKFVLCDB6BJ55B4OKQ7ZVEIWT5X5I3DGAA=",
+    "retina_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/QJMDMOU4C7AQXFJE34ZXNQZJBND26K5PMJ7OOKOCFN7FI5BQRBGI57NGC7DKNJG3YHGR55MNJ4ZQ6U5INRTIZJJ266L22YZRX6QMNTY=",
+    "light_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/QJMDMOU4C7AQXFJE34ZXNQZJBND26K5PMJ7OOKOCFN7FI5BQRBGI57NGC7DKNJG3YHGR55MNJ4ZQ6U5INRTIZJJ266L22YZRX6QMNTY=",
+    "dark_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/TRUNGXFXDGKZOZ4X3RAC366XPS3FIJYVSMXXSAGOXNJRDGZGJZDB2W7OZ2DRISQUVFMO7SNPHM7CIP4MKAQLNCEQ5YFFMFU2XWFOEJA="
+  },
+  "name": "Dag 2: Col du Galibier",
+  "private": false,
+  "resource_state": 3,
+  "starred": false,
+  "sub_type": 1,
+  "created_at": "2026-05-04T18:01:56Z",
+  "updated_at": "2026-05-04T18:01:57Z",
+  "timestamp": 1777917716,
+  "type": 1,
+  "estimated_moving_time": 11577,
+  "waypoints": [],
+  "segments": [
+    {
+      "id": 681588,
+      "resource_state": 2,
+      "name": "D33 Climb",
+      "activity_type": "Ride",
+      "distance": 4153.67,
+      "average_grade": 3.8,
+      "maximum_grade": 8.4,
+      "elevation_high": 1468.6,
+      "elevation_low": 1311.8,
+      "start_latlng": [
+        45.03984002396464,
+        6.2590456288307905
+      ],
+      "end_latlng": [
+        45.046413112431765,
+        6.308165928348899
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "La Grave",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 690650,
+      "resource_state": 2,
+      "name": "D902 Climb",
+      "activity_type": "Ride",
+      "distance": 1367.32,
+      "average_grade": 6.6,
+      "maximum_grade": 9.8,
+      "elevation_high": 2164.2,
+      "elevation_low": 2074.6,
+      "start_latlng": [
+        45.036441,
+        6.404456
+      ],
+      "end_latlng": [
+        45.037444,
+        6.396014
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Le Monêtier Les Bains",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 866743,
+      "resource_state": 2,
+      "name": "Traverse Et Cotariol Climb",
+      "activity_type": "Ride",
+      "distance": 866.906,
+      "average_grade": 11.8,
+      "maximum_grade": 31.1,
+      "elevation_high": 1300.2,
+      "elevation_low": 1197.9,
+      "start_latlng": [
+        45.0427742004394,
+        6.13218688964844
+      ],
+      "end_latlng": [
+        45.0357666015625,
+        6.13141584396362
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Mont De Lans",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 921727,
+      "resource_state": 2,
+      "name": "Traverse Et Cotariol Climb",
+      "activity_type": "Ride",
+      "distance": 958.85,
+      "average_grade": 5.4,
+      "maximum_grade": 217.2,
+      "elevation_high": 1011.6,
+      "elevation_low": 959.8,
+      "start_latlng": [
+        45.045209219679236,
+        6.1256075743585825
+      ],
+      "end_latlng": [
+        45.04070185124874,
+        6.125919297337532
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Freney D'Oisans",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 921728,
+      "resource_state": 2,
+      "name": "Vierge De Mizoen Climb",
+      "activity_type": "Ride",
+      "distance": 800.68,
+      "average_grade": 6.0,
+      "maximum_grade": 53.7,
+      "elevation_high": 1051.0,
+      "elevation_low": 1002.6,
+      "start_latlng": [
+        45.043090023100376,
+        6.128428168594837
+      ],
+      "end_latlng": [
+        45.04553284496069,
+        6.135240979492664
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mont De Lans",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 1398248,
+      "resource_state": 2,
+      "name": "D902 Climb",
+      "activity_type": "Ride",
+      "distance": 1241.78,
+      "average_grade": 10.5,
+      "maximum_grade": 41.1,
+      "elevation_high": 2350.3,
+      "elevation_low": 2219.8,
+      "start_latlng": [
+        45.04326480849952,
+        6.401454167503987
+      ],
+      "end_latlng": [
+        45.05023985417532,
+        6.391883939412474
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Le Monêtier Les Bains",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 1795281,
+      "resource_state": 2,
+      "name": "Traverse Et Cotariol Climb",
+      "activity_type": "Ride",
+      "distance": 1188.53,
+      "average_grade": 9.7,
+      "maximum_grade": 18.8,
+      "elevation_high": 1210.4,
+      "elevation_low": 1095.4,
+      "start_latlng": [
+        45.040962,
+        6.136204
+      ],
+      "end_latlng": [
+        45.037933,
+        6.13404
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Mont De Lans",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 4355022,
+      "resource_state": 2,
+      "name": "Bons to La Rivoire descent",
+      "activity_type": "Ride",
+      "distance": 5497.2,
+      "average_grade": -6.4,
+      "maximum_grade": 0.0,
+      "elevation_high": 1322.4,
+      "elevation_low": 972.6,
+      "start_latlng": [
+        45.035107,
+        6.111384
+      ],
+      "end_latlng": [
+        45.034905,
+        6.092027
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mont De Lans",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 4748714,
+      "resource_state": 2,
+      "name": "Climb le Freney d'Oisans",
+      "activity_type": "Ride",
+      "distance": 6287.1,
+      "average_grade": 2.9,
+      "maximum_grade": 65.2,
+      "elevation_high": 1054.0,
+      "elevation_low": 749.7,
+      "start_latlng": [
+        45.028138,
+        6.072071
+      ],
+      "end_latlng": [
+        45.042841,
+        6.124139
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Bourg D'Oisans",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 5869636,
+      "resource_state": 2,
+      "name": "Galibier sud: 1er lacet",
+      "activity_type": "Ride",
+      "distance": 943.4,
+      "average_grade": 5.3,
+      "maximum_grade": 11.0,
+      "elevation_high": 1984.4,
+      "elevation_low": 1934.2,
+      "start_latlng": [
+        45.035579,
+        6.405045
+      ],
+      "end_latlng": [
+        45.039893,
+        6.400463
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Monêtier Les Bains",
+      "state": "PACA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 7515974,
+      "resource_state": 2,
+      "name": "Jimbo's 7of9 Borg Sprint",
+      "activity_type": "Ride",
+      "distance": 459.7,
+      "average_grade": -0.7,
+      "maximum_grade": 10.6,
+      "elevation_high": 785.2,
+      "elevation_low": 780.8,
+      "start_latlng": [
+        45.057974,
+        6.036511
+      ],
+      "end_latlng": [
+        45.0549,
+        6.032647
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Bourg D'Oisans",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 9638050,
+      "resource_state": 2,
+      "name": "Descent to D1091",
+      "activity_type": "Ride",
+      "distance": 2431.8,
+      "average_grade": -9.7,
+      "maximum_grade": -6.5,
+      "elevation_high": 1194.3,
+      "elevation_low": 959.3,
+      "start_latlng": [
+        45.024285,
+        6.090421
+      ],
+      "end_latlng": [
+        45.034,
+        6.092091
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mont-de-Lans",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 9841908,
+      "resource_state": 2,
+      "name": "Full gas ",
+      "activity_type": "Ride",
+      "distance": 1149.2,
+      "average_grade": -18.4,
+      "maximum_grade": 5.3,
+      "elevation_high": 959.4,
+      "elevation_low": 739.1,
+      "start_latlng": [
+        45.027169,
+        6.078823
+      ],
+      "end_latlng": [
+        45.028941,
+        6.071116
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mont-de-Lans",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 9894544,
+      "resource_state": 2,
+      "name": "Max Power test",
+      "activity_type": "Ride",
+      "distance": 634.5,
+      "average_grade": 43.0,
+      "maximum_grade": 48.6,
+      "elevation_high": 1095.9,
+      "elevation_low": 795.0,
+      "start_latlng": [
+        45.031169,
+        6.07696
+      ],
+      "end_latlng": [
+        45.02665,
+        6.079881
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mont-de-Lans",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 11034851,
+      "resource_state": 2,
+      "name": "Déviation Chambon descente",
+      "activity_type": "Ride",
+      "distance": 5179.8,
+      "average_grade": -0.7,
+      "maximum_grade": 13.0,
+      "elevation_high": 1127.6,
+      "elevation_low": 1061.6,
+      "start_latlng": [
+        45.0382,
+        6.191783
+      ],
+      "end_latlng": [
+        45.041953,
+        6.136165
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mizoën",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12445316,
+      "resource_state": 2,
+      "name": "Rush dernière épingle - sommet",
+      "activity_type": "Ride",
+      "distance": 389.1,
+      "average_grade": 8.2,
+      "maximum_grade": 37.3,
+      "elevation_high": 2617.0,
+      "elevation_low": 2584.8,
+      "start_latlng": [
+        45.062564,
+        6.41159
+      ],
+      "end_latlng": [
+        45.0642,
+        6.408128
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Monêtier-les-Bains",
+      "state": null,
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12688057,
+      "resource_state": 2,
+      "name": "La Grave -> Chambon",
+      "activity_type": "Ride",
+      "distance": 7512.1,
+      "average_grade": -3.8,
+      "maximum_grade": 28.5,
+      "elevation_high": 1422.0,
+      "elevation_low": 1131.4,
+      "start_latlng": [
+        45.044022,
+        6.294532
+      ],
+      "end_latlng": [
+        45.037706,
+        6.2039
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Grave",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13043959,
+      "resource_state": 2,
+      "name": "Col du Lautaret - Villar-d'Arene descent",
+      "activity_type": "Ride",
+      "distance": 7341.7,
+      "average_grade": -5.7,
+      "maximum_grade": 13.1,
+      "elevation_high": 2048.7,
+      "elevation_low": 1626.9,
+      "start_latlng": [
+        45.034298,
+        6.405225
+      ],
+      "end_latlng": [
+        45.045572,
+        6.333784
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Villar-d'Arène",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13209221,
+      "resource_state": 2,
+      "name": "SECOND HALF: GALIBIER",
+      "activity_type": "Ride",
+      "distance": 4176.2,
+      "average_grade": 6.5,
+      "maximum_grade": 15.4,
+      "elevation_high": 2582.0,
+      "elevation_low": 2312.0,
+      "start_latlng": [
+        45.051695,
+        6.391989
+      ],
+      "end_latlng": [
+        45.06408,
+        6.407952
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Le Monêtier-les-Bains",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13218585,
+      "resource_state": 2,
+      "name": "GALIBIER: FROM THE TUNNEL TO THE TOP",
+      "activity_type": "Ride",
+      "distance": 861.8,
+      "average_grade": 9.2,
+      "maximum_grade": 15.4,
+      "elevation_high": 2582.0,
+      "elevation_low": 2502.4,
+      "start_latlng": [
+        45.062787,
+        6.407019
+      ],
+      "end_latlng": [
+        45.06408,
+        6.407952
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Valloire",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 15112933,
+      "resource_state": 2,
+      "name": "Les Freux - La Grave",
+      "activity_type": "Ride",
+      "distance": 1342.7,
+      "average_grade": 5.1,
+      "maximum_grade": 6.9,
+      "elevation_high": 1455.3,
+      "elevation_low": 1387.0,
+      "start_latlng": [
+        45.04422,
+        6.28463
+      ],
+      "end_latlng": [
+        45.04439,
+        6.3011
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Grave",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 15487744,
+      "resource_state": 2,
+      "name": "4 kms to Galibier Tunnel",
+      "activity_type": "Ride",
+      "distance": 3826.5,
+      "average_grade": 5.7,
+      "maximum_grade": 11.7,
+      "elevation_high": 2525.9,
+      "elevation_low": 2309.4,
+      "start_latlng": [
+        45.049055,
+        6.39419
+      ],
+      "end_latlng": [
+        45.062046,
+        6.406956
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Le Monêtier-les-Bains",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17695374,
+      "resource_state": 2,
+      "name": "Tunnel-> La Rivoire = it burns!",
+      "activity_type": "Ride",
+      "distance": 982.6,
+      "average_grade": -5.6,
+      "maximum_grade": 43.8,
+      "elevation_high": 986.1,
+      "elevation_low": 930.7,
+      "start_latlng": [
+        45.02729,
+        6.081095
+      ],
+      "end_latlng": [
+        45.032354,
+        6.089422
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mont-de-Lans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17914795,
+      "resource_state": 2,
+      "name": "avant le tunnel Galibier",
+      "activity_type": "Ride",
+      "distance": 2611.7,
+      "average_grade": 5.5,
+      "maximum_grade": 16.5,
+      "elevation_high": 2540.7,
+      "elevation_low": 2395.9,
+      "start_latlng": [
+        45.05328,
+        6.398314
+      ],
+      "end_latlng": [
+        45.062134,
+        6.405907
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Le Monêtier-les-Bains",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18160840,
+      "resource_state": 2,
+      "name": "Le Clapier avant tunnel",
+      "activity_type": "Ride",
+      "distance": 651.2,
+      "average_grade": 8.2,
+      "maximum_grade": 12.2,
+      "elevation_high": 761.0,
+      "elevation_low": 707.4,
+      "start_latlng": [
+        45.029048,
+        6.072509
+      ],
+      "end_latlng": [
+        45.029138,
+        6.076498
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mont-de-Lans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18160848,
+      "resource_state": 2,
+      "name": "Le Clapier après tunnel",
+      "activity_type": "Ride",
+      "distance": 2410.4,
+      "average_grade": 6.3,
+      "maximum_grade": 15.4,
+      "elevation_high": 940.2,
+      "elevation_low": 788.8,
+      "start_latlng": [
+        45.027314,
+        6.080861
+      ],
+      "end_latlng": [
+        45.04073,
+        6.098762
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Mont-de-Lans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18239632,
+      "resource_state": 2,
+      "name": "Galibier 1ère Partie",
+      "activity_type": "Ride",
+      "distance": 3674.3,
+      "average_grade": 6.6,
+      "maximum_grade": 13.7,
+      "elevation_high": 2319.2,
+      "elevation_low": 2077.6,
+      "start_latlng": [
+        45.035729,
+        6.404896
+      ],
+      "end_latlng": [
+        45.049772,
+        6.393672
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Le Monêtier-les-Bains",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18325341,
+      "resource_state": 2,
+      "name": "Descente Galibier - Lautaret",
+      "activity_type": "Ride",
+      "distance": 8465.9,
+      "average_grade": -6.5,
+      "maximum_grade": -0.5,
+      "elevation_high": 2598.2,
+      "elevation_low": 2045.4,
+      "start_latlng": [
+        45.063985,
+        6.407995
+      ],
+      "end_latlng": [
+        45.035941,
+        6.404691
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Monêtier-les-Bains",
+      "state": null,
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18328881,
+      "resource_state": 2,
+      "name": "Col du Galibier (par Col du Lautaret)",
+      "activity_type": "Ride",
+      "distance": 8605.8,
+      "average_grade": 6.5,
+      "maximum_grade": 43.5,
+      "elevation_high": 2598.4,
+      "elevation_low": 2039.6,
+      "start_latlng": [
+        45.035571,
+        6.404991
+      ],
+      "end_latlng": [
+        45.064041,
+        6.407926
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Le Monêtier-les-Bains",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18693066,
+      "resource_state": 2,
+      "name": "HRA18 - Lautaret 1st half",
+      "activity_type": "Ride",
+      "distance": 13607.4,
+      "average_grade": 3.6,
+      "maximum_grade": 43.5,
+      "elevation_high": 1518.9,
+      "elevation_low": 1018.4,
+      "start_latlng": [
+        45.044123,
+        6.162201
+      ],
+      "end_latlng": [
+        45.048292,
+        6.322279
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Mizoën",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21327852,
+      "resource_state": 2,
+      "name": "sprinting too early",
+      "activity_type": "Ride",
+      "distance": 510.1,
+      "average_grade": 8.3,
+      "maximum_grade": 20.5,
+      "elevation_high": 2605.7,
+      "elevation_low": 2563.4,
+      "start_latlng": [
+        45.062841,
+        6.40713
+      ],
+      "end_latlng": [
+        45.062551,
+        6.411628
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Monêtier-les-Bains",
+      "state": null,
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21362208,
+      "resource_state": 2,
+      "name": "sprint -7 ",
+      "activity_type": "Ride",
+      "distance": 349.7,
+      "average_grade": 7.7,
+      "maximum_grade": 9.0,
+      "elevation_high": 1170.0,
+      "elevation_low": 1142.9,
+      "start_latlng": [
+        45.037436,
+        6.136347
+      ],
+      "end_latlng": [
+        45.038552,
+        6.133499
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mont-de-Lans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22295770,
+      "resource_state": 2,
+      "name": "Col du Galibier de l'ouest Descent ",
+      "activity_type": "Ride",
+      "distance": 16875.5,
+      "average_grade": -6.2,
+      "maximum_grade": 1.7,
+      "elevation_high": 2628.4,
+      "elevation_low": 1588.7,
+      "start_latlng": [
+        45.063989,
+        6.408091
+      ],
+      "end_latlng": [
+        45.046272,
+        6.329096
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Monêtier-les-Bains",
+      "state": null,
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 23337898,
+      "resource_state": 2,
+      "name": "D1091-confinement-2020",
+      "activity_type": "Ride",
+      "distance": 2251.4,
+      "average_grade": 4.1,
+      "maximum_grade": 22.8,
+      "elevation_high": 1439.6,
+      "elevation_low": 1346.6,
+      "start_latlng": [
+        45.042838,
+        6.268268
+      ],
+      "end_latlng": [
+        45.044055,
+        6.294912
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "La Grave",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 30505058,
+      "resource_state": 2,
+      "name": "montée jusqu'a la maison du villar",
+      "activity_type": "Ride",
+      "distance": 382.4,
+      "average_grade": 7.6,
+      "maximum_grade": 42.7,
+      "elevation_high": 1655.0,
+      "elevation_low": 1625.8,
+      "start_latlng": [
+        45.043843,
+        6.333355
+      ],
+      "end_latlng": [
+        45.042378,
+        6.337361
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Villar-d'Arène",
+      "state": "Provence-Alpes-Côte d'Azur",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 32211041,
+      "resource_state": 2,
+      "name": "route de secoure - MDL",
+      "activity_type": "Ride",
+      "distance": 2497.8,
+      "average_grade": 7.1,
+      "maximum_grade": 18.5,
+      "elevation_high": 1221.2,
+      "elevation_low": 1043.6,
+      "start_latlng": [
+        45.042186,
+        6.136057
+      ],
+      "end_latlng": [
+        45.036979,
+        6.132148
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Les Deux Alpes",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 34751446,
+      "resource_state": 2,
+      "name": "Marmotte 2023: La Grave neutralised zone that wasn't",
+      "activity_type": "Ride",
+      "distance": 841.6,
+      "average_grade": -2.0,
+      "maximum_grade": 13.9,
+      "elevation_high": 1478.6,
+      "elevation_low": 1461.6,
+      "start_latlng": [
+        45.046642,
+        6.308839
+      ],
+      "end_latlng": [
+        45.044397,
+        6.300339
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Grave",
+      "state": "Hautes-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 34928873,
+      "resource_state": 2,
+      "name": "Lautaret Start",
+      "activity_type": "Ride",
+      "distance": 4396.6,
+      "average_grade": -5.0,
+      "maximum_grade": 0.6,
+      "elevation_high": 2054.2,
+      "elevation_low": 1835.0,
+      "start_latlng": [
+        45.033347,
+        6.404184
+      ],
+      "end_latlng": [
+        45.039001,
+        6.36291
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Villar-d'Arêne",
+      "state": "Hautes-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 35381700,
+      "resource_state": 2,
+      "name": "SMALL DESCENT  ON THE WAY UP",
+      "activity_type": "Ride",
+      "distance": 1601.9,
+      "average_grade": -5.3,
+      "maximum_grade": -0.4,
+      "elevation_high": 1008.6,
+      "elevation_low": 923.2,
+      "start_latlng": [
+        45.039175,
+        6.110004
+      ],
+      "end_latlng": [
+        45.045142,
+        6.125472
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Les Deux Alpes",
+      "state": "Isère",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 37266099,
+      "resource_state": 2,
+      "name": "🅼🆁🆂🅿🅾🅲🅺[Discesa] Col du Galibier-Col du Lautaret, Segmento D1 (Colle-Bivio Tunnel) 🇫🇷",
+      "activity_type": "Ride",
+      "distance": 838.7,
+      "average_grade": -9.1,
+      "maximum_grade": -2.4,
+      "elevation_high": 2623.2,
+      "elevation_low": 2547.2,
+      "start_latlng": [
+        45.063954,
+        6.4081
+      ],
+      "end_latlng": [
+        45.062867,
+        6.407098
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Valloire",
+      "state": "Savoy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 39861991,
+      "resource_state": 2,
+      "name": "Mémorial Marco Pantani Stèle Les Deux Alpes => Stèle Galibier : Section #02",
+      "activity_type": "Ride",
+      "distance": 7433.1,
+      "average_grade": 2.6,
+      "maximum_grade": 18.8,
+      "elevation_high": 1287.4,
+      "elevation_low": 1074.2,
+      "start_latlng": [
+        45.045045,
+        6.15627
+      ],
+      "end_latlng": [
+        45.038655,
+        6.244
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Mizoën",
+      "state": "Isère",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 39862068,
+      "resource_state": 2,
+      "name": "Mémorial Marco Pantani Stèle Les Deux Alpes => Stèle Galibier : Section #07",
+      "activity_type": "Ride",
+      "distance": 600.2,
+      "average_grade": -5.6,
+      "maximum_grade": -3.3,
+      "elevation_high": 1540.6,
+      "elevation_low": 1506.8,
+      "start_latlng": [
+        45.048155,
+        6.320757
+      ],
+      "end_latlng": [
+        45.048717,
+        6.31456
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Grave",
+      "state": "Hautes-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 39862098,
+      "resource_state": 2,
+      "name": "Mémorial Marco Pantani Stèle Les Deux Alpes => Stèle Galibier : Section #08",
+      "activity_type": "Ride",
+      "distance": 4617.6,
+      "average_grade": -3.7,
+      "maximum_grade": 3.7,
+      "elevation_high": 1494.0,
+      "elevation_low": 1324.0,
+      "start_latlng": [
+        45.046733,
+        6.310335
+      ],
+      "end_latlng": [
+        45.03922,
+        6.253742
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Grave",
+      "state": "Hautes-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 39905205,
+      "resource_state": 2,
+      "name": "2ème lacets galibier",
+      "activity_type": "Ride",
+      "distance": 913.8,
+      "average_grade": 6.8,
+      "maximum_grade": 8.8,
+      "elevation_high": 2164.1,
+      "elevation_low": 2102.0,
+      "start_latlng": [
+        45.040487,
+        6.401018
+      ],
+      "end_latlng": [
+        45.038262,
+        6.393373
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Monêtier-les-Bains",
+      "state": "Hautes-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 39905228,
+      "resource_state": 2,
+      "name": "Relance 2/3 galibier",
+      "activity_type": "Ride",
+      "distance": 506.4,
+      "average_grade": 5.8,
+      "maximum_grade": 9.4,
+      "elevation_high": 2358.3,
+      "elevation_low": 2328.9,
+      "start_latlng": [
+        45.051495,
+        6.390208
+      ],
+      "end_latlng": [
+        45.052372,
+        6.393813
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Monêtier-les-Bains",
+      "state": "Hautes-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    }
+  ]
+}

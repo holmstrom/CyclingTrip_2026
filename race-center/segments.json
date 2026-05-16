@@ -1,0 +1,305 @@
+{
+  "stages": [
+    {
+      "name": "Dag 1: Alpe d'Huez + Col de Sarenne",
+      "route_id": "3486425133972935152",
+      "distance_km": 57.8,
+      "elevation_gain_m": 2014,
+      "estimated_time_h": 1.9,
+      "climbs": [
+        {
+          "name": "Alpe d'Huez",
+          "strava_segment_name": "Alpe d'Huez",
+          "strava_segment_id": 652851,
+          "distance_km": 12.02,
+          "avg_gradient_pct": 8.8,
+          "peak_elevation_m": 1775.7,
+          "starts_at_m": 728.4,
+          "elevation_gain_m": 1047,
+          "category": "HC",
+          "points": [
+            25,
+            20,
+            16,
+            14,
+            12,
+            10
+          ],
+          "strava_url": "https://www.strava.com/segments/652851"
+        },
+        {
+          "name": "Col de Sarenne West",
+          "strava_segment_name": "Col de Sarenne West",
+          "strava_segment_id": 2053659,
+          "distance_km": 3.15,
+          "avg_gradient_pct": 7.9,
+          "peak_elevation_m": 1990.6,
+          "starts_at_m": 1740.4,
+          "elevation_gain_m": 250,
+          "category": "Cat2",
+          "points": [
+            10,
+            8,
+            6,
+            4,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/2053659"
+        }
+      ],
+      "sprints": [
+        {
+          "name": "Alpe d'Huez Final Sprint",
+          "strava_segment_name": "Hairpin 1 to Marked Official Chrono Finish Line",
+          "strava_segment_id": 21518971,
+          "distance_km": 0.62,
+          "avg_gradient_pct": 8.0,
+          "peak_elevation_m": 1770.8,
+          "starts_at_m": 1721.8,
+          "elevation_gain_m": 49,
+          "category": "Sprint",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/21518971"
+        }
+      ],
+      "descents": [
+        {
+          "name": "Sarenne-Romanche Descent",
+          "strava_segment_name": "Sarenne-Romanche",
+          "strava_segment_id": 20910769,
+          "distance_km": 13.14,
+          "avg_gradient_pct": -7.4,
+          "peak_elevation_m": 1994.1,
+          "starts_at_m": 1024.1,
+          "elevation_gain_m": 970,
+          "category": "Descent",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/20910769"
+        }
+      ]
+    },
+    {
+      "name": "Dag 2: Col du Galibier",
+      "route_id": "3486425940246209816",
+      "distance_km": 99.3,
+      "elevation_gain_m": 2790,
+      "estimated_time_h": 3.2,
+      "climbs": [
+        {
+          "name": "Col du Galibier",
+          "strava_segment_name": "Col du Galibier (par Col du Lautaret)",
+          "strava_segment_id": 18328881,
+          "distance_km": 8.61,
+          "avg_gradient_pct": 6.5,
+          "peak_elevation_m": 2598.4,
+          "starts_at_m": 2039.6,
+          "elevation_gain_m": 559,
+          "category": "HC",
+          "points": [
+            25,
+            20,
+            16,
+            14,
+            12,
+            10
+          ],
+          "strava_url": "https://www.strava.com/segments/18328881"
+        }
+      ],
+      "sprints": [
+        {
+          "name": "Galibier 1ère Partie (Opener)",
+          "strava_segment_name": "Galibier 1ère Partie",
+          "strava_segment_id": 18239632,
+          "distance_km": 3.67,
+          "avg_gradient_pct": 6.6,
+          "peak_elevation_m": 2319.2,
+          "starts_at_m": 2077.6,
+          "elevation_gain_m": 242,
+          "category": "Sprint",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/18239632"
+        },
+        {
+          "name": "Galibier Tunnel Punch",
+          "strava_segment_name": "GALIBIER: FROM THE TUNNEL TO THE TOP",
+          "strava_segment_id": 13218585,
+          "distance_km": 0.86,
+          "avg_gradient_pct": 9.2,
+          "peak_elevation_m": 2582.0,
+          "starts_at_m": 2502.4,
+          "elevation_gain_m": 80,
+          "category": "Sprint",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/13218585"
+        }
+      ],
+      "descents": [
+        {
+          "name": "Galibier → Lautaret Descent",
+          "strava_segment_name": "Descente Galibier - Lautaret",
+          "strava_segment_id": 18325341,
+          "distance_km": 8.47,
+          "avg_gradient_pct": -6.5,
+          "peak_elevation_m": 2598.2,
+          "starts_at_m": 2045.4,
+          "elevation_gain_m": 553,
+          "category": "Descent",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/18325341"
+        }
+      ]
+    },
+    {
+      "name": "Dag 3: Croix de Fer + Glandon",
+      "route_id": "3486430726403184920",
+      "distance_km": 78.7,
+      "elevation_gain_m": 1890,
+      "estimated_time_h": 2.5,
+      "climbs": [
+        {
+          "name": "Col de la Croix de Fer",
+          "strava_segment_name": "Col de la Croix de Fer (par Barrage du Verney)",
+          "strava_segment_id": 37857789,
+          "distance_km": 27.61,
+          "avg_gradient_pct": 6.7,
+          "peak_elevation_m": 2067.8,
+          "starts_at_m": 773.1,
+          "elevation_gain_m": 1295,
+          "category": "HC",
+          "points": [
+            25,
+            20,
+            16,
+            14,
+            12,
+            10
+          ],
+          "strava_url": "https://www.strava.com/segments/37857789"
+        },
+        {
+          "name": "Glandon (Second Ramp)",
+          "strava_segment_name": "Second ramp up South of Glandon to Café",
+          "strava_segment_id": 10033700,
+          "distance_km": 12.99,
+          "avg_gradient_pct": 5.5,
+          "peak_elevation_m": 1888.8,
+          "starts_at_m": 1172.0,
+          "elevation_gain_m": 717,
+          "category": "Cat1",
+          "points": [
+            15,
+            12,
+            10,
+            8,
+            6,
+            4
+          ],
+          "strava_url": "https://www.strava.com/segments/10033700"
+        }
+      ],
+      "sprints": [
+        {
+          "name": "Croix de Fer Final 1k",
+          "strava_segment_name": "Final 1k",
+          "strava_segment_id": 12632508,
+          "distance_km": 1.14,
+          "avg_gradient_pct": 6.6,
+          "peak_elevation_m": 2064.3,
+          "starts_at_m": 1986.1,
+          "elevation_gain_m": 78,
+          "category": "Sprint",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/12632508"
+        },
+        {
+          "name": "Lac du Verney Flat TT",
+          "strava_segment_name": "Lac du Verney sprint",
+          "strava_segment_id": 2485038,
+          "distance_km": 2.9,
+          "avg_gradient_pct": -1.1,
+          "peak_elevation_m": 793.7,
+          "starts_at_m": 740.9,
+          "elevation_gain_m": 53,
+          "category": "Sprint",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/2485038"
+        },
+        {
+          "name": "Glandon Final Push",
+          "strava_segment_name": "Glandon Final Push (Lac - Restaurant)",
+          "strava_segment_id": 12738518,
+          "distance_km": 2.3,
+          "avg_gradient_pct": 7.2,
+          "peak_elevation_m": 1894.0,
+          "starts_at_m": 1725.3,
+          "elevation_gain_m": 169,
+          "category": "Sprint",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/12738518"
+        }
+      ],
+      "descents": [
+        {
+          "name": "Glandon Descent",
+          "strava_segment_name": "Glandon Descent ",
+          "strava_segment_id": 10058561,
+          "distance_km": 11.55,
+          "avg_gradient_pct": -5.1,
+          "peak_elevation_m": 1923.8,
+          "starts_at_m": 1333.4,
+          "elevation_gain_m": 590,
+          "category": "Descent",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/10058561"
+        }
+      ]
+    }
+  ]
+}

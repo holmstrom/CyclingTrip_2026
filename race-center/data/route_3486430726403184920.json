@@ -1,0 +1,1453 @@
+{
+  "athlete": {
+    "id": 100103171,
+    "username": null,
+    "resource_state": 2,
+    "firstname": "Rasmus",
+    "lastname": "Jørgensen",
+    "bio": null,
+    "city": null,
+    "state": null,
+    "country": null,
+    "sex": "M",
+    "premium": true,
+    "summit": true,
+    "created_at": "2022-03-13T14:49:03Z",
+    "updated_at": "2026-05-09T04:11:00Z",
+    "badge_type_id": 1,
+    "profile_medium": "avatar/athlete/medium.png",
+    "profile": "avatar/athlete/large.png",
+    "friend": null,
+    "follower": null
+  },
+  "description": null,
+  "distance": 78668.89260737084,
+  "elevation_gain": 1889.952520660489,
+  "id": 3486430726403184920,
+  "id_str": "3486430726403184920",
+  "map": {
+    "id": "r3486430726403184920",
+    "summary_polyline": "gx~qGylxc@y@dAsCqHyHvAm]~SPdAyCrByBFw@|BqlAbz@kkFfx@wD_j@_Z}_@wIwZeFeE{a@mwAF_DsG}TpFkNcPbSjOoZ]aCqFgJaZgGyM{AiKzE{RcDcSyMP{KiB_D{BzAeB`NyGjFaDxIgHxAiUnOiKdB}JzHyUfHid@|@a`@xU_YfFeC|BgD_BuE^{OdHk`@fGaLqGmVuGaSiLePaC{Ep@eSgF{G{HgCoHgQiHwA}B_Dl@]oF}IiFfBaJuAgEpAyDMwa@fAxG|AsI~@zK`BmMdBcCxDse@fKeXlLaj@tF_HpBO{AqA_HrCpLwMnAyMb@{S{CgJkJcN]mKgDmQH_r@gMuk@~@jSzCtNsIoX_BwL`@sMoCsZq@}[kMag@oTgWgn@kb@gE}J}EP_CoFwIw`@i@uViIqYW}KmIeWuHoMgPc{@yMeUiIuEaCg^n@gUcA{F|CeCjHo[nGoKzGwBfEmRnOuZ`E}FbK}COcHw@[vA|Bi@jFmKrCmTra@gElR{GvBoGnKkHn[eDlDjArESf_@dBfThItExMdUfPb{@tHnMlIdWV|KhIpYh@tVlLnf@fGd@fE|Jfn@jb@pLvMrJ|OtIr_@p@|[tBtOHj[rDlSlF~N{CuNs@uRzL~j@d@rPiAbZ`EtWSnE|AfH~HxJzCfJaBpa@cMzN~GsCzApAqBNuF~GmL`j@gJjUyElh@eBbCaBlM_A{K}ArIgAyGLva@qAxDtAfEgB`J|IhF\\nF~Cm@vA|BfQhHfCnHzGzHdSfFzEq@dP`C`ShLlVtG`LpGj`@gGzOeHtE_@fD~AdC}B~XgF``@yUhd@}@xUgH|J{HhKeBhUoOfHyA`DyIxGkFdBaNzB{AhB~CQzKbSxMrT`DzJ{Exh@pKpF`LqOt[~OmSoFfPdj@npBdFdEvIvZpWd\\|LkXtEkFrS_K`PuCpUBty@pOtm@~Azz@WrFxAjCfFdhBeoAvRiDf@jEuDpB",
+    "resource_state": 3,
+    "polyline": "gx~qGylxc@y@dA}AkDu@eCaAHmBXoAd@Y?_@LeMzImAr@{CvB]ZIAMOINiAt@Od@}AbAMAIc@MBDh@JZyCrB_@Hi@FOMOCOFKLEj@e@bAwJ`HaFfD}IpGoFrDuFlD}EnDiGxEoKtHuA|@eAf@}@PwkAdQ{Df@eA@WBqAf@eIhAsEt@eUdDi@Nm@^a@LY@iAEw@Fi~AnUWF_@Pq@f@Yu@OsBkBw`@Kw@UeAWq@Yg@gGwGuMyPoAqBiAkC_@gAqDuL_@cD[iAYi@SUe@UgA[c@UMQWk@k@gD}CsK?OWkAaAeCwBoHmAwDq@kCIu@]w@QU_BeFeLq_@G]LuA@k@i@gBMk@k@cBWk@kC{HIa@A{@D[hD}IJQl@YDIH[AQEMGEMCKFaLrOMR_@fBMNGEGDOOCIAUPa@zNwXH[@Yi@kAiE{Hg@k@_@QwASsA_@eFiAwE_AwEw@wEq@wEk@i@@a@J[PmDjC_Ab@e@Jw@@m@Ig@Q_Bw@k@O_AGcBHiAIuAQuAe@sCoAmEkC{@q@m@u@y@w@yAu@c@g@GYC]@W`@mBHu@OgDYwASa@MMQK[Ke@AQFk@d@Wn@[hAk@lIGb@Ud@[`@UJMB?TGPORg@d@UHk@BWH[Rc@j@sAxBK^YvBUt@QPy@d@iAXoCPSF}I~Ec@`@gAvA_@PkAZYPqArAg@`@g@NyDTSD{@Zw@J_@PYV[l@UVaAn@kAh@cDbC]LcBVe@J_@P{@h@eBHaA\\sAj@w@f@mBp@s@J_AByEk@gAAsCNqDFeCZu@CgA@y@d@q@DeACkALeA^q@NmBr@cAv@]f@[~@]v@w@p@e@Tc@Hc@?a@Ls@`@}ArAkCnAsC`Be@Tc@F_B`@q@F}BFg@Pm@ZaA~@e@Ry@NiAAq@R_@PY@{@Ka@@[P]Xu@bAULc@AmByAUCm@XUN{@?i@Kk@@a@Pm@^eBrAq@XsHdC{@RkARcC@w@FoFp@sE`@q@Li@RkAl@{Bp@a@Am@W{@q@cDyBqBkAaB]iBaAmAa@uE{@s@Qe@UQS_@KqBOq@a@_BwBqAw@sAm@c@O}AE]GiDkCo@Ms@C_Fg@yCo@e@Qa@EgARo@Ba@Tg@DYAqASwBu@i@Ew@?g@GQGoAcBq@g@QGQAWBk@Pa@@SIMIY][i@yD}D]k@{AoFQc@Y[q@a@sBk@s@]}@iAq@m@c@U]My@SeBE[GSUi@qAYUUEUDsAr@Q?MEKMI]HuCCWMUMOw@GUGaAiAiA]iBiAKW@i@DSLUh@i@JQDST}DGm@I[o@y@MYEi@Di@J[l@q@JYDg@Cs@[mE@yBT_JCe@Ko@Ac@J{CAmA@WHIFBDJTvBLlCBHFBJMH_A^kCFeA@iAHERZf@~DJfBKxA@TFHLE`@sARsB^_FJe@RYl@Yb@oAzC{\\JoEPgA^yAj@iAh@qBTm@r@mAxDoJLc@FkAP{@tDkNL{APw@Ri@b@u@Dc@?YQyA?[FWvAiCNe@NwAPe@z@aA~AwAZa@\\y@^i@XSR?t@LLIASaAs@WIe@JyDnBk@d@M?EMBQ|EsFtC{Cx@u@Pc@Fm@HuCFu@Z}BF}@DsA]yE@uBf@gBLyABu@s@gDOe@wAyCcAuA{EqF_@q@k@iBq@}D?a@VoBC}@Ie@g@oAIk@Q_Ce@sCs@wCYgEb@qKK}BDs@f@gEBwAA{AQ_EQwGMu@kAaDeAyEo@uEqAuEyAmEy@oEC{@@m@CYKUOCGFCL@VNl@NvAH|Bj@hGBrAF\\l@dBb@tDXz@f@z@Jn@KRM?KMGaA_AoCWeAa@cA}@aBSs@m@kDw@cCKw@GcBGc@q@}CQyA@o@H_A?eCBw@NwB@m@Co@e@uD@]Jy@@_@Ek@WoAK_Bc@{AUuAQgCKqD?q@NyDCa@_@{ACo@HqCAy@UeCo@wDOq@sBoGs@iCk@uC[eCe@sBuBmFYe@][i@Sc@K[[[q@k@cBS[{EuFwCsC}@mAi@[oAe@{Au@oBoAuB_BcDyCeG_EsFkFi@[}Aq@w@a@qAeA{BgAa@c@Ya@uAuE]aAW_@e@Ya@Ea@DcAh@QDO?MCIG_@o@uAwDW_AOw@y@wG_@wAmBoGc@aCq@_CQ}@KaAc@eM?_AHeCCg@Ic@Oa@]i@y@cASo@Gi@KmCMg@U_@][U_@Ia@K}AKq@u@_Ck@qDC]RuAHkAEk@k@yA[aAi@iAmBiDQk@Ia@KyAeAmESWk@_@USSc@Ke@Oa@Ue@g@u@O_@Ic@Sq@s@k@OYq@gCu@eIkAqFe@gDq@_CEc@Ag@UaBOu@_@eAQs@M_Bq@aC{@kBk@oDS_Aw@}B_@_AOMiB}@SQU_@y@}BOQw@e@KOGOUyAMe@MWU[QOu@UaAu@gAYk@Wy@o@QWIe@@eAC_@i@uC?i@D}@E_@EGQ_CQmAEg@EmACqCQ_B@cDXiBF{@EwFPeCA[Ki@s@sAI[?]Fg@JQRIb@GVMVUX_@N]jBmG`@}@Tw@JsA~@iEz@mF|AwCh@q@lBgDX]\\Sn@OfAk@pBQRUtAoFp@wAJc@R}ADmADa@Rs@zAkDj@c@XYr@gA|@mA\\}@vAmEn@wAtAqC|C}Eb@_@REzAKfCi@bBk@LKXi@Le@Bk@AoBI_AUa@UQWII?H?VHTPT`@H~@@nBCj@Md@Yh@MJcBj@gCh@{AJSDc@^}C|EuApCo@vAwAlE]|@}@lAs@fAYXk@b@{AjDSr@E`@ElAS|AKb@q@vAuAnFSTqBPgAj@o@N]RY\\mBfDi@p@}AvC{@lF_AhEKrAUv@a@|@kBlGO\\Y^WTWLc@FSHKPGf@?\\HZr@rAJh@@ZQdCDvFGz@YhBAbDP~ABpCDlADf@PlAP~BDFD^E|@?h@h@tCB^AdAHd@PVx@n@j@VfAX`At@t@TPNTZLVLd@TxAFNJNv@d@NPx@|BT^RPhB|@NL^~@v@|BR~@j@nDz@jBp@`CL~APr@^dANt@T`B@f@Db@p@~Bd@fDjApFt@dIp@fCNXr@j@Rp@Hb@N^f@t@Td@N`@Jd@Rb@TRj@^RVdAlEJxAH`@Pj@lBhDh@hAZ`Aj@xADj@IjAStAB\\j@pDt@~BJp@J|AH`@T^\\ZT^Lf@JlCFh@Rn@x@bA\\h@N`@Hb@Bf@IdC?~@b@dMJ`AP|@p@~Bb@`ClBnG^vAx@vGNv@V~@tAvD^n@HFLBN?PEbAi@`@E`@Dd@XV^\\`AtAtEX`@`@b@zBfApAdAv@`@|Ap@h@ZrFjFdG~DbDxCtB~AnBnAzAt@nAd@h@Z|@lAvCrCzEtFRZj@bBZp@ZZb@Jh@R\\ZXd@tBlFd@rBZdCj@tCr@hCrBnGNp@n@vDTdC@x@IpCBn@^zAB`@OxD?p@JpDPfCTtAb@zAJ~AVnADj@A^Kx@A\\d@tDBn@Al@OvBCv@?dCI~@An@PxAp@|CFb@FbBJv@v@bCl@jDRr@|@`B`@bAVdA~@nCF`AJLL?JSKo@g@{@Y{@c@uDm@eBG]CsAk@iGI}BOwAOm@AWBMFGNBJTBXAl@Bz@x@nExAlEpAtEn@tEdAxEjA`DLt@PvGP~D@zACvAg@fEEr@J|Bc@pKXfEr@vCd@rCP~BHj@f@nAHd@B|@WnB?`@p@|Dj@hB^p@zEpFbAtAvAxCNd@r@fDCt@MxAg@fBAtB\\xEErAG|@[|BGt@ItCGl@Qb@y@t@uCzC}ErFCPDLL?j@e@xDoBd@KVH`Ar@@RMHu@MS?YR_@h@]x@[`@_BvA{@`AQd@OvAOd@wAhCGV?ZPxA?XEb@c@t@Sh@Qv@MzAuDjNQz@GjAMb@yDnJs@lAUl@i@pBk@hA_@xAQfAKnE{Cz\\c@nAm@XSXKd@_@~ESrBa@rAMDGIAUJyAKgBg@_ES[IDAhAGdA_@jCI~@KLGCCIMmCUwBEKGCIHAV@lAKzC@b@Jn@Bd@U~IAxBZlEBr@Ef@KXm@p@KZEh@Dh@LXn@x@HZFl@U|DERKPi@h@MTERAh@JVhBhAhA\\`AhATFv@FLNLTBVItCH\\JLLDP?rAs@TETDXTh@pARTZFdBDx@R\\Lb@Tp@l@|@hAr@\\rBj@p@`@XZPb@zAnF\\j@xD|DZh@X\\LHRH`@Aj@QVCP@PFp@f@nAbBPFf@Fv@?h@DvBt@pARX@f@E`@Un@CfAS`@Dd@PxCn@~Ef@r@Bn@LhDjC\\F|ADb@NrAl@pAv@~AvBp@`@pBN^JPRd@Tr@PtEz@lA`@hB`A`B\\pBjAbDxBz@p@l@V`@@zBq@jAm@h@Sp@MrEa@nFq@v@GbCAjASz@SrHeCp@YdBsAl@_@`@Qj@Ah@Jz@?TOl@YTBlBxAb@@TMt@cA\\YZQ`@Az@JXA^Qp@ShA@x@Od@S`A_Al@[f@Q|BGp@G~Aa@b@Gd@UrCaBjCoA|AsAr@a@`@Mb@?b@Id@Uv@q@\\w@Z_A\\g@bAw@lBs@p@OdA_@jAMdABp@Ex@e@fAAt@BdC[pDGnCQjABxEj@~@Cr@KlBq@v@g@rAk@`A]dBIz@i@^Qd@KbBW\\MbDcCjAi@`Ao@TWZm@XW^Qv@Kz@[RExDUf@Of@a@pAsAXQjA[^QfAwAb@a@|I_FRGnCQhAYx@e@PQTu@XwBJ_@rAyBb@k@ZSVIj@CTIf@e@NSFQ?ULCTKZa@Te@Fc@j@mIZiAVo@j@e@PGd@@ZJPJLLR`@XvANfDIt@a@lBAVB\\FXb@f@xAt@x@v@l@t@z@p@lEjCrCnAtAd@tAPhAHbBI~@Fj@N~Av@f@Pl@Hv@Ad@K~@c@lDkCZQ`@Kh@AvEj@vEp@vEv@vE~@dFhArA^vAR^Pf@j@hEzHh@jAAXIZ{NvXQ`@@TBHNNFEFDLO^gBLS`LsOJGLBFDDL@PIZEHm@XKPiD|IEZ@z@H`@jCzHVj@j@bBLj@h@fBAj@MtAF\\dLp_@~AdFPT\\v@Ht@p@jClAvDzAlFp@pB|@dDbD~Kj@fDVj@LPb@TfAZd@TRTXh@ZhA^bDpDtL^fAhAjCnApBtMxPjFxFvGoO|AgDfAsBtEkFh@a@tL_GrD}AtDgAbB_@bD_@bBM|CCtOB\\BjTdExFlAxKrB~JpB|@JvAJtZt@~Qh@nSGzc@WnAFx@H~@PxB|@n@l@n@`ARd@VpAxB}AhGyE|EoDtFmDnFsD|IqG`FgDvJaHx@[JBTELQF_@~@u@fGgEjAm@bBwAbSeNv@e@jBs@lBY`AIzC_@`@SDFx@E|A_@VnBNzAgBl@a@Tk@l@"
+  },
+  "map_urls": {
+    "url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/HQOJTLIP27VZNYGLREXO55DIOY6HDEN3ZSBAJ3EHZDWAILRSZEJ7WD4CPDZ3M6AIJBBZWCNHBOQ2BFX6OY64E577UDRB22ZE26EPCZI=",
+    "retina_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/ANJYP4AQGE7XCQ6FWUZD7YMWY3AGBOHCLWUN6YESTF6XVJ5FJH6XBJL3NX7RNBIG4XV6KJXESX2GIBZMFPM4YI5LYEWS3GUDYTCUKDQ=",
+    "light_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/ANJYP4AQGE7XCQ6FWUZD7YMWY3AGBOHCLWUN6YESTF6XVJ5FJH6XBJL3NX7RNBIG4XV6KJXESX2GIBZMFPM4YI5LYEWS3GUDYTCUKDQ=",
+    "dark_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/NWH46FUL4VOA6FCHIGOZVJVRB75XN7PLVEPC6LEEIO6IGFMNOFDJ4CZXRZO6HUQFKUX25DYDZCV2Y2M27QSUE4ZKGDQQUNTLTDQHVVY="
+  },
+  "name": "Dag 3: Col de la Croix de Fer + Col du Glandon",
+  "private": false,
+  "resource_state": 3,
+  "starred": false,
+  "sub_type": 1,
+  "created_at": "2026-05-04T18:14:27Z",
+  "updated_at": "2026-05-04T18:14:26Z",
+  "timestamp": 1777918467,
+  "type": 1,
+  "estimated_moving_time": 9174,
+  "waypoints": [],
+  "segments": [
+    {
+      "id": 938418,
+      "resource_state": 2,
+      "name": "D526 Climb",
+      "activity_type": "Ride",
+      "distance": 2805.79,
+      "average_grade": 8.7,
+      "maximum_grade": 14.9,
+      "elevation_high": 1541.9,
+      "elevation_low": 1297.5,
+      "start_latlng": [
+        45.204274,
+        6.073097
+      ],
+      "end_latlng": [
+        45.204191,
+        6.099558
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Vaujany",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 1514068,
+      "resource_state": 2,
+      "name": "D526 Climb",
+      "activity_type": "Ride",
+      "distance": 862.422,
+      "average_grade": 11.2,
+      "maximum_grade": 32.5,
+      "elevation_high": 1551.0,
+      "elevation_low": 1454.6,
+      "start_latlng": [
+        45.2034856309398,
+        6.0889756380994635
+      ],
+      "end_latlng": [
+        45.20423785014719,
+        6.099448180498605
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Vaujany",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 2485038,
+      "resource_state": 2,
+      "name": "Lac du Verney sprint",
+      "activity_type": "Ride",
+      "distance": 2899.81,
+      "average_grade": -1.1,
+      "maximum_grade": 11.2,
+      "elevation_high": 793.7,
+      "elevation_low": 740.9,
+      "start_latlng": [
+        45.14465714,
+        6.0516181
+      ],
+      "end_latlng": [
+        45.1280899,
+        6.04411173
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Oz",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 4353095,
+      "resource_state": 2,
+      "name": "4 hairpins interrupting the Glandon descent",
+      "activity_type": "Ride",
+      "distance": 832.7,
+      "average_grade": 8.5,
+      "maximum_grade": 31.5,
+      "elevation_high": 1293.6,
+      "elevation_low": 1218.8,
+      "start_latlng": [
+        45.209304,
+        6.056237
+      ],
+      "end_latlng": [
+        45.210884,
+        6.055336
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Vaujany",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 4385095,
+      "resource_state": 2,
+      "name": "I4E1 Afterburner downhill",
+      "activity_type": "Ride",
+      "distance": 1548.5,
+      "average_grade": -8.0,
+      "maximum_grade": 9.1,
+      "elevation_high": 1290.2,
+      "elevation_low": 1166.4,
+      "start_latlng": [
+        45.203774,
+        6.074795
+      ],
+      "end_latlng": [
+        45.209087,
+        6.057443
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Vaujany",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 4469250,
+      "resource_state": 2,
+      "name": "CdG 2 CdlCdF",
+      "activity_type": "Ride",
+      "distance": 2941.5,
+      "average_grade": 6.0,
+      "maximum_grade": 50.7,
+      "elevation_high": 2064.3,
+      "elevation_low": 1885.8,
+      "start_latlng": [
+        45.23856,
+        6.176779
+      ],
+      "end_latlng": [
+        45.22753,
+        6.203388
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Saint Sorlin D'Arves",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 4469271,
+      "resource_state": 2,
+      "name": "296climb",
+      "activity_type": "Ride",
+      "distance": 1166.8,
+      "average_grade": 6.9,
+      "maximum_grade": 38.1,
+      "elevation_high": 2045.6,
+      "elevation_low": 1962.1,
+      "start_latlng": [
+        45.236446,
+        6.191829
+      ],
+      "end_latlng": [
+        45.229836,
+        6.202081
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Saint Sorlin D'Arves",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 4659255,
+      "resource_state": 2,
+      "name": "Route de Savoie Climb",
+      "activity_type": "Ride",
+      "distance": 788.7,
+      "average_grade": -0.4,
+      "maximum_grade": 8.4,
+      "elevation_high": 724.2,
+      "elevation_low": 716.5,
+      "start_latlng": [
+        45.124395,
+        6.028755
+      ],
+      "end_latlng": [
+        45.12079,
+        6.020565
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Oz",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 4791860,
+      "resource_state": 2,
+      "name": "After descent to 2nd lake",
+      "activity_type": "Ride",
+      "distance": 6418.6,
+      "average_grade": 7.9,
+      "maximum_grade": 17.7,
+      "elevation_high": 1704.9,
+      "elevation_low": 1200.7,
+      "start_latlng": [
+        45.208584,
+        6.058465
+      ],
+      "end_latlng": [
+        45.208409,
+        6.115935
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Vaujany",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 5587705,
+      "resource_state": 2,
+      "name": "Warm up",
+      "activity_type": "Ride",
+      "distance": 1221.5,
+      "average_grade": -0.8,
+      "maximum_grade": 43.0,
+      "elevation_high": 798.7,
+      "elevation_low": 715.0,
+      "start_latlng": [
+        45.073518,
+        6.016948
+      ],
+      "end_latlng": [
+        45.06385,
+        6.024235
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Bourg D'Oisans",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 6825571,
+      "resource_state": 2,
+      "name": "after the british 3",
+      "activity_type": "Ride",
+      "distance": 3032.1,
+      "average_grade": 0.2,
+      "maximum_grade": 4.6,
+      "elevation_high": 747.4,
+      "elevation_low": 737.6,
+      "start_latlng": [
+        45.114473,
+        6.006262
+      ],
+      "end_latlng": [
+        45.127834,
+        6.038177
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Bourg D'Oisans",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 7646507,
+      "resource_state": 2,
+      "name": "Sprint final Croix de Fer",
+      "activity_type": "Ride",
+      "distance": 204.2,
+      "average_grade": 5.9,
+      "maximum_grade": 10.1,
+      "elevation_high": 2018.6,
+      "elevation_low": 2006.6,
+      "start_latlng": [
+        45.229935,
+        6.201748
+      ],
+      "end_latlng": [
+        45.2282,
+        6.202523
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint Sorlin D'Arves",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 7670811,
+      "resource_state": 2,
+      "name": "Sprint Lac du Verney short.",
+      "activity_type": "Ride",
+      "distance": 955.7,
+      "average_grade": -0.5,
+      "maximum_grade": -0.4,
+      "elevation_high": 791.7,
+      "elevation_low": 786.8,
+      "start_latlng": [
+        45.135991,
+        6.049536
+      ],
+      "end_latlng": [
+        45.128161,
+        6.045685
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Oz, Isère",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 7730697,
+      "resource_state": 2,
+      "name": "#pro",
+      "activity_type": "Ride",
+      "distance": 2042.3,
+      "average_grade": 4.5,
+      "maximum_grade": 16.9,
+      "elevation_high": 1321.6,
+      "elevation_low": 1225.2,
+      "start_latlng": [
+        45.20943,
+        6.057258
+      ],
+      "end_latlng": [
+        45.208057,
+        6.044731
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Vaujany",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 7959433,
+      "resource_state": 2,
+      "name": "Lac de Grand Maison - Croix de Fer",
+      "activity_type": "Ride",
+      "distance": 5075.0,
+      "average_grade": 6.5,
+      "maximum_grade": 14.6,
+      "elevation_high": 2044.2,
+      "elevation_low": 1715.0,
+      "start_latlng": [
+        45.228332,
+        6.153231
+      ],
+      "end_latlng": [
+        45.227478,
+        6.203534
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Saint Colomban Des Villards",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 8340600,
+      "resource_state": 2,
+      "name": "Descent off Croix de Fer",
+      "activity_type": "Ride",
+      "distance": 4904.1,
+      "average_grade": -6.7,
+      "maximum_grade": 1.0,
+      "elevation_high": 1996.8,
+      "elevation_low": 1665.8,
+      "start_latlng": [
+        45.229081,
+        6.202279
+      ],
+      "end_latlng": [
+        45.227561,
+        6.151277
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Sorlin-d'Arves",
+      "state": "Rhone-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 8342093,
+      "resource_state": 2,
+      "name": "Croix de Fer to the lake",
+      "activity_type": "Ride",
+      "distance": 9842.5,
+      "average_grade": -4.3,
+      "maximum_grade": 10.7,
+      "elevation_high": 2004.8,
+      "elevation_low": 1585.8,
+      "start_latlng": [
+        45.227857,
+        6.202725
+      ],
+      "end_latlng": [
+        45.206029,
+        6.104008
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Sorlin-d'Arves",
+      "state": "Rhone-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 10033700,
+      "resource_state": 2,
+      "name": "Second ramp up South of Glandon to Café",
+      "activity_type": "Ride",
+      "distance": 12991.1,
+      "average_grade": 5.5,
+      "maximum_grade": 29.8,
+      "elevation_high": 1888.8,
+      "elevation_low": 1172.0,
+      "start_latlng": [
+        45.208707,
+        6.057863
+      ],
+      "end_latlng": [
+        45.238675,
+        6.177728
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 4,
+      "city": "Vaujany",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 10058561,
+      "resource_state": 2,
+      "name": "Glandon Descent ",
+      "activity_type": "Ride",
+      "distance": 11550.3,
+      "average_grade": -5.1,
+      "maximum_grade": 11.1,
+      "elevation_high": 1923.8,
+      "elevation_low": 1333.4,
+      "start_latlng": [
+        45.238686,
+        6.177666
+      ],
+      "end_latlng": [
+        45.204228,
+        6.072486
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Sorlin-d'Arves",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 10059930,
+      "resource_state": 2,
+      "name": "Down to last hairpin",
+      "activity_type": "Ride",
+      "distance": 9153.8,
+      "average_grade": -6.7,
+      "maximum_grade": 34.0,
+      "elevation_high": 1803.4,
+      "elevation_low": 1183.2,
+      "start_latlng": [
+        45.22208,
+        6.136822
+      ],
+      "end_latlng": [
+        45.20974,
+        6.055626
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Colomban-des-Villards",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 10094995,
+      "resource_state": 2,
+      "name": "Allemont Straight Line NE -> SO",
+      "activity_type": "Ride",
+      "distance": 1290.4,
+      "average_grade": -0.4,
+      "maximum_grade": 6.0,
+      "elevation_high": 729.7,
+      "elevation_low": 716.5,
+      "start_latlng": [
+        45.127912,
+        6.037439
+      ],
+      "end_latlng": [
+        45.122319,
+        6.023067
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Oz",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 10107399,
+      "resource_state": 2,
+      "name": "king poseidon's ascent",
+      "activity_type": "Ride",
+      "distance": 1159.4,
+      "average_grade": 3.5,
+      "maximum_grade": 37.7,
+      "elevation_high": 771.4,
+      "elevation_low": 731.4,
+      "start_latlng": [
+        45.129042,
+        6.041001
+      ],
+      "end_latlng": [
+        45.128289,
+        6.045075
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Allemont",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 10185629,
+      "resource_state": 2,
+      "name": "L'Eau d'Olle",
+      "activity_type": "Ride",
+      "distance": 6643.1,
+      "average_grade": -6.5,
+      "maximum_grade": 0.0,
+      "elevation_high": 1300.2,
+      "elevation_low": 866.2,
+      "start_latlng": [
+        45.208734,
+        6.045497
+      ],
+      "end_latlng": [
+        45.154526,
+        6.045891
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Allemont",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12231318,
+      "resource_state": 2,
+      "name": "Jolly Boys climb for home",
+      "activity_type": "Ride",
+      "distance": 2893.1,
+      "average_grade": 8.5,
+      "maximum_grade": 44.0,
+      "elevation_high": 1042.2,
+      "elevation_low": 795.1,
+      "start_latlng": [
+        45.152767,
+        6.046162
+      ],
+      "end_latlng": [
+        45.177108,
+        6.036356
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Vaujany",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12517888,
+      "resource_state": 2,
+      "name": "Glandon hairpin",
+      "activity_type": "Ride",
+      "distance": 584.0,
+      "average_grade": 6.2,
+      "maximum_grade": 11.4,
+      "elevation_high": 1625.8,
+      "elevation_low": 1589.0,
+      "start_latlng": [
+        45.20675,
+        6.108932
+      ],
+      "end_latlng": [
+        45.206104,
+        6.104151
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Vaujany",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12564519,
+      "resource_state": 2,
+      "name": "Le Rivier til 1 top Glandon",
+      "activity_type": "Ride",
+      "distance": 11673.0,
+      "average_grade": 4.4,
+      "maximum_grade": 27.2,
+      "elevation_high": 1759.6,
+      "elevation_low": 1167.2,
+      "start_latlng": [
+        45.201148,
+        6.039562
+      ],
+      "end_latlng": [
+        45.221037,
+        6.136153
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Allemont",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12564558,
+      "resource_state": 2,
+      "name": "Lille nedkørsel og sidste stykke mod toppen af Glandon",
+      "activity_type": "Ride",
+      "distance": 4141.7,
+      "average_grade": 2.5,
+      "maximum_grade": 37.3,
+      "elevation_high": 1902.5,
+      "elevation_low": 1719.0,
+      "start_latlng": [
+        45.221347,
+        6.136414
+      ],
+      "end_latlng": [
+        45.239012,
+        6.176806
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Vaujany",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12632508,
+      "resource_state": 2,
+      "name": "Final 1k",
+      "activity_type": "Ride",
+      "distance": 1141.3,
+      "average_grade": 6.6,
+      "maximum_grade": 21.2,
+      "elevation_high": 2064.3,
+      "elevation_low": 1986.1,
+      "start_latlng": [
+        45.233944,
+        6.194011
+      ],
+      "end_latlng": [
+        45.227505,
+        6.20394
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Sorlin-d'Arves",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12738518,
+      "resource_state": 2,
+      "name": "Glandon Final Push (Lac - Restaurant)",
+      "activity_type": "Ride",
+      "distance": 2296.7,
+      "average_grade": 7.2,
+      "maximum_grade": 20.2,
+      "elevation_high": 1894.0,
+      "elevation_low": 1725.3,
+      "start_latlng": [
+        45.228511,
+        6.153946
+      ],
+      "end_latlng": [
+        45.238698,
+        6.177203
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Saint-Colomban-des-Villards",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13061040,
+      "resource_state": 2,
+      "name": "Steep Bit",
+      "activity_type": "Ride",
+      "distance": 846.6,
+      "average_grade": 10.8,
+      "maximum_grade": 47.2,
+      "elevation_high": 1378.6,
+      "elevation_low": 1287.4,
+      "start_latlng": [
+        45.204128,
+        6.07399
+      ],
+      "end_latlng": [
+        45.202095,
+        6.078241
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Vaujany",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13492057,
+      "resource_state": 2,
+      "name": "Chadash sprint",
+      "activity_type": "Ride",
+      "distance": 2469.3,
+      "average_grade": -0.1,
+      "maximum_grade": 44.5,
+      "elevation_high": 832.2,
+      "elevation_low": 758.0,
+      "start_latlng": [
+        45.129778,
+        6.047964
+      ],
+      "end_latlng": [
+        45.147964,
+        6.049387
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Oz",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 14085380,
+      "resource_state": 2,
+      "name": "Short Climb in descent D926",
+      "activity_type": "Ride",
+      "distance": 959.0,
+      "average_grade": 7.0,
+      "maximum_grade": 32.1,
+      "elevation_high": 1808.4,
+      "elevation_low": 1741.0,
+      "start_latlng": [
+        45.226447,
+        6.145233
+      ],
+      "end_latlng": [
+        45.22171,
+        6.136467
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Colomban-des-Villards",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 14948402,
+      "resource_state": 2,
+      "name": "Race for Cafe de Paris",
+      "activity_type": "Ride",
+      "distance": 976.8,
+      "average_grade": 1.9,
+      "maximum_grade": 18.2,
+      "elevation_high": 733.0,
+      "elevation_low": 713.3,
+      "start_latlng": [
+        45.061633,
+        6.025959
+      ],
+      "end_latlng": [
+        45.054626,
+        6.029933
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 15291612,
+      "resource_state": 2,
+      "name": "Croix de Fer to the Stop",
+      "activity_type": "Ride",
+      "distance": 2496.5,
+      "average_grade": -5.9,
+      "maximum_grade": 0.0,
+      "elevation_high": 2050.2,
+      "elevation_low": 1903.2,
+      "start_latlng": [
+        45.227777,
+        6.20278
+      ],
+      "end_latlng": [
+        45.238951,
+        6.179006
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Sorlin-d'Arves",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 15493143,
+      "resource_state": 2,
+      "name": "Sprint finish across the dam after Croix de Fer descent",
+      "activity_type": "Ride",
+      "distance": 433.0,
+      "average_grade": -7.3,
+      "maximum_grade": -0.7,
+      "elevation_high": 791.0,
+      "elevation_low": 759.3,
+      "start_latlng": [
+        45.128334,
+        6.045395
+      ],
+      "end_latlng": [
+        45.130761,
+        6.041095
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Allemont",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 15603864,
+      "resource_state": 2,
+      "name": "PR_Cycling_Pass_Glandon-South_Part-2",
+      "activity_type": "Ride",
+      "distance": 1106.9,
+      "average_grade": 10.7,
+      "maximum_grade": 42.2,
+      "elevation_high": 1293.4,
+      "elevation_low": 1175.4,
+      "start_latlng": [
+        45.208647,
+        6.058339
+      ],
+      "end_latlng": [
+        45.204875,
+        6.071038
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 15603889,
+      "resource_state": 2,
+      "name": "PR_Cycling_Pass_Glandon-South_Part-3",
+      "activity_type": "Ride",
+      "distance": 7285.3,
+      "average_grade": 6.6,
+      "maximum_grade": 20.0,
+      "elevation_high": 1775.4,
+      "elevation_low": 1294.8,
+      "start_latlng": [
+        45.204159,
+        6.073954
+      ],
+      "end_latlng": [
+        45.220269,
+        6.135703
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Vaujany",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18327289,
+      "resource_state": 2,
+      "name": "Descent",
+      "activity_type": "Ride",
+      "distance": 26469.8,
+      "average_grade": -4.6,
+      "maximum_grade": 24.3,
+      "elevation_high": 2015.2,
+      "elevation_low": 797.6,
+      "start_latlng": [
+        45.229574,
+        6.202123
+      ],
+      "end_latlng": [
+        45.134542,
+        6.049238
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Sorlin-d'Arves",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18744652,
+      "resource_state": 2,
+      "name": "Baxters Bend",
+      "activity_type": "Ride",
+      "distance": 430.2,
+      "average_grade": -7.3,
+      "maximum_grade": -5.8,
+      "elevation_high": 1795.8,
+      "elevation_low": 1764.4,
+      "start_latlng": [
+        45.229642,
+        6.157434
+      ],
+      "end_latlng": [
+        45.228141,
+        6.152693
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Colomban-des-Villards",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20833291,
+      "resource_state": 2,
+      "name": "Le Rivier d'Allemont to river",
+      "activity_type": "Ride",
+      "distance": 3158.6,
+      "average_grade": -2.3,
+      "maximum_grade": 11.0,
+      "elevation_high": 1270.8,
+      "elevation_low": 1172.4,
+      "start_latlng": [
+        45.198779,
+        6.039423
+      ],
+      "end_latlng": [
+        45.208923,
+        6.057764
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Allemont",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21177882,
+      "resource_state": 2,
+      "name": "Croix de Fer montée + descente",
+      "activity_type": "Ride",
+      "distance": 48706.2,
+      "average_grade": -0.0,
+      "maximum_grade": 41.2,
+      "elevation_high": 2061.0,
+      "elevation_low": 787.3,
+      "start_latlng": [
+        45.152285,
+        6.046412
+      ],
+      "end_latlng": [
+        45.151231,
+        6.047406
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Vaujany",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21293648,
+      "resource_state": 2,
+      "name": "Col de la Croix de Fer officiel da Allemond by Cova ",
+      "activity_type": "Ride",
+      "distance": 5629.0,
+      "average_grade": 8.0,
+      "maximum_grade": 16.2,
+      "elevation_high": 1272.4,
+      "elevation_low": 822.0,
+      "start_latlng": [
+        45.15249,
+        6.046365
+      ],
+      "end_latlng": [
+        45.200046,
+        6.039115
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Vaujany",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21338764,
+      "resource_state": 2,
+      "name": "Col croix de la croix de fer depuis barage EDF",
+      "activity_type": "Ride",
+      "distance": 8862.9,
+      "average_grade": 3.9,
+      "maximum_grade": 11.0,
+      "elevation_high": 2061.2,
+      "elevation_low": 1714.4,
+      "start_latlng": [
+        45.208479,
+        6.118048
+      ],
+      "end_latlng": [
+        45.227499,
+        6.203201
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Vaujany",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21580522,
+      "resource_state": 2,
+      "name": "Allemond to L'Allemand Rivier",
+      "activity_type": "Ride",
+      "distance": 10959.2,
+      "average_grade": 4.8,
+      "maximum_grade": 24.8,
+      "elevation_high": 1198.4,
+      "elevation_low": 674.6,
+      "start_latlng": [
+        45.129106,
+        6.042033
+      ],
+      "end_latlng": [
+        45.206261,
+        6.043938
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Allemont",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24879373,
+      "resource_state": 2,
+      "name": "Col du Damn ",
+      "activity_type": "Ride",
+      "distance": 740.7,
+      "average_grade": 5.5,
+      "maximum_grade": 16.1,
+      "elevation_high": 718.4,
+      "elevation_low": 677.6,
+      "start_latlng": [
+        45.129233,
+        6.041406
+      ],
+      "end_latlng": [
+        45.130522,
+        6.04142
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Allemont",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24882552,
+      "resource_state": 2,
+      "name": "Articol > Rivier d'Allemond",
+      "activity_type": "Ride",
+      "distance": 2960.2,
+      "average_grade": 8.9,
+      "maximum_grade": 15.8,
+      "elevation_high": 1276.3,
+      "elevation_low": 1013.9,
+      "start_latlng": [
+        45.175722,
+        6.036837
+      ],
+      "end_latlng": [
+        45.200651,
+        6.039385
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Allemont",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24882724,
+      "resource_state": 2,
+      "name": "Sprint → Usine EDF",
+      "activity_type": "Ride",
+      "distance": 691.6,
+      "average_grade": 3.2,
+      "maximum_grade": 11.1,
+      "elevation_high": 810.3,
+      "elevation_low": 788.3,
+      "start_latlng": [
+        45.151787,
+        6.046861
+      ],
+      "end_latlng": [
+        45.146669,
+        6.050907
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Vaujany",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 25187079,
+      "resource_state": 2,
+      "name": "Début Col de croix de fer",
+      "activity_type": "Ride",
+      "distance": 1743.4,
+      "average_grade": 2.3,
+      "maximum_grade": 19.5,
+      "elevation_high": 819.7,
+      "elevation_low": 779.6,
+      "start_latlng": [
+        45.144279,
+        6.05143
+      ],
+      "end_latlng": [
+        45.155007,
+        6.045359
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Oz",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 25187121,
+      "resource_state": 2,
+      "name": "Col de croix de fer (avant déraillement)",
+      "activity_type": "Ride",
+      "distance": 8819.5,
+      "average_grade": 4.8,
+      "maximum_grade": 18.8,
+      "elevation_high": 1303.0,
+      "elevation_low": 831.2,
+      "start_latlng": [
+        45.155707,
+        6.044789
+      ],
+      "end_latlng": [
+        45.207762,
+        6.063582
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Vaujany",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 37857789,
+      "resource_state": 2,
+      "name": "Col de la Croix de Fer (par Barrage du Verney)",
+      "activity_type": "Ride",
+      "distance": 27607.9,
+      "average_grade": 6.7,
+      "maximum_grade": 20.0,
+      "elevation_high": 2067.8,
+      "elevation_low": 773.1,
+      "start_latlng": [
+        45.128113,
+        6.04573
+      ],
+      "end_latlng": [
+        45.227479,
+        6.203485
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 5,
+      "city": "Oz",
+      "state": "Isère",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    }
+  ]
+}

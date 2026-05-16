@@ -1,0 +1,1453 @@
+{
+  "athlete": {
+    "id": 100103171,
+    "username": null,
+    "resource_state": 2,
+    "firstname": "Rasmus",
+    "lastname": "Jørgensen",
+    "bio": null,
+    "city": null,
+    "state": null,
+    "country": null,
+    "sex": "M",
+    "premium": true,
+    "summit": true,
+    "created_at": "2022-03-13T14:49:03Z",
+    "updated_at": "2026-05-09T04:11:00Z",
+    "badge_type_id": 1,
+    "profile_medium": "avatar/athlete/medium.png",
+    "profile": "avatar/athlete/large.png",
+    "friend": null,
+    "follower": null
+  },
+  "description": null,
+  "distance": 57786.34451316557,
+  "elevation_gain": 2013.9558430026314,
+  "id": 3486425133972935152,
+  "id_str": "3486425133972935152",
+  "map": {
+    "id": "r3486425133972935152",
+    "summary_polyline": "gx~qGylxc@y@dAsCqHdEaALgNmSaWkEgJsTrEoNmR__@xGyH_AnFq@tGyHjPsFyHFpBHjHaGkQnBlIaGoPyJ}JgMlDxH?fMaC}LuIsFs@uChFgPcMzJc@vHs@aKdKgNeOzJwCvQXmTrI{IqK|C{FrLL`IuAsLhG{ScL_GmHu@YwAzBcBXyDmLma@CzXw@fBiFPfC_H{BsUBfFsAbEoHbCgKzIcDpGd@nDeDuB_@eChAcTsKxN{CrNe@mTfG_f@cBaAaAnHqH~Od@iNqCaWpDyMKcLhI_J|COnAuL`F}FWmBoCG`BcLeHbEu@qAfFgNyAyP`EiSfGkNbA{JhEdNt@QLmL~F_k@Sg`@qAoGd^cYi@{QxHye@iDwZ{IqQ{A_PxAaGYiE`EuAjBrFfAiGwLe{@kMmWmOmRgKmBeItCfAiDmEfB{DyGyRoHkLmN~Y|ImRsTgHiDmNsQfDDqCyCvGTsFkGvEs@`CnDsEiQcE_BtFl@rJrKeCsJvJjEtFb@hCwA`HzBn@}F~GxDdBwAxMpLvWx@jO|IeFmKlYnTbUK|QhOlAvFzBlB`SdAhs@zi@mDcRjTdWjOfFnIbJxGgAxClAnCdIy@tE`CyERkMjF`]P{NhBlQpGrAlBbDa@vGyErEwBnKh^r]fGvJ\\nDu@`AaBoI}GaEcG_AwIpAsH_DM~KeGWzC|@b@jK|BrHzGxCqBlB{JDdCpB|AtF|I`HzAtEhEbAyE^oXmEdDdE|TrKd@hGkCrDvFvJk@rGkCrBsGXqI`VwJhHbHpHoBlItCjGhAtV|FnQnN`EbNp]bWrU{B~QcGnJnBfBtHfUsEdL_PhDoC~EyBd@uKlReIvCaE|FmBu@yJpNoI|G_JfRcJdKDzCyDnLaL_E{AnEsE\\@nIqG|@eF`MwYcF}QkSmDkJcBpIV`Py@tBzA\\lBtIrLjK`AhDuI~EjQ{AkHlFqBIxHGkPrFuGxHuFh@~HfA~^yGnNlRfQ}ChCv@zXz^UtN|C]f@jEuDpB",
+    "resource_state": 3,
+    "polyline": "gx~qGylxc@y@dA}AkDu@eCzC_@`@SFMBU?m@LuCHqANyAAO[qAk@gA}CwD_EqEgFkG[c@qCaF_@kAAWIUMKO?MFKPYP{Eh@{Dp@e@NmBz@_@Bc@Ci@S[[qGcK}BgDYQY?gBb@oCz@_@FgF`@eA`@]@}@MS@sATk@PoAl@gAZWDw@AmAQeB_@}@EOEIO?SBKJGzB^`@@jA[p@]l@k@t@iAx@}@x@{AJKPGlDe@d@MtAk@~CaBnAi@FI?QGKGAwD|Ai@HiAYCEAUDILCt@^L@XIZSdAuA^]`DwAFM?SIMMAm@VcBVw@j@SHM@q@A]BmA`@y@BeBIIECMDSJEN@p@N^?RI~D}CJODQGa@{A_BMIaAa@gCa@[Uk@aAOQ}@q@mAa@WMSUoAqC_@m@qCgCk@o@m@y@M?KN?NBLl@b@PR|@rAd@bAPz@@tAIzEFj@`@tA?RIJM?IKq@uBi@mFQu@Sc@_@i@e@i@_DaCWMOC{@CKGYc@YqBAUBa@P_@b@q@Lg@J}@Tk@lCeF@UCGIGMB]z@]b@oCrBONy@rASLYDgADOHYZUp@[xA?^BXb@|AYRGk@k@qBI{@DsCBSJ]RW`@Qv@SZSP_@Nk@Ta@vBcDb@c@`@[BK?OIII@gBrBgCzB}@^oARa@L{AfAO^c@vBu@|BAd@RzBAVg@vBILK@IKAS^oABg@Oy@[aACq@@yAFy@XkALgC\\cAp@oAPUz@m@`B_A`@Oh@IHUASGIGCE@UN_@^mA`@i@TSDqALgAX_@Rc@l@]l@[`A}AtCs@`BK\\C`@XlAAjABf@ThA?TEHK?MKMwAWiAi@wAI[AoADmAN_A`BkG`@aCf@kAPWx@_ADSCUGOIIMEiAO[OuAkAgEsBe@Em@J]@cCa@i@OMKQ_@G]?YHYFGrAg@TYJe@NkBAg@Ke@o@mBkAkEaAgBk@cCg@}@{@gEe@qCc@_BIIIAON@Vh@lADT@f@UtIGrHMr@Q^WROF[ByA@oATIAIOBWBEx@k@f@gAR_AHmACiCGiAmAuJEk@AiAEOGEK@EHALHv@DpBCd@{@xCWh@WVSLUH}Cj@i@Pe@Tm@f@cCjCe@b@m@d@aC|A}AjCy@fBK\\Ej@F`@Pf@RZBJEPI@c@_@iBgAMOOm@OwAGcDBcAx@cI`@{A@QCGKAa@l@sCjCkDnFq@nAyArD_@nBCb@@jBFt@CTIFIAOQCQCuAi@qDEm@?{@PiHzA}LNg@CMh@wBr@eFFwBf@yBP{CEe@IQWM_@G[JIRGt@?~@OpA_@rA_AtAkBpEiA`BWl@QpAGRI@CCEUP_AXmGBaCYaGc@qDOyDOu@s@}ADIHq@d@eBD@JCJS@}@~@kCPm@Hi@B_ASyIBId@}@pCmCpCsCZQd@CRDPRLDVENSFYA[K[?{@Fc@d@{Af@gDf@oAR]j@q@TK|@WVWLa@De@E]Wi@QCeA`@]BKGMa@A]BSNa@d@s@Zo@ZkBBkACYMYWIO@QFu@d@eAvAUTyAn@QASSOg@?SJWr@g@R_@Nw@@SGi@De@^kAV]d@c@Xa@J{@?_@Gk@{@qFY_EB{@Jc@tAwCd@mBR{ENkATw@vB_FbBqDj@yAd@sBVkBBgAEw@F[FGHCJ?HBHHHPBxABVn@fCv@|AT`BFVJLHBJALKDUSyBAu@b@}FPaBr@_Ef@iFHeDAgADi@t@uC|@sFNqEUcCAeADwBGuKGeCBoBHyAESYw@S_Aa@cACa@F]VQhB]j@c@Xe@NiAl@kARMdA_@~AkA`AkAx@u@f@u@RSh@]RGb@E|@@h@Mn@_@^Yn@y@XUHk@GkBE]Kc@Cc@@y@CwAB{AOaC@YZkBPeBh@}At@mDr@eEfAaEV_EZwBC{@UyBm@sCQwAEe@CyAQcAIuAYyBS}BUo@c@_As@u@c@cAu@sAg@mAYi@e@qAk@iACcAg@{C[oAMoA@kAGsAH_A|@aCP_AAc@e@cCBOHQXYrAcAp@CPBNFTV`@|@\\~@FjAFND@HCFKl@gDFqACq@Kq@e@qAy@oEm@qCe@eCI_AMqGQgDU}BUyAaAoEq@cCUyASgBSw@a@_AeAgBw@gBuBkDaDyGeBoCgAkBY_@]]o@g@_@a@cBgCw@u@{@k@m@Uc@K}BMu@Ss@Yu@OW?GBk@f@WDWCe@OUBSJg@f@qAv@OFG?EGBKr@s@Xc@Ja@CWKCKFYn@QN_ALg@XU@WIk@c@c@s@a@[c@aAYsAKOk@M[UME]@[FUCUMSa@GGK?[FOAIGM]UYMAWPU?OKi@s@WMo@KKEY]QMq@OSMY]w@qAg@i@i@kAS[cAeAi@]g@w@q@m@k@a@CSFGH@n@b@v@X`At@v@^pCz@pBt@|@b@nBj@`AJhBZPE@OEEo@Ie@SiA}@iAaBe@_AwBcCsAaAQQk@{@s@iB[a@k@_@e@SeAOOGeBeAYWY]y@qAeA_AYe@Wg@W{AKWMKa@KSK}BsCSQg@WKW@SFIH@d@Z|@T`@TL?JM?MCIKG_@Ig@m@w@e@EOBKJ?h@Vr@Tj@EfA_@RBVTHABIAMGIWOc@MOMo@mAk@q@YSk@OEU@GFEv@?|Ay@ZCd@HZTf@l@H\\JlAFPNFHCDUQ}@MsAQcAkAsCu@iAMs@?o@EYKWMOu@c@iBGYMAKDILEh@?z@Ib@@XLbAl@pA`Ar@t@l@v@bAbAlBxCLDFE?Ko@gA_@gASw@YeBQc@@OHAHH^~@JPRNN?rAu@RCJDb@|@zBvA`@DxAFhBTN?TEVKROj@q@JCN?jAXtBRl@b@f@f@H@HEBKAsAH{AJq@LIj@Fh@j@v@l@hAf@h@^\\NN?LGt@gAPGTHZf@TPb@FZLt@z@jAz@dA~A`B`Bf@\\d@Ld@Rf@Bv@Rx@BNEh@_@VELDn@b@n@Nd@DZ?lEg@n@Bp@JXNn@f@x@|@`@\\^Tb@HhBDXDTJ`@VNRr@xAHJNDFEAS_@k@m@cCUi@[e@wAqAMS@Sb@VfCfBVThDzDxAnAdAfAp@\\rA\\n@h@hBlA^PXFl@AtCNT?^Ov@q@p@On@A\\F|Ah@VDh@At@I`@DTRt@~@hAl@|@`An@f@lAh@n@b@zBnB~A~ATj@Jz@P^NvAHV\\`@|AjA~@PlBGt@W^IZA^Df@Ph@Zf@P\\FhB@b@BZJbDnC^Lb@T~ErEl@r@JFJGRX`Ax@nAvArArAdBxAnA\\b@\\`@f@RLxBt@rBdAj@\\`CvBxCvBn@nAJEGm@iA}Da@sCoAkE@QFKJDHNLd@d@nA^n@t@|@rA`Aj@Xv@t@v@~@VJb@BVHTR\\z@h@b@PRfAhCZRv@Jt@CVBXLzA^XT|Av@v@dAJHPF`AFvAbA^d@b@x@r@hAvA|Af@VVDTAlCy@p@Kj@EVFh@\\j@Vj@N`@dAn@jAl@tBN|@?ZEl@Sp@e@`A@PBDF@JEn@y@NWRq@XqAHs@@uBIiGBWBAH@HJ?|@BX|@xEHZb@dALn@B\\BzAZvBLvAHX^z@D^@p@FJL?FUAe@YmBCaADuAEwDFIJCRlGJp@v@~BFn@@fAFTHNRLrEf@^L^Tb@f@Zt@Ln@B~@CdAUrBK\\KP_@R[Zs@lAQNw@ZSVw@vB_@fBc@bCBj@JVNNx@LVHf@XVT`@j@f@pB^v@Xb@bKvItAtAfBfAf@`@lApAfD`E^l@j@nARv@VzBDr@Kh@SRUBMCQMMYEc@E}BQkAUu@QWSSUOsBw@mBmA}@WeEg@sBBwCJk@NOLKNCRc@O]Gy@m@gAMYYuAq@IFQv@?R`@t@H^@ZC^]hAA\\D~@APIHQE[s@MKs@I{BXOR@LDF\\CV@|@LD@XXNr@HbBBdEDl@pAdFj@lALJnBbAf@p@NHR@v@EPDFJCNUNm@t@SPUDs@GyBZqAC{@Qk@]KAOFCDJX`BjAb@d@Rb@Nh@^fCX^|AfA`@l@f@d@jC`Bh@b@PXr@zCT^d@V`@H\\DnABJFFNCNKHK@y@IcCLyEcAiAc@[GQAe@JgBQoBG_AQo@Ua@Uk@s@KII?KFCPBRNTVT\\b@t@jAh@h@pAl@tBl@`EtA|BvAb@^d@j@RPx@R\\V^v@H\\DlBIdAK\\OLQDW@UDSPQXGj@A`@F\\pBbDZx@T`@TT^TPRBX[hBBzBG\\KN{@x@_@Ro@d@Q?u@_@]Ga@@gAPcAl@gAzAWh@Wt@{AdHy@|BcA`CSZ_@Xw@Z}@r@mAfA_Aj@m@TIHGND^NPb@P~@RZPbAnAr@lATh@BXCVK\\sAfBKbACpAHh@J\\j@RXTTd@b@rBHp@Dv@IrBCvAFnA~@nJXvARh@Xd@hAvAp@pA|@tC@NGfA@NLTHBpAARBd@PrBbA`Dt@t@XZb@j@tAVt@ZjAXbBXbAd@~@b@n@TTPZ^nALPTNb@j@p@|ATr@F`AHXjC`BrAbBBVLBj@x@dAbAxAz@\\\\l@RjA`AjAxAlA`ARf@Jh@Bn@Cj@a@lCiAxD[pCOPm@b@SZQf@OfAKZyBlBGPAPBVLV`AZPJHNh@vBxA`FPXt@r@NXHd@FvAJZf@n@@NLNBZELw@v@[fAi@~@i@~ASrAQb@QFq@?MB[\\e@N[`@OF_@Fw@V[@i@CMB]d@YNYBoAWQ@SR[bBKPa@Zq@x@MBq@Xy@FO~@e@^SXQd@q@`AiAtBw@p@g@h@Yd@YvAi@z@qAbAuBv@eBHWPS`@Ob@o@t@Yf@_@PKJ]t@ID[DMGe@m@OIMBKNWjA[VWj@]`@a@t@MLMBY?UJ]n@qAdBINMd@MNYRm@V]Tu@p@}AlBe@HUZYTYl@UVWf@m@j@kAbEIJi@\\GHKjAGVmApB{@x@_BpBmArCW`@OLIBIA[QKFU\\APLp@Dj@Kj@eCxI]|@UVQF[AiBWcD_Bg@]c@k@QEG@EFOj@_@`AS~@QXOFwADq@Hq@CGH?n@LjAD`AAhAEh@I\\QTSHgAHmC@UPo@xAc@`COTu@v@w@~BSVWFoBUgAe@uFmBi@Q[Gi@Ak@HaAj@SHUCSIuBwAWw@a@a@e@Qg@_@}A_AIKiB}DMMy@OYi@c@cAQQ{AeAOQsBqDIWI_@ASDcAAIg@_@MCIFc@vACTC`BWfAGt@AdBQfBAv@D|@b@vBD\\AfAOZa@^ITARBNFHTFL?XENFDHX`CrArE\\`@p@h@zBpATXbAvBPTVNjAZVX`@`A@LCZXZF`@EPKN_E|CSH_@?q@OOAKDERBLHDdBHZ?\\CPEz@[\\Cp@@LARIv@k@bBWl@WL@HL?RGLaDvA_@\\eAtA[RYHMAu@_@MBEH@TBDhAXh@IvD}AF@FJ?PGHoAh@_D`BuAj@e@LmDd@QFKJy@zAy@|@u@hAm@j@q@\\kAZa@A{B_@KFCJ?RBFDFND|@DdB^lAPv@@VEfA[nAm@j@QrAURA|@L\\AdAa@fFa@^GnC{@fBc@X?XP|BfDpGbKZZh@Rb@B^ClB{@d@OzDq@rD_@t@LJDPTLDNEVLZVpC`FZb@fFjG~DpE|CvDj@fAZpA@NOxAIpAMtC?l@CTGLDFx@E|A_@VnBNzAgBl@a@Tk@l@"
+  },
+  "map_urls": {
+    "url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/B36KR2CIE7W4KLHXHQ6OGGFFMCQCW52I53XMETKIM3BNZRXLKH4UZNCMOYAV2EDYZPZNTHJVBB3UYVNXZ7BRQLCQX54XQLOMDLSMZ4A=",
+    "retina_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/UYDRHHC67UY6UQGA7CLCA73TYHT7TJXQ7V6MXIEP446Y4EUFCRR66QSSCMTLRMJJ34FZUO2NUW2XIFKVTSGQQSCV3EV2OTLXSOEIGLI=",
+    "light_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/UYDRHHC67UY6UQGA7CLCA73TYHT7TJXQ7V6MXIEP446Y4EUFCRR66QSSCMTLRMJJ34FZUO2NUW2XIFKVTSGQQSCV3EV2OTLXSOEIGLI=",
+    "dark_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/QNFX7P4LVHKMUZXDJG6F4N2MR7R562BC5VFUB6EYTYKMX523WBREWXCPDFG6BDQXEBJAXVMKNQ3INTQ2WT745PALHKOTM27VZHMXUAA="
+  },
+  "name": "Dag 1: Alpe d’Huez + Col de Sarenne + Auris Balconies",
+  "private": false,
+  "resource_state": 3,
+  "starred": false,
+  "sub_type": 1,
+  "created_at": "2026-05-04T17:56:40Z",
+  "updated_at": "2026-05-04T17:56:40Z",
+  "timestamp": 1777917400,
+  "type": 1,
+  "estimated_moving_time": 6738,
+  "waypoints": [],
+  "segments": [
+    {
+      "id": 652851,
+      "resource_state": 2,
+      "name": "Alpe d'Huez",
+      "activity_type": "Ride",
+      "distance": 12024.9,
+      "average_grade": 8.8,
+      "maximum_grade": 15.7,
+      "elevation_high": 1775.7,
+      "elevation_low": 728.4,
+      "start_latlng": [
+        45.0649319216609,
+        6.03998651728034
+      ],
+      "end_latlng": [
+        45.09066168218851,
+        6.0639028530567884
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 5,
+      "city": "Le Bourg D'Oisans",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 2053659,
+      "resource_state": 2,
+      "name": "Col de Sarenne West",
+      "activity_type": "Ride",
+      "distance": 3153.32,
+      "average_grade": 7.9,
+      "maximum_grade": 30.1,
+      "elevation_high": 1990.6,
+      "elevation_low": 1740.4,
+      "start_latlng": [
+        45.07897940464318,
+        6.117788935080171
+      ],
+      "end_latlng": [
+        45.08686660788953,
+        6.14889208227396
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Clavans En Haut Oisans",
+      "state": "Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 2686198,
+      "resource_state": 2,
+      "name": "Bend 14 to 13",
+      "activity_type": "Ride",
+      "distance": 755.84,
+      "average_grade": 8.8,
+      "maximum_grade": 17.0,
+      "elevation_high": 1252.8,
+      "elevation_low": 1186.0,
+      "start_latlng": [
+        45.07092531770468,
+        6.0443380661308765
+      ],
+      "end_latlng": [
+        45.07242710329592,
+        6.051204605028033
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Garde",
+      "state": "Rhone-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 4580819,
+      "resource_state": 2,
+      "name": "last piece col du sarenne",
+      "activity_type": "Ride",
+      "distance": 956.4,
+      "average_grade": 8.5,
+      "maximum_grade": 11.6,
+      "elevation_high": 1941.4,
+      "elevation_low": 1859.8,
+      "start_latlng": [
+        45.081097,
+        6.139125
+      ],
+      "end_latlng": [
+        45.086335,
+        6.148497
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Clavans En Haut Oisans",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 7645607,
+      "resource_state": 2,
+      "name": "Col de Sarenne (Ouest) - Partie dure",
+      "activity_type": "Ride",
+      "distance": 1124.2,
+      "average_grade": 9.5,
+      "maximum_grade": 15.1,
+      "elevation_high": 1937.4,
+      "elevation_low": 1830.2,
+      "start_latlng": [
+        45.079665,
+        6.131841
+      ],
+      "end_latlng": [
+        45.083405,
+        6.144607
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Clavans En Haut Oisans",
+      "state": "RA",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12258346,
+      "resource_state": 2,
+      "name": "Alpe d'Huez TDF Part 3/5",
+      "activity_type": "Ride",
+      "distance": 2734.6,
+      "average_grade": 8.5,
+      "maximum_grade": 28.0,
+      "elevation_high": 1426.0,
+      "elevation_low": 1194.0,
+      "start_latlng": [
+        45.073277,
+        6.05218
+      ],
+      "end_latlng": [
+        45.08043,
+        6.055767
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "La Garde",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12258558,
+      "resource_state": 2,
+      "name": "Alpe d'Huez TDF Part 4/5",
+      "activity_type": "Ride",
+      "distance": 2051.3,
+      "average_grade": 8.0,
+      "maximum_grade": 23.0,
+      "elevation_high": 1590.0,
+      "elevation_low": 1426.0,
+      "start_latlng": [
+        45.08043,
+        6.055767
+      ],
+      "end_latlng": [
+        45.086568,
+        6.058835
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "La Garde",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12327602,
+      "resource_state": 2,
+      "name": "Faris sprint interval ",
+      "activity_type": "Ride",
+      "distance": 82.7,
+      "average_grade": 7.5,
+      "maximum_grade": 12.6,
+      "elevation_high": 820.2,
+      "elevation_low": 814.0,
+      "start_latlng": [
+        45.071628,
+        6.039211
+      ],
+      "end_latlng": [
+        45.07091,
+        6.03914
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Garde",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12426370,
+      "resource_state": 2,
+      "name": "test oisan bis",
+      "activity_type": "Ride",
+      "distance": 2671.9,
+      "average_grade": -4.7,
+      "maximum_grade": 36.0,
+      "elevation_high": 1867.2,
+      "elevation_low": 1732.9,
+      "start_latlng": [
+        45.088883,
+        6.088049
+      ],
+      "end_latlng": [
+        45.080177,
+        6.110267
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12426396,
+      "resource_state": 2,
+      "name": "test isan 1",
+      "activity_type": "Ride",
+      "distance": 3570.3,
+      "average_grade": -7.8,
+      "maximum_grade": 48.6,
+      "elevation_high": 1282.9,
+      "elevation_low": 1005.5,
+      "start_latlng": [
+        45.063817,
+        6.150111
+      ],
+      "end_latlng": [
+        45.047036,
+        6.13809
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Clavans-en-Haut-Oisans",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12531771,
+      "resource_state": 2,
+      "name": "Avenue des Fontaines",
+      "activity_type": "Ride",
+      "distance": 683.3,
+      "average_grade": 7.9,
+      "maximum_grade": 14.5,
+      "elevation_high": 1440.4,
+      "elevation_low": 1386.4,
+      "start_latlng": [
+        45.080364,
+        6.054837
+      ],
+      "end_latlng": [
+        45.081979,
+        6.06186
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12680761,
+      "resource_state": 2,
+      "name": "Sprint to the top of the Serenne",
+      "activity_type": "Ride",
+      "distance": 459.1,
+      "average_grade": 6.3,
+      "maximum_grade": 13.6,
+      "elevation_high": 1967.2,
+      "elevation_low": 1938.4,
+      "start_latlng": [
+        45.083295,
+        6.144211
+      ],
+      "end_latlng": [
+        45.086216,
+        6.148404
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Clavans-en-Haut-Oisans",
+      "state": "Auvergne Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13147188,
+      "resource_state": 2,
+      "name": "From view to bench",
+      "activity_type": "Ride",
+      "distance": 6959.5,
+      "average_grade": -8.5,
+      "maximum_grade": 43.8,
+      "elevation_high": 2001.7,
+      "elevation_low": 1397.6,
+      "start_latlng": [
+        45.08789,
+        6.14915
+      ],
+      "end_latlng": [
+        45.08245,
+        6.161333
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Clavans-en-Haut-Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 15395953,
+      "resource_state": 2,
+      "name": "Ripley Ramblers - Pantani Lives On In Bedoin! The Legend Never Died?",
+      "activity_type": "Ride",
+      "distance": 1191.0,
+      "average_grade": 6.4,
+      "maximum_grade": 19.8,
+      "elevation_high": 1812.8,
+      "elevation_low": 1736.1,
+      "start_latlng": [
+        45.091218,
+        6.061238
+      ],
+      "end_latlng": [
+        45.092717,
+        6.064819
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 15398895,
+      "resource_state": 2,
+      "name": "Sprint ronde punten Alpe d'Huez ",
+      "activity_type": "Ride",
+      "distance": 320.8,
+      "average_grade": 0.7,
+      "maximum_grade": 4.3,
+      "elevation_high": 1827.0,
+      "elevation_low": 1819.1,
+      "start_latlng": [
+        45.093109,
+        6.068201
+      ],
+      "end_latlng": [
+        45.092558,
+        6.072032
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 15559579,
+      "resource_state": 2,
+      "name": "Short descent ",
+      "activity_type": "Ride",
+      "distance": 762.6,
+      "average_grade": -3.7,
+      "maximum_grade": 0.9,
+      "elevation_high": 1863.7,
+      "elevation_low": 1835.6,
+      "start_latlng": [
+        45.08876,
+        6.088205
+      ],
+      "end_latlng": [
+        45.086021,
+        6.091244
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17407847,
+      "resource_state": 2,
+      "name": " km 1",
+      "activity_type": "Ride",
+      "distance": 979.7,
+      "average_grade": 5.9,
+      "maximum_grade": 14.6,
+      "elevation_high": 781.4,
+      "elevation_low": 723.4,
+      "start_latlng": [
+        45.061803,
+        6.037244
+      ],
+      "end_latlng": [
+        45.069406,
+        6.03913
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Bourg-d'Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17407860,
+      "resource_state": 2,
+      "name": " 2e km",
+      "activity_type": "Ride",
+      "distance": 1014.2,
+      "average_grade": 10.3,
+      "maximum_grade": 15.9,
+      "elevation_high": 885.4,
+      "elevation_low": 781.2,
+      "start_latlng": [
+        45.069378,
+        6.03915
+      ],
+      "end_latlng": [
+        45.066779,
+        6.042191
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Le Bourg-d'Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17407885,
+      "resource_state": 2,
+      "name": " 4e km",
+      "activity_type": "Ride",
+      "distance": 1004.6,
+      "average_grade": 7.4,
+      "maximum_grade": 13.2,
+      "elevation_high": 1056.8,
+      "elevation_low": 982.2,
+      "start_latlng": [
+        45.067222,
+        6.043987
+      ],
+      "end_latlng": [
+        45.071038,
+        6.044349
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Bourg-d'Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17407895,
+      "resource_state": 2,
+      "name": " 5e km",
+      "activity_type": "Ride",
+      "distance": 1016.6,
+      "average_grade": 7.8,
+      "maximum_grade": 15.7,
+      "elevation_high": 1220.0,
+      "elevation_low": 1140.4,
+      "start_latlng": [
+        45.07405,
+        6.049716
+      ],
+      "end_latlng": [
+        45.075561,
+        6.05061
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17407918,
+      "resource_state": 2,
+      "name": " 7e km",
+      "activity_type": "Ride",
+      "distance": 1033.3,
+      "average_grade": 8.6,
+      "maximum_grade": 15.2,
+      "elevation_high": 1307.6,
+      "elevation_low": 1218.6,
+      "start_latlng": [
+        45.075439,
+        6.050691
+      ],
+      "end_latlng": [
+        45.076538,
+        6.052167
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17407931,
+      "resource_state": 2,
+      "name": " 8e km",
+      "activity_type": "Ride",
+      "distance": 1037.9,
+      "average_grade": 8.7,
+      "maximum_grade": 14.2,
+      "elevation_high": 1394.2,
+      "elevation_low": 1304.2,
+      "start_latlng": [
+        45.076256,
+        6.052274
+      ],
+      "end_latlng": [
+        45.077739,
+        6.053824
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17407954,
+      "resource_state": 2,
+      "name": " 10e km",
+      "activity_type": "Ride",
+      "distance": 1026.6,
+      "average_grade": 7.4,
+      "maximum_grade": 14.2,
+      "elevation_high": 1550.0,
+      "elevation_low": 1473.6,
+      "start_latlng": [
+        45.081944,
+        6.061467
+      ],
+      "end_latlng": [
+        45.083487,
+        6.06252
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18355148,
+      "resource_state": 2,
+      "name": "dernier virage à donf",
+      "activity_type": "Ride",
+      "distance": 442.3,
+      "average_grade": 4.0,
+      "maximum_grade": 43.5,
+      "elevation_high": 1802.8,
+      "elevation_low": 1774.0,
+      "start_latlng": [
+        45.090995,
+        6.064852
+      ],
+      "end_latlng": [
+        45.092668,
+        6.062431
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18879003,
+      "resource_state": 2,
+      "name": "Sarenne almost there",
+      "activity_type": "Ride",
+      "distance": 1522.8,
+      "average_grade": 6.5,
+      "maximum_grade": 42.6,
+      "elevation_high": 1879.6,
+      "elevation_low": 1781.2,
+      "start_latlng": [
+        45.079644,
+        6.123718
+      ],
+      "end_latlng": [
+        45.080762,
+        6.137451
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 19489800,
+      "resource_state": 2,
+      "name": "DREAM_BIKE_PADOVA🇮🇹",
+      "activity_type": "Ride",
+      "distance": 321.5,
+      "average_grade": -1.1,
+      "maximum_grade": 0.3,
+      "elevation_high": 747.8,
+      "elevation_low": 744.2,
+      "start_latlng": [
+        45.05947,
+        6.0379
+      ],
+      "end_latlng": [
+        45.062276,
+        6.037016
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Bourg-d'Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20821606,
+      "resource_state": 2,
+      "name": "Alpe Du Zwift Compare",
+      "activity_type": "Ride",
+      "distance": 6451.9,
+      "average_grade": 8.6,
+      "maximum_grade": 17.9,
+      "elevation_high": 1299.4,
+      "elevation_low": 741.4,
+      "start_latlng": [
+        45.064845,
+        6.039882
+      ],
+      "end_latlng": [
+        45.074972,
+        6.052461
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Le Bourg-d'Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824299,
+      "resource_state": 2,
+      "name": "Bend 18 to 16",
+      "activity_type": "Ride",
+      "distance": 575.0,
+      "average_grade": 9.4,
+      "maximum_grade": 17.7,
+      "elevation_high": 991.4,
+      "elevation_low": 937.2,
+      "start_latlng": [
+        45.065853,
+        6.04297
+      ],
+      "end_latlng": [
+        45.067199,
+        6.043829
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Bourg-d'Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824377,
+      "resource_state": 2,
+      "name": "Bend 13 to 12",
+      "activity_type": "Ride",
+      "distance": 461.0,
+      "average_grade": 8.7,
+      "maximum_grade": 14.2,
+      "elevation_high": 1168.4,
+      "elevation_low": 1128.2,
+      "start_latlng": [
+        45.072462,
+        6.051231
+      ],
+      "end_latlng": [
+        45.074897,
+        6.047737
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824401,
+      "resource_state": 2,
+      "name": "Bend 12 to 11",
+      "activity_type": "Ride",
+      "distance": 474.3,
+      "average_grade": 7.7,
+      "maximum_grade": 13.3,
+      "elevation_high": 1205.0,
+      "elevation_low": 1168.4,
+      "start_latlng": [
+        45.074897,
+        6.047737
+      ],
+      "end_latlng": [
+        45.073215,
+        6.052128
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824420,
+      "resource_state": 2,
+      "name": "Bend 11 to 10",
+      "activity_type": "Ride",
+      "distance": 608.0,
+      "average_grade": 7.4,
+      "maximum_grade": 12.9,
+      "elevation_high": 1249.8,
+      "elevation_low": 1205.0,
+      "start_latlng": [
+        45.073215,
+        6.052128
+      ],
+      "end_latlng": [
+        45.076637,
+        6.047391
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824445,
+      "resource_state": 2,
+      "name": "Bend 9 to 8",
+      "activity_type": "Ride",
+      "distance": 607.2,
+      "average_grade": 8.9,
+      "maximum_grade": 17.2,
+      "elevation_high": 1350.2,
+      "elevation_low": 1296.0,
+      "start_latlng": [
+        45.074683,
+        6.052266
+      ],
+      "end_latlng": [
+        45.077911,
+        6.047935
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824463,
+      "resource_state": 2,
+      "name": "Bend 8 to 7",
+      "activity_type": "Ride",
+      "distance": 487.6,
+      "average_grade": 8.3,
+      "maximum_grade": 15.8,
+      "elevation_high": 1390.8,
+      "elevation_low": 1350.2,
+      "start_latlng": [
+        45.077911,
+        6.047935
+      ],
+      "end_latlng": [
+        45.077082,
+        6.053372
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824505,
+      "resource_state": 2,
+      "name": "Bend 6 to 5",
+      "activity_type": "Ride",
+      "distance": 507.3,
+      "average_grade": 6.5,
+      "maximum_grade": 11.8,
+      "elevation_high": 1514.0,
+      "elevation_low": 1480.8,
+      "start_latlng": [
+        45.082288,
+        6.062309
+      ],
+      "end_latlng": [
+        45.083689,
+        6.05764
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824519,
+      "resource_state": 2,
+      "name": "Bend 5 to 4",
+      "activity_type": "Ride",
+      "distance": 434.4,
+      "average_grade": 8.5,
+      "maximum_grade": 13.9,
+      "elevation_high": 1550.8,
+      "elevation_low": 1514.0,
+      "start_latlng": [
+        45.083689,
+        6.05764
+      ],
+      "end_latlng": [
+        45.08359,
+        6.062622
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": null,
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824534,
+      "resource_state": 2,
+      "name": "Bend 3 to 2",
+      "activity_type": "Ride",
+      "distance": 431.5,
+      "average_grade": 8.9,
+      "maximum_grade": 14.0,
+      "elevation_high": 1659.2,
+      "elevation_low": 1620.8,
+      "start_latlng": [
+        45.088188,
+        6.055938
+      ],
+      "end_latlng": [
+        45.088716,
+        6.060485
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20824553,
+      "resource_state": 2,
+      "name": "Bend 2 to 1",
+      "activity_type": "Ride",
+      "distance": 537.1,
+      "average_grade": 8.1,
+      "maximum_grade": 14.6,
+      "elevation_high": 1702.8,
+      "elevation_low": 1659.2,
+      "start_latlng": [
+        45.088716,
+        6.060485
+      ],
+      "end_latlng": [
+        45.091455,
+        6.055434
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20910769,
+      "resource_state": 2,
+      "name": "Sarenne-Romanche",
+      "activity_type": "Ride",
+      "distance": 13135.4,
+      "average_grade": -7.4,
+      "maximum_grade": 13.5,
+      "elevation_high": 1994.1,
+      "elevation_low": 1024.1,
+      "start_latlng": [
+        45.088215,
+        6.149273
+      ],
+      "end_latlng": [
+        45.04589,
+        6.137793
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Clavans-en-Haut-Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20977032,
+      "resource_state": 2,
+      "name": "Finish Lepape La Marmotte - Grand Fondo 2019",
+      "activity_type": "Ride",
+      "distance": 2016.0,
+      "average_grade": 8.8,
+      "maximum_grade": 20.0,
+      "elevation_high": 1757.8,
+      "elevation_low": 1580.0,
+      "start_latlng": [
+        45.086685,
+        6.058697
+      ],
+      "end_latlng": [
+        45.090579,
+        6.064098
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21126099,
+      "resource_state": 2,
+      "name": "ADH final kick",
+      "activity_type": "Ride",
+      "distance": 433.5,
+      "average_grade": 8.7,
+      "maximum_grade": 15.5,
+      "elevation_high": 1741.6,
+      "elevation_low": 1704.0,
+      "start_latlng": [
+        45.091748,
+        6.058462
+      ],
+      "end_latlng": [
+        45.090735,
+        6.063747
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21476037,
+      "resource_state": 2,
+      "name": "Deux Mille: Bend 21 to 19",
+      "activity_type": "Ride",
+      "distance": 832.3,
+      "average_grade": 10.5,
+      "maximum_grade": 14.0,
+      "elevation_high": 858.0,
+      "elevation_low": 771.0,
+      "start_latlng": [
+        45.071668,
+        6.039284
+      ],
+      "end_latlng": [
+        45.067958,
+        6.042029
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21476085,
+      "resource_state": 2,
+      "name": "Deux Mille: Bend 13 to 8",
+      "activity_type": "Ride",
+      "distance": 2644.9,
+      "average_grade": 8.4,
+      "maximum_grade": 13.9,
+      "elevation_high": 1297.4,
+      "elevation_low": 1074.8,
+      "start_latlng": [
+        45.07248,
+        6.051256
+      ],
+      "end_latlng": [
+        45.077828,
+        6.047883
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21476104,
+      "resource_state": 2,
+      "name": "Deux Mille: Bend 8 to 6",
+      "activity_type": "Ride",
+      "distance": 1632.7,
+      "average_grade": 8.0,
+      "maximum_grade": 14.2,
+      "elevation_high": 1428.2,
+      "elevation_low": 1297.4,
+      "start_latlng": [
+        45.077828,
+        6.047883
+      ],
+      "end_latlng": [
+        45.082276,
+        6.0623
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21476123,
+      "resource_state": 2,
+      "name": "Deux Mille: Bend 6 to 3",
+      "activity_type": "Ride",
+      "distance": 1789.8,
+      "average_grade": 7.9,
+      "maximum_grade": 12.0,
+      "elevation_high": 1570.0,
+      "elevation_low": 1427.8,
+      "start_latlng": [
+        45.082173,
+        6.062326
+      ],
+      "end_latlng": [
+        45.088129,
+        6.055895
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21484426,
+      "resource_state": 2,
+      "name": "Whoom!",
+      "activity_type": "Ride",
+      "distance": 387.7,
+      "average_grade": -3.6,
+      "maximum_grade": 13.2,
+      "elevation_high": 1212.6,
+      "elevation_low": 1184.6,
+      "start_latlng": [
+        45.05976,
+        6.149263
+      ],
+      "end_latlng": [
+        45.05701,
+        6.146504
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Clavans-en-Haut-Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21518971,
+      "resource_state": 2,
+      "name": "Hairpin 1 to Marked Official Chrono Finish Line",
+      "activity_type": "Ride",
+      "distance": 615.5,
+      "average_grade": 8.0,
+      "maximum_grade": 12.9,
+      "elevation_high": 1770.8,
+      "elevation_low": 1721.8,
+      "start_latlng": [
+        45.091523,
+        6.05557
+      ],
+      "end_latlng": [
+        45.090808,
+        6.063106
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21585199,
+      "resource_state": 2,
+      "name": "20 to 18",
+      "activity_type": "Ride",
+      "distance": 457.4,
+      "average_grade": 9.5,
+      "maximum_grade": 14.2,
+      "elevation_high": 884.0,
+      "elevation_low": 840.6,
+      "start_latlng": [
+        45.066443,
+        6.042207
+      ],
+      "end_latlng": [
+        45.065963,
+        6.043348
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "La Garde",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21890267,
+      "resource_state": 2,
+      "name": "Fatboy Folly to 21",
+      "activity_type": "Ride",
+      "distance": 719.5,
+      "average_grade": 11.1,
+      "maximum_grade": 15.1,
+      "elevation_high": 690.6,
+      "elevation_low": 610.8,
+      "start_latlng": [
+        45.065464,
+        6.040143
+      ],
+      "end_latlng": [
+        45.071781,
+        6.039088
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Le Bourg-d'Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24847998,
+      "resource_state": 2,
+      "name": "La Garde -> Huez Village",
+      "activity_type": "Ride",
+      "distance": 6259.4,
+      "average_grade": 7.7,
+      "maximum_grade": 17.9,
+      "elevation_high": 1433.4,
+      "elevation_low": 951.0,
+      "start_latlng": [
+        45.067437,
+        6.044222
+      ],
+      "end_latlng": [
+        45.08221,
+        6.059972
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 3,
+      "city": "Le Bourg-d'Oisans",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 25226487,
+      "resource_state": 2,
+      "name": "alpe d'huez (les bergers) - col de sarenne",
+      "activity_type": "Ride",
+      "distance": 7753.9,
+      "average_grade": 2.4,
+      "maximum_grade": 17.3,
+      "elevation_high": 2032.4,
+      "elevation_low": 1805.0,
+      "start_latlng": [
+        45.08911,
+        6.07775
+      ],
+      "end_latlng": [
+        45.087448,
+        6.149081
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Huez",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    }
+  ]
+}

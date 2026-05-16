@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race Center — Alps 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Archivo+Narrow:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ─────────────────────────────────────────────────────────
+       Editorial cycling-luxury — Rapha / PNS mood
+       Same tokens as the personal dashboard.
+       ───────────────────────────────────────────────────────── */
+    :root {
+      --bg: #EDE7DD;          /* bone */
+      --paper: #F5F1E8;       /* chalk */
+      --paper-2: #E8E0D2;     /* deeper chalk */
+      --ink: #1A1A1A;         /* carbon */
+      --ink-2: #2A2A2A;
+      --accent: #6B1F1F;      /* oxblood */
+      --accent-soft: #8B2D2D; /* wine */
+      --brass: #B89968;       /* brass */
+      --mute: #8B8377;        /* stone */
+      --line: #D8D2C5;        /* bone-line */
+      --good: #5A7D4A;        /* aged olive */
+      --warn: #B89968;
+      --bad: #8B2D2D;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Archivo', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-soft); }
+
+    /* ── Top nav (sticky) ── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--ink); color: var(--paper);
+      padding: 12px 22px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--accent);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .nav-logo {
+      font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 16px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo::before {
+      content: ''; width: 10px; height: 10px;
+      background: var(--accent); display: inline-block;
+    }
+    .nav-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+    .nav-links a {
+      color: var(--paper); font-family: 'Archivo Narrow', sans-serif;
+      font-weight: 700; font-size: 11px; letter-spacing: 0.16em;
+      text-transform: uppercase; padding-bottom: 2px;
+      border-bottom: 1px solid transparent; transition: border-color 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active { border-bottom-color: var(--brass); color: var(--paper); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 80px 22px 56px;
+      background:
+        radial-gradient(ellipse at 75% 30%, rgba(184,153,104,0.10), transparent 60%),
+        linear-gradient(180deg, #1A1A1A 0%, #2A1F1A 60%, #3D0F0F 100%);
+      color: var(--paper);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: 16px; right: 22px;
+      width: 24px; height: 24px; background: var(--brass);
+      transform: rotate(45deg);
+    }
+    .hero-eyebrow {
+      font-family: 'Archivo Narrow', sans-serif;
+      font-weight: 700; font-size: 11px; letter-spacing: 0.30em;
+      text-transform: uppercase; color: var(--brass);
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: 'Archivo', sans-serif; font-weight: 800;
+      font-size: clamp(42px, 8vw, 84px); line-height: 0.92;
+      letter-spacing: -0.025em; margin: 0 0 14px;
+    }
+    .hero h1 .accent { color: var(--accent); }
+    .hero h1 .brass { color: var(--brass); }
+    .hero-sub {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 14px; letter-spacing: 0.10em; text-transform: uppercase;
+      color: var(--mute); margin-bottom: 32px;
+    }
+    .countdown {
+      display: inline-flex; gap: 0;
+      border: 1px solid rgba(184,153,104,0.25);
+      background: rgba(0,0,0,0.30);
+    }
+    .countdown-cell {
+      padding: 14px 24px; border-right: 1px solid rgba(184,153,104,0.25);
+      min-width: 80px; text-align: center;
+    }
+    .countdown-cell:last-child { border-right: none; }
+    .countdown-num {
+      font-family: 'Archivo', sans-serif; font-weight: 800;
+      font-size: 28px; line-height: 1; color: var(--paper);
+      font-variant-numeric: tabular-nums;
+    }
+    .countdown-label {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--brass); margin-top: 6px;
+    }
+
+    /* ── Bands / sections ── */
+    .band {
+      padding: 56px 22px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+    .band.alt { background: var(--paper); }
+    .wrap { max-width: 1200px; margin: 0 auto; }
+    .section-h {
+      font-family: 'Archivo', sans-serif; font-weight: 800;
+      font-size: 28px; letter-spacing: -0.01em;
+      margin: 0 0 6px; color: var(--ink);
+      border-bottom: 2px solid var(--ink); padding-bottom: 8px;
+      display: inline-block;
+    }
+    .section-sub {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 400;
+      font-size: 13px; letter-spacing: 0.06em; color: var(--mute);
+      margin: 8px 0 28px;
+    }
+    .eyebrow {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 6px;
+    }
+
+    /* ── Current jerseys panel ── */
+    .jerseys-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+      border: 1px solid var(--line); background: var(--paper);
+    }
+    .jersey-cell {
+      padding: 18px 16px; border-right: 1px solid var(--line);
+      text-align: center; position: relative;
+    }
+    .jersey-cell:last-child { border-right: none; }
+    .jersey-cell.gc::before    { background: #E8B620; }
+    .jersey-cell.kom::before   { background: var(--accent); }
+    .jersey-cell.sprint::before { background: #5A7D4A; }
+    .jersey-cell.team::before  { background: var(--brass); }
+    .jersey-cell::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 4px;
+    }
+    .jersey-label {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--mute); margin-bottom: 4px;
+    }
+    .jersey-leader {
+      font-family: 'Archivo', sans-serif; font-weight: 800;
+      font-size: 18px; color: var(--ink); margin-bottom: 4px;
+    }
+    .jersey-meta {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 400;
+      font-size: 11px; color: var(--mute);
+    }
+    @media (max-width: 700px) {
+      .jerseys-row { grid-template-columns: 1fr 1fr; }
+      .jersey-cell:nth-child(2) { border-right: none; }
+      .jersey-cell:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    }
+
+    /* ── Standings ── */
+    .tabs { display: flex; gap: 0; margin: 24px 0 14px; flex-wrap: wrap; border-bottom: 2px solid var(--ink); }
+    .tab {
+      padding: 10px 18px; cursor: pointer;
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--mute); background: transparent; border: none;
+      border-bottom: 3px solid transparent;
+    }
+    .tab.active { color: var(--ink); border-bottom-color: var(--accent); }
+    .tab:hover { color: var(--ink); }
+
+    .standings-table {
+      width: 100%; border-collapse: collapse;
+      background: var(--paper); border: 1px solid var(--line);
+      font-variant-numeric: tabular-nums;
+    }
+    .standings-table th {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--mute); padding: 11px 14px; text-align: left;
+      border-bottom: 1px solid var(--ink);
+    }
+    .standings-table td {
+      padding: 12px 14px; border-bottom: 1px solid var(--line); font-size: 14px;
+    }
+    .standings-table tr:last-child td { border-bottom: none; }
+    .standings-table .pos { font-weight: 800; width: 40px; }
+    .standings-table .pos-1 { color: #E8B620; }
+    .standings-table .pos-2 { color: #999; }
+    .standings-table .pos-3 { color: #C77B5C; }
+    .standings-empty {
+      padding: 36px 18px; text-align: center;
+      color: var(--mute); font-style: italic;
+    }
+
+    /* ── Riders grid ── */
+    .riders {
+      display: grid; gap: 12px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    .rider {
+      background: var(--paper); border: 1px solid var(--line);
+      padding: 18px 18px 16px; position: relative;
+    }
+    .rider::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 6px; height: 100%;
+    }
+    .rider.team-a::before { background: var(--accent); }
+    .rider.team-b::before { background: var(--brass); }
+    .rider-team-tag {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 3px 7px; display: inline-block;
+      margin-bottom: 10px; border: 1px solid var(--ink);
+    }
+    .rider.team-a .rider-team-tag { color: var(--accent); border-color: var(--accent); }
+    .rider.team-b .rider-team-tag { color: var(--accent-soft); border-color: var(--brass); background: rgba(184,153,104,0.08); }
+    .rider-name {
+      font-family: 'Archivo', sans-serif; font-weight: 800;
+      font-size: 17px; margin-bottom: 12px; line-height: 1.15;
+    }
+    .rider-stat {
+      display: flex; justify-content: space-between;
+      padding: 4px 0; font-size: 13px;
+      border-top: 1px dashed var(--line);
+    }
+    .rider-stat:first-of-type { border-top: none; }
+    .rider-stat .label {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--mute);
+    }
+    .rider-stat .value { font-weight: 700; font-variant-numeric: tabular-nums; }
+
+    /* ── Stage cards ── */
+    .stage-cards { display: grid; gap: 22px; grid-template-columns: 1fr; }
+    @media (min-width: 900px) { .stage-cards { grid-template-columns: repeat(3, 1fr); } }
+    .stage {
+      background: var(--paper); border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .stage-head {
+      background: linear-gradient(180deg, #3D0F0F 0%, #1A1A1A 100%);
+      color: var(--paper); padding: 18px 20px;
+      position: relative;
+    }
+    .stage-head::after {
+      content: ''; position: absolute; top: 12px; right: 16px;
+      width: 14px; height: 14px; background: var(--brass);
+      transform: rotate(45deg);
+    }
+    .stage-day {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--brass); margin-bottom: 4px;
+    }
+    .stage-name {
+      font-family: 'Archivo', sans-serif; font-weight: 800;
+      font-size: 19px; line-height: 1.15; margin-bottom: 8px;
+    }
+    .stage-stats {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      font-family: 'Archivo Narrow', sans-serif; font-size: 11px;
+      letter-spacing: 0.10em; text-transform: uppercase; color: var(--mute);
+    }
+    .stage-stats strong { color: var(--paper); font-weight: 700; }
+    .stage-body { padding: 18px 20px; }
+    .stage-section {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent); border-bottom: 1px solid var(--ink);
+      padding-bottom: 6px; margin: 14px 0 10px;
+    }
+    .stage-section:first-child { margin-top: 0; }
+    .seg {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 9px 0; border-bottom: 1px dashed var(--line); gap: 12px;
+    }
+    .seg:last-child { border-bottom: none; }
+    .seg-main { flex: 1; min-width: 0; }
+    .seg-name {
+      font-weight: 700; font-size: 13.5px; margin-bottom: 3px;
+      display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+    }
+    .seg-cat {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 9px; letter-spacing: 0.08em;
+      padding: 2px 6px; border: 1px solid var(--ink);
+    }
+    .seg-cat.HC { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+    .seg-cat.Cat1 { background: var(--accent-soft); color: var(--paper); border-color: var(--accent-soft); }
+    .seg-cat.Cat2 { background: var(--brass); color: var(--ink); border-color: var(--brass); }
+    .seg-cat.Sprint { background: var(--good); color: var(--paper); border-color: var(--good); }
+    .seg-cat.Descent { background: var(--ink); color: var(--brass); border-color: var(--brass); }
+
+    /* ── Rider details ── */
+    details.rider { padding: 0; }
+    details.rider summary {
+      padding: 18px 18px 16px; cursor: pointer; list-style: none;
+      position: relative;
+    }
+    details.rider summary::-webkit-details-marker { display: none; }
+    .rider-expand-cue {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); margin-top: 10px;
+    }
+    details.rider[open] .rider-expand-cue { color: var(--mute); }
+    details.rider[open] .rider-expand-cue::after { content: ' (luk)'; }
+    .rider-detail {
+      padding: 6px 18px 18px; border-top: 1px solid var(--line);
+      background: var(--paper-2);
+    }
+    .rider-detail-section { margin-top: 14px; }
+    .rider-detail-section:first-child { margin-top: 4px; }
+    .rider-detail-h {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 8px;
+      border-bottom: 1px solid var(--ink); padding-bottom: 4px;
+    }
+    .rider-detail-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px;
+      font-size: 13px;
+    }
+    .rider-detail-grid > div {
+      display: flex; justify-content: space-between;
+      padding: 3px 0; border-bottom: 1px dashed var(--line);
+    }
+    .rider-detail-grid .label {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.10em; text-transform: uppercase;
+      color: var(--mute);
+    }
+    .rider-detail-grid .value { font-weight: 700; font-variant-numeric: tabular-nums; }
+    .rider-commentary {
+      font-style: italic; font-size: 13.5px; line-height: 1.55;
+      color: var(--ink-2); margin: 0;
+    }
+
+    /* ── Segment benchmark ── */
+    .benchmark-grid {
+      background: var(--paper); border: 1px solid var(--line);
+      padding: 18px;
+    }
+    .benchmark-bar-row {
+      display: grid; grid-template-columns: 160px 1fr 80px; gap: 12px;
+      align-items: center; padding: 7px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .benchmark-bar-row:last-child { border-bottom: none; }
+    .benchmark-label {
+      font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12.5px;
+    }
+    .benchmark-label .cat-tag {
+      display: inline-block; font-family: 'Archivo Narrow', sans-serif;
+      font-size: 9px; letter-spacing: 0.06em; padding: 1px 5px;
+      margin-right: 5px; border: 1px solid var(--ink);
+    }
+    .benchmark-track {
+      height: 14px; background: rgba(0,0,0,0.06);
+      border: 1px solid var(--line); position: relative;
+    }
+    .benchmark-fill {
+      height: 100%; background: linear-gradient(90deg, var(--brass), var(--accent));
+    }
+    .benchmark-value {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 11px; text-align: right; color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .benchmark-tabs { display: flex; gap: 4px; margin-bottom: 12px; flex-wrap: wrap; }
+    .benchmark-tab {
+      padding: 6px 12px; font-family: 'Archivo Narrow', sans-serif;
+      font-weight: 700; font-size: 10px; letter-spacing: 0.14em;
+      text-transform: uppercase; border: 1px solid var(--line);
+      cursor: pointer; background: var(--paper); color: var(--mute);
+    }
+    .benchmark-tab.active { background: var(--ink); color: var(--brass); border-color: var(--ink); }
+    .benchmark-foot {
+      font-family: 'Archivo Narrow', sans-serif; font-size: 11px;
+      color: var(--mute); margin-top: 10px; letter-spacing: 0.04em;
+    }
+    .seg-detail {
+      font-family: 'Archivo Narrow', sans-serif; font-size: 11px;
+      letter-spacing: 0.06em; color: var(--mute);
+    }
+    .seg-strava {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.10em; text-transform: uppercase;
+      color: var(--accent); padding-top: 4px; white-space: nowrap;
+    }
+
+    /* ── Guide ── */
+    .guide {
+      background: var(--paper); border: 1px solid var(--line);
+      padding: 26px 28px;
+    }
+    .guide h3 {
+      font-family: 'Archivo', sans-serif; font-weight: 800;
+      font-size: 17px; margin: 22px 0 8px; color: var(--ink);
+      border-left: 3px solid var(--accent); padding-left: 10px;
+    }
+    .guide h3:first-child { margin-top: 0; }
+    .guide p, .guide li {
+      font-size: 14px; line-height: 1.6; color: var(--ink-2);
+    }
+    .guide ol, .guide ul { margin: 8px 0 8px 18px; }
+    .guide table {
+      width: 100%; border-collapse: collapse; margin: 10px 0;
+      font-variant-numeric: tabular-nums;
+    }
+    .guide table th, .guide table td {
+      padding: 7px 10px; border: 1px solid var(--line);
+      font-size: 12.5px; text-align: center;
+    }
+    .guide table th {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: var(--paper-2);
+    }
+    .guide-callout {
+      background: rgba(107, 31, 31, 0.06);
+      border-left: 3px solid var(--accent); padding: 12px 16px;
+      margin: 12px 0; font-size: 13.5px;
+    }
+
+    /* ── Recap (placeholder) ── */
+    .recap-empty {
+      background: var(--paper); border: 1px dashed var(--line);
+      padding: 36px 22px; text-align: center;
+    }
+    .recap-empty-icon { font-size: 32px; opacity: 0.4; margin-bottom: 10px; }
+    .recap-empty p {
+      font-family: 'Archivo Narrow', sans-serif; color: var(--mute);
+      font-size: 13px; letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky top nav -->
+  <nav class="nav">
+    <div class="nav-logo">Race Center · Alps 26</div>
+    <ul class="nav-links">
+      <li><a href="index.html">← Hovedside</a></li>
+      <li><a href="#standings">Standings</a></li>
+      <li><a href="#riders">Ryttere</a></li>
+      <li><a href="#stages">Etaper</a></li>
+      <li><a href="#guide">Guide</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-eyebrow">1.–3. juni 2026 · Le Bourg-d'Oisans</div>
+    <h1>Race<br><span class="accent">Center</span><br><span class="brass">Alps 2026</span></h1>
+    <div class="hero-sub">6 ryttere · 2 hold · 3 HC-bjerge · 235 km · 6 700 hm</div>
+    <div class="countdown">
+      <div class="countdown-cell">
+        <div class="countdown-num" id="cd-days">—</div>
+        <div class="countdown-label">Dage</div>
+      </div>
+      <div class="countdown-cell">
+        <div class="countdown-num" id="cd-hours">—</div>
+        <div class="countdown-label">Timer</div>
+      </div>
+      <div class="countdown-cell">
+        <div class="countdown-num" id="cd-mins">—</div>
+        <div class="countdown-label">Min</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Current jerseys (updates per stage) -->
+  <section class="band alt">
+    <div class="wrap">
+      <div class="eyebrow">Dagens trøjer</div>
+      <h2 class="section-h">Hvem fører lige nu</h2>
+      <p class="section-sub">Skifter automatisk efter hver etape via Strava-data. Status før etape 1: ingen leder.</p>
+      <div class="jerseys-row">
+        <div class="jersey-cell gc">
+          <div class="jersey-label">🟡 Gul · GC</div>
+          <div class="jersey-leader" id="jersey-gc">—</div>
+          <div class="jersey-meta" id="jersey-gc-meta">Samlet tid</div>
+        </div>
+        <div class="jersey-cell kom">
+          <div class="jersey-label">🔴 Bjerg · KOM</div>
+          <div class="jersey-leader" id="jersey-kom">—</div>
+          <div class="jersey-meta" id="jersey-kom-meta">Bjergpoint</div>
+        </div>
+        <div class="jersey-cell sprint">
+          <div class="jersey-label">🟢 Sprint</div>
+          <div class="jersey-leader" id="jersey-sprint">—</div>
+          <div class="jersey-meta" id="jersey-sprint-meta">Sprint-point</div>
+        </div>
+        <div class="jersey-cell team">
+          <div class="jersey-label">🏁 Hold</div>
+          <div class="jersey-leader" id="jersey-team">—</div>
+          <div class="jersey-meta" id="jersey-team-meta">Bedste hold-tid</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standings detail -->
+  <section id="standings" class="band">
+    <div class="wrap">
+      <div class="eyebrow">Live klassement</div>
+      <h2 class="section-h">Standings</h2>
+      <p class="section-sub">Detaljeret pr. dag. Klik en kategori for at skifte tabel.</p>
+      <div class="tabs">
+        <button class="tab active" data-tab="gc">🟡 GC</button>
+        <button class="tab" data-tab="kom">🔴 Bjergpoint</button>
+        <button class="tab" data-tab="sprint">🟢 Sprint</button>
+        <button class="tab" data-tab="team">🏁 Hold</button>
+      </div>
+      <table class="standings-table">
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Rytter</th>
+            <th id="col-main">Tid</th>
+            <th>Etape 1</th>
+            <th>Etape 2</th>
+            <th>Etape 3</th>
+          </tr>
+        </thead>
+        <tbody id="standings-body">
+          <tr><td colspan="6" class="standings-empty">Ingen data endnu. Standings opdateres efter første cykeldag (1. juni).</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Riders + teams -->
+  <section id="riders" class="band alt">
+    <div class="wrap">
+      <div class="eyebrow">Hold &amp; ryttere</div>
+      <h2 class="section-h">2 hold · 6 ryttere</h2>
+      <p class="section-sub">Foreløbig fordeling — bekræftet: Frederik ≠ Emil's hold, Ulrich ≠ Tobias's hold. Auto-balancering kommer m. Strava-data.</p>
+      <div class="riders" id="riders-grid"></div>
+    </div>
+  </section>
+
+  <!-- Segment benchmark -->
+  <section id="benchmark" class="band">
+    <div class="wrap">
+      <div class="eyebrow">Visuel sammenligning</div>
+      <h2 class="section-h">Segment-benchmark</h2>
+      <p class="section-sub">Hvordan stiger turens segmenter op mod hinanden — sammenligning på hård-leveret-arbejde.</p>
+      <div class="benchmark-tabs" id="benchmark-tabs">
+        <button class="benchmark-tab active" data-metric="elev">↑ Højdemeter</button>
+        <button class="benchmark-tab" data-metric="distance">↔ Distance</button>
+        <button class="benchmark-tab" data-metric="gradient">▲ Snit-gradient</button>
+      </div>
+      <div class="benchmark-grid" id="benchmark-grid"></div>
+      <div class="benchmark-foot" id="benchmark-foot">Klik en metric for at re-rank segmenterne. Bjælker er normaliseret til 100 % af største værdi.</div>
+    </div>
+  </section>
+
+  <!-- Stages -->
+  <section id="stages" class="band">
+    <div class="wrap">
+      <div class="eyebrow">3 etaper · 11 segmenter</div>
+      <h2 class="section-h">Etaper &amp; segmenter</h2>
+      <p class="section-sub">Klik et segment for at åbne det på Strava → stjerne det → vises live på din cykelcomputer.</p>
+      <div class="stage-cards" id="stage-cards"></div>
+    </div>
+  </section>
+
+  <!-- Guide -->
+  <section id="guide" class="band alt">
+    <div class="wrap">
+      <div class="eyebrow">Guide</div>
+      <h2 class="section-h">Sådan virker det</h2>
+      <p class="section-sub">Point-system, trøjer, og hvordan du gemmer segmenter på cykelcomputeren.</p>
+
+      <div class="guide">
+
+        <h3>1. Stjerne segmenterne på Strava (vises live på din Garmin/Wahoo)</h3>
+        <ol>
+          <li>Klik et segment-link i "Etaper"-sektionen ovenfor — det åbner Strava.</li>
+          <li>Tryk <strong>stjernen</strong> ved siden af segmentets navn.</li>
+          <li>Sync din cykelcomputer (Garmin Connect / Wahoo Companion).</li>
+          <li>Segmentet vises live med tider og dine venners PR'er mens du kører.</li>
+        </ol>
+
+        <h3>2. Bjergpoint (🔴 KOM-trøje)</h3>
+        <p>Hver kategoriseret stigning giver point til top 6 over toppen:</p>
+        <table>
+          <tr><th>Kategori</th><th>1.</th><th>2.</th><th>3.</th><th>4.</th><th>5.</th><th>6.</th></tr>
+          <tr><td><strong>HC</strong> (Alpe d'Huez, Galibier, Croix de Fer)</td><td>25</td><td>20</td><td>16</td><td>14</td><td>12</td><td>10</td></tr>
+          <tr><td><strong>Cat 1</strong> (Glandon)</td><td>15</td><td>12</td><td>10</td><td>8</td><td>6</td><td>4</td></tr>
+          <tr><td><strong>Cat 2</strong> (Sarenne West)</td><td>10</td><td>8</td><td>6</td><td>4</td><td>2</td><td>1</td></tr>
+        </table>
+        <div class="guide-callout">Flest KOM-point efter 3 dage = <strong>🔴 Bjergtrøje for hele turen</strong>. Daglig leder vises i toppen.</div>
+
+        <h3>3. Sprint-point (🟢 Sprint-trøje)</h3>
+        <p>5 udvalgte "sjove segmenter" — finals, ramper og én flad TT. Point top 4:</p>
+        <table>
+          <tr><th>Pos</th><th>1.</th><th>2.</th><th>3.</th><th>4.</th></tr>
+          <tr><td>Point</td><td>5</td><td>3</td><td>2</td><td>1</td></tr>
+        </table>
+
+        <h3>4. GC (🟡 Gul trøje)</h3>
+        <p>Klassement på samlet kørselstid over alle 3 dage. Hurtigste rytter samlet = <strong>Maillot Jaune</strong>.</p>
+
+        <h3>5. Hold-konkurrence (🏁)</h3>
+        <p>De 6 ryttere er delt i 2 hold à 3. Hver dag summeres holdets tider og bjergpoint. Holdet med lavest tid + flest point får dagens hold-trøje. Samlet vinder = bedste hold efter 3 dage.</p>
+
+        <h3>6. Trøjer skifter dagligt</h3>
+        <p>Alle 4 trøjer (gul, rød, grøn, hold) opdateres efter hver etape. Toppen af siden viser hvem der fører <em>lige nu</em>. Slut-resultatet låses 3. juni aften.</p>
+
+        <h3>7. Auto-update efter hver dag (Phase 2)</h3>
+        <p>Når Strava-OAuth er sat op for alle 6 ryttere:</p>
+        <ul>
+          <li>Hver aften kl. 22:00 (eller når du synes "Sync") puller systemet automatisk dagens aktiviteter fra Strava.</li>
+          <li>Tider på hver KOM- og sprint-segment udregnes pr. rytter.</li>
+          <li>Point fordeles, trøjer opdateres, hold-tider summeres.</li>
+          <li><strong>AI-genereret etape-resumé</strong> skrives (interessante observationer: hvem angreb, hvem brød hvor, største overraskelse — i samme stil som Frederiks personlige dashboard).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stage recap (placeholder) -->
+  <section id="recap" class="band">
+    <div class="wrap">
+      <div class="eyebrow">Etape-resumé</div>
+      <h2 class="section-h">Dagens kommentar</h2>
+      <p class="section-sub">AI-genereret efter hver cykeldag — vinder, taber, interessante observationer.</p>
+      <div class="recap-empty">
+        <div class="recap-empty-icon">🏁</div>
+        <p>Første etape-resumé landes 1. juni aften efter Alpe d'Huez.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ─────────────────────────────────────────────────────────
+    // Data
+    // ─────────────────────────────────────────────────────────
+
+    // Hold-fordeling: Frederik + Tobias + Sebastian vs Emil + Ulrich + Rasmus
+    const RIDERS = [
+      { name: 'Frederik Holmstrøm',     team: 'A', ftp: 245, weight: 72.5,
+        commentary: 'Indoor-anker 245 W FTP (3,45 W/kg). Klassisk klatreprofil — sustained tærskel-tolerance over 60+ min. Outdoor underperformer ~10 % vs indoor pga. trafik. Italien-erfaring (San Marco 2 062 hm). Negative split-rytter — sparer kraft til slutningen.',
+        recent_km: '1438 YTD', best_5min: 294, best_20min: 219, ftp_estimate: 245 },
+      { name: 'Tobias Kragh',           team: 'A', ftp: null, weight: null,
+        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
+      { name: 'Sebastian P. Carlsen',   team: 'A', ftp: null, weight: null,
+        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
+      { name: 'Emil Bech',              team: 'B', ftp: null, weight: null,
+        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
+      { name: 'Ulrich Bille Nielsen',   team: 'B', ftp: null, weight: null,
+        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
+      { name: 'Rasmus Jørgensen',       team: 'B', ftp: null, weight: null,
+        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
+    ];
+
+    // ─────────────────────────────────────────────────────────
+    // Countdown
+    // ─────────────────────────────────────────────────────────
+    function updateCountdown() {
+      const target = new Date('2026-06-01T07:00:00+02:00');
+      const now = new Date();
+      const diff = target - now;
+      if (diff < 0) {
+        ['cd-days', 'cd-hours', 'cd-mins'].forEach(id => document.getElementById(id).textContent = '0');
+        return;
+      }
+      document.getElementById('cd-days').textContent = Math.floor(diff / 86400000);
+      document.getElementById('cd-hours').textContent = Math.floor((diff % 86400000) / 3600000);
+      document.getElementById('cd-mins').textContent = Math.floor((diff % 3600000) / 60000);
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 30000);
+
+    // ─────────────────────────────────────────────────────────
+    // Riders
+    // ─────────────────────────────────────────────────────────
+    function renderRiders() {
+      const grid = document.getElementById('riders-grid');
+      grid.innerHTML = RIDERS.map((r, idx) => {
+        const wkg = (r.ftp && r.weight) ? (r.ftp / r.weight).toFixed(2) : '—';
+        return `
+          <details class="rider team-${r.team.toLowerCase()}">
+            <summary>
+              <div class="rider-team-tag">Hold ${r.team}</div>
+              <div class="rider-name">${r.name}</div>
+              <div class="rider-stat"><span class="label">FTP</span><span class="value">${r.ftp ? r.ftp + ' W' : '—'}</span></div>
+              <div class="rider-stat"><span class="label">Vægt</span><span class="value">${r.weight ? r.weight + ' kg' : '—'}</span></div>
+              <div class="rider-stat"><span class="label">W/kg</span><span class="value">${wkg}</span></div>
+              <div class="rider-expand-cue">Tryk for AI-præsentation ↓</div>
+            </summary>
+            <div class="rider-detail">
+              <div class="rider-detail-section">
+                <div class="rider-detail-h">Strava-stats</div>
+                <div class="rider-detail-grid">
+                  <div><span class="label">YTD km</span><span class="value">${r.recent_km || '— (afventer OAuth)'}</span></div>
+                  <div><span class="label">Best 5-min</span><span class="value">${r.best_5min ? r.best_5min + ' W' : '— (afventer OAuth)'}</span></div>
+                  <div><span class="label">Best 20-min</span><span class="value">${r.best_20min ? r.best_20min + ' W' : '— (afventer OAuth)'}</span></div>
+                  <div><span class="label">FTP est.</span><span class="value">${r.ftp_estimate ? r.ftp_estimate + ' W' : '— (afventer OAuth)'}</span></div>
+                </div>
+              </div>
+              <div class="rider-detail-section">
+                <div class="rider-detail-h">Race-præsentation</div>
+                <p class="rider-commentary">${r.commentary}</p>
+              </div>
+            </div>
+          </details>
+        `;
+      }).join('');
+    }
+    renderRiders();
+
+    // ─────────────────────────────────────────────────────────
+    // Stages
+    // ─────────────────────────────────────────────────────────
+    async function renderStages() {
+      const container = document.getElementById('stage-cards');
+      try {
+        const res = await fetch('race-center/segments.json');
+        const data = await res.json();
+        const dayLabels = ['Dag 1 · 1. juni', 'Dag 2 · 2. juni', 'Dag 3 · 3. juni'];
+        container.innerHTML = data.stages.map((s, i) => {
+          const cleanName = s.name.replace(/^Dag \d+:\s*/, '');
+          const climbsHtml = (s.climbs || []).map(c => `
+            <div class="seg">
+              <div class="seg-main">
+                <div class="seg-name"><span class="seg-cat ${c.category}">${c.category}</span>${c.name}</div>
+                <div class="seg-detail">${c.distance_km} km · ${c.avg_gradient_pct}% snit · ${c.elevation_gain_m} hm</div>
+              </div>
+              <a class="seg-strava" href="${c.strava_url}" target="_blank" rel="noopener">Strava ↗</a>
+            </div>
+          `).join('');
+          const sprintsHtml = (s.sprints || []).map(c => `
+            <div class="seg">
+              <div class="seg-main">
+                <div class="seg-name"><span class="seg-cat Sprint">SP</span>${c.name}</div>
+                <div class="seg-detail">${c.distance_km} km · ${c.avg_gradient_pct}%</div>
+              </div>
+              <a class="seg-strava" href="${c.strava_url}" target="_blank" rel="noopener">Strava ↗</a>
+            </div>
+          `).join('');
+          const descentsHtml = (s.descents || []).map(c => `
+            <div class="seg">
+              <div class="seg-main">
+                <div class="seg-name"><span class="seg-cat Descent">DS</span>${c.name}</div>
+                <div class="seg-detail">${c.distance_km} km · ${c.avg_gradient_pct}%</div>
+              </div>
+              <a class="seg-strava" href="${c.strava_url}" target="_blank" rel="noopener">Strava ↗</a>
+            </div>
+          `).join('');
+          return `
+            <div class="stage">
+              <div class="stage-head">
+                <div class="stage-day">${dayLabels[i]}</div>
+                <div class="stage-name">${cleanName}</div>
+                <div class="stage-stats">
+                  <span><strong>${s.distance_km}</strong> km</span>
+                  <span><strong>${s.elevation_gain_m}</strong> hm</span>
+                  <span>~<strong>${s.estimated_time_h}</strong> t</span>
+                </div>
+              </div>
+              <div class="stage-body">
+                ${climbsHtml ? `<div class="stage-section">Bjergpoint</div>${climbsHtml}` : ''}
+                ${sprintsHtml ? `<div class="stage-section">Sprint-segmenter</div>${sprintsHtml}` : ''}
+                ${descentsHtml ? `<div class="stage-section">Descent-segmenter (King of the Descent)</div>${descentsHtml}` : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+        renderBenchmark(data);
+      } catch (e) {
+        container.innerHTML = `<p style="color:var(--mute)">Kunne ikke loade segments.json.</p>`;
+      }
+    }
+    renderStages();
+
+    // ─────────────────────────────────────────────────────────
+    // Segment benchmark (KOM + sprint compared)
+    // ─────────────────────────────────────────────────────────
+    let _benchmarkData = null;
+    function renderBenchmark(data) {
+      _benchmarkData = data;
+      drawBenchmark('elev');
+    }
+    function drawBenchmark(metric) {
+      if (!_benchmarkData) return;
+      const grid = document.getElementById('benchmark-grid');
+      const allSegs = [];
+      _benchmarkData.stages.forEach((s, dayIdx) => {
+        (s.climbs || []).forEach(c => allSegs.push({...c, dayIdx, type: 'KOM'}));
+        (s.sprints || []).forEach(c => allSegs.push({...c, dayIdx, type: 'Sprint'}));
+        (s.descents || []).forEach(c => allSegs.push({...c, dayIdx, type: 'Descent'}));
+      });
+      const getValue = (s) => {
+        if (metric === 'elev') return s.elevation_gain_m;
+        if (metric === 'distance') return s.distance_km;
+        if (metric === 'gradient') return Math.abs(s.avg_gradient_pct);
+      };
+      const sorted = [...allSegs].sort((a, b) => getValue(b) - getValue(a));
+      const max = getValue(sorted[0]) || 1;
+      const unit = metric === 'elev' ? 'hm' : metric === 'distance' ? 'km' : '%';
+      grid.innerHTML = sorted.map(s => {
+        const v = getValue(s);
+        const pct = Math.max(2, (v / max) * 100);
+        return `
+          <div class="benchmark-bar-row">
+            <div class="benchmark-label"><span class="cat-tag">${s.category}</span>${s.name}</div>
+            <div class="benchmark-track"><div class="benchmark-fill" style="width:${pct.toFixed(1)}%"></div></div>
+            <div class="benchmark-value">${v.toFixed(metric === 'gradient' ? 1 : (metric === 'distance' ? 2 : 0))} ${unit}</div>
+          </div>
+        `;
+      }).join('');
+    }
+    document.querySelectorAll('.benchmark-tab').forEach(t => {
+      t.addEventListener('click', () => {
+        document.querySelectorAll('.benchmark-tab').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        drawBenchmark(t.dataset.metric);
+      });
+    });
+
+    // ─────────────────────────────────────────────────────────
+    // Tabs
+    // ─────────────────────────────────────────────────────────
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const col = document.getElementById('col-main');
+        const type = tab.dataset.tab;
+        if (type === 'gc') col.textContent = 'Total tid';
+        if (type === 'kom') col.textContent = 'Bjergpoint';
+        if (type === 'sprint') col.textContent = 'Sprint-point';
+        if (type === 'team') col.textContent = 'Hold-tid';
+      });
+    });
+  </script>
+
+</body>
+</html>
