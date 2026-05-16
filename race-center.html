@@ -411,6 +411,44 @@
       font-family: 'Archivo Narrow', sans-serif; font-size: 11px;
       color: var(--mute); margin-top: 10px; letter-spacing: 0.04em;
     }
+
+    /* ── Rider × Segment table ── */
+    .rider-times-wrap {
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      background: var(--paper); border: 1px solid var(--line);
+    }
+    .rider-times-table {
+      width: 100%; border-collapse: collapse; min-width: 700px;
+    }
+    .rider-times-table th {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--mute); padding: 10px 12px; text-align: left;
+      border-bottom: 1px solid var(--ink); background: var(--paper-2);
+      position: sticky; top: 0;
+    }
+    .rider-times-table th.num { text-align: right; }
+    .rider-times-table td {
+      padding: 12px; border-bottom: 1px solid var(--line);
+      font-size: 13px; font-variant-numeric: tabular-nums;
+    }
+    .rider-times-table td.num { text-align: right; }
+    .rider-times-table tr:last-child td { border-bottom: none; }
+    .rider-times-table td.fastest {
+      background: rgba(107, 31, 31, 0.08);
+      color: var(--accent); font-weight: 700;
+    }
+    .rider-times-table td.pending {
+      color: var(--mute); font-style: italic;
+    }
+    .seg-cell-name {
+      font-weight: 700; font-size: 13.5px; display: flex; align-items: center;
+      gap: 6px; flex-wrap: wrap;
+    }
+    .seg-cell-detail {
+      font-family: 'Archivo Narrow', sans-serif; font-size: 11px;
+      color: var(--mute); letter-spacing: 0.04em; margin-top: 2px;
+    }
     .seg-detail {
       font-family: 'Archivo Narrow', sans-serif; font-size: 11px;
       letter-spacing: 0.06em; color: var(--mute);
@@ -578,14 +616,37 @@
     <div class="wrap">
       <div class="eyebrow">Visuel sammenligning</div>
       <h2 class="section-h">Segment-benchmark</h2>
-      <p class="section-sub">Hvordan stiger turens segmenter op mod hinanden — sammenligning på hård-leveret-arbejde.</p>
+      <p class="section-sub">Hvordan rangerer turens segmenter mod hinanden. Stigninger og descents vises separat.</p>
+
+      <!-- Direction toggle -->
+      <div class="benchmark-tabs" id="benchmark-dir-tabs" style="margin-bottom: 6px;">
+        <button class="benchmark-tab dir active" data-dir="up">▲ Stigninger</button>
+        <button class="benchmark-tab dir" data-dir="down">▼ Descents</button>
+      </div>
+      <!-- Metric toggle -->
       <div class="benchmark-tabs" id="benchmark-tabs">
-        <button class="benchmark-tab active" data-metric="elev">↑ Højdemeter</button>
-        <button class="benchmark-tab" data-metric="distance">↔ Distance</button>
-        <button class="benchmark-tab" data-metric="gradient">▲ Snit-gradient</button>
+        <button class="benchmark-tab active" data-metric="elev">Højdemeter</button>
+        <button class="benchmark-tab" data-metric="distance">Distance</button>
+        <button class="benchmark-tab" data-metric="gradient">Snit-gradient</button>
       </div>
       <div class="benchmark-grid" id="benchmark-grid"></div>
-      <div class="benchmark-foot" id="benchmark-foot">Klik en metric for at re-rank segmenterne. Bjælker er normaliseret til 100 % af største værdi.</div>
+      <div class="benchmark-foot" id="benchmark-foot">Bjælkerne er normaliseret til 100 % af største værdi i den valgte retning + metric.</div>
+    </div>
+  </section>
+
+  <!-- Rider × Segment comparison -->
+  <section id="rider-times" class="band alt">
+    <div class="wrap">
+      <div class="eyebrow">Side-om-side</div>
+      <h2 class="section-h">Rytter × Segment</h2>
+      <p class="section-sub">Forudsagte tider på hvert KOM-segment pr. rytter (fysik-baseret model). Erstattes med faktiske tider efter hver etape.</p>
+      <div class="rider-times-wrap">
+        <table class="rider-times-table" id="rider-times-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="benchmark-foot" id="rider-times-foot">Prædiktion: cykel-fysik baseret på FTP × 0,85 (sustained klimat-effort) + samlet vægt (rytter + 8 kg cykel). Negative tider er ikke ægte — placeholders indtil Strava-OAuth lander.</div>
     </div>
   </section>
 
@@ -815,49 +876,146 @@
     renderStages();
 
     // ─────────────────────────────────────────────────────────
-    // Segment benchmark (KOM + sprint compared)
+    // Segment benchmark (split by direction: climbs vs descents)
     // ─────────────────────────────────────────────────────────
     let _benchmarkData = null;
+    let _bmDir = 'up';
+    let _bmMetric = 'elev';
     function renderBenchmark(data) {
       _benchmarkData = data;
-      drawBenchmark('elev');
+      drawBenchmark();
+      renderRiderTimes();
     }
-    function drawBenchmark(metric) {
+    function drawBenchmark() {
       if (!_benchmarkData) return;
       const grid = document.getElementById('benchmark-grid');
       const allSegs = [];
       _benchmarkData.stages.forEach((s, dayIdx) => {
-        (s.climbs || []).forEach(c => allSegs.push({...c, dayIdx, type: 'KOM'}));
-        (s.sprints || []).forEach(c => allSegs.push({...c, dayIdx, type: 'Sprint'}));
-        (s.descents || []).forEach(c => allSegs.push({...c, dayIdx, type: 'Descent'}));
+        if (_bmDir === 'up') {
+          (s.climbs || []).forEach(c => allSegs.push({...c, dayIdx}));
+          (s.sprints || []).forEach(c => {
+            if (c.avg_gradient_pct >= 0) allSegs.push({...c, dayIdx});
+          });
+        } else {
+          (s.descents || []).forEach(c => allSegs.push({...c, dayIdx}));
+          (s.sprints || []).forEach(c => {
+            if (c.avg_gradient_pct < 0) allSegs.push({...c, dayIdx});
+          });
+        }
       });
       const getValue = (s) => {
-        if (metric === 'elev') return s.elevation_gain_m;
-        if (metric === 'distance') return s.distance_km;
-        if (metric === 'gradient') return Math.abs(s.avg_gradient_pct);
+        if (_bmMetric === 'elev') return s.elevation_gain_m;
+        if (_bmMetric === 'distance') return s.distance_km;
+        if (_bmMetric === 'gradient') return Math.abs(s.avg_gradient_pct);
       };
       const sorted = [...allSegs].sort((a, b) => getValue(b) - getValue(a));
       const max = getValue(sorted[0]) || 1;
-      const unit = metric === 'elev' ? 'hm' : metric === 'distance' ? 'km' : '%';
+      const unit = _bmMetric === 'elev' ? 'hm' : _bmMetric === 'distance' ? 'km' : '%';
+      if (!sorted.length) {
+        grid.innerHTML = `<div style="padding:24px; text-align:center; color:var(--mute);">Ingen segmenter i denne retning</div>`;
+        return;
+      }
       grid.innerHTML = sorted.map(s => {
         const v = getValue(s);
         const pct = Math.max(2, (v / max) * 100);
+        // When showing gradient, also surface distance as secondary
+        let valueLabel = '';
+        if (_bmMetric === 'gradient') {
+          valueLabel = `${v.toFixed(1)} % · over ${s.distance_km} km`;
+        } else if (_bmMetric === 'distance') {
+          valueLabel = `${v.toFixed(2)} km`;
+        } else {
+          valueLabel = `${v.toFixed(0)} ${unit}`;
+        }
         return `
           <div class="benchmark-bar-row">
             <div class="benchmark-label"><span class="cat-tag">${s.category}</span>${s.name}</div>
             <div class="benchmark-track"><div class="benchmark-fill" style="width:${pct.toFixed(1)}%"></div></div>
-            <div class="benchmark-value">${v.toFixed(metric === 'gradient' ? 1 : (metric === 'distance' ? 2 : 0))} ${unit}</div>
+            <div class="benchmark-value">${valueLabel}</div>
           </div>
         `;
       }).join('');
     }
-    document.querySelectorAll('.benchmark-tab').forEach(t => {
+    document.querySelectorAll('.benchmark-tab.dir').forEach(t => {
       t.addEventListener('click', () => {
-        document.querySelectorAll('.benchmark-tab').forEach(x => x.classList.remove('active'));
+        document.querySelectorAll('.benchmark-tab.dir').forEach(x => x.classList.remove('active'));
         t.classList.add('active');
-        drawBenchmark(t.dataset.metric);
+        _bmDir = t.dataset.dir;
+        drawBenchmark();
       });
     });
+    document.querySelectorAll('.benchmark-tab[data-metric]').forEach(t => {
+      t.addEventListener('click', () => {
+        document.querySelectorAll('.benchmark-tab[data-metric]').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        _bmMetric = t.dataset.metric;
+        drawBenchmark();
+      });
+    });
+
+    // ─────────────────────────────────────────────────────────
+    // Rider × Segment (predicted times on each KOM climb)
+    // ─────────────────────────────────────────────────────────
+    function predictClimbSeconds(distanceKm, gradientPct, ftpW, weightKg, bikeKg = 8) {
+      // Simplified cycling-physics: velocity = (P × efficiency) / (mass × g × gradient)
+      // Use 0.85 = efficiency 0.92 × sustained-climb-fraction 0.92 ≈ 0.85 of FTP.
+      if (!ftpW || !weightKg || ftpW <= 0 || weightKg <= 0 || gradientPct <= 0) return null;
+      const mass = weightKg + bikeKg;
+      const g = 9.81;
+      const sustainedW = ftpW * 0.85;
+      const velocity = sustainedW / (mass * g * (gradientPct / 100));
+      if (velocity <= 0) return null;
+      const distM = distanceKm * 1000;
+      return distM / velocity;
+    }
+    function fmtTime(s) {
+      if (s == null || !isFinite(s) || s <= 0) return '—';
+      const h = Math.floor(s / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const sec = Math.floor(s % 60);
+      if (h > 0) return `${h}:${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+      return `${m}:${String(sec).padStart(2, '0')}`;
+    }
+    function renderRiderTimes() {
+      if (!_benchmarkData) return;
+      const table = document.getElementById('rider-times-table');
+      // Collect all KOM segments (climbs) in stage order
+      const climbs = [];
+      _benchmarkData.stages.forEach((s, di) => {
+        (s.climbs || []).forEach(c => climbs.push({...c, day: di + 1}));
+      });
+      // Build header
+      const thead = `
+        <tr>
+          <th>Segment</th>
+          <th class="num">Dag</th>
+          ${RIDERS.map(r => `<th class="num">${r.name.split(' ')[0]}</th>`).join('')}
+        </tr>
+      `;
+      // Build rows
+      const tbody = climbs.map(c => {
+        // Find fastest predicted time for highlighting
+        const times = RIDERS.map(r => predictClimbSeconds(c.distance_km, c.avg_gradient_pct, r.ftp, r.weight));
+        const validTimes = times.filter(t => t != null);
+        const fastest = validTimes.length ? Math.min(...validTimes) : null;
+        return `
+          <tr>
+            <td class="seg-cell">
+              <div class="seg-cell-name"><span class="cat-tag">${c.category}</span>${c.name}</div>
+              <div class="seg-cell-detail">${c.distance_km} km @ ${c.avg_gradient_pct}%</div>
+            </td>
+            <td class="num">${c.day}</td>
+            ${times.map((t, idx) => {
+              if (t == null) return `<td class="num pending">—</td>`;
+              const isFastest = (t === fastest);
+              return `<td class="num ${isFastest ? 'fastest' : ''}">${fmtTime(t)}</td>`;
+            }).join('')}
+          </tr>
+        `;
+      }).join('');
+      table.querySelector('thead').innerHTML = thead;
+      table.querySelector('tbody').innerHTML = tbody;
+    }
 
     // ─────────────────────────────────────────────────────────
     // Tabs
