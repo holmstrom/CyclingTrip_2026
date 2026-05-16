@@ -364,8 +364,27 @@
     }
     .rider-detail-grid .value { font-weight: 700; font-variant-numeric: tabular-nums; }
     .rider-commentary {
-      font-style: italic; font-size: 13.5px; line-height: 1.55;
-      color: var(--ink-2); margin: 0;
+      font-size: 13.5px; line-height: 1.6;
+      color: var(--ink-2); margin: 0 0 12px;
+    }
+    .rider-commentary strong { color: var(--accent); font-weight: 700; }
+    .rider-commentary em {
+      display: block; margin-top: 8px;
+      font-style: italic; color: var(--mute); font-size: 12.5px;
+      border-left: 2px solid var(--brass); padding-left: 8px;
+    }
+    .rider-nickname {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+      color: var(--accent); margin-top: -6px; margin-bottom: 12px;
+      font-style: normal;
+    }
+    .rider-fun-fact {
+      margin-top: 10px; padding: 10px 12px;
+      background: rgba(184, 153, 104, 0.12);
+      border-left: 3px solid var(--brass);
+      font-family: 'Archivo', sans-serif; font-size: 12.5px;
+      line-height: 1.5; color: var(--ink);
     }
 
     /* ── Segment benchmark ── */
@@ -374,13 +393,21 @@
       padding: 18px;
     }
     .benchmark-bar-row {
-      display: grid; grid-template-columns: 160px 1fr 80px; gap: 12px;
-      align-items: center; padding: 7px 0;
+      display: grid; grid-template-columns: 200px 1fr 130px; gap: 12px;
+      align-items: center; padding: 8px 0;
       border-bottom: 1px dashed var(--line);
     }
     .benchmark-bar-row:last-child { border-bottom: none; }
     .benchmark-label {
       font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12.5px;
+    }
+    @media (max-width: 700px) {
+      .benchmark-bar-row {
+        grid-template-columns: 1fr; gap: 4px; padding: 10px 0;
+      }
+      .benchmark-track { width: 100%; }
+      .benchmark-value { text-align: left; }
+      .benchmark-label { font-size: 13px; }
     }
     .benchmark-label .cat-tag {
       display: inline-block; font-family: 'Archivo Narrow', sans-serif;
@@ -601,16 +628,6 @@
     </div>
   </section>
 
-  <!-- Riders + teams -->
-  <section id="riders" class="band alt">
-    <div class="wrap">
-      <div class="eyebrow">Hold &amp; ryttere</div>
-      <h2 class="section-h">2 hold · 6 ryttere</h2>
-      <p class="section-sub">Foreløbig fordeling — bekræftet: Frederik ≠ Emil's hold, Ulrich ≠ Tobias's hold. Auto-balancering kommer m. Strava-data.</p>
-      <div class="riders" id="riders-grid"></div>
-    </div>
-  </section>
-
   <!-- Segment benchmark -->
   <section id="benchmark" class="band">
     <div class="wrap">
@@ -646,7 +663,17 @@
           <tbody></tbody>
         </table>
       </div>
-      <div class="benchmark-foot" id="rider-times-foot">Prædiktion: cykel-fysik baseret på FTP × 0,85 (sustained klimat-effort) + samlet vægt (rytter + 8 kg cykel). Negative tider er ikke ægte — placeholders indtil Strava-OAuth lander.</div>
+      <div class="benchmark-foot" id="rider-times-foot">Prædiktion: cykel-fysik baseret på FTP × 0,85 (sustained klimat-effort) + samlet vægt (rytter + 8 kg cykel). Sprints + descents kan ikke prædiktes fra FTP — faktiske tider kommer post-ride.</div>
+    </div>
+  </section>
+
+  <!-- Riders + teams (moved below rider × segment) -->
+  <section id="riders" class="band">
+    <div class="wrap">
+      <div class="eyebrow">Hold &amp; ryttere</div>
+      <h2 class="section-h">2 hold · 6 ryttere</h2>
+      <p class="section-sub">Hold A vs Hold B. Tryk en rytter for at se Strava-stats + race-præsentation.</p>
+      <div class="riders" id="riders-grid"></div>
     </div>
   </section>
 
@@ -735,24 +762,48 @@
 
     // Hold-fordeling: Frederik + Tobias + Sebastian vs Emil + Ulrich + Rasmus
     const RIDERS = [
-      { name: 'Frederik Holmstrøm',     team: 'A', ftp: 245, weight: 72.5,
-        commentary: 'Indoor-anker 245 W FTP (3,45 W/kg). Klassisk klatreprofil — sustained tærskel-tolerance over 60+ min. Outdoor underperformer ~10 % vs indoor pga. trafik. Italien-erfaring (San Marco 2 062 hm). Negative split-rytter — sparer kraft til slutningen.',
-        recent_km: '1 861 YTD (1 555 ude + 306 indoor)', best_5min: 294, best_20min: 219, ftp_estimate: 245 },
-      { name: 'Tobias Kragh',           team: 'A', ftp: null, weight: null,
-        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
-        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
-      { name: 'Sebastian P. Carlsen',   team: 'A', ftp: null, weight: null,
-        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
-        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
-      { name: 'Emil Bech',              team: 'B', ftp: null, weight: null,
-        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
-        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
-      { name: 'Ulrich Bille Nielsen',   team: 'B', ftp: null, weight: null,
-        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
-        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
-      { name: 'Rasmus Jørgensen',       team: 'B', ftp: null, weight: null,
-        commentary: 'Strava-data afventer OAuth. AI-analyse genereres når data er pullet.',
-        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null },
+      {
+        name: 'Frederik Holmstrøm', team: 'A', ftp: 245, weight: 72.5,
+        nickname: 'Den negative split-rytter',
+        commentary: 'Kalibreret indoor-FTP 245 W (3,45 W/kg) — solid amateur. Klatre-signaturen: <strong>sustained tærskel i 60+ min uden fade</strong>, hvilket er præcis hvad Alpe d\'Huez kræver. Outdoor underperformer ~10 % vs. indoor pga. Aarhus-trafik. Alpe-veteranen — kørte San Marco Passet 2 062 hm + Valdicava 1 265 hm på back-to-back-dage i Italien (maj 2025). Negative-split-fingeraftrykket er målbart: 5/8/2026 byggede han NP <strong>207 → 233 → 223 W per tredjedel</strong> over 199 min. Største enkelt-dag i 2026: TSS 261 over 101 km / 2 230 kJ — håndterede det uden recovery-problemer. <em>Skarp på taktik, ikke på max-power — tag dig i agt for hans pacing.</em>',
+        fun_fact: '🎯 Negative-split-signatur: NP gik 207→233→223 W gennem 5/8-turen. Dem der angriber tidligt, sprænges først.',
+        recent_km: '1 861 YTD (1 555 ude + 306 indoor)', best_5min: 294, best_20min: 219, ftp_estimate: 245,
+      },
+      {
+        name: 'Tobias Kragh', team: 'A', ftp: null, weight: null,
+        nickname: 'Profil afventer',
+        commentary: 'Strava-data afventer OAuth. Når data er pullet, leverer modellen race-profil baseret på best-efforts, recent kilometer, klatre-historik, og pacing-tendenser fra de seneste 4 ugers ture.',
+        fun_fact: null,
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null,
+      },
+      {
+        name: 'Sebastian P. Carlsen', team: 'A', ftp: null, weight: null,
+        nickname: 'Profil afventer',
+        commentary: 'Strava-data afventer OAuth. Når data er pullet, leverer modellen race-profil baseret på best-efforts, recent kilometer, klatre-historik, og pacing-tendenser fra de seneste 4 ugers ture.',
+        fun_fact: null,
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null,
+      },
+      {
+        name: 'Emil Bech', team: 'B', ftp: null, weight: null,
+        nickname: 'Profil afventer',
+        commentary: 'Strava-data afventer OAuth. Når data er pullet, leverer modellen race-profil baseret på best-efforts, recent kilometer, klatre-historik, og pacing-tendenser fra de seneste 4 ugers ture.',
+        fun_fact: null,
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null,
+      },
+      {
+        name: 'Ulrich Bille Nielsen', team: 'B', ftp: null, weight: null,
+        nickname: 'Profil afventer',
+        commentary: 'Strava-data afventer OAuth. Når data er pullet, leverer modellen race-profil baseret på best-efforts, recent kilometer, klatre-historik, og pacing-tendenser fra de seneste 4 ugers ture.',
+        fun_fact: null,
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null,
+      },
+      {
+        name: 'Rasmus Jørgensen', team: 'B', ftp: null, weight: null,
+        nickname: 'Profil afventer',
+        commentary: 'Strava-data afventer OAuth. Når data er pullet, leverer modellen race-profil baseret på best-efforts, recent kilometer, klatre-historik, og pacing-tendenser fra de seneste 4 ugers ture.',
+        fun_fact: null,
+        recent_km: null, best_5min: null, best_20min: null, ftp_estimate: null,
+      },
     ];
 
     // ─────────────────────────────────────────────────────────
@@ -780,15 +831,19 @@
       const grid = document.getElementById('riders-grid');
       grid.innerHTML = RIDERS.map((r, idx) => {
         const wkg = (r.ftp && r.weight) ? (r.ftp / r.weight).toFixed(2) : '—';
+        const funFactHtml = r.fun_fact
+          ? `<div class="rider-fun-fact">${r.fun_fact}</div>`
+          : '';
         return `
           <details class="rider team-${r.team.toLowerCase()}">
             <summary>
               <div class="rider-team-tag">Hold ${r.team}</div>
               <div class="rider-name">${r.name}</div>
+              ${r.nickname ? `<div class="rider-nickname">"${r.nickname}"</div>` : ''}
               <div class="rider-stat"><span class="label">FTP</span><span class="value">${r.ftp ? r.ftp + ' W' : '—'}</span></div>
               <div class="rider-stat"><span class="label">Vægt</span><span class="value">${r.weight ? r.weight + ' kg' : '—'}</span></div>
               <div class="rider-stat"><span class="label">W/kg</span><span class="value">${wkg}</span></div>
-              <div class="rider-expand-cue">Tryk for AI-præsentation ↓</div>
+              <div class="rider-expand-cue">Tryk for race-præsentation ↓</div>
             </summary>
             <div class="rider-detail">
               <div class="rider-detail-section">
@@ -803,6 +858,7 @@
               <div class="rider-detail-section">
                 <div class="rider-detail-h">Race-præsentation</div>
                 <p class="rider-commentary">${r.commentary}</p>
+                ${funFactHtml}
               </div>
             </div>
           </details>
@@ -995,14 +1051,13 @@
       `;
       const tbody = allSegs.map(c => {
         let times, validTimes, fastest;
-        if (c.kind === 'climb' && c.avg_gradient_pct > 0) {
-          // Predict times for climbs only (physics-based)
+        // Predict for any segment with positive gradient (climbs + climbing-style sprints).
+        // Skip prediction for flat sprints (gradient ~0) and descents.
+        if ((c.kind === 'climb' || c.kind === 'sprint') && c.avg_gradient_pct >= 3) {
           times = RIDERS.map(r => predictClimbSeconds(c.distance_km, c.avg_gradient_pct, r.ftp, r.weight));
           validTimes = times.filter(t => t != null);
           fastest = validTimes.length ? Math.min(...validTimes) : null;
         } else {
-          // Sprints + descents: no physics prediction (power model doesn't capture sprint or descent skill).
-          // Show — for all riders; actual times come post-ride from Strava.
           times = RIDERS.map(() => null);
           fastest = null;
         }
