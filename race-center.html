@@ -979,12 +979,13 @@
     function renderRiderTimes() {
       if (!_benchmarkData) return;
       const table = document.getElementById('rider-times-table');
-      // Collect all KOM segments (climbs) in stage order
-      const climbs = [];
+      // Collect ALL scored segments (KOM + sprint + descent) in stage order
+      const allSegs = [];
       _benchmarkData.stages.forEach((s, di) => {
-        (s.climbs || []).forEach(c => climbs.push({...c, day: di + 1}));
+        (s.climbs || []).forEach(c => allSegs.push({...c, day: di + 1, kind: 'climb'}));
+        (s.sprints || []).forEach(c => allSegs.push({...c, day: di + 1, kind: 'sprint'}));
+        (s.descents || []).forEach(c => allSegs.push({...c, day: di + 1, kind: 'descent'}));
       });
-      // Build header
       const thead = `
         <tr>
           <th>Segment</th>
@@ -992,20 +993,28 @@
           ${RIDERS.map(r => `<th class="num">${r.name.split(' ')[0]}</th>`).join('')}
         </tr>
       `;
-      // Build rows
-      const tbody = climbs.map(c => {
-        // Find fastest predicted time for highlighting
-        const times = RIDERS.map(r => predictClimbSeconds(c.distance_km, c.avg_gradient_pct, r.ftp, r.weight));
-        const validTimes = times.filter(t => t != null);
-        const fastest = validTimes.length ? Math.min(...validTimes) : null;
+      const tbody = allSegs.map(c => {
+        let times, validTimes, fastest;
+        if (c.kind === 'climb' && c.avg_gradient_pct > 0) {
+          // Predict times for climbs only (physics-based)
+          times = RIDERS.map(r => predictClimbSeconds(c.distance_km, c.avg_gradient_pct, r.ftp, r.weight));
+          validTimes = times.filter(t => t != null);
+          fastest = validTimes.length ? Math.min(...validTimes) : null;
+        } else {
+          // Sprints + descents: no physics prediction (power model doesn't capture sprint or descent skill).
+          // Show — for all riders; actual times come post-ride from Strava.
+          times = RIDERS.map(() => null);
+          fastest = null;
+        }
+        const kindLabel = c.kind === 'climb' ? '' : c.kind === 'sprint' ? ' · sprint' : ' · descent';
         return `
           <tr>
             <td class="seg-cell">
               <div class="seg-cell-name"><span class="cat-tag">${c.category}</span>${c.name}</div>
-              <div class="seg-cell-detail">${c.distance_km} km @ ${c.avg_gradient_pct}%</div>
+              <div class="seg-cell-detail">${c.distance_km} km @ ${c.avg_gradient_pct}%${kindLabel}</div>
             </td>
             <td class="num">${c.day}</td>
-            ${times.map((t, idx) => {
+            ${times.map((t) => {
               if (t == null) return `<td class="num pending">—</td>`;
               const isFastest = (t === fastest);
               return `<td class="num ${isFastest ? 'fastest' : ''}">${fmtTime(t)}</td>`;
