@@ -1,0 +1,12 @@
+{
+  "name": "cycling-trip-2026",
+  "version": "1.0.0",
+  "description": "Alps 2026 Race Center — Strava OAuth + AI race-presentation pipeline",
+  "private": true,
+  "dependencies": {
+    "firebase-admin": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

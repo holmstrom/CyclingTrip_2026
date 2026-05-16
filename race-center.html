@@ -543,6 +543,7 @@
       <li><a href="#riders">Ryttere</a></li>
       <li><a href="#stages">Etaper</a></li>
       <li><a href="#guide">Guide</a></li>
+      <li><a href="connect.html" style="color:#FC4C02">Connect Strava ↗</a></li>
     </ul>
   </nav>
 
@@ -755,9 +756,14 @@
     </div>
   </section>
 
+  <!-- Firebase SDK (optional — for live Strava-synced rider data) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+
   <script>
     // ─────────────────────────────────────────────────────────
-    // Data
+    // Data — default rider list (overridden by Firebase if available)
     // ─────────────────────────────────────────────────────────
 
     // Hold-fordeling: Frederik + Tobias + Sebastian vs Emil + Ulrich + Rasmus
@@ -827,6 +833,43 @@
     // ─────────────────────────────────────────────────────────
     // Riders
     // ─────────────────────────────────────────────────────────
+    // Try to fetch live rider data from Firebase. When available, it overrides
+    // the hardcoded defaults. Each riders/{name} document looks like:
+    //   { name, weight, ftp, strava: {...}, computed: { nickname, commentary,
+    //     fun_fact, ytd_km, best_5min, best_20min, ftp_estimate, ... } }
+    async function loadRidersFromFirebase() {
+      if (!window.db) return;
+      try {
+        const snap = await window.db.collection('riders').get();
+        if (snap.empty) return;
+        snap.forEach(doc => {
+          const data = doc.data();
+          const r = RIDERS.find(x => x.name === data.name);
+          if (!r) return;
+          // Merge self-reported weight/FTP if user filled them in connect.html
+          if (data.weight) r.weight = data.weight;
+          if (data.ftp) r.ftp = data.ftp;
+          // Merge AI-computed fields if sync has run
+          if (data.computed) {
+            const c = data.computed;
+            r.nickname = c.nickname || r.nickname;
+            r.commentary = c.commentary || r.commentary;
+            r.fun_fact = c.fun_fact || r.fun_fact;
+            r.best_5min = c.best_5min || r.best_5min;
+            r.best_20min = c.best_20min || r.best_20min;
+            r.ftp_estimate = c.ftp || r.ftp_estimate;
+            if (c.ytd_km != null) {
+              r.recent_km = `${c.ytd_km} YTD${c.ytd_outdoor_km != null ? ` (${c.ytd_outdoor_km} ude + ${c.ytd_indoor_km} indoor)` : ''}`;
+            }
+          }
+        });
+        renderRiders();
+        renderRiderTimes();
+      } catch (e) {
+        console.warn('Firebase load failed', e);
+      }
+    }
+
     function renderRiders() {
       const grid = document.getElementById('riders-grid');
       grid.innerHTML = RIDERS.map((r, idx) => {
@@ -866,6 +909,8 @@
       }).join('');
     }
     renderRiders();
+    // Try Firebase override (no-op if not configured)
+    loadRidersFromFirebase();
 
     // ─────────────────────────────────────────────────────────
     // Stages

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect Strava — Alps 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Archivo+Narrow:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EDE7DD; --paper: #F5F1E8; --paper-2: #E8E0D2;
+      --ink: #1A1A1A; --ink-2: #2A2A2A;
+      --accent: #6B1F1F; --accent-soft: #8B2D2D;
+      --brass: #B89968; --mute: #8B8377; --line: #D8D2C5;
+      --good: #5A7D4A;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      font-family: 'Archivo', system-ui, sans-serif;
+      background: var(--bg); color: var(--ink);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding: 40px 20px;
+    }
+    .container { max-width: 580px; width: 100%; }
+    .header {
+      text-align: center; margin-bottom: 36px;
+    }
+    .eyebrow {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 10px;
+    }
+    h1 {
+      font-family: 'Archivo', sans-serif; font-weight: 800;
+      font-size: clamp(32px, 6vw, 48px); line-height: 1.0;
+      letter-spacing: -0.02em; margin: 0 0 12px;
+    }
+    .sub {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 400;
+      font-size: 14px; letter-spacing: 0.06em; color: var(--mute);
+      margin: 0;
+    }
+    .card {
+      background: var(--paper); border: 1px solid var(--line);
+      padding: 28px;
+    }
+    .form-row { margin-bottom: 20px; }
+    .form-row label {
+      display: block; font-family: 'Archivo Narrow', sans-serif;
+      font-weight: 700; font-size: 11px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--ink); margin-bottom: 6px;
+    }
+    .form-row .hint {
+      display: block; font-family: 'Archivo Narrow', sans-serif;
+      font-weight: 400; font-size: 11px; letter-spacing: 0.04em;
+      color: var(--mute); margin-top: 4px;
+    }
+    input, select {
+      width: 100%; padding: 12px 14px;
+      background: var(--bg); border: 1px solid var(--ink);
+      font-family: 'Archivo', sans-serif; font-size: 15px;
+      color: var(--ink); border-radius: 0;
+    }
+    input:focus, select:focus {
+      outline: none; border-left: 4px solid var(--accent);
+      padding-left: 11px;
+    }
+    .btn {
+      width: 100%; padding: 14px;
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+      cursor: pointer; border: none; border-radius: 0;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn-strava {
+      background: #FC4C02; color: white;
+      margin-top: 8px;
+    }
+    .btn-strava:hover { background: #E04302; }
+    .btn-strava:disabled { background: var(--mute); cursor: not-allowed; }
+    .btn-strava svg { width: 18px; height: 18px; }
+    .steps {
+      background: var(--paper-2); border-left: 3px solid var(--brass);
+      padding: 16px 18px; margin-bottom: 24px;
+    }
+    .steps-title {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 8px;
+    }
+    .steps ol { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.6; }
+    .success {
+      background: rgba(90, 125, 74, 0.12);
+      border-left: 3px solid var(--good);
+      padding: 16px 18px; margin-bottom: 20px;
+      font-size: 14px; line-height: 1.5;
+      display: none;
+    }
+    .success.show { display: block; }
+    .footer-link {
+      text-align: center; margin-top: 24px;
+      font-family: 'Archivo Narrow', sans-serif; font-size: 12px;
+      letter-spacing: 0.06em;
+    }
+    .footer-link a { color: var(--accent); text-decoration: none; }
+    .footer-link a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="eyebrow">Race Center · Alps 2026</div>
+      <h1>Forbind Strava</h1>
+      <p class="sub">Vi henter dine data så modellen kan forudsige tider + lave din race-præsentation</p>
+    </div>
+
+    <div class="success" id="success-msg"></div>
+
+    <div class="card">
+      <div class="steps">
+        <div class="steps-title">3 trin · ~30 sekunder</div>
+        <ol>
+          <li>Vælg dit navn + indtast vægt og FTP</li>
+          <li>Klik "Connect with Strava" og godkend</li>
+          <li>Du sendes tilbage hertil — dit profil er live</li>
+        </ol>
+      </div>
+
+      <form id="connect-form">
+        <div class="form-row">
+          <label for="rider-name">Hvem er du?</label>
+          <select id="rider-name" required>
+            <option value="">Vælg ditt navn ↓</option>
+            <option value="Frederik Holmstrøm">Frederik Holmstrøm</option>
+            <option value="Tobias Kragh">Tobias Kragh</option>
+            <option value="Sebastian P. Carlsen">Sebastian P. Carlsen</option>
+            <option value="Emil Bech">Emil Bech</option>
+            <option value="Ulrich Bille Nielsen">Ulrich Bille Nielsen</option>
+            <option value="Rasmus Jørgensen">Rasmus Jørgensen</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="rider-weight">Vægt (kg)</label>
+          <input type="number" id="rider-weight" min="40" max="120" step="0.5" placeholder="fx 72.5" required>
+          <span class="hint">Bruges til W/kg-beregninger og tids-forudsigelser på klatre-segmenter</span>
+        </div>
+
+        <div class="form-row">
+          <label for="rider-ftp">FTP (W)</label>
+          <input type="number" id="rider-ftp" min="100" max="500" placeholder="fx 245" required>
+          <span class="hint">Din kalibrerede 1-times-effekt. Hvis du ikke kender den, så gæt — Strava-data overskriver senere</span>
+        </div>
+
+        <button type="submit" class="btn btn-strava" id="connect-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg>
+          Connect with Strava
+        </button>
+      </form>
+    </div>
+
+    <div class="footer-link">
+      <a href="race-center.html">← Tilbage til Race Center</a>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+
+  <script>
+    // Read query params (success/error from OAuth callback)
+    const params = new URLSearchParams(window.location.search);
+    const success = params.get('success');
+    const riderConnected = params.get('rider');
+    const error = params.get('error');
+
+    if (success === '1' && riderConnected) {
+      const msg = document.getElementById('success-msg');
+      msg.classList.add('show');
+      msg.innerHTML = `<strong>✓ ${decodeURIComponent(riderConnected)} forbundet med Strava!</strong><br>Dine data synces nu. Race-præsentationen er live om få minutter.<br><br><a href="race-center.html" style="color:var(--accent);font-weight:700;">→ Se Race Center</a>`;
+    } else if (error) {
+      const msg = document.getElementById('success-msg');
+      msg.classList.add('show');
+      msg.style.background = 'rgba(139, 45, 45, 0.12)';
+      msg.style.borderLeftColor = 'var(--accent)';
+      msg.innerHTML = `<strong>Fejl:</strong> ${decodeURIComponent(error)}<br><br>Prøv igen eller skriv til Frederik.`;
+    }
+
+    // Strava OAuth config — these need to be set in Vercel env vars
+    // For static deployment, the redirect_uri must match what's configured in Strava app settings.
+    const STRAVA_CLIENT_ID = window.STRAVA_CLIENT_ID || '';  // injected at build time or hardcoded
+    const REDIRECT_URI = window.location.origin + '/api/strava-callback';
+    const SCOPE = 'read,activity:read_all,profile:read_all';
+
+    document.getElementById('connect-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('rider-name').value;
+      const weight = parseFloat(document.getElementById('rider-weight').value);
+      const ftp = parseInt(document.getElementById('rider-ftp').value);
+      if (!name || !weight || !ftp) return;
+
+      // 1) Save the form data (weight + FTP) to Firebase BEFORE redirect
+      try {
+        if (window.db) {
+          await window.db.collection('riders').doc(name).set({
+            name, weight, ftp,
+            self_reported_at: new Date().toISOString(),
+          }, { merge: true });
+        }
+      } catch (err) {
+        console.error('Firebase save failed', err);
+      }
+
+      // 2) Redirect to Strava OAuth (state encodes rider name so callback knows who)
+      if (!STRAVA_CLIENT_ID) {
+        alert('Strava client ID ikke konfigureret endnu. Frederik skal sætte STRAVA_CLIENT_ID i Vercel env-vars.');
+        return;
+      }
+      const state = encodeURIComponent(name);
+      const url = `https://www.strava.com/oauth/authorize?client_id=${STRAVA_CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=${SCOPE}&state=${state}&approval_prompt=auto`;
+      window.location.href = url;
+    });
+  </script>
+  <!-- Strava client ID injection: edit this to set client ID, OR set window.STRAVA_CLIENT_ID via env -->
+  <script>
+    // SET YOUR STRAVA CLIENT ID HERE (or inject via build):
+    // window.STRAVA_CLIENT_ID = '12345';
+  </script>
+</body>
+</html>
