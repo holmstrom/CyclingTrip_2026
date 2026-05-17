@@ -7,6 +7,23 @@ Format: `## YYYY-MM-DD — [Title]` with sections for *Why*, *What*, *How*.
 
 ---
 
+## 2026-05-17 — France trip date correction (1–3 June → 4–6 June)
+
+### Why
+User confirmed trip is 4–6 June, not 1–3 June as originally captured.
+
+### What
+- `race-center.html`: countdown target 2026-06-01 → 2026-06-04, stage day
+  labels updated (Dag 1·4. juni, Dag 2·5. juni, Dag 3·6. juni), hero
+  eyebrow now reads "4.–6. juni 2026", standings/recap copy updated.
+- `CHANGELOG.md`: countdown line updated.
+
+Cross-project: `dashboard/build_data.py` COACH_EVENTS in the personal Wahoo
+project also updated (2026-06-01 → 2026-06-04 for the first France stage)
+so taper-mode kicks in at the right time.
+
+---
+
 ## 2026-05-15 — Race Center MVP
 
 ### Why
@@ -35,7 +52,7 @@ Format: `## YYYY-MM-DD — [Title]` with sections for *Why*, *What*, *How*.
 - Daily-jersey panel at top: 🟡 GC, 🔴 KOM, 🟢 Sprint, 🏁 Team — updates after
   each stage (placeholder until Strava OAuth).
 - Standings tabs (GC / KOM / Sprint / Team) with per-stage breakdown.
-- Countdown to 1. juni 2026, sticky nav, mobile-first layout.
+- Countdown to 4. juni 2026, sticky nav, mobile-first layout.
 - Guide section: how to star segments on Strava, points tables for HC/Cat1/Cat2,
   daily-jersey explanation, Phase 2 plan.
 
