@@ -196,7 +196,11 @@
     }
 
     // Strava OAuth config
-    const REDIRECT_URI = window.location.origin + '/api/strava-callback';
+    // IMPORTANT: redirect_uri must match the production domain exactly, even
+    // if a friend opens this on a Vercel preview URL (...-xyz.vercel.app).
+    // Hardcoding avoids the "Bad Request — redirect_uri invalid" error when
+    // someone clicks a preview link instead of the canonical URL.
+    const REDIRECT_URI = 'https://cycling-trip-2026.vercel.app/api/strava-callback';
     const SCOPE = 'read,activity:read_all,profile:read_all';
 
     document.getElementById('connect-form').addEventListener('submit', async (e) => {
