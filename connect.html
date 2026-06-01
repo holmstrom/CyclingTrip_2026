@@ -229,9 +229,14 @@
         console.error('Firebase save failed', err);
       }
 
-      // 2) Redirect to Strava OAuth (state encodes rider name so callback knows who)
+      // 2) Redirect to Strava OAuth.
+      // On mobile, use /oauth/mobile/authorize — this opens the Strava app
+      // directly if installed (much cleaner UX than web-login on phone).
+      // Falls back to web flow if app not installed.
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const path = isMobile ? 'oauth/mobile/authorize' : 'oauth/authorize';
       const state = encodeURIComponent(name);
-      const url = `https://www.strava.com/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=${SCOPE}&state=${state}&approval_prompt=auto`;
+      const url = `https://www.strava.com/${path}?client_id=${clientId}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=${SCOPE}&state=${state}&approval_prompt=auto`;
       window.location.href = url;
     });
   </script>
