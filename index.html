@@ -417,9 +417,9 @@
                             <span>Est. Tid</span>
                             <span class="prediction-value">--:--</span>
                         </div>
-                        <a href="https://www.strava.com/segments/661401" target="_blank" class="btn btn-outline"
+                        <a href="routes/dag1-alpe-dhuez.gpx" download class="btn btn-outline"
                             style="margin-top: 1rem; width: 100%; justify-content: center;">
-                            <i class="fab fa-strava"></i> Download GPX
+                            <i class="fas fa-download"></i> Download GPX (Dag 1)
                         </a>
                         <!-- Upload for this mountain -->
                         <div style="margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
@@ -471,9 +471,9 @@
                             <span>Est. Tid</span>
                             <span class="prediction-value">--:--</span>
                         </div>
-                        <a href="https://www.strava.com/segments/638894" target="_blank" class="btn btn-outline"
+                        <a href="routes/dag3-croix-de-fer.gpx" download class="btn btn-outline"
                             style="margin-top: 1rem; width: 100%; justify-content: center;">
-                            <i class="fab fa-strava"></i> Download GPX
+                            <i class="fas fa-download"></i> Download GPX (Dag 3)
                         </a>
                         <!-- Upload for this mountain -->
                         <div style="margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
@@ -524,9 +524,9 @@
                             <span>Est. Tid</span>
                             <span class="prediction-value">--:--</span>
                         </div>
-                        <a href="https://www.strava.com/segments/662586" target="_blank" class="btn btn-outline"
+                        <a href="routes/dag2-galibier.gpx" download class="btn btn-outline"
                             style="margin-top: 1rem; width: 100%; justify-content: center;">
-                            <i class="fab fa-strava"></i> Download GPX
+                            <i class="fas fa-download"></i> Download GPX (Dag 2)
                         </a>
                         <!-- Upload for this mountain -->
                         <div style="margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
@@ -1121,19 +1121,51 @@
 
 
 
-    <!-- Map Section (Moved to bottom & using Google Maps) -->
+    <!-- Map Section — Leaflet med de 3 ruter overlejret -->
     <section id="map" class="section">
         <div class="container">
-            <h2>Områdekort</h2>
-            <p class="text-secondary">Oisans Dalen</p>
-            <div class="map-container" style="height: 450px; border-radius: 12px; overflow: hidden;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44795.37924716835!2d6.003678648618774!3d45.05437877909874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478a3c6c060d006d%3A0x408ab2ae4be7b70!2s38520%20Le%20Bourg-d&#39;Oisans%2C%20France!5e0!3m2!1sen!2sdk!4v1620000000000!5m2!1sen!2sdk"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <h2>Områdekort &amp; ruter</h2>
+            <p class="text-secondary">Alle 3 etaper vist på kortet · klik en rute for at downloade GPX</p>
+            <div id="route-map" style="height: 520px; border: 1px solid var(--line); margin-top: 1rem;"></div>
+            <div style="display:flex; gap:1.2rem; flex-wrap:wrap; margin-top:1rem; font-family:'Archivo Narrow',sans-serif; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; font-weight:700;">
+                <span style="display:inline-flex; align-items:center; gap:8px;"><span style="display:inline-block;width:22px;height:4px;background:#6B1F1F;"></span>Dag 1 · Alpe d'Huez</span>
+                <span style="display:inline-flex; align-items:center; gap:8px;"><span style="display:inline-block;width:22px;height:4px;background:#B89968;"></span>Dag 2 · Galibier</span>
+                <span style="display:inline-flex; align-items:center; gap:8px;"><span style="display:inline-block;width:22px;height:4px;background:#5A7D4A;"></span>Dag 3 · Croix de Fer</span>
             </div>
         </div>
+        <script>
+        (function initRouteMap() {
+            if (typeof L === 'undefined') return;
+            const map = L.map('route-map');
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; OpenStreetMap &copy; CARTO',
+                maxZoom: 18,
+            }).addTo(map);
+            const COLORS = { 1: '#6B1F1F', 2: '#B89968', 3: '#5A7D4A' };
+            fetch('routes/routes.json').then(r => r.json()).then(data => {
+                const allPoints = [];
+                (data.routes || []).forEach(route => {
+                    const color = COLORS[route.day] || '#1A1A1A';
+                    const latlngs = route.points.map(p => [p[0], p[1]]);
+                    const poly = L.polyline(latlngs, { color, weight: 4, opacity: 0.85 }).addTo(map);
+                    poly.bindPopup(
+                        '<strong>' + route.name + '</strong><br>' +
+                        route.distance_km + ' km · ' + route.elevation_gain_m + ' hm<br>' +
+                        '<a href="' + route.gpx_url + '" download>⬇ Download GPX</a> &middot; ' +
+                        '<a href="' + route.strava_route_url + '" target="_blank" rel="noopener">Strava ↗</a>'
+                    );
+                    latlngs.forEach(function (ll) { allPoints.push(ll); });
+                });
+                if (allPoints.length) {
+                    map.fitBounds(L.latLngBounds(allPoints), { padding: [20, 20] });
+                } else {
+                    map.setView([45.054, 6.034], 11);
+                }
+            }).catch(function () {
+                map.setView([45.054, 6.034], 11);
+            });
+        })();
+        </script>
     </section>
 
     <footer class="section" style="text-align: center; border-top: 1px solid var(--border); padding: 4rem 0;">
