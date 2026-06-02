@@ -66,25 +66,25 @@ const websiteContent = {
     // ===== ROUTES =====
     routes: {
         alpeDhuez: {
-            name: "Alpe d'Huez",
-            description: "De legendariske 21 hårnålesving. Den ultimative test.",
-            distance: "55 km",
-            elevation: "1,600 m",
-            difficulty: "Svær"
+            name: "Alpe d'Huez + Sarenne",
+            description: "Dag 1 — de legendariske 21 hårnålesving op til 1 776 m, plus Col de Sarenne (Cat 2) som ekstra-klatretur. Vores velkomst til Alperne.",
+            distance: "57,8 km",
+            elevation: "2 014 hm",
+            difficulty: "HC"
         },
         croixDeFer: {
-            name: "Croix de Fer",
-            description: "Ofte kaldt det smukkeste bjergpas i Alperne.",
-            distance: "65 km",
-            elevation: "1,700 m",
-            difficulty: "Svær"
+            name: "Croix de Fer + Glandon",
+            description: "Dag 3 — to bjergpas på samme tur. Croix de Fer (HC, 27,6 km @ 6,7 %) og Glandon (Cat 1). Durability-testen efter 2 dages alpe-belastning.",
+            distance: "78,7 km",
+            elevation: "1 890 hm",
+            difficulty: "HC + Cat 1"
         },
         galibier: {
-            name: "Galibier",
-            description: "Taget af Touren. Vi rører himlen ved 2,642m.",
-            distance: "40-90 km",
-            elevation: "1,200+ m",
-            difficulty: "Meget Svær"
+            name: "Col du Galibier",
+            description: "Dag 2 — dagens monster. Via Col du Lautaret op til 2 598 m. Den længste dag og den højeste top — luften bliver tynd over 2 000 m.",
+            distance: "99,3 km",
+            elevation: "2 790 hm",
+            difficulty: "HC"
         }
     },
 

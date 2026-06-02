@@ -552,6 +552,10 @@
     <div class="hero-eyebrow">4.–6. juni 2026 · Le Bourg-d'Oisans</div>
     <h1>Race<br><span class="accent">Center</span><br><span class="brass">Alps 2026</span></h1>
     <div class="hero-sub">6 ryttere · 2 hold · 3 HC-bjerge · 235 km · 6 700 hm</div>
+    <div style="margin-bottom: 20px;">
+      <button id="sync-now-btn" style="background: var(--accent); color: var(--paper); border: 1px solid var(--accent); padding: 10px 20px; font-family: 'Archivo Narrow', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;">⟳ Sync nu (alle ryttere)</button>
+      <span id="sync-status" style="margin-left: 12px; font-family: 'Archivo Narrow', sans-serif; font-size: 11px; color: var(--mute); letter-spacing: 0.08em;">Auto-sync kører dagligt kl. 22:00 CEST</span>
+    </div>
     <div class="countdown">
       <div class="countdown-cell">
         <div class="countdown-num" id="cd-days">—</div>
@@ -828,6 +832,31 @@
       document.getElementById('cd-mins').textContent = Math.floor((diff % 3600000) / 60000);
     }
     updateCountdown();
+
+    // Manual sync trigger — hits the serverless function
+    const syncBtn = document.getElementById('sync-now-btn');
+    const syncStatus = document.getElementById('sync-status');
+    if (syncBtn) {
+      syncBtn.addEventListener('click', async () => {
+        syncBtn.disabled = true;
+        syncBtn.textContent = '⟳ Synker… (kan tage 30-60 sek)';
+        syncStatus.textContent = 'Henter friske data fra Strava + genererer AI-præsentationer…';
+        const start = Date.now();
+        try {
+          const res = await fetch('/api/strava-sync', { method: 'GET' });
+          const data = await res.json();
+          const elapsed = Math.round((Date.now() - start) / 1000);
+          const synced = Object.keys(data.results || {}).length;
+          syncStatus.textContent = `✓ Synkroniseret ${synced} ryttere på ${elapsed} sek. Reload siden for at se opdaterede profiler.`;
+          syncStatus.style.color = 'var(--good)';
+        } catch (e) {
+          syncStatus.textContent = '✗ Sync fejlede: ' + (e.message || 'ukendt');
+          syncStatus.style.color = 'var(--accent)';
+        }
+        syncBtn.disabled = false;
+        syncBtn.textContent = '⟳ Sync nu igen';
+      });
+    }
     setInterval(updateCountdown, 30000);
 
     // ─────────────────────────────────────────────────────────

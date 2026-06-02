@@ -437,7 +437,7 @@
                 <div class="card" data-dist="24.0" data-grad="0.052" data-base-time="55:00" data-route="croixDeFer">
                     <div class="card-padding">
                         <div class="ride-header">
-                            <span class="ride-tag">Dag 2</span>
+                            <span class="ride-tag">Dag 3</span>
                             <h3 data-content="routes.croixDeFer.name">Croix de Fer</h3>
                         </div>
                         <p class="text-secondary" style="margin: 0.5rem 0 1rem 0; font-size: 0.9rem;"
@@ -491,7 +491,7 @@
                 <div class="card" data-dist="8.5" data-grad="0.069" data-base-time="23:00" data-route="galibier">
                     <div class="card-padding">
                         <div class="ride-header">
-                            <span class="ride-tag">Dag 3</span>
+                            <span class="ride-tag">Dag 2</span>
                             <h3 data-content="routes.galibier.name">Galibier</h3>
                         </div>
                         <p class="text-secondary" style="margin: 0.5rem 0 1rem 0; font-size: 0.9rem;"
@@ -1134,8 +1134,13 @@
             </div>
         </div>
         <script>
-        (function initRouteMap() {
-            if (typeof L === 'undefined') return;
+        // Wait for full page load — leaflet.js is loaded at the bottom of the page,
+        // so we need it to be available before initializing the map.
+        window.addEventListener('load', function initRouteMap() {
+            if (typeof L === 'undefined') {
+                console.warn('Leaflet not loaded — map cannot render');
+                return;
+            }
             const map = L.map('route-map');
             L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                 attribution: '&copy; OpenStreetMap &copy; CARTO',
@@ -1164,7 +1169,7 @@
             }).catch(function () {
                 map.setView([45.054, 6.034], 11);
             });
-        })();
+        });
         </script>
     </section>
 
