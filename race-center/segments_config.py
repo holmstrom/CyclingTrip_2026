@@ -19,7 +19,9 @@ ROUTE_FILES = {
 # NB: Bourgogne har ingen HC/Cat1-bjerge — højeste klatre er Cat 2-3 niveau.
 PICKS = {
     'Dag 1: Voie Verte du Canal de Bourgogne': [
-        ('KOM:Cat2',  'Combe Lavaux (kløften)',          'Combe Lavaux'),
+        # Combe Lavaux er dagens hårdeste — behandlet som dagens "dronning"
+        # (Cat 1-niveau) så Dag 1 tæller ordentligt i konkurrencen.
+        ('KOM:Cat1',  'Combe Lavaux (dagens dronning)',  'Combe Lavaux'),
         ('KOM:Cat3',  'Corcelles',                        'Corcelles'),
         ('KOM:Cat3',  'Velars-Corcelles (det stejle)',    'Velars-Corcelles 1°partie raide'),
         ('SPRINT',    'Route des Grands Crus (vinmark)',  'Route des Grands crus'),
@@ -28,8 +30,9 @@ PICKS = {
     ],
     'Dag 2: Col du Galibier': [
         ('KOM:HC',    'Col du Galibier',                 'Col du Galibier (par Col du Lautaret)'),
+        # Tunnel-til-top er en brutal 0,86 km @ 9,2% finale — ægte klatre-point, ikke sprint.
+        ('KOM:Cat2',  'Galibier Tunnel-finale',          'GALIBIER: FROM THE TUNNEL TO THE TOP'),
         ('SPRINT',    'Galibier 1ère Partie (Opener)',   'Galibier 1ère Partie'),
-        ('SPRINT',    'Galibier Tunnel Punch',           'GALIBIER: FROM THE TUNNEL TO THE TOP'),
         ('DESCENT',   'Galibier → Lautaret Descent',     'Descente Galibier - Lautaret'),
     ],
     'Dag 3: Croix de Fer + Glandon': [

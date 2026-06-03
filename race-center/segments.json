@@ -8,7 +8,7 @@
       "estimated_time_h": 2.7,
       "climbs": [
         {
-          "name": "Combe Lavaux (kløften)",
+          "name": "Combe Lavaux (dagens dronning)",
           "strava_segment_name": "Combe Lavaux",
           "strava_segment_id": 6028820,
           "distance_km": 3.85,
@@ -16,14 +16,14 @@
           "peak_elevation_m": 464.6,
           "starts_at_m": 301.8,
           "elevation_gain_m": 163,
-          "category": "Cat2",
+          "category": "Cat1",
           "points": [
+            15,
+            12,
             10,
             8,
             6,
-            4,
-            2,
-            1
+            4
           ],
           "strava_url": "https://www.strava.com/segments/6028820"
         },
@@ -149,6 +149,26 @@
             10
           ],
           "strava_url": "https://www.strava.com/segments/18328881"
+        },
+        {
+          "name": "Galibier Tunnel-finale",
+          "strava_segment_name": "GALIBIER: FROM THE TUNNEL TO THE TOP",
+          "strava_segment_id": 13218585,
+          "distance_km": 0.86,
+          "avg_gradient_pct": 9.2,
+          "peak_elevation_m": 2582.0,
+          "starts_at_m": 2502.4,
+          "elevation_gain_m": 80,
+          "category": "Cat2",
+          "points": [
+            10,
+            8,
+            6,
+            4,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/13218585"
         }
       ],
       "sprints": [
@@ -169,24 +189,6 @@
             1
           ],
           "strava_url": "https://www.strava.com/segments/18239632"
-        },
-        {
-          "name": "Galibier Tunnel Punch",
-          "strava_segment_name": "GALIBIER: FROM THE TUNNEL TO THE TOP",
-          "strava_segment_id": 13218585,
-          "distance_km": 0.86,
-          "avg_gradient_pct": 9.2,
-          "peak_elevation_m": 2582.0,
-          "starts_at_m": 2502.4,
-          "elevation_gain_m": 80,
-          "category": "Sprint",
-          "points": [
-            5,
-            3,
-            2,
-            1
-          ],
-          "strava_url": "https://www.strava.com/segments/13218585"
         }
       ],
       "descents": [
