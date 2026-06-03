@@ -1,0 +1,1453 @@
+{
+  "athlete": {
+    "id": 100103171,
+    "username": null,
+    "resource_state": 2,
+    "firstname": "Rasmus",
+    "lastname": "Jørgensen",
+    "bio": null,
+    "city": null,
+    "state": null,
+    "country": null,
+    "sex": "M",
+    "premium": true,
+    "summit": true,
+    "created_at": "2022-03-13T14:49:03Z",
+    "updated_at": "2026-06-02T06:30:33Z",
+    "badge_type_id": 1,
+    "profile_medium": "avatar/athlete/medium.png",
+    "profile": "avatar/athlete/large.png",
+    "friend": null,
+    "follower": null
+  },
+  "description": null,
+  "distance": 87944.75383425617,
+  "elevation_gain": 1278.8088059751017,
+  "id": 3496919746527548724,
+  "id_str": "3496919746527548724",
+  "map": {
+    "id": "r3496919746527548724",
+    "summary_polyline": "{tz_Hcpm]CvNoCfN_Zj]c`@ddAt@vHmBrf@fFje@|CxMzJ`Q`N`c@rb@vw@tHrHxPzHtHfIvCpHfAhZ{AtX{CdSV~TtApEbOvOlL|`@wBvw@vFje@`Pda@rHro@[bi@oKdQwGhT?bPyQnHcVkDgEmLqFcDmTyF}^eE_RiGgWvAk\\oPa@dHeFhBoJoCmGxKwc@_CgE{CcJ_Uc^nb@cNrGoErGqGuGtKn[mEhX\\vMu@~PsCdLYzSuHdJqGlBaFvKsLpJkCrUaA``@j@`K~JfKrc@fpAEdK{Kzz@{CpHo\\oEkIcLyENkK{S{Rj^}NvIBe]fA{KoO_d@aCyn@dHcc@lFwFlDaY_BeD{R{KkR|@uRgQoLqEkVae@sLkGgFsH{FyYsBag@mG_Vr@{RbG_[zF}IhCoLMsKyIgWg@ub@oJcVyBaWuF}HaDsMcEeE_BoHm@sQiHkJ_EoLiI_HsFwWmMgKgJk^UuZmPeXoGyVwGqMoCuN}IeRuDsRgIuKu@}E`@uKcGk`@iJmTyI_LSmGoEf@~@nEgYdAqK|NaE|a@lAjn@{C~XkCpI{FnHcOfA_MpTrGtHtEtg@Q`QjBbXq@vSpAhT`Tz|@nP~]xFhf@pSjw@AfK||@b_@tN|KhFNxBOlJo`@AmQbA}F~LcJpB_EjIoA`FaKkCbBjCcBxAwJdS_P`HwNnHoA`CiCF{DeF}RRyCjLmGzNBsEuHh@eJaK|GgBm@wF}^~@wK`H_LnDiVxHaR|Tyf@r{@a`BfRgWzrAy`AvMi_@hMut@bU}e@nXxGlLbPrYzKrL~OhIfDfSiHjKkM`Gw@pIeHbGnAlKmm@dOfWo@hOtAfFKxHvD{RrIyUhEcAEtBxHpJ|GtTjU`YjGfPtM`Kz`@te@p^j]dSj_@j\\mA|JxBpIpF~H}FdKiAjKlC|AqDlNpClFnFlI`a@nDqQpDyE`G|BtObOgE~AoBhhAnBihAnEmA}OuOaG}BqDxEoDpQqHq_@sHqHyAmXiM{MwLuh@uXc|@oDuReHeiAaMmd@uRifAeEyLiPgfBmGOwEhD_C_BwFX_@pErA`H}@`Cc`@|g@_CP{GhJqBvFQdVqCjMsDte@e@uE",
+    "resource_state": 3,
+    "polyline": "{tz_Hcpm]UlBH@PNZ|@BVi@`HSzAcAxFYhA]fAkA`CuAp@mDhCW\\Ut@w@|@u@`B]dAYn@q@hAcBxAkBbA[T]d@]t@uEzMoJ`XwHvTCD_@Ve@f@a@r@[~@ObA@b@H\\j@pAJh@@t@SrHcAdSSjCG`BDjAH`A`DtWr@|EFtCLx@Nn@Pb@`@j@f@rDb@jBp@`BrGrJt@jBlE`MpEzMNrBV~@Xn@RTh@`@x@`Cl@rApWlf@zDzGvAhB~@r@lAt@`@|@l@`@b@Nd@?h@KbChAbGvD|@t@tDpDn@r@nA`B`@n@|@rBd@vAPt@ZrBFv@d@~PA|Bc@jIGT_@p@IVIx@?jBTdBQ|B{@zFwArIGt@CnAPtNHxBV|AZ|@`@t@X^rFhFJp@RZVVXPb@LVPhAlA\\f@`AtB|AtDz@pC|CxL\\fBT|AJ~A@`AC`AmApVMnEIt@a@hAKlB@TT~@B\\KlBCtADjATfCrEr_@Ln@ZjAXp@dHpOBh@Hh@ZjAf@z@b@`@Zd@r@pCdHnl@LbBFlCCx@Kv\\ElBMtAGXWr@cEpGm@dAq@x@kAdBu@vBaFpPU~@Ip@?fB^hIkFfCqBhASP[LgCp@cAJ}A?iBc@aBU{@AiAOeBOyAUcA[o@]e@e@q@{AUo@{@{D]_Ac@m@i@c@q@_@qBq@}OiEoCo@oFi@q@EsAAcBBs@EeCiAu@WcASeAKuA?c@Co@KeGyAoEyAi@SgAu@WKgAGqA@y@PqBj@q@JgBBoBLiAL{@Aq@Ic@QwFqCsBuAiBY{@C_@Io@}@mCuA[Wa@g@yAy@Mr@KdB?`CGH}A`AsAb@s@Bu@O_BmAiBYs@c@{@Je@b@WZ{AdFg@bAg@d@c@HgBB_@GmAg@sB_@kAJo@EqBc@mBYmAMiACeBBqBTaAF_AKuA]c@_@mA}Ae@iAs@sBYmASyAyDmIa@KO@OLUh@w@~@_Ap@_Az@e@r@mAzB}@hAyCjCgBxAeApAeDrFuA`B_@X]PcD`A}EhCc@ZuA~AkBbDMNSFOCSMo@k@OSaAuBe@u@a@]OAEF\\|@h@`Cj@pAlDdGb@fAf@bBb@hCHx@AdBKt@YtA{AxFiA|HE|AHzA^lDEnBs@jI@xBCxBKd@oAlDa@pAU~BUrFFjHAn@IjAu@`B{@vAcEjDoAj@aE`AaA|AoBvFo@`AeFnC}B`BoA~Bu@`Eq@~Fc@pGUbJAvBa@zIGhFDxCLrBVrBxAzCp@x@xA^xCpCtDzKpAvFhBfFpTtj@n@lBp@lCLx@HbAB`BCdBOxBsBhRg@xDq@fEkBbIc@bDYxD?dBc@fCs@nA[bAY|A_@p@QLsA@wE[o@ImCaAm@GkD}@iANi@?wBs@mAeAwAeAMUYgA}@iBk@_ASO_AYu@?mAh@U?s@kAQi@_@eCQc@mA{AoAiAgAuAW{@My@GIO@[\\yB`EkB`Ey@|AeAtCsCjFuAfB[ZgIxDi@d@eArAULSEGGGUAiAEs@JeFNcQLyAv@qDHiAGeAe@oCc@}AeAyCyCwHkDgIy@wCWcBKuCq@{GC}JEuDa@oL@_BFoAb@oBdAaDvAkGfA{GPyCd@e@hAYx@i@TYXu@R}@L}@VmAp@kFvAwHJqAM_A[_A_@y@c@k@mA_@aBYsAg@wJyHYEe@@mANyBr@_HLcAOUQ_EaFeAkAyIgGqAYoFqBmBeA[a@mHsLiGgLaBmFUk@_@i@kAwAs@o@eAm@s@[yDy@]]qC}Dw@wAe@_Bm@}CeA{GgAsEYkBo@yGGkBHiFAw@k@{GMiGIs@[gBa@aBgBsGk@qAe@sAU{AC{AHcCP}DZ}ERuAlBcIn@cDpAaITs@f@eAh@u@tAqA|@{AbBqFT}AN_BF{C@oCWgBa@sA]iBa@sAyCeG_AgC]gBUiCGkCBqC`@aJEoCQuBWeBqAcFi@iAgBiBo@_Bu@_Ce@kBY{AIeAaAkPSs@]i@wA}AmBoDIGG@aDsMOAMGiAgA{AsBmAcFQkAGgA@{@PmE?{@Gs@q@qCe@cAqD}DqAiBw@uBg@kCc@oA{@}AqByBc@]eBq@]Yo@{@uCkI_@cBEs@DsCW_Be@_AaA}@_FaDeCwBe@o@Qw@e@iFWw@Ug@uBgDw@yBSw@_AoGGwADaPI}DI}@o@{A_BiCuAyAgIeNmAaDi@eBkAcHkAmEkBmEkDcGk@}B]oBU}Bo@iCgHwNu@mBo@{Cc@sDMu@q@cDa@iAyAeCmFoGq@gCCuA@k@d@yF@k@GcA}@oFa@oBk@qFg@uDoAcHaA}CkEuI{AyDkB{C}@eAkB}A[]g@aAWuAGqAJeBOAkA\\sA?QBMFIPAP?JDNNNn@^LNHT@NC\\CFKBsB?sEb@eDr@uH]c@JqK|Nm@`B]hEL|DIhCyBhNDdIfAv]?lEaAxMyAdJaAzDiAtC}AzB}CrDYLYFsDd@_A?cBKq@Ak@LYJWVY`@kBrDoCrGeBjCk@b@x@fAj@fAz@l@pBvBPrBE|B@pAj@hFPxCPpAb@jBrAnKJlD?vA[|EA|AXpDj@fL`@zCBl@k@tME`Et@tOZrCnD~QbIzX|AvEnAfIVv@fKtS~AxCVr@VbATrArE~a@Nt@dC~ItDpNhExP`CxIHd@Dx@?dDGfDvAt@`C~@vCdBjD|@dBn@rCvAzC|@jCvBpBb@vA`@z@PnBbAdC`AxBbA`BjA`@TdBX\\LlFjDbApAbE~ChFN|AWZFtI_^VoARuADmBA}AWyEAqAFmAL_AR_AXo@h@u@hAkA\\SbBi@TMh@_@hCuBXa@z@{BZa@\\KNAdCFpAUd@U^]`@i@Vg@n@_BvBoEk@J_BvA~AwAj@KLa@Lw@Du@?iBFo@Pg@\\e@RSrCmBf@e@`@m@h@iA\\c@`Ak@|CsAv@k@r@o@jBqCf@{@Zq@`@iAl@}B`@o@d@a@v@Yr@GxBEb@Ev@a@POPUd@aAJi@BqAG_AmAgEwCuLEm@?g@XcAT[xHiEn@Wj@Or@CbBDvH`@ZKNSD[?_@M_@a@]mAs@a@]OQ[k@Mk@Cy@Di@|@sCFe@C]O]IKWKc@JyBlAYR[ZsBhCa@T_@D]IMG[a@o@sAk@yB}@oFuAqNGmARoEP}BXiAh@}@pDeF\\o@f@kAXeA^_C~@uJt@mDh@gBnGyNvEmIpDcI|BoGzAwDxA_DlP{ZtImOpJkQ~GkLjBkDdBsD`B}DhAaC~@uA`CcChBaCzHkLdEwE|@{@`Au@|BwAjTqL~GsEzd@w]n@y@~CwF~@}BbCqIrBaInIwg@vA_I`@}AnDqJv@cBXg@v@cAdCsCj@y@z@eBzCgJVJvQpEzCf@b@RPZ|DxFv@|@vA`ClAlAlAv@b@Pd@DdBAr@VPJj@j@f@p@b@d@b@PrAXhBl@|Bj@v@^jAjAz@jA^l@dAhAvCxEl@t@^TxAb@rAnAl@PlAJt@IVKlCgBr@UhEs@XMp@g@~@Y`@QzDmEhAcB^_@j@[PSX}@LKHCd@BbA?p@IzAm@xAy@v@o@`DiD\\QZCr@VfAFj@X~@Xj@{DdAsIt@kDZ{BZgDViBd@mB\\w@pA}ErLbSpAbC@rAq@tLVp@p@fCJl@@p@Eh@_@`BIf@@d@J^DFLDPANGJQFSB}CPkBbAoDf@qCl@mBhAiCnA_EfAyCbAgCV_@\\Un@Qx@Ch@FHHDJ?TWr@AHBJdAZXRhBlCh@|@dAtBz@rCv@hEn@pBxBdF^r@dA~AdBrBfDjEdEfElArAbApAv@`B`@fA|AfFrAtC\\^p@j@`JpGb@b@tGhI`DtDvC~CxDpEnG~H`@b@jCtB|BpBbCrDxDjEhAbAnBlApBzAhA`Ar@r@jAlBh@dAxFpM|ErITV`@XPHVF|A@rAOjDk@vDa@dBK|@CfEJl@H|Dt@hBd@f@Rj@ZdBtApBrAlAj@~@y@vBuBb@[r@_@n@Q`AMfAEfCAb@Eh@Qd@[Nt@LL~A@XB|@NRJt@RdBLDDl@aAN[^sArAh@r@PxABfCt@`A^T@j@EN^l@XbAn@l@p@|@rAZn@^nAd@xCJh@Tx@~@rBLd@f@rCx@zFJbAB~@HTNFLIHSF_Cx@_GNy@t@aCXq@\\o@r@aATW^YNCL?x@PrAl@dB|@vB|B|FdHj@l@NLVHl@H\\NFPAXGNKFm@DwBMGBGJCRDxA?jAMvHgBly@fBmy@LwH?kAEyABSFKFCvBLl@EJGFO@YGQ]Om@IWIOMk@m@}FeHwB}BeB}@sAm@y@QM?OB_@XUVs@`A]n@Yp@u@`COx@y@~FG~BIRMHOGIUC_AKcAy@{Fg@sCMe@_AsBUy@q@cE_@oA[o@}@sAm@q@cAo@m@YO_@O@YSE]KcCi@aPGk@U}@Ww@S[O_@c@g@}AoA_CcBm@WQQEYK[QQYCMUMa@m@aEQy@}D{PkD{MeEkMaFuPaFyNkDgLaAyDe@{BgA_I]eE}Ag\\qBa\\W{C_@yCkAoFgIqXm@kCqBoM]mBcAaE}AsFq@}CcAkGkAoJg@{BeAyGSeA_A{C}AyDg@cBYsBO_Ca@oDmA{Ls@qFKiAIkCw@kI]qEe@kKuCkVs@iHiEOcA?[JgCxBs@b@e@CQGi@_AMKOGQA{@FEOMGOHCTgBPQAGCO\\CfAKjBNj@R~AJ\\\\j@BV@r@Kh@Sf@]n@}IxL_A`A_B~BkGlIyGrISL{@Eo@H{GhJmAnCc@fBShCAlBNzIKpC_@nBcAbE_@`BMt@qBzTWfDC~@@l@g@bGCW[}@QOIATmB"
+  },
+  "map_urls": {
+    "url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/EAGQDERIIXA44C7BDUTJP24752RLDSD4Y5GQ2JD2IBEWFP2XCKTQHJ4GPWGXKDIFNAHYJYQ5W5JDJX6WVE4O24QVRFBY6Z3V5ZSZNAY=",
+    "retina_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/PCHDLEQWPWKG6RGJ7KK567WWJN5FEMPN2URNTYZ27GMLNRHRD3MILKCSLJYLB5TIAUN2HJPHKWXOJ3RAUWEFV25DGP2PUUCUSK2REFQ=",
+    "light_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/PCHDLEQWPWKG6RGJ7KK567WWJN5FEMPN2URNTYZ27GMLNRHRD3MILKCSLJYLB5TIAUN2HJPHKWXOJ3RAUWEFV25DGP2PUUCUSK2REFQ=",
+    "dark_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/CGWF6Z7RKAAGVRWELLUQG5GUPINUVDSP3SP3IOKB6IPIZQ5Y7GT5X6OTX77FJMVXO2MXPUJB5DWWMSPP37JEKFTFXR6GZHW6BOV444A="
+  },
+  "name": "Bourgogne ruten ",
+  "private": false,
+  "resource_state": 3,
+  "starred": false,
+  "sub_type": 1,
+  "created_at": "2026-06-02T16:59:11Z",
+  "updated_at": "2026-06-02T16:59:11Z",
+  "timestamp": 1780419551,
+  "type": 1,
+  "estimated_moving_time": 10334,
+  "waypoints": [],
+  "segments": [
+    {
+      "id": 749961,
+      "resource_state": 2,
+      "name": "D104 K Climb",
+      "activity_type": "Ride",
+      "distance": 2901.03,
+      "average_grade": 6.0,
+      "maximum_grade": 24.4,
+      "elevation_high": 529.8,
+      "elevation_low": 356.4,
+      "start_latlng": [
+        47.340852,
+        4.866498
+      ],
+      "end_latlng": [
+        47.362169,
+        4.863283
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Lantenay",
+      "state": "Bourgogne",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 1957197,
+      "resource_state": 2,
+      "name": "cote de Pasques par Velay-sur-Ouch",
+      "activity_type": "Ride",
+      "distance": 5782.11,
+      "average_grade": 4.5,
+      "maximum_grade": 30.4,
+      "elevation_high": 532.6,
+      "elevation_low": 270.7,
+      "start_latlng": [
+        47.31626190248252,
+        4.85824658407145
+      ],
+      "end_latlng": [
+        47.361691155007584,
+        4.863463914199842
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Fleurey Sur Ouche",
+      "state": "Bourgogne",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 3709445,
+      "resource_state": 2,
+      "name": "Montée de Curtil",
+      "activity_type": "Ride",
+      "distance": 3167.22,
+      "average_grade": 6.9,
+      "maximum_grade": 23.4,
+      "elevation_high": 499.6,
+      "elevation_low": 280.4,
+      "start_latlng": [
+        47.43507488630712,
+        4.956382289528847
+      ],
+      "end_latlng": [
+        47.4489994905889,
+        4.929089220240712
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Val Suzon",
+      "state": "Burgandy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 3822235,
+      "resource_state": 2,
+      "name": "Bosse arrivée Curtil Ufolep",
+      "activity_type": "Ride",
+      "distance": 491.83,
+      "average_grade": 5.4,
+      "maximum_grade": 9.3,
+      "elevation_high": 571.0,
+      "elevation_low": 544.2,
+      "start_latlng": [
+        47.448488026857376,
+        4.926475239917636
+      ],
+      "end_latlng": [
+        47.44746149517596,
+        4.920233236625791
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Curtil Saint Seine",
+      "state": "Burgandy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 3944158,
+      "resource_state": 2,
+      "name": "D10 Climb",
+      "activity_type": "Ride",
+      "distance": 2467.2,
+      "average_grade": 3.3,
+      "maximum_grade": 8.5,
+      "elevation_high": 597.8,
+      "elevation_low": 517.2,
+      "start_latlng": [
+        47.365003,
+        4.850004
+      ],
+      "end_latlng": [
+        47.371327,
+        4.824411
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Pasques",
+      "state": "Burgandy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 6408478,
+      "resource_state": 2,
+      "name": "Lantenay Climb",
+      "activity_type": "Ride",
+      "distance": 2950.0,
+      "average_grade": 2.8,
+      "maximum_grade": 10.1,
+      "elevation_high": 360.1,
+      "elevation_low": 278.4,
+      "start_latlng": [
+        47.317103,
+        4.858082
+      ],
+      "end_latlng": [
+        47.341587,
+        4.866964
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Fleurey Sur Ouche",
+      "state": "Burgandy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 6855281,
+      "resource_state": 2,
+      "name": "Fleurey-Panges",
+      "activity_type": "Ride",
+      "distance": 9928.5,
+      "average_grade": 3.2,
+      "maximum_grade": 19.2,
+      "elevation_high": 565.0,
+      "elevation_low": 252.2,
+      "start_latlng": [
+        47.316119,
+        4.858378
+      ],
+      "end_latlng": [
+        47.371003,
+        4.824068
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Fleurey Sur Ouche",
+      "state": "Burgandy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 7454051,
+      "resource_state": 2,
+      "name": "descente la casquette",
+      "activity_type": "Ride",
+      "distance": 2726.3,
+      "average_grade": -4.9,
+      "maximum_grade": 4.9,
+      "elevation_high": 490.2,
+      "elevation_low": 352.8,
+      "start_latlng": [
+        47.422422,
+        4.866871
+      ],
+      "end_latlng": [
+        47.406747,
+        4.89018
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Francheville",
+      "state": "Burgundy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 7729464,
+      "resource_state": 2,
+      "name": "D971 Val Suzon short",
+      "activity_type": "Ride",
+      "distance": 1341.5,
+      "average_grade": 6.7,
+      "maximum_grade": 34.9,
+      "elevation_high": 479.3,
+      "elevation_low": 389.7,
+      "start_latlng": [
+        47.404531,
+        4.89596
+      ],
+      "end_latlng": [
+        47.407538,
+        4.904655
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Darois",
+      "state": "Burgundy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 9339312,
+      "resource_state": 2,
+      "name": "CLM Entrée canal - lac Kir",
+      "activity_type": "Ride",
+      "distance": 1240.0,
+      "average_grade": 0.4,
+      "maximum_grade": 5.9,
+      "elevation_high": 246.0,
+      "elevation_low": 239.4,
+      "start_latlng": [
+        47.317828,
+        5.013325
+      ],
+      "end_latlng": [
+        47.324865,
+        5.002303
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Dijon",
+      "state": "Bourgogne",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 9339382,
+      "resource_state": 2,
+      "name": "Descente Corcelles - La Bergerie",
+      "activity_type": "Ride",
+      "distance": 3010.7,
+      "average_grade": -3.0,
+      "maximum_grade": 0.7,
+      "elevation_high": 445.9,
+      "elevation_low": 356.9,
+      "start_latlng": [
+        47.295734,
+        4.946828
+      ],
+      "end_latlng": [
+        47.30625,
+        4.982946
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 10637162,
+      "resource_state": 2,
+      "name": "La Cra - premiers 800m",
+      "activity_type": "Ride",
+      "distance": 767.4,
+      "average_grade": 10.2,
+      "maximum_grade": 15.4,
+      "elevation_high": 298.2,
+      "elevation_low": 220.0,
+      "start_latlng": [
+        47.337062,
+        4.965757
+      ],
+      "end_latlng": [
+        47.334338,
+        4.970972
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Plombières-lès-Dijon",
+      "state": "Bourgogne",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 11241929,
+      "resource_state": 2,
+      "name": "Partie raide direction Pasques ",
+      "activity_type": "Ride",
+      "distance": 590.6,
+      "average_grade": 12.7,
+      "maximum_grade": 25.7,
+      "elevation_high": 450.6,
+      "elevation_low": 373.9,
+      "start_latlng": [
+        47.343358,
+        4.866295
+      ],
+      "end_latlng": [
+        47.347829,
+        4.864497
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Lantenay",
+      "state": "Bourgogne",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12041817,
+      "resource_state": 2,
+      "name": "\"Radars\" dir.Francheville",
+      "activity_type": "Ride",
+      "distance": 4271.6,
+      "average_grade": -0.3,
+      "maximum_grade": 7.4,
+      "elevation_high": 572.5,
+      "elevation_low": 534.0,
+      "start_latlng": [
+        47.449213,
+        4.927206
+      ],
+      "end_latlng": [
+        47.436037,
+        4.875727
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Curtil-Saint-Seine",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12510421,
+      "resource_state": 2,
+      "name": "Route de Corcelles",
+      "activity_type": "Ride",
+      "distance": 4940.3,
+      "average_grade": -3.8,
+      "maximum_grade": 3.4,
+      "elevation_high": 409.0,
+      "elevation_low": 220.6,
+      "start_latlng": [
+        47.295777,
+        4.946936
+      ],
+      "end_latlng": [
+        47.31229,
+        5.006899
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13675059,
+      "resource_state": 2,
+      "name": "A38 Climb - D108",
+      "activity_type": "Ride",
+      "distance": 5483.4,
+      "average_grade": 3.7,
+      "maximum_grade": 29.4,
+      "elevation_high": 456.0,
+      "elevation_low": 252.0,
+      "start_latlng": [
+        47.337215,
+        4.966167
+      ],
+      "end_latlng": [
+        47.301359,
+        4.938884
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Plombières-lès-Dijon",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13994324,
+      "resource_state": 2,
+      "name": "Val Suzon full",
+      "activity_type": "Ride",
+      "distance": 2302.1,
+      "average_grade": 6.3,
+      "maximum_grade": 11.8,
+      "elevation_high": 506.7,
+      "elevation_low": 362.3,
+      "start_latlng": [
+        47.407448,
+        4.894988
+      ],
+      "end_latlng": [
+        47.404777,
+        4.911664
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Val-Suzon",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16258592,
+      "resource_state": 2,
+      "name": "5' dans Curtil",
+      "activity_type": "Ride",
+      "distance": 1968.5,
+      "average_grade": 6.9,
+      "maximum_grade": 17.7,
+      "elevation_high": 346.0,
+      "elevation_low": 211.0,
+      "start_latlng": [
+        47.435043,
+        4.956431
+      ],
+      "end_latlng": [
+        47.442268,
+        4.93954
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Val-Suzon",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16788777,
+      "resource_state": 2,
+      "name": "Mur de Pasques jusqu'au virage",
+      "activity_type": "Ride",
+      "distance": 1626.0,
+      "average_grade": 7.3,
+      "maximum_grade": 25.2,
+      "elevation_high": 490.0,
+      "elevation_low": 371.0,
+      "start_latlng": [
+        47.343665,
+        4.866046
+      ],
+      "end_latlng": [
+        47.355909,
+        4.869335
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Lantenay",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17016676,
+      "resource_state": 2,
+      "name": "Coteaux de Pont climb",
+      "activity_type": "Ride",
+      "distance": 1035.2,
+      "average_grade": 10.3,
+      "maximum_grade": 25.9,
+      "elevation_high": 393.6,
+      "elevation_low": 286.6,
+      "start_latlng": [
+        47.336406,
+        4.966216
+      ],
+      "end_latlng": [
+        47.330883,
+        4.966106
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Plombières-lès-Dijon",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17787878,
+      "resource_state": 2,
+      "name": "MA",
+      "activity_type": "Ride",
+      "distance": 322.3,
+      "average_grade": 7.5,
+      "maximum_grade": 11.2,
+      "elevation_high": 491.6,
+      "elevation_low": 467.4,
+      "start_latlng": [
+        47.292446,
+        4.939636
+      ],
+      "end_latlng": [
+        47.290673,
+        4.936473
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17898722,
+      "resource_state": 2,
+      "name": "1ère bosse Fleurey > Lantenay",
+      "activity_type": "Ride",
+      "distance": 1269.7,
+      "average_grade": 4.7,
+      "maximum_grade": 7.3,
+      "elevation_high": 328.3,
+      "elevation_low": 269.1,
+      "start_latlng": [
+        47.315678,
+        4.858582
+      ],
+      "end_latlng": [
+        47.325887,
+        4.863139
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Fleurey-sur-Ouche",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18924369,
+      "resource_state": 2,
+      "name": "Gouttière",
+      "activity_type": "Ride",
+      "distance": 780.8,
+      "average_grade": 2.9,
+      "maximum_grade": 6.6,
+      "elevation_high": 453.2,
+      "elevation_low": 430.6,
+      "start_latlng": [
+        47.308295,
+        4.940214
+      ],
+      "end_latlng": [
+        47.301359,
+        4.938883
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 19609203,
+      "resource_state": 2,
+      "name": "Long de la combe à la serpent",
+      "activity_type": "Ride",
+      "distance": 2111.0,
+      "average_grade": 1.0,
+      "maximum_grade": 7.3,
+      "elevation_high": 425.9,
+      "elevation_low": 404.9,
+      "start_latlng": [
+        47.325402,
+        4.958229
+      ],
+      "end_latlng": [
+        47.310204,
+        4.941094
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Plombières-lès-Dijon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 19737872,
+      "resource_state": 2,
+      "name": "Pétard du rond-point",
+      "activity_type": "Ride",
+      "distance": 509.4,
+      "average_grade": -1.9,
+      "maximum_grade": 1.5,
+      "elevation_high": 471.8,
+      "elevation_low": 461.2,
+      "start_latlng": [
+        47.293011,
+        4.940474
+      ],
+      "end_latlng": [
+        47.295105,
+        4.945858
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20116629,
+      "resource_state": 2,
+      "name": "Fin mur Lantenay",
+      "activity_type": "Ride",
+      "distance": 985.9,
+      "average_grade": 5.6,
+      "maximum_grade": 16.4,
+      "elevation_high": 581.4,
+      "elevation_low": 525.4,
+      "start_latlng": [
+        47.355176,
+        4.868081
+      ],
+      "end_latlng": [
+        47.362238,
+        4.863278
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Lantenay",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20238732,
+      "resource_state": 2,
+      "name": "Sprint Plombières",
+      "activity_type": "Ride",
+      "distance": 374.0,
+      "average_grade": -1.8,
+      "maximum_grade": 10.8,
+      "elevation_high": 257.9,
+      "elevation_low": 247.3,
+      "start_latlng": [
+        47.339669,
+        4.97312
+      ],
+      "end_latlng": [
+        47.337245,
+        4.969519
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Plombières-lès-Dijon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20238739,
+      "resource_state": 2,
+      "name": "Sprint D905",
+      "activity_type": "Ride",
+      "distance": 426.0,
+      "average_grade": 2.3,
+      "maximum_grade": 8.7,
+      "elevation_high": 262.2,
+      "elevation_low": 252.2,
+      "start_latlng": [
+        47.337177,
+        4.96934
+      ],
+      "end_latlng": [
+        47.337143,
+        4.964085
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Plombières-lès-Dijon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20938294,
+      "resource_state": 2,
+      "name": "Sprint D971",
+      "activity_type": "Ride",
+      "distance": 834.9,
+      "average_grade": -0.8,
+      "maximum_grade": 3.3,
+      "elevation_high": 479.7,
+      "elevation_low": 472.5,
+      "start_latlng": [
+        47.387712,
+        4.939191
+      ],
+      "end_latlng": [
+        47.381206,
+        4.944405
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Darois",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22612913,
+      "resource_state": 2,
+      "name": "Corcelles-Combe à la Serpent",
+      "activity_type": "Ride",
+      "distance": 1610.1,
+      "average_grade": -1.9,
+      "maximum_grade": 2.1,
+      "elevation_high": 443.6,
+      "elevation_low": 413.1,
+      "start_latlng": [
+        47.296019,
+        4.947714
+      ],
+      "end_latlng": [
+        47.302923,
+        4.966355
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22886829,
+      "resource_state": 2,
+      "name": "Bout droit",
+      "activity_type": "Ride",
+      "distance": 952.2,
+      "average_grade": -0.7,
+      "maximum_grade": 4.1,
+      "elevation_high": 336.5,
+      "elevation_low": 327.3,
+      "start_latlng": [
+        47.326016,
+        4.863163
+      ],
+      "end_latlng": [
+        47.334332,
+        4.865476
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Fleurey-sur-Ouche",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22941221,
+      "resource_state": 2,
+      "name": "Sprint Plombières",
+      "activity_type": "Ride",
+      "distance": 564.6,
+      "average_grade": 0.6,
+      "maximum_grade": 4.9,
+      "elevation_high": 260.5,
+      "elevation_low": 253.7,
+      "start_latlng": [
+        47.341624,
+        4.966164
+      ],
+      "end_latlng": [
+        47.339864,
+        4.973114
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Plombières-lès-Dijon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22941241,
+      "resource_state": 2,
+      "name": "Le toboggan du Val-Suzon",
+      "activity_type": "Ride",
+      "distance": 5400.0,
+      "average_grade": 0.0,
+      "maximum_grade": 10.9,
+      "elevation_high": 506.7,
+      "elevation_low": 362.1,
+      "start_latlng": [
+        47.421779,
+        4.867197
+      ],
+      "end_latlng": [
+        47.40467,
+        4.911955
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Francheville",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22951604,
+      "resource_state": 2,
+      "name": "Sprint de Velars",
+      "activity_type": "Ride",
+      "distance": 351.4,
+      "average_grade": 0.5,
+      "maximum_grade": 2.5,
+      "elevation_high": 458.0,
+      "elevation_low": 454.9,
+      "start_latlng": [
+        47.30105,
+        4.938859
+      ],
+      "end_latlng": [
+        47.298112,
+        4.940161
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22974860,
+      "resource_state": 2,
+      "name": "Montée Lantenay depuis le chemin de fer",
+      "activity_type": "Ride",
+      "distance": 735.8,
+      "average_grade": 5.1,
+      "maximum_grade": 10.0,
+      "elevation_high": 363.2,
+      "elevation_low": 325.1,
+      "start_latlng": [
+        47.334702,
+        4.865558
+      ],
+      "end_latlng": [
+        47.341088,
+        4.866535
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Lantenay",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24186521,
+      "resource_state": 2,
+      "name": "Deuxième mur",
+      "activity_type": "Ride",
+      "distance": 309.2,
+      "average_grade": 9.8,
+      "maximum_grade": 17.5,
+      "elevation_high": 498.4,
+      "elevation_low": 468.0,
+      "start_latlng": [
+        47.354372,
+        4.866085
+      ],
+      "end_latlng": [
+        47.355966,
+        4.869458
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Pasques",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24308532,
+      "resource_state": 2,
+      "name": "Champmoron",
+      "activity_type": "Ride",
+      "distance": 418.1,
+      "average_grade": -2.5,
+      "maximum_grade": -1.8,
+      "elevation_high": 430.8,
+      "elevation_low": 420.3,
+      "start_latlng": [
+        47.365248,
+        4.970383
+      ],
+      "end_latlng": [
+        47.361593,
+        4.969108
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Daix",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24308618,
+      "resource_state": 2,
+      "name": "Radar Champmoron",
+      "activity_type": "Ride",
+      "distance": 819.0,
+      "average_grade": -9.2,
+      "maximum_grade": -3.7,
+      "elevation_high": 399.0,
+      "elevation_low": 323.8,
+      "start_latlng": [
+        47.359331,
+        4.966447
+      ],
+      "end_latlng": [
+        47.352939,
+        4.9616
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Daix",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 25258652,
+      "resource_state": 2,
+      "name": "Val-Suzon - Sainte-Foy",
+      "activity_type": "Ride",
+      "distance": 5820.4,
+      "average_grade": -0.5,
+      "maximum_grade": 6.8,
+      "elevation_high": 354.4,
+      "elevation_low": 320.6,
+      "start_latlng": [
+        47.408146,
+        4.894117
+      ],
+      "end_latlng": [
+        47.4348,
+        4.956155
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Val-Suzon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 25274101,
+      "resource_state": 2,
+      "name": "Route du Val-Suzon",
+      "activity_type": "Ride",
+      "distance": 7901.4,
+      "average_grade": -1.6,
+      "maximum_grade": 0.6,
+      "elevation_high": 482.2,
+      "elevation_low": 356.0,
+      "start_latlng": [
+        47.385516,
+        4.811411
+      ],
+      "end_latlng": [
+        47.406836,
+        4.891352
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Saint-Martin-du-Mont",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 26555801,
+      "resource_state": 2,
+      "name": "A fond vers la ville",
+      "activity_type": "Ride",
+      "distance": 749.4,
+      "average_grade": -7.5,
+      "maximum_grade": -3.3,
+      "elevation_high": 311.0,
+      "elevation_low": 254.6,
+      "start_latlng": [
+        47.310829,
+        4.998177
+      ],
+      "end_latlng": [
+        47.312342,
+        5.007834
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Dijon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 26555860,
+      "resource_state": 2,
+      "name": "Combe Persil --> Dijon",
+      "activity_type": "Ride",
+      "distance": 1381.5,
+      "average_grade": -6.5,
+      "maximum_grade": -3.3,
+      "elevation_high": 344.6,
+      "elevation_low": 254.6,
+      "start_latlng": [
+        47.308572,
+        4.99058
+      ],
+      "end_latlng": [
+        47.312342,
+        5.007834
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Dijon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 26739079,
+      "resource_state": 2,
+      "name": "Sprint Bruant",
+      "activity_type": "Ride",
+      "distance": 509.3,
+      "average_grade": -0.3,
+      "maximum_grade": 1.3,
+      "elevation_high": 247.2,
+      "elevation_low": 244.9,
+      "start_latlng": [
+        47.323857,
+        5.00369
+      ],
+      "end_latlng": [
+        47.325808,
+        4.998158
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 27708448,
+      "resource_state": 2,
+      "name": "Bosse après Pasques",
+      "activity_type": "Ride",
+      "distance": 1649.0,
+      "average_grade": 4.1,
+      "maximum_grade": 6.0,
+      "elevation_high": 572.1,
+      "elevation_low": 504.2,
+      "start_latlng": [
+        47.364778,
+        4.851658
+      ],
+      "end_latlng": [
+        47.372522,
+        4.835532
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Pasques",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 27918912,
+      "resource_state": 2,
+      "name": "Le sprint au-dessus de Champmoron",
+      "activity_type": "Ride",
+      "distance": 556.2,
+      "average_grade": 0.5,
+      "maximum_grade": 3.0,
+      "elevation_high": 438.6,
+      "elevation_low": 434.6,
+      "start_latlng": [
+        47.368848,
+        4.964783
+      ],
+      "end_latlng": [
+        47.365618,
+        4.970315
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Daix",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 27987480,
+      "resource_state": 2,
+      "name": "D905 - Les Contours - La Grande Vendue",
+      "activity_type": "Ride",
+      "distance": 946.3,
+      "average_grade": 2.6,
+      "maximum_grade": 10.9,
+      "elevation_high": 277.3,
+      "elevation_low": 251.4,
+      "start_latlng": [
+        47.339515,
+        4.972827
+      ],
+      "end_latlng": [
+        47.336617,
+        4.965613
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Plombières-lès-Dijon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 27993605,
+      "resource_state": 2,
+      "name": "Faux plat Darois",
+      "activity_type": "Ride",
+      "distance": 1130.7,
+      "average_grade": -2.8,
+      "maximum_grade": -0.3,
+      "elevation_high": 525.2,
+      "elevation_low": 494.0,
+      "start_latlng": [
+        47.395273,
+        4.927865
+      ],
+      "end_latlng": [
+        47.388189,
+        4.938544
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Darois",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 27993621,
+      "resource_state": 2,
+      "name": "Punch darois",
+      "activity_type": "Ride",
+      "distance": 305.2,
+      "average_grade": 3.1,
+      "maximum_grade": 6.4,
+      "elevation_high": 477.8,
+      "elevation_low": 468.2,
+      "start_latlng": [
+        47.374399,
+        4.949816
+      ],
+      "end_latlng": [
+        47.372483,
+        4.952641
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Daix",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 28247108,
+      "resource_state": 2,
+      "name": "Bang mont Afrique",
+      "activity_type": "Ride",
+      "distance": 318.0,
+      "average_grade": 8.0,
+      "maximum_grade": 21.0,
+      "elevation_high": 556.4,
+      "elevation_low": 531.0,
+      "start_latlng": [
+        47.287521,
+        4.936931
+      ],
+      "end_latlng": [
+        47.285111,
+        4.934703
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 41127640,
+      "resource_state": 2,
+      "name": "Descente D7C-VS",
+      "activity_type": "Ride",
+      "distance": 4640.4,
+      "average_grade": -3.5,
+      "maximum_grade": 3.4,
+      "elevation_high": 522.0,
+      "elevation_low": 361.1,
+      "start_latlng": [
+        47.436056,
+        4.874106
+      ],
+      "end_latlng": [
+        47.407876,
+        4.893779
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Francheville",
+      "state": "Côte-d'Or",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    }
+  ]
+}

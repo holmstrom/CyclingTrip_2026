@@ -16,9 +16,9 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 ROUTES = [
     {
-        'id': '3486425133972935152',
-        'slug': 'dag1-alpe-dhuez',
-        'short': 'Dag 1 — Alpe d\'Huez',
+        'id': 'dijon_route_3496922123103851710',
+        'slug': 'dag1-bourgogne-voie-verte',
+        'short': 'Dag 1 — Bourgogne / Voie Verte',
         'day': 1,
     },
     {
@@ -92,7 +92,7 @@ def write_gpx(points: list[tuple[float, float]], name: str, path: Path) -> None:
 map_overlay = {'routes': []}
 
 for r in ROUTES:
-    src = DATA / f"route_{r['id']}.json"
+    src = DATA / (f"{r['id']}.json" if r['id'].startswith('dijon_route_') else f"route_{r['id']}.json")
     if not src.exists():
         print(f"⚠️  missing {src.name}")
         continue
@@ -117,7 +117,7 @@ for r in ROUTES:
         'distance_km': round(rj.get('distance', 0) / 1000, 1),
         'elevation_gain_m': round(rj.get('elevation_gain', 0)),
         'gpx_url': f"routes/{r['slug']}.gpx",
-        'strava_route_url': f"https://www.strava.com/routes/{r['id']}",
+        'strava_route_url': f"https://www.strava.com/routes/{r['id'].replace('dijon_route_','')}",
         'points': [[lat, lng] for lat, lng in overlay_points],
     })
 

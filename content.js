@@ -66,11 +66,11 @@ const websiteContent = {
     // ===== ROUTES =====
     routes: {
         alpeDhuez: {
-            name: "Alpe d'Huez + Sarenne",
-            description: "Dag 1 — de legendariske 21 hårnålesving op til 1 776 m, plus Col de Sarenne (Cat 2) som ekstra-klatretur. Vores velkomst til Alperne.",
-            distance: "57,8 km",
-            elevation: "2 014 hm",
-            difficulty: "HC"
+            name: "Bourgogne / Voie Verte",
+            description: "Dag 1 — ændret pga. vejret. Naturskøn Bourgogne-rute: bilfri kanalsti (Voie Verte), den smukke Combe Lavaux-kløft, og gennem Grand Cru-vinlandsbyen Gevrey-Chambertin. Nul store veje, små stille landeveje hele vejen.",
+            distance: "83,6 km",
+            elevation: "1 087 hm",
+            difficulty: "Bølget"
         },
         croixDeFer: {
             name: "Croix de Fer + Glandon",

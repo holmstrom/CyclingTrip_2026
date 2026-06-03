@@ -1,0 +1,1454 @@
+{
+  "athlete": {
+    "id": 89353883,
+    "username": "frederik_holmstrm",
+    "resource_state": 2,
+    "firstname": "Frederik",
+    "lastname": "Holmstrøm",
+    "bio": null,
+    "city": "Aarhus ",
+    "state": null,
+    "country": null,
+    "sex": "M",
+    "premium": true,
+    "summit": true,
+    "created_at": "2021-07-23T14:33:54Z",
+    "updated_at": "2026-04-26T11:39:16Z",
+    "badge_type_id": 1,
+    "weight": 71.0,
+    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/athletes/89353883/27084053/1/medium.jpg",
+    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/athletes/89353883/27084053/1/large.jpg",
+    "friend": null,
+    "follower": null
+  },
+  "description": null,
+  "distance": 80951.08424386405,
+  "elevation_gain": 886.8162903405225,
+  "id": 3496934878054045820,
+  "id_str": "3496934878054045820",
+  "map": {
+    "id": "r3496934878054045820",
+    "summary_polyline": "swv_Hqie]VARBPIHl@HzBHj@LXj@VF\\Cd@Ux@c@dCSjBIb@m@~@x@Rh@aB_@tBkAlDqA~C[hAQ|@_@xFjDk@vDa@dBK|@CfEJl@H|Dt@hBd@f@Rj@ZdBtApBrAlAj@~@y@vBuBb@[r@_@n@Q`AMfAEfCAb@Eh@QbAs@A@h@_AZw@TeAdDkUXw@Xg@POX?LJPBPCJIP_@Bg@AOFe@FMTWZSfDk@z@[x@i@x@{@`@i@vBkDnCaDb@aAbCuJl@kBhByE\\qA`DyZJqAH_EH}@bAuGnA_FvE_Qh@eAn@o@hEyCd@e@\\a@l@cAVm@Rq@VoAPwA^qI\\yDPoA`@oB|AeGViBNiCH}JAsEEw@Kk@g@}AgAkCCYFUPMNDFF~AzCFDF?PKBUI]gB_ECOBWFKNAZTdEbE`@\\ZPXJZFV@f@Et@[j@e@f@_AjG}PvDkI~DoFl@q@~AoAdC{Ah@k@dDeBP@d@p@P^X`ALVh@X|@Lv@Ff@Jd@R|@TpALl@@b@EbAc@d@YVGhCXpChAvClBrAd@l@F\\AXQ^AdANNApAb@rDzBtAf@t@^j@h@RZbBv@`AXjBv@lA@`AJbDnAzAjAdB|A\\TH?n@y@JZpBfBj@z@BJ?b@Et@FRd@t@LJRHtBb@vB?b@JXNX\\nAtBn@f@n@ZvAh@jGpBtKd@dAP~TdHlBv@tC|@|GjCn@Rr@Db@Fv@R\\N`BlAx@`@|A\\rAd@`@@^Fh@RrAdAXLl@D^FhBp@d@Dr@Az@@~@CbAV\\Jz@^bFbCbCbBxAt@f@JlAAb@@p@HjFnAxL~CbA^jDfBbA`@zJhBvIjAxBx@NBNELMf@kB`AnEh@~A~AzCfAtALVPz@@l@S~EDvAJ~@X|@z@~ANb@h@`Cp@tD\\jAbBpEhBpIt@vFv@zI|D|ZZvAzAlEp@dCh@vCN|ALfD@~HNvA^|@rBbC`ApDXpBBzAElB]dBaAlC_@f@uB~Bi@t@kClFsA`CgDxGU|@UhBItAI`@Od@o@vAc@jAOv@BZHRRHRAr@]R?HFLvAVvECj@YbDInFKhAUvA?d@Dd@ZbBz@xDLx@@TAl@OnA}@xDsBnHYtBy@jJMp@m@~BkAbDa@z@kBhDYr@g@rBkGj^c@|HmAtHw@pFGLIF_@HOJ[bCU~DVpEChC]vKk@|`@F~CPzBLbAbHd_@d@lBL\\jB|D|@bCjH|Yt@`Ct@hBv@zA~CnF`AxB~AbFlB`Eb@lAd@|B~AvGpA~GpCrIzCvHvCtIr@|Bj@jEL`@zAbD\\~@TbAB`@KdE?lCCLHTlAlG`@n@dBbBxAlAlAh@VD~Ad@\\Nz@P|CQ~Ah@jCj@|B|@v@Th@@f@a@b@Wh@cANSPKt@QbBQr@?p@HvAr@xAz@bAb@`C\\j@BrAA`AF`B\\|DpAnATtANlDn@t@ZVPxClCbBr@d@HX?\\Id@URUPa@Jc@f@iF@oEd@wEDq@FeDz@{OLu@Na@^i@tA}A^g@To@x@}DTcCf@oI\\gE\\eCVeA\\_Ab@o@x@cBl@mBXuAFkAKyC@i@Jw@Nk@p@{Ab@s@d@i@x@w@vC}BrBkB`@Y|@_@tA[|Fs@tAIdAApCB~Kb@dA@\\CtBc@tAAXCTGVORQxB{Bd@m@jAsBrC{DRS^OZEz@HjABb@C\\GtAi@r@Gt@BVFpD`C`A^j@HrABnAMjBe@XAn@BlAXnAf@xAnAlAlAfC`Dr@v@`BnAhChAl@LjB@hHc@~B?t@EhAQ|@Id@?`@D\\H|F`CfDjA`@H^BVAlAQbBg@bAg@dB{AnBuAh@Wv@SlA@j@g@`AoAvDaEn@k@nLmFxAi@tBg@hAQnAYlAe@~CgBbHoCd@_@d@k@t@qA|AmDPq@r@Yh@@`AZfJxD`FlAv@FtHZpDI`A?|ADnBRn@J`@NnCzAfCvAf@^fGlGh@b@^RZL~@LdH\\~ADZFlBj@Nm@Xc@z@o@VYFYGcLTwEfDDbCHbA?`HOjCUpBY~@CdBHzFv@|@F~@?hAGlBQz@SlAg@j@IlIr@rAZf@V|BbBj@XjA`@nEnAh@Tn@d@bBdBlC|Cn@~@v@|Ad@lA^|AJ`AN~BN|@`@rAbCfEzBrCr@f@n@PV?p@Mx@[j@]`A_AZCPPFTH|AHx@Pz@b@hAp@fAz@dA`BbB|@vA\\^x@r@xCnBvBdAdA^`ARvAf@bAWt@MzFiBfCg@`A_@nMwGv@[z@IzCBvADx@OdEgA~FcBA@ZWT]`BmGt@qBj@eBNq@Cu@YcAw@wBWc@m@k@iBsAy@w@qA}Bw@eBOiAI_D@u@Ho@Le@r@wEt@aGNm@^y@|AoCr@mBt@}Dd@qB\\aAf@w@tBqCb@}@tAyDNm@RsB@a@I_B_@cDYsEa@aD_AoDGo@SyEs@_HM{@m@{Bu@cD]iBE{@FeANy@V_A`@s@xAsB`DiDv@_@n@k@d@w@\\_Ad@yBb@U`@Vp@dB\\\\l@XlGTPAXMNOR]j@oCt@yCHq@Bs@AaEBc@Z}Aj@yAjAcE^i@XU^Sd@c@b@{@Hg@NcCVoB@c@IiAeAmFMc@?c@s@e@cA{@oU}VU[u@qAo@yAW}@sCgMHGB}@b@IR@rChA|A`B`@XLD`GHJBh@ZL@^ILOr@sAr@iBNSNExBQ?m@EOaBmA{A}@oBuAiBwAEIQsICqEIeAWcBi@aCe@yAaCkGe@cCIiAQmFGs@Kg@O[q@u@cO}LMCGFa@pBSHSGvBkMp@qGAUwAoBwIgHQMoAi@_Am@iA_Ae@s@}@g@wAq@b@uA`@{AV}ARmB|AeIXeCVsH@cBI_D@g@b@kD^mDPeEBgBFuA~@{KV}A|DoM`@aBVaBf@eFbAaJdCyOv@_GYAiBFg@K_C_A_By@[SOQg@}@mBcGo@iAyBaDcDeEsAmByAuCcAi@aBi@u@a@QGs@C[Gm@_@[KWJY\\WRWBUCYOiAiAuAu@y@k@_@]eDsEqByBi@_AOc@uACmB_AgAs@}AiAyCeCcAaAm@u@qFcGcGwFmDqGuBqDuAqBqB{Bw@u@yFqEcFuC{B`HMj@QvAuAxOcGaDmN{Hs@e@Y[U_@{CwIa@u@q@y@Ui@Mm@Ey@Bs@bCuPBm@QeAWc@KIeGcD]WQ_@Oo@WiCOi@KO]U{Ag@iAw@W]]y@Hk@Cc@[}Ak@qDw@QoBYwC[s@Mu@YQOMSyCwGi@cAyCwDYk@Om@Em@IaJ_AkOKcAMw@Qm@Uk@]c@uCaD]e@g@kAaAiDIg@GyDOwA_@oAgDiGKa@Gu@Ba@tAqGBUA}@QeAS]Y[MIc@IcZeD}q@iH]SOFSAiNyAeQeBeJeAgs@eH[yEqFeh@[mAm@gBeAgBi@i@iSgNyDqCo@[mCk@c@WQ]_@uBc@Kc@Cw@FWJUA{BcB[]qAcAgB_BgLoLo@g@s@[s@OuAO_C]i@Ok@UiAm@eG_Bi@UwAw@{H_FcDkBc@Ky@EcAF}@V{@Du@Cy@Qy@SoK{Eg@y@K@M^sAjJc@xGMbAe@bBwBnFaAzEwD`NgAfCkEbG_A`Dg@zAOz@GlBDdBAbBMnAi@nC]fCaAlGo@tJgArK[`EoBdQQ`ASv@qAxDi@|BuAtDyApFw@zBs@rAe@@KAGHMhAQp@cE|Ii@pAwApEiAzFmAtFuEvQmAlFk@fDeAnHQv@]hAk@jA]h@a@f@g@f@[TeAd@oKnCWDq@D_AGs@SwKuF_Bo@cAU_Fw@sMuEwA{@e@_@[Kg@Im@CMCe@c@[CMFOVGX?d@Rv@EjAgCnP[zAqBbGWlAmAjK}BjUyApMMb@@t@EbAwAbU]jDSxEc@hH[bHE\\GLz@tFF~@LnFF^L`@r@t@hArBHrBHVtAfBDf@D`ESnBGdAMHw@@q@HaBn@S^oBrFg@jBMN@AQDOCyBy@wIkA{I}A_@KcAa@kDgBcA_@yL_DkFoAq@Ic@AmA@g@KyAu@cCcB_HcDiCu@o@Dc@Ls@@e@EiBq@_@Gm@EYMsAeAi@S_@Ga@AsAe@}A]y@a@aBmA]Ow@Sc@Gs@Eo@S}GkCuC}@mBw@_UeHeAQuKe@kGqBwAi@o@[o@g@oAuBY]YOc@KwB?uBc@SIMKe@u@GSDu@?c@CKk@{@qBgBK[{@yAoB{EcAkBw@_Aa@[s@g@}Aq@yBe@eBo@uCsAiAm@aEcBsAe@e@]UUOUmG_EyBi@oCiCiAaA{@[g@G[O{EeDQYoBvBcAp@oAnA[d@kA`DiAjA{FxCi@j@eCzA_BnAm@p@_EnFwDjIkG|Pg@~@k@d@u@Zg@DWA[GYK[Qa@]eEcE[UO@GJCVBNfB~DH\\CTQJG?GE_B{CGGOEQLGTBXfAjCf@|AJj@Dv@@rEI|JOhCWhB}AdGa@nBQnA]xD_@pIQvAWnASp@Wl@m@bA]`@e@d@iExCo@n@i@dAwE~PoA~EcAtGI|@I~DKpAaDxZ]pAiBxEm@jBcCtJc@`AoC`DwBjDa@h@y@z@y@h@{@Z}@Nw@@i@FWF]RYZOJa@C[NEJSpAo@fAK^mDlVUdA[v@i@~@@AcAr@i@Pc@DgC@gADaALo@Ps@^c@ZwBtB_Ax@mAk@qBsAeBuAk@[g@SiBe@}Du@m@IgEK}@BeBJwD`@kDj@^yFP}@ZiApA_DjAmD^uB^cADmBJw@p@eCKk@UYE]VyAO}Ag@mAEk@FQOMOWEa@EMa@o@e@xANbCJp@QHSCU@",
+    "resource_state": 3,
+    "polyline": "swv_Hqie]VARBPIHl@HzBHj@LXj@VF\\Cd@Ux@c@dCSjBIb@m@~@x@Rh@aB_@tBkAlDqA~C[hAQ|@_@xFjDk@vDa@dBK|@CfEJl@H|Dt@hBd@f@Rj@ZdBtApBrAlAj@~@y@vBuBb@[r@_@n@Q`AMfAEfCAb@Eh@QbAs@A@h@_AZw@TeAdDkUXw@Xg@POX?LJPBPCJIP_@Bg@AOFe@FMTWZSfDk@z@[x@i@x@{@`@i@vBkDnCaDb@aAbCuJl@kBhByE\\qA`DyZJqAH_EH}@bAuGnA_FvE_Qh@eAn@o@hEyCd@e@\\a@l@cAVm@Rq@VoAPwA^qI\\yDPoA`@oB|AeGViBNiCH}JAsEEw@Kk@g@}AgAkCCYFUPMNDFF~AzCFDF?PKBUI]gB_ECOBWFKNAZTdEbE`@\\ZPXJZFV@f@Et@[j@e@f@_AjG}PvDkI~DoFl@q@~AoAdC{Ah@k@dDeBP@d@p@P^X`ALVh@X|@Lv@Ff@Jd@R|@TpALl@@b@EbAc@d@YVGhCXpChAvClBrAd@l@F\\AXQ^AdANNApAb@rDzBtAf@t@^j@h@RZbBv@`AXjBv@lA@`AJbDnAzAjAdB|A\\TH?n@y@JZpBfBj@z@BJ?b@Et@FRd@t@LJRHtBb@vB?b@JXNX\\nAtBn@f@n@ZvAh@jGpBtKd@dAP~TdHlBv@tC|@|GjCn@Rr@Db@Fv@R\\N`BlAx@`@|A\\rAd@`@@^Fh@RrAdAXLl@D^FhBp@d@Dr@Az@@~@CbAV\\Jz@^bFbCbCbBxAt@f@JlAAb@@p@HjFnAxL~CbA^jDfBbA`@zJhBvIjAxBx@NBNELMf@kB`AnEh@~A~AzCfAtALVPz@@l@S~EDvAJ~@X|@z@~ANb@h@`Cp@tD\\jAbBpEhBpIt@vFv@zI|D|ZZvAzAlEp@dCh@vCN|ALfD@~HNvA^|@rBbC`ApDXpBBzAElB]dBaAlC_@f@uB~Bi@t@kClFsA`CgDxGU|@UhBItAI`@Od@o@vAc@jAOv@BZHRRHRAr@]R?HFLvAVvECj@YbDInFKhAUvA?d@Dd@ZbBz@xDLx@@TAl@OnA}@xDsBnHYtBy@jJMp@m@~BkAbDa@z@kBhDYr@g@rBkGj^c@|HmAtHw@pFGLIF_@HOJ[bCU~DVpEChC]vKk@|`@F~CPzBLbAbHd_@d@lBL\\jB|D|@bCjH|Yt@`Ct@hBv@zA~CnF`AxB~AbFlB`Eb@lAd@|B~AvGpA~GpCrIzCvHvCtIr@|Bj@jEL`@zAbD\\~@TbAB`@KdE?lCCLHTlAlG`@n@dBbBxAlAlAh@VD~Ad@\\Nz@P|CQ~Ah@jCj@|B|@v@Th@@f@a@b@Wh@cANSPKt@QbBQr@?p@HvAr@xAz@bAb@`C\\j@BrAA`AF`B\\|DpAnATtANlDn@t@ZVPxClCbBr@d@HX?\\Id@URUPa@Jc@f@iF@oEd@wEDq@FeDz@{OLu@Na@^i@tA}A^g@To@x@}DTcCf@oI\\gE\\eCVeA\\_Ab@o@x@cBl@mBXuAFkAKyC@i@Jw@Nk@p@{Ab@s@d@i@x@w@vC}BrBkB`@Y|@_@tA[|Fs@tAIdAApCB~Kb@dA@\\CtBc@tAAXCTGVORQxB{Bd@m@jAsBrC{DRS^OZEz@HjABb@C\\GtAi@r@Gt@BVFpD`C`A^j@HrABnAMjBe@XAn@BlAXnAf@xAnAlAlAfC`Dr@v@`BnAhChAl@LjB@hHc@~B?t@EhAQ|@Id@?`@D\\H|F`CfDjA`@H^BVAlAQbBg@bAg@dB{AnBuAh@Wv@SlA@j@g@`AoAvDaEn@k@nLmFxAi@tBg@hAQnAYlAe@~CgBbHoCd@_@d@k@t@qA|AmDPq@r@Yh@@`AZfJxD`FlAv@FtHZpDI`A?|ADnBRn@J`@NnCzAfCvAf@^fGlGh@b@^RZL~@LdH\\~ADZFlBj@Nm@Xc@z@o@VYFYGcLTwEfDDbCHbA?`HOjCUpBY~@CdBHzFv@|@F~@?hAGlBQz@SlAg@j@IlIr@rAZf@V|BbBj@XjA`@nEnAh@Tn@d@bBdBlC|Cn@~@v@|Ad@lA^|AJ`AN~BN|@`@rAbCfEzBrCr@f@n@PV?p@Mx@[j@]`A_AZCPPFTH|AHx@Pz@b@hAp@fAz@dA`BbB|@vA\\^x@r@xCnBvBdAdA^`ARvAf@bAWt@MzFiBfCg@`A_@nMwGv@[z@IzCBvADx@OdEgA~FcBA@ZWT]`BmGt@qBj@eBNq@Cu@YcAw@wBWc@m@k@iBsAy@w@qA}Bw@eBOiAI_D@u@Ho@Le@r@wEt@aGNm@^y@|AoCr@mBt@}Dd@qB\\aAf@w@tBqCb@}@tAyDNm@RsB@a@I_B_@cDYsEa@aD_AoDGo@SyEs@_HM{@m@{Bu@cD]iBE{@FeANy@V_A`@s@xAsB`DiDv@_@n@k@d@w@\\_Ad@yBb@U`@Vp@dB\\\\l@XlGTPAXMNOR]j@oCt@yCHq@Bs@AaEBc@Z}Aj@yAjAcE^i@XU^Sd@c@b@{@Hg@NcCVoB@c@IiAeAmFMc@?c@s@e@cA{@oU}VU[u@qAo@yAW}@sCgMHGB}@b@IR@rChA|A`B`@XLD`GHJBh@ZL@^ILOr@sAr@iBNSNExBQ?m@EOaBmA{A}@oBuAiBwAEIQsICqEIeAWcBi@aCe@yAaCkGe@cCIiAQmFGs@Kg@O[q@u@cO}LMCGFa@pBSHSGvBkMp@qGAUwAoBwIgHQMoAi@_Am@iA_Ae@s@}@g@wAq@b@uA`@{AV}ARmB|AeIXeCVsH@cBI_D@g@b@kD^mDPeEBgBFuA~@{KV}A|DoM`@aBVaBf@eFbAaJdCyOv@_GYAiBFg@K_C_A_By@[SOQg@}@mBcGo@iAyBaDcDeEsAmByAuCcAi@aBi@u@a@QGs@C[Gm@_@[KWJY\\WRWBUCYOiAiAuAu@y@k@_@]eDsEqByBi@_AOc@uACmB_AgAs@}AiAyCeCcAaAm@u@qFcGcGwFmDqGuBqDuAqBqB{Bw@u@yFqEcFuC{B`HMj@QvAuAxOcGaDmN{Hs@e@Y[U_@{CwIa@u@q@y@Ui@Mm@Ey@Bs@bCuPBm@QeAWc@KIeGcD]WQ_@Oo@WiCOi@KO]U{Ag@iAw@W]]y@Hk@Cc@[}Ak@qDw@QoBYwC[s@Mu@YQOMSyCwGi@cAyCwDYk@Om@Em@IaJ_AkOKcAMw@Qm@Uk@]c@uCaD]e@g@kAaAiDIg@GyDOwA_@oAgDiGKa@Gu@Ba@tAqGBUA}@QeAS]Y[MIc@IcZeD}q@iH]SOFSAiNyAeQeBeJeAgs@eH[yEqFeh@[mAm@gBeAgBi@i@iSgNyDqCo@[mCk@c@WQ]_@uBc@Kc@Cw@FWJUA{BcB[]qAcAgB_BgLoLo@g@s@[s@OuAO_C]i@Ok@UiAm@eG_Bi@UwAw@{H_FcDkBc@Ky@EcAF}@V{@Du@Cy@Qy@SoK{Eg@y@K@M^sAjJc@xGMbAe@bBwBnFaAzEwD`NgAfCkEbG_A`Dg@zAOz@GlBDdBAbBMnAi@nC]fCaAlGo@tJgArK[`EoBdQQ`ASv@qAxDi@|BuAtDyApFw@zBs@rAe@@KAGHMhAQp@cE|Ii@pAwApEiAzFmAtFuEvQmAlFk@fDeAnHQv@]hAk@jA]h@a@f@g@f@[TeAd@oKnCWDq@D_AGs@SwKuF_Bo@cAU_Fw@sMuEwA{@e@_@[Kg@Im@CMCe@c@[CMFOVGX?d@Rv@EjAgCnP[zAqBbGWlAmAjK}BjUyApMMb@@t@EbAwAbU]jDSxEc@hH[bHE\\GLz@tFF~@LnFF^L`@r@t@hArBHrBHVtAfBDf@D`ESnBGdAMHw@@q@HaBn@S^oBrFg@jBMN@AQDOCyBy@wIkA{I}A_@KcAa@kDgBcA_@yL_DkFoAq@Ic@AmA@g@KyAu@cCcB_HcDiCu@o@Dc@Ls@@e@EiBq@_@Gm@EYMsAeAi@S_@Ga@AsAe@}A]y@a@aBmA]Ow@Sc@Gs@Eo@S}GkCuC}@mBw@_UeHeAQuKe@kGqBwAi@o@[o@g@oAuBY]YOc@KwB?uBc@SIMKe@u@GSDu@?c@CKk@{@qBgBK[{@yAoB{EcAkBw@_Aa@[s@g@}Aq@yBe@eBo@uCsAiAm@aEcBsAe@e@]UUOUmG_EyBi@oCiCiAaA{@[g@G[O{EeDQYoBvBcAp@oAnA[d@kA`DiAjA{FxCi@j@eCzA_BnAm@p@_EnFwDjIkG|Pg@~@k@d@u@Zg@DWA[GYK[Qa@]eEcE[UO@GJCVBNfB~DH\\CTQJG?GE_B{CGGOEQLGTBXfAjCf@|AJj@Dv@@rEI|JOhCWhB}AdGa@nBQnA]xD_@pIQvAWnASp@Wl@m@bA]`@e@d@iExCo@n@i@dAwE~PoA~EcAtGI|@I~DKpAaDxZ]pAiBxEm@jBcCtJc@`AoC`DwBjDa@h@y@z@y@h@{@Z}@Nw@@i@FWF]RYZOJa@C[NEJSpAo@fAK^mDlVUdA[v@i@~@@AcAr@i@Pc@DgC@gADaALo@Ps@^c@ZwBtB_Ax@mAk@qBsAeBuAk@[g@SiBe@}Du@m@IgEK}@BeBJwD`@kDj@^yFP}@ZiApA_DjAmD^uB^cADmBJw@p@eCKk@UYE]VyAO}Ag@mAEk@FQOMOWEa@EMa@o@e@xANbCJp@QHSCU@"
+  },
+  "map_urls": {
+    "url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/BMNSMURPVVSH3H2QBDU6SPD3JS5NJIODI3DDESPDL2KI6YTA3INJZLGLL6AMPDYP6WR7AJ22YLXUBL77D2YOIP4NAJHUDXIBGKDNIBA=",
+    "retina_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/MOZVHFSRHNR3SLRTVVLGEPGUMQWQTBWZS5SAWUHBZJLTWFHINI66L6EFY72HVRWSGQSF46WUVKRBKZZBTTTPL6443JVOZMTEF62O2XI=",
+    "light_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/MOZVHFSRHNR3SLRTVVLGEPGUMQWQTBWZS5SAWUHBZJLTWFHINI66L6EFY72HVRWSGQSF46WUVKRBKZZBTTTPL6443JVOZMTEF62O2XI=",
+    "dark_url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/WQYRWV3IKWJJE6DXRPOGSAQZNELBIT5R2VY5DE4WGQ4C3F3HLMY2U5D3BO6KOJ7XBPMF66NZ4TPH7O3O3AV6GFRKHCDKNDBDKNFT4XA="
+  },
+  "name": "M 108-Route des Grands Crus-D 31",
+  "private": false,
+  "resource_state": 3,
+  "starred": true,
+  "sub_type": 1,
+  "created_at": "2026-06-02T17:22:27Z",
+  "updated_at": "2026-06-02T17:22:45Z",
+  "timestamp": 1780420947,
+  "type": 1,
+  "estimated_moving_time": 9512,
+  "waypoints": [],
+  "segments": [
+    {
+      "id": 5477891,
+      "resource_state": 2,
+      "name": "Montée de Gevrey-Chambertin",
+      "activity_type": "Ride",
+      "distance": 426.9,
+      "average_grade": 2.4,
+      "maximum_grade": 4.2,
+      "elevation_high": 295.6,
+      "elevation_low": 285.4,
+      "start_latlng": [
+        47.228407,
+        4.967
+      ],
+      "end_latlng": [
+        47.232178,
+        4.967998
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Gevrey Chambertin",
+      "state": "Burgandy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 6028820,
+      "resource_state": 2,
+      "name": "Combe Lavaux",
+      "activity_type": "Ride",
+      "distance": 3846.9,
+      "average_grade": 4.2,
+      "maximum_grade": 14.8,
+      "elevation_high": 464.6,
+      "elevation_low": 301.8,
+      "start_latlng": [
+        47.223592,
+        4.953958
+      ],
+      "end_latlng": [
+        47.227836,
+        4.909868
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Gevrey Chambertin",
+      "state": "Burgandy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 7084259,
+      "resource_state": 2,
+      "name": "mont Afrique by marsanay",
+      "activity_type": "Ride",
+      "distance": 4724.9,
+      "average_grade": 4.1,
+      "maximum_grade": 24.0,
+      "elevation_high": 464.8,
+      "elevation_low": 271.8,
+      "start_latlng": [
+        47.273819,
+        4.988813
+      ],
+      "end_latlng": [
+        47.29536,
+        4.946324
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 2,
+      "city": "Marsannay La Côte",
+      "state": "Burgandy",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 11068726,
+      "resource_state": 2,
+      "name": "Côte du Lieu Dieu",
+      "activity_type": "Ride",
+      "distance": 3143.0,
+      "average_grade": 3.5,
+      "maximum_grade": 15.1,
+      "elevation_high": 388.5,
+      "elevation_low": 278.4,
+      "start_latlng": [
+        47.140372,
+        4.882844
+      ],
+      "end_latlng": [
+        47.116188,
+        4.870436
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 1,
+      "city": "Meuilley",
+      "state": "Bourgogne",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 12931600,
+      "resource_state": 2,
+      "name": "chamboeuf/ternant",
+      "activity_type": "Ride",
+      "distance": 3280.3,
+      "average_grade": -1.2,
+      "maximum_grade": 10.3,
+      "elevation_high": 469.8,
+      "elevation_low": 425.0,
+      "start_latlng": [
+        47.229298,
+        4.900076
+      ],
+      "end_latlng": [
+        47.217504,
+        4.861847
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Chambœuf",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13339570,
+      "resource_state": 2,
+      "name": "Avant grimpette",
+      "activity_type": "Ride",
+      "distance": 620.4,
+      "average_grade": 2.4,
+      "maximum_grade": 4.7,
+      "elevation_high": 300.2,
+      "elevation_low": 285.2,
+      "start_latlng": [
+        47.27781,
+        4.98509
+      ],
+      "end_latlng": [
+        47.28141,
+        4.9789
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Marsannay-la-Côte",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13387668,
+      "resource_state": 2,
+      "name": "Après grimpette",
+      "activity_type": "Ride",
+      "distance": 611.0,
+      "average_grade": -2.4,
+      "maximum_grade": -1.1,
+      "elevation_high": 300.0,
+      "elevation_low": 285.3,
+      "start_latlng": [
+        47.28131,
+        4.97886
+      ],
+      "end_latlng": [
+        47.27781,
+        4.98503
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Marsannay-la-Côte",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13446667,
+      "resource_state": 2,
+      "name": "Passage lycée stephen liégard",
+      "activity_type": "Ride",
+      "distance": 132.0,
+      "average_grade": -1.3,
+      "maximum_grade": -0.7,
+      "elevation_high": 296.1,
+      "elevation_low": 294.4,
+      "start_latlng": [
+        47.23915,
+        4.9707
+      ],
+      "end_latlng": [
+        47.23803,
+        4.97018
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Brochon",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13447303,
+      "resource_state": 2,
+      "name": "Pavés couchey",
+      "activity_type": "Ride",
+      "distance": 48.7,
+      "average_grade": 2.9,
+      "maximum_grade": 2.9,
+      "elevation_high": 291.8,
+      "elevation_low": 290.4,
+      "start_latlng": [
+        47.26063,
+        4.98043
+      ],
+      "end_latlng": [
+        47.26058,
+        4.97982
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Couchey",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13618657,
+      "resource_state": 2,
+      "name": "Début climb lacets",
+      "activity_type": "Ride",
+      "distance": 1150.4,
+      "average_grade": 3.1,
+      "maximum_grade": 13.0,
+      "elevation_high": 316.1,
+      "elevation_low": 279.8,
+      "start_latlng": [
+        47.27546,
+        4.98691
+      ],
+      "end_latlng": [
+        47.28329,
+        4.97986
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Marsannay-la-Côte",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13696587,
+      "resource_state": 2,
+      "name": "Première boucle lacets",
+      "activity_type": "Ride",
+      "distance": 264.0,
+      "average_grade": 6.4,
+      "maximum_grade": 14.1,
+      "elevation_high": 318.1,
+      "elevation_low": 301.3,
+      "start_latlng": [
+        47.28157,
+        4.97882
+      ],
+      "end_latlng": [
+        47.28366,
+        4.98022
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Marsannay-la-Côte",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 13749804,
+      "resource_state": 2,
+      "name": "Début des lacets: 1,25km",
+      "activity_type": "Ride",
+      "distance": 1246.0,
+      "average_grade": 5.6,
+      "maximum_grade": 24.4,
+      "elevation_high": 369.5,
+      "elevation_low": 298.9,
+      "start_latlng": [
+        47.281086,
+        4.979298
+      ],
+      "end_latlng": [
+        47.284304,
+        4.971632
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Marsannay-la-Côte",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 14564690,
+      "resource_state": 2,
+      "name": "D122 vers brochon",
+      "activity_type": "Ride",
+      "distance": 580.6,
+      "average_grade": -0.3,
+      "maximum_grade": 1.2,
+      "elevation_high": 295.2,
+      "elevation_low": 293.1,
+      "start_latlng": [
+        47.23255,
+        4.96813
+      ],
+      "end_latlng": [
+        47.23756,
+        4.97018
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Brochon",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16265923,
+      "resource_state": 2,
+      "name": "Haut gevrey",
+      "activity_type": "Ride",
+      "distance": 578.0,
+      "average_grade": 4.6,
+      "maximum_grade": 8.8,
+      "elevation_high": 430.4,
+      "elevation_low": 403.8,
+      "start_latlng": [
+        47.224197,
+        4.925979
+      ],
+      "end_latlng": [
+        47.22471,
+        4.918979
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Chambœuf",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16365925,
+      "resource_state": 2,
+      "name": "Fixin à Fixey",
+      "activity_type": "Ride",
+      "distance": 330.4,
+      "average_grade": 0.6,
+      "maximum_grade": 3.3,
+      "elevation_high": 302.4,
+      "elevation_low": 299.6,
+      "start_latlng": [
+        47.245447,
+        4.973278
+      ],
+      "end_latlng": [
+        47.248254,
+        4.974647
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Fixin",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16418681,
+      "resource_state": 2,
+      "name": "Route des Grands crus🍇​: Couchey/Fixin",
+      "activity_type": "Ride",
+      "distance": 1808.2,
+      "average_grade": 0.1,
+      "maximum_grade": 4.9,
+      "elevation_high": 296.6,
+      "elevation_low": 288.4,
+      "start_latlng": [
+        47.26058,
+        4.98024
+      ],
+      "end_latlng": [
+        47.24551,
+        4.9733
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Couchey",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16418687,
+      "resource_state": 2,
+      "name": "Route des Grands crus🍇​: Fixin/Brochon",
+      "activity_type": "Ride",
+      "distance": 658.7,
+      "average_grade": 0.7,
+      "maximum_grade": 3.3,
+      "elevation_high": 297.1,
+      "elevation_low": 291.1,
+      "start_latlng": [
+        47.24505,
+        4.97312
+      ],
+      "end_latlng": [
+        47.2394,
+        4.97091
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Fixin",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16419569,
+      "resource_state": 2,
+      "name": "Espace chambretin",
+      "activity_type": "Ride",
+      "distance": 385.2,
+      "average_grade": 1.3,
+      "maximum_grade": 3.0,
+      "elevation_high": 279.8,
+      "elevation_low": 274.8,
+      "start_latlng": [
+        47.227168,
+        4.973407
+      ],
+      "end_latlng": [
+        47.226037,
+        4.969289
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Gevrey-Chambertin",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16420063,
+      "resource_state": 2,
+      "name": "Route des Grands crus🍇​: Couchey/Marsannay",
+      "activity_type": "Ride",
+      "distance": 1365.4,
+      "average_grade": -1.0,
+      "maximum_grade": 2.6,
+      "elevation_high": 290.1,
+      "elevation_low": 274.9,
+      "start_latlng": [
+        47.26058,
+        4.98032
+      ],
+      "end_latlng": [
+        47.27114,
+        4.98878
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Couchey",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16420078,
+      "resource_state": 2,
+      "name": "Route des Grands crus🍇​: Fixin/Couchey",
+      "activity_type": "Ride",
+      "distance": 1795.6,
+      "average_grade": -0.2,
+      "maximum_grade": 1.6,
+      "elevation_high": 296.9,
+      "elevation_low": 290.0,
+      "start_latlng": [
+        47.24566,
+        4.97336
+      ],
+      "end_latlng": [
+        47.26058,
+        4.98032
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Fixin",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16420092,
+      "resource_state": 2,
+      "name": "Route des Grands crus🍇​: Brochon/Fixin",
+      "activity_type": "Ride",
+      "distance": 676.5,
+      "average_grade": -0.7,
+      "maximum_grade": 1.3,
+      "elevation_high": 297.8,
+      "elevation_low": 290.9,
+      "start_latlng": [
+        47.23944,
+        4.97093
+      ],
+      "end_latlng": [
+        47.24525,
+        4.9732
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Fixin",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16420096,
+      "resource_state": 2,
+      "name": "Gevrey/Brochon D122",
+      "activity_type": "Ride",
+      "distance": 972.5,
+      "average_grade": 0.6,
+      "maximum_grade": 4.0,
+      "elevation_high": 296.8,
+      "elevation_low": 289.4,
+      "start_latlng": [
+        47.23067,
+        4.96758
+      ],
+      "end_latlng": [
+        47.23911,
+        4.97069
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Gevrey-Chambertin",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 16898038,
+      "resource_state": 2,
+      "name": "Descente Ternant/L'Etang-Vergy",
+      "activity_type": "Ride",
+      "distance": 3434.5,
+      "average_grade": -3.4,
+      "maximum_grade": 2.6,
+      "elevation_high": 413.0,
+      "elevation_low": 297.0,
+      "start_latlng": [
+        47.200622,
+        4.857175
+      ],
+      "end_latlng": [
+        47.179882,
+        4.879046
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Ternant",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17017021,
+      "resource_state": 2,
+      "name": "D108 rond point",
+      "activity_type": "Ride",
+      "distance": 414.1,
+      "average_grade": -1.5,
+      "maximum_grade": 2.9,
+      "elevation_high": 468.6,
+      "elevation_low": 459.4,
+      "start_latlng": [
+        47.297541,
+        4.940413
+      ],
+      "end_latlng": [
+        47.296052,
+        4.945322
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 17614720,
+      "resource_state": 2,
+      "name": "Remontée Bois de la Combe du Pré",
+      "activity_type": "Ride",
+      "distance": 627.1,
+      "average_grade": 1.8,
+      "maximum_grade": 4.7,
+      "elevation_high": 369.4,
+      "elevation_low": 357.8,
+      "start_latlng": [
+        47.290775,
+        4.95181
+      ],
+      "end_latlng": [
+        47.289041,
+        4.959554
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18034881,
+      "resource_state": 2,
+      "name": "Champs pourri",
+      "activity_type": "Ride",
+      "distance": 374.4,
+      "average_grade": -0.3,
+      "maximum_grade": 3.9,
+      "elevation_high": 428.0,
+      "elevation_low": 424.8,
+      "start_latlng": [
+        47.308345,
+        4.940327
+      ],
+      "end_latlng": [
+        47.306844,
+        4.944763
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 18924369,
+      "resource_state": 2,
+      "name": "Gouttière",
+      "activity_type": "Ride",
+      "distance": 780.8,
+      "average_grade": 2.9,
+      "maximum_grade": 6.6,
+      "elevation_high": 453.2,
+      "elevation_low": 430.6,
+      "start_latlng": [
+        47.308295,
+        4.940214
+      ],
+      "end_latlng": [
+        47.301359,
+        4.938883
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 19004236,
+      "resource_state": 2,
+      "name": "lacet",
+      "activity_type": "Ride",
+      "distance": 551.1,
+      "average_grade": -5.8,
+      "maximum_grade": -2.0,
+      "elevation_high": 338.3,
+      "elevation_low": 306.1,
+      "start_latlng": [
+        47.283666,
+        4.978355
+      ],
+      "end_latlng": [
+        47.282222,
+        4.978797
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": null,
+      "state": null,
+      "country": null,
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 19530334,
+      "resource_state": 2,
+      "name": "Descente le long de la carrière",
+      "activity_type": "Ride",
+      "distance": 2625.4,
+      "average_grade": -3.3,
+      "maximum_grade": 0.0,
+      "elevation_high": 337.0,
+      "elevation_low": 250.4,
+      "start_latlng": [
+        47.105948,
+        4.886396
+      ],
+      "end_latlng": [
+        47.098067,
+        4.911403
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Villers-la-Faye",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 19530351,
+      "resource_state": 2,
+      "name": "Route de Marey",
+      "activity_type": "Ride",
+      "distance": 1058.6,
+      "average_grade": -3.3,
+      "maximum_grade": -1.1,
+      "elevation_high": 390.8,
+      "elevation_low": 355.4,
+      "start_latlng": [
+        47.113588,
+        4.871088
+      ],
+      "end_latlng": [
+        47.105339,
+        4.87627
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Villers-la-Faye",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 20454740,
+      "resource_state": 2,
+      "name": "La relance du tunnel",
+      "activity_type": "Ride",
+      "distance": 496.8,
+      "average_grade": 8.8,
+      "maximum_grade": 13.0,
+      "elevation_high": 438.2,
+      "elevation_low": 394.5,
+      "start_latlng": [
+        47.223657,
+        4.930825
+      ],
+      "end_latlng": [
+        47.223378,
+        4.924703
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Brochon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21620666,
+      "resource_state": 2,
+      "name": "La Courtavaux",
+      "activity_type": "Ride",
+      "distance": 479.2,
+      "average_grade": -1.1,
+      "maximum_grade": 4.1,
+      "elevation_high": 220.7,
+      "elevation_low": 213.6,
+      "start_latlng": [
+        47.105838,
+        4.939011
+      ],
+      "end_latlng": [
+        47.109599,
+        4.942049
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Premeaux-Prissey",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 21644816,
+      "resource_state": 2,
+      "name": "Sprint entrée Chamboeuf",
+      "activity_type": "Ride",
+      "distance": 568.4,
+      "average_grade": 0.1,
+      "maximum_grade": 3.5,
+      "elevation_high": 476.7,
+      "elevation_low": 473.2,
+      "start_latlng": [
+        47.227886,
+        4.909342
+      ],
+      "end_latlng": [
+        47.229137,
+        4.902363
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Chambœuf",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22093387,
+      "resource_state": 2,
+      "name": "Faux plat Meuilley",
+      "activity_type": "Ride",
+      "distance": 1515.2,
+      "average_grade": 0.3,
+      "maximum_grade": 7.9,
+      "elevation_high": 285.6,
+      "elevation_low": 267.6,
+      "start_latlng": [
+        47.155582,
+        4.883881
+      ],
+      "end_latlng": [
+        47.142647,
+        4.879106
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Segrois",
+      "state": null,
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22192305,
+      "resource_state": 2,
+      "name": "corcelles D108",
+      "activity_type": "Ride",
+      "distance": 790.9,
+      "average_grade": -2.4,
+      "maximum_grade": 4.3,
+      "elevation_high": 447.4,
+      "elevation_low": 424.5,
+      "start_latlng": [
+        47.295074,
+        4.946453
+      ],
+      "end_latlng": [
+        47.290093,
+        4.953215
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22207118,
+      "resource_state": 2,
+      "name": "Effort max 1 min",
+      "activity_type": "Ride",
+      "distance": 626.2,
+      "average_grade": 6.5,
+      "maximum_grade": 13.0,
+      "elevation_high": 346.3,
+      "elevation_low": 305.5,
+      "start_latlng": [
+        47.281788,
+        4.978756
+      ],
+      "end_latlng": [
+        47.283672,
+        4.978077
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Marsannay-la-Côte",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22729376,
+      "resource_state": 2,
+      "name": "Liegard",
+      "activity_type": "Ride",
+      "distance": 302.3,
+      "average_grade": 1.2,
+      "maximum_grade": 5.4,
+      "elevation_high": 296.9,
+      "elevation_low": 292.7,
+      "start_latlng": [
+        47.236496,
+        4.969857
+      ],
+      "end_latlng": [
+        47.239109,
+        4.970752
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Brochon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22729778,
+      "resource_state": 2,
+      "name": "Liegard",
+      "activity_type": "Ride",
+      "distance": 306.4,
+      "average_grade": -0.1,
+      "maximum_grade": 0.7,
+      "elevation_high": 287.0,
+      "elevation_low": 286.4,
+      "start_latlng": [
+        47.239166,
+        4.970676
+      ],
+      "end_latlng": [
+        47.236469,
+        4.969776
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Brochon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22907063,
+      "resource_state": 2,
+      "name": "Entrée de Chamboeuf",
+      "activity_type": "Ride",
+      "distance": 327.4,
+      "average_grade": 0.9,
+      "maximum_grade": 3.1,
+      "elevation_high": 475.9,
+      "elevation_low": 472.9,
+      "start_latlng": [
+        47.227942,
+        4.909639
+      ],
+      "end_latlng": [
+        47.228814,
+        4.905549
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Chambœuf",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22951590,
+      "resource_state": 2,
+      "name": "Bout presque droit jusqu'au rond-point",
+      "activity_type": "Ride",
+      "distance": 854.6,
+      "average_grade": -0.7,
+      "maximum_grade": 2.5,
+      "elevation_high": 458.0,
+      "elevation_low": 447.8,
+      "start_latlng": [
+        47.30105,
+        4.938859
+      ],
+      "end_latlng": [
+        47.295901,
+        4.945565
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 22951604,
+      "resource_state": 2,
+      "name": "Sprint de Velars",
+      "activity_type": "Ride",
+      "distance": 351.4,
+      "average_grade": 0.5,
+      "maximum_grade": 2.5,
+      "elevation_high": 458.0,
+      "elevation_low": 454.9,
+      "start_latlng": [
+        47.30105,
+        4.938859
+      ],
+      "end_latlng": [
+        47.298112,
+        4.940161
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 23806615,
+      "resource_state": 2,
+      "name": "Sprint D108",
+      "activity_type": "Ride",
+      "distance": 304.7,
+      "average_grade": -1.9,
+      "maximum_grade": -0.5,
+      "elevation_high": 285.0,
+      "elevation_low": 279.2,
+      "start_latlng": [
+        47.277714,
+        4.985113
+      ],
+      "end_latlng": [
+        47.27529,
+        4.986931
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Marsannay-la-Côte",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 23806657,
+      "resource_state": 2,
+      "name": "Attention ça va monter !",
+      "activity_type": "Ride",
+      "distance": 351.5,
+      "average_grade": 2.0,
+      "maximum_grade": 5.6,
+      "elevation_high": 279.2,
+      "elevation_low": 272.2,
+      "start_latlng": [
+        47.272771,
+        4.98976
+      ],
+      "end_latlng": [
+        47.27526,
+        4.987029
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Marsannay-la-Côte",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24223671,
+      "resource_state": 2,
+      "name": "Lâche ces freins",
+      "activity_type": "Ride",
+      "distance": 1072.2,
+      "average_grade": -7.0,
+      "maximum_grade": -6.3,
+      "elevation_high": 425.4,
+      "elevation_low": 349.9,
+      "start_latlng": [
+        47.287017,
+        4.965382
+      ],
+      "end_latlng": [
+        47.283467,
+        4.977538
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Marsannay-la-Côte",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24500173,
+      "resource_state": 2,
+      "name": "C'est bon tu as la priorité",
+      "activity_type": "Ride",
+      "distance": 368.5,
+      "average_grade": 4.0,
+      "maximum_grade": 6.8,
+      "elevation_high": 292.8,
+      "elevation_low": 277.9,
+      "start_latlng": [
+        47.140446,
+        4.882839
+      ],
+      "end_latlng": [
+        47.137139,
+        4.88287
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Meuilley",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24551595,
+      "resource_state": 2,
+      "name": "C'est là que ça pique",
+      "activity_type": "Ride",
+      "distance": 1002.4,
+      "average_grade": 4.2,
+      "maximum_grade": 5.6,
+      "elevation_high": 383.0,
+      "elevation_low": 340.5,
+      "start_latlng": [
+        47.220743,
+        4.941894
+      ],
+      "end_latlng": [
+        47.22439,
+        4.93115
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Gevrey-Chambertin",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 24842093,
+      "resource_state": 2,
+      "name": "Bout presque droit depuis le rond-point",
+      "activity_type": "Ride",
+      "distance": 857.0,
+      "average_grade": 0.5,
+      "maximum_grade": 6.0,
+      "elevation_high": 459.1,
+      "elevation_low": 447.9,
+      "start_latlng": [
+        47.29595,
+        4.945622
+      ],
+      "end_latlng": [
+        47.301104,
+        4.938892
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Corcelles-les-Monts",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 25105698,
+      "resource_state": 2,
+      "name": "Chamboeuf 2nd part ",
+      "activity_type": "Ride",
+      "distance": 1637.2,
+      "average_grade": 4.7,
+      "maximum_grade": 9.8,
+      "elevation_high": 465.6,
+      "elevation_low": 389.4,
+      "start_latlng": [
+        47.223389,
+        4.929676
+      ],
+      "end_latlng": [
+        47.22782,
+        4.909888
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Brochon",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 27059385,
+      "resource_state": 2,
+      "name": "Première partie descente Ternant",
+      "activity_type": "Ride",
+      "distance": 849.6,
+      "average_grade": -5.8,
+      "maximum_grade": -0.8,
+      "elevation_high": 411.2,
+      "elevation_low": 361.8,
+      "start_latlng": [
+        47.199808,
+        4.863389
+      ],
+      "end_latlng": [
+        47.196973,
+        4.873367
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Ternant",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    },
+    {
+      "id": 27239747,
+      "resource_state": 2,
+      "name": "Sprint coup de cul Fixey",
+      "activity_type": "Ride",
+      "distance": 345.3,
+      "average_grade": 1.1,
+      "maximum_grade": 2.9,
+      "elevation_high": 295.9,
+      "elevation_low": 291.8,
+      "start_latlng": [
+        47.246708,
+        4.974059
+      ],
+      "end_latlng": [
+        47.249693,
+        4.975296
+      ],
+      "elevation_profile": null,
+      "elevation_profiles": null,
+      "climb_category": 0,
+      "city": "Fixin",
+      "state": "Bourgogne-Franche-Comté",
+      "country": "France",
+      "private": false,
+      "hazardous": false,
+      "starred": false
+    }
+  ]
+}

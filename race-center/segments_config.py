@@ -7,19 +7,24 @@ from pathlib import Path
 DATA = Path(__file__).parent / 'data'
 
 # Map: route file name fragment -> stage name
+# Dag 1 ændret pga. vejret — Alpe d'Huez erstattet med Bourgogne Voie Verte-rute
+# (lavere risiko, nul store veje, naturskøn kanalsti + Combe Lavaux).
 ROUTE_FILES = {
-    '3486425133972935152': 'Dag 1: Alpe d\'Huez + Col de Sarenne',
+    'dijon_route_3496922123103851710': 'Dag 1: Voie Verte du Canal de Bourgogne',
     '3486425940246209816': 'Dag 2: Col du Galibier',
     '3486430726403184920': 'Dag 3: Croix de Fer + Glandon',
 }
 
 # Curated picks per stage. Each: (category, display_name, exact_segment_name_substring)
+# NB: Bourgogne har ingen HC/Cat1-bjerge — højeste klatre er Cat 2-3 niveau.
 PICKS = {
-    'Dag 1: Alpe d\'Huez + Col de Sarenne': [
-        ('KOM:HC',    'Alpe d\'Huez',                    'Alpe d\'Huez'),
-        ('KOM:Cat2',  'Col de Sarenne West',             'Col de Sarenne West'),
-        ('SPRINT',    'Alpe d\'Huez Final Sprint',       'Hairpin 1 to Marked'),
-        ('DESCENT',   'Sarenne-Romanche Descent',        'Sarenne-Romanche'),
+    'Dag 1: Voie Verte du Canal de Bourgogne': [
+        ('KOM:Cat2',  'Combe Lavaux (kløften)',          'Combe Lavaux'),
+        ('KOM:Cat3',  'Corcelles',                        'Corcelles'),
+        ('KOM:Cat3',  'Velars-Corcelles (det stejle)',    'Velars-Corcelles 1°partie raide'),
+        ('SPRINT',    'Route des Grands Crus (vinmark)',  'Route des Grands crus'),
+        ('SPRINT',    'Kanal-sprint: Gissey→Ste Marie',   'Gissey > Ste Marie / canal'),
+        ('DESCENT',   'Petite descente (pinjeskov)',      'Petite descente au milieu des pins'),
     ],
     'Dag 2: Col du Galibier': [
         ('KOM:HC',    'Col du Galibier',                 'Col du Galibier (par Col du Lautaret)'),
@@ -49,7 +54,9 @@ POINTS = {
 output = {'stages': []}
 
 for rid, stage_name in ROUTE_FILES.items():
-    rp = DATA / f'route_{rid}.json'
+    # Dijon routes are saved as dijon_route_<id>.json; alpine as route_<id>.json
+    fname = f'{rid}.json' if rid.startswith('dijon_route_') else f'route_{rid}.json'
+    rp = DATA / fname
     r = json.loads(rp.read_text(encoding='utf-8'))
     picks = PICKS.get(stage_name, [])
     stage_data = {

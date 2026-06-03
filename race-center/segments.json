@@ -1,41 +1,21 @@
 {
   "stages": [
     {
-      "name": "Dag 1: Alpe d'Huez + Col de Sarenne",
-      "route_id": "3486425133972935152",
-      "distance_km": 57.8,
-      "elevation_gain_m": 2014,
-      "estimated_time_h": 1.9,
+      "name": "Dag 1: Voie Verte du Canal de Bourgogne",
+      "route_id": "dijon_route_3496922123103851710",
+      "distance_km": 83.6,
+      "elevation_gain_m": 1087,
+      "estimated_time_h": 2.7,
       "climbs": [
         {
-          "name": "Alpe d'Huez",
-          "strava_segment_name": "Alpe d'Huez",
-          "strava_segment_id": 652851,
-          "distance_km": 12.02,
-          "avg_gradient_pct": 8.8,
-          "peak_elevation_m": 1775.7,
-          "starts_at_m": 728.4,
-          "elevation_gain_m": 1047,
-          "category": "HC",
-          "points": [
-            25,
-            20,
-            16,
-            14,
-            12,
-            10
-          ],
-          "strava_url": "https://www.strava.com/segments/652851"
-        },
-        {
-          "name": "Col de Sarenne West",
-          "strava_segment_name": "Col de Sarenne West",
-          "strava_segment_id": 2053659,
-          "distance_km": 3.15,
-          "avg_gradient_pct": 7.9,
-          "peak_elevation_m": 1990.6,
-          "starts_at_m": 1740.4,
-          "elevation_gain_m": 250,
+          "name": "Combe Lavaux (kløften)",
+          "strava_segment_name": "Combe Lavaux",
+          "strava_segment_id": 6028820,
+          "distance_km": 3.85,
+          "avg_gradient_pct": 4.2,
+          "peak_elevation_m": 464.6,
+          "starts_at_m": 301.8,
+          "elevation_gain_m": 163,
           "category": "Cat2",
           "points": [
             10,
@@ -45,19 +25,55 @@
             2,
             1
           ],
-          "strava_url": "https://www.strava.com/segments/2053659"
+          "strava_url": "https://www.strava.com/segments/6028820"
+        },
+        {
+          "name": "Corcelles",
+          "strava_segment_name": "Corcelles",
+          "strava_segment_id": 5577628,
+          "distance_km": 2.05,
+          "avg_gradient_pct": 6.7,
+          "peak_elevation_m": 285.4,
+          "starts_at_m": 147.8,
+          "elevation_gain_m": 138,
+          "category": "Cat3",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/5577628"
+        },
+        {
+          "name": "Velars-Corcelles (det stejle)",
+          "strava_segment_name": "Velars-Corcelles 1°partie raide",
+          "strava_segment_id": 9174042,
+          "distance_km": 1.1,
+          "avg_gradient_pct": 7.3,
+          "peak_elevation_m": 344.0,
+          "starts_at_m": 263.0,
+          "elevation_gain_m": 81,
+          "category": "Cat3",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/9174042"
         }
       ],
       "sprints": [
         {
-          "name": "Alpe d'Huez Final Sprint",
-          "strava_segment_name": "Hairpin 1 to Marked Official Chrono Finish Line",
-          "strava_segment_id": 21518971,
-          "distance_km": 0.62,
-          "avg_gradient_pct": 8.0,
-          "peak_elevation_m": 1770.8,
-          "starts_at_m": 1721.8,
-          "elevation_gain_m": 49,
+          "name": "Route des Grands Crus (vinmark)",
+          "strava_segment_name": "Route des Grands crus🍇​: Couchey/Fixin",
+          "strava_segment_id": 16418681,
+          "distance_km": 1.81,
+          "avg_gradient_pct": 0.1,
+          "peak_elevation_m": 296.6,
+          "starts_at_m": 288.4,
+          "elevation_gain_m": 8,
           "category": "Sprint",
           "points": [
             5,
@@ -65,19 +81,37 @@
             2,
             1
           ],
-          "strava_url": "https://www.strava.com/segments/21518971"
+          "strava_url": "https://www.strava.com/segments/16418681"
+        },
+        {
+          "name": "Kanal-sprint: Gissey→Ste Marie",
+          "strava_segment_name": "Gissey > Ste Marie / canal",
+          "strava_segment_id": 17270309,
+          "distance_km": 4.07,
+          "avg_gradient_pct": -0.2,
+          "peak_elevation_m": 361.0,
+          "starts_at_m": 352.6,
+          "elevation_gain_m": 8,
+          "category": "Sprint",
+          "points": [
+            5,
+            3,
+            2,
+            1
+          ],
+          "strava_url": "https://www.strava.com/segments/17270309"
         }
       ],
       "descents": [
         {
-          "name": "Sarenne-Romanche Descent",
-          "strava_segment_name": "Sarenne-Romanche",
-          "strava_segment_id": 20910769,
-          "distance_km": 13.14,
-          "avg_gradient_pct": -7.4,
-          "peak_elevation_m": 1994.1,
-          "starts_at_m": 1024.1,
-          "elevation_gain_m": 970,
+          "name": "Petite descente (pinjeskov)",
+          "strava_segment_name": "Petite descente au milieu des pins",
+          "strava_segment_id": 23087194,
+          "distance_km": 1.61,
+          "avg_gradient_pct": -4.5,
+          "peak_elevation_m": 621.8,
+          "starts_at_m": 550.0,
+          "elevation_gain_m": 72,
           "category": "Descent",
           "points": [
             5,
@@ -85,7 +119,7 @@
             2,
             1
           ],
-          "strava_url": "https://www.strava.com/segments/20910769"
+          "strava_url": "https://www.strava.com/segments/23087194"
         }
       ]
     },
