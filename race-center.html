@@ -700,14 +700,14 @@
     <div class="wrap">
       <div class="eyebrow">Side-om-side</div>
       <h2 class="section-h">Rytter × Segment</h2>
-      <p class="section-sub">Forudsagte tider på hvert KOM-segment pr. rytter (fysik-baseret model). Erstattes med faktiske tider efter hver etape.</p>
+      <p class="section-sub">Faktiske tider på hvert segment pr. rytter — hurtigste tid markeret. Tomme felter = segmentet ikke kørt endnu.</p>
       <div class="rider-times-wrap">
         <table class="rider-times-table" id="rider-times-table">
           <thead></thead>
           <tbody></tbody>
         </table>
       </div>
-      <div class="benchmark-foot" id="rider-times-foot">Prædiktion: cykel-fysik baseret på FTP × 0,85 (sustained klimat-effort) + samlet vægt (rytter + 8 kg cykel). Sprints + descents kan ikke prædiktes fra FTP — faktiske tider kommer post-ride.</div>
+      <div class="benchmark-foot" id="rider-times-foot">Realiserede tider trukket fra Strava-segment-efforts. Opdateres hver gang en rytter uploader sin tur + "Sync nu" køres.</div>
     </div>
   </section>
 
@@ -963,6 +963,7 @@
     function posClass(i){ return i===0?'pos-1':i===1?'pos-2':i===2?'pos-3':''; }
     const FIRST = n => (n||'').split(' ')[0];
 
+    let _standingsData = null;
     async function loadStandings() {
       if (!window.db) return;
       let data;
@@ -971,6 +972,9 @@
         if (!doc.exists) return;
         data = doc.data();
       } catch(e){ console.warn('standings load failed', e); return; }
+      _standingsData = data;
+      // Re-render the rider×segment table with actual times once standings load
+      try { renderRiderTimes(); } catch(e){ /* benchmark may not be ready yet */ }
 
       const riders = data.riders || {};
       const names = Object.keys(riders).filter(n => riders[n].segments_done > 0);
@@ -1238,38 +1242,21 @@
     });
 
     // ─────────────────────────────────────────────────────────
-    // Rider × Segment (predicted times on each KOM climb)
+    // Rider × Segment — ACTUAL times from standings/current.segments
     // ─────────────────────────────────────────────────────────
-    function predictClimbSeconds(distanceKm, gradientPct, ftpW, weightKg, bikeKg = 8) {
-      // Simplified cycling-physics: velocity = (P × efficiency) / (mass × g × gradient)
-      // Use 0.85 = efficiency 0.92 × sustained-climb-fraction 0.92 ≈ 0.85 of FTP.
-      if (!ftpW || !weightKg || ftpW <= 0 || weightKg <= 0 || gradientPct <= 0) return null;
-      const mass = weightKg + bikeKg;
-      const g = 9.81;
-      const sustainedW = ftpW * 0.85;
-      const velocity = sustainedW / (mass * g * (gradientPct / 100));
-      if (velocity <= 0) return null;
-      const distM = distanceKm * 1000;
-      return distM / velocity;
-    }
-    function fmtTime(s) {
-      if (s == null || !isFinite(s) || s <= 0) return '—';
-      const h = Math.floor(s / 3600);
-      const m = Math.floor((s % 3600) / 60);
-      const sec = Math.floor(s % 60);
-      if (h > 0) return `${h}:${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
-      return `${m}:${String(sec).padStart(2, '0')}`;
-    }
     function renderRiderTimes() {
       if (!_benchmarkData) return;
       const table = document.getElementById('rider-times-table');
-      // Collect ALL scored segments (KOM + sprint + descent) in stage order
+      // Segment metadata + display order from segments.json
       const allSegs = [];
       _benchmarkData.stages.forEach((s, di) => {
         (s.climbs || []).forEach(c => allSegs.push({...c, day: di + 1, kind: 'climb'}));
         (s.sprints || []).forEach(c => allSegs.push({...c, day: di + 1, kind: 'sprint'}));
         (s.descents || []).forEach(c => allSegs.push({...c, day: di + 1, kind: 'descent'}));
       });
+      // Actual times keyed by segment id → { riderName: seconds }
+      const segResults = (_standingsData && _standingsData.segments) || {};
+
       const thead = `
         <tr>
           <th>Segment</th>
@@ -1278,17 +1265,14 @@
         </tr>
       `;
       const tbody = allSegs.map(c => {
-        let times, validTimes, fastest;
-        // Predict for any segment with positive gradient (climbs + climbing-style sprints).
-        // Skip prediction for flat sprints (gradient ~0) and descents.
-        if ((c.kind === 'climb' || c.kind === 'sprint') && c.avg_gradient_pct >= 3) {
-          times = RIDERS.map(r => predictClimbSeconds(c.distance_km, c.avg_gradient_pct, r.ftp, r.weight));
-          validTimes = times.filter(t => t != null);
-          fastest = validTimes.length ? Math.min(...validTimes) : null;
-        } else {
-          times = RIDERS.map(() => null);
-          fastest = null;
-        }
+        const sid = String(c.strava_segment_id);
+        const res = segResults[sid];
+        // Build name → time map from this segment's entries
+        const timeByName = {};
+        if (res && res.entries) res.entries.forEach(e => { timeByName[e.name] = e.time; });
+        const times = RIDERS.map(r => timeByName[r.name] != null ? timeByName[r.name] : null);
+        const valid = times.filter(t => t != null);
+        const fastest = valid.length ? Math.min(...valid) : null;
         const kindLabel = c.kind === 'climb' ? '' : c.kind === 'sprint' ? ' · sprint' : ' · descent';
         return `
           <tr>
