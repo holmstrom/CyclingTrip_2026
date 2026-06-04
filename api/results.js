@@ -132,11 +132,13 @@ module.exports = async (req, res) => {
         if (t != null) entries.push({ name: r.name, time: t });
       }
       entries.sort((a,b) => a.time - b.time);
+      // climb efforts count toward the KOM jersey field
+      const field = seg.kind === 'climb' ? 'kom' : seg.kind;
       entries.forEach((e, i) => {
         const pts = seg.points[i] || 0;
         e.points = pts; e.pos = i+1;
         const rp = riderPoints[e.name];
-        rp[seg.kind] += pts;
+        rp[field] += pts;
         rp.total += pts;
         rp.gc_seconds += e.time;
         rp.segments_done += 1;
