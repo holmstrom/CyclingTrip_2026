@@ -217,6 +217,31 @@
     .standings-table .pos-1 { color: #E8B620; }
     .standings-table .pos-2 { color: #999; }
     .standings-table .pos-3 { color: #C77B5C; }
+    .standings-block-h {
+      font-family: 'Archivo Narrow', sans-serif; font-weight: 700;
+      font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--accent); margin: 28px 0 10px; padding-bottom: 6px;
+      border-bottom: 2px solid var(--ink);
+    }
+    .standings-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .standings-table .tot { font-weight: 800; }
+    .team-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .team-card { background: var(--paper); border: 1px solid var(--line); padding: 16px 18px; position: relative; }
+    .team-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:4px; }
+    .team-card.team-a::before { background: var(--accent); }
+    .team-card.team-b::before { background: var(--brass); }
+    .team-card.leading { box-shadow: inset 0 0 0 2px var(--ink); }
+    .team-name { font-family:'Archivo Narrow',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--mute); }
+    .team-pts { font-family:'Archivo',sans-serif; font-weight:800; font-size:32px; line-height:1; margin:4px 0; }
+    .team-meta { font-family:'Archivo Narrow',sans-serif; font-size:11px; color:var(--mute); }
+    .seg-result { background: var(--paper); border: 1px solid var(--line); margin-bottom: 8px; }
+    .seg-result summary { cursor:pointer; padding:10px 14px; font-weight:700; font-size:13.5px; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+    .seg-result summary::-webkit-details-marker { display:none; }
+    .seg-result .seg-cat-tag { font-family:'Archivo Narrow',sans-serif; font-size:9px; letter-spacing:0.06em; padding:2px 6px; border:1px solid var(--ink); margin-right:8px; }
+    .seg-result-body { padding: 0 14px 12px; }
+    .seg-result-body table { width:100%; border-collapse:collapse; font-size:12.5px; font-variant-numeric:tabular-nums; }
+    .seg-result-body td { padding:4px 6px; border-bottom:1px dashed var(--line); }
+    .seg-result-body td:last-child, .seg-result-body td:nth-child(3) { text-align:right; }
     .standings-empty {
       padding: 36px 18px; text-align: center;
       color: var(--mute); font-style: italic;
@@ -608,28 +633,42 @@
     <div class="wrap">
       <div class="eyebrow">Live klassement</div>
       <h2 class="section-h">Standings</h2>
-      <p class="section-sub">Detaljeret pr. dag. Klik en kategori for at skifte tabel.</p>
-      <div class="tabs">
-        <button class="tab active" data-tab="gc">🟡 GC</button>
-        <button class="tab" data-tab="kom">🔴 Bjergpoint</button>
-        <button class="tab" data-tab="sprint">🟢 Sprint</button>
-        <button class="tab" data-tab="team">🏁 Hold</button>
-      </div>
-      <table class="standings-table">
+      <p class="section-sub" id="standings-updated">Opdateres efter hver etape via Strava.</p>
+
+      <!-- Point-matrix -->
+      <h3 class="standings-block-h">Point-matrix</h3>
+      <table class="standings-table" id="matrix-table">
         <thead>
-          <tr>
-            <th>Pos</th>
-            <th>Rytter</th>
-            <th id="col-main">Tid</th>
-            <th>Etape 1</th>
-            <th>Etape 2</th>
-            <th>Etape 3</th>
-          </tr>
+          <tr><th>#</th><th>Rytter</th><th>Hold</th><th>🔴 KOM</th><th>🟢 Sprint</th><th>🏁 Desc</th><th>Total</th></tr>
         </thead>
-        <tbody id="standings-body">
-          <tr><td colspan="6" class="standings-empty">Ingen data endnu. Standings opdateres efter første cykeldag (4. juni).</td></tr>
+        <tbody id="matrix-body">
+          <tr><td colspan="7" class="standings-empty">Ingen data endnu — tryk "Sync nu" øverst efter første cykeldag.</td></tr>
         </tbody>
       </table>
+
+      <!-- GC leaderboard -->
+      <h3 class="standings-block-h">🟡 GC — samlet segment-tid</h3>
+      <table class="standings-table" id="gc-table">
+        <thead>
+          <tr><th>#</th><th>Rytter</th><th>Hold</th><th>Tid</th><th>Gap</th><th>Segs</th></tr>
+        </thead>
+        <tbody id="gc-body">
+          <tr><td colspan="6" class="standings-empty">Ingen data endnu.</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Team standings -->
+      <h3 class="standings-block-h">🏁 Hold-kamp</h3>
+      <div id="team-standings" class="team-cards">
+        <div class="team-card team-a"><div class="team-name">Hold A</div><div class="team-pts" id="team-a-pts">—</div><div class="team-meta">Frederik · Tobias · Sebastian</div></div>
+        <div class="team-card team-b"><div class="team-name">Hold B</div><div class="team-pts" id="team-b-pts">—</div><div class="team-meta">Emil · Ulrich · Rasmus</div></div>
+      </div>
+
+      <!-- Segment times -->
+      <h3 class="standings-block-h">Segment-tider</h3>
+      <div id="segment-times">
+        <p class="standings-empty" style="text-align:left;">Ingen data endnu.</p>
+      </div>
     </div>
   </section>
 
@@ -852,15 +891,19 @@
       syncBtn.addEventListener('click', async () => {
         syncBtn.disabled = true;
         syncBtn.textContent = '⟳ Synker… (kan tage 30-60 sek)';
-        syncStatus.textContent = 'Henter friske data fra Strava + genererer AI-præsentationer…';
+        syncStatus.textContent = 'Henter friske data + beregner stilling…';
         const start = Date.now();
         try {
-          const res = await fetch('/api/strava-sync', { method: 'GET' });
+          // Run profiles + results in sequence
+          await fetch('/api/strava-sync', { method: 'GET' });
+          const res = await fetch('/api/results', { method: 'GET' });
           const data = await res.json();
           const elapsed = Math.round((Date.now() - start) / 1000);
-          const synced = Object.keys(data.results || {}).length;
-          syncStatus.textContent = `✓ Synkroniseret ${synced} ryttere på ${elapsed} sek. Reload siden for at se opdaterede profiler.`;
+          syncStatus.textContent = `✓ Opdateret ${data.riders_processed||0} ryttere på ${elapsed} sek.`;
           syncStatus.style.color = 'var(--good)';
+          // Re-render standings + riders live (no reload needed)
+          await loadStandings();
+          await loadRidersFromFirebase();
         } catch (e) {
           syncStatus.textContent = '✗ Sync fejlede: ' + (e.message || 'ukendt');
           syncStatus.style.color = 'var(--accent)';
@@ -911,6 +954,104 @@
       }
     }
 
+    // ── Load + render live standings from Firebase standings/current ──
+    function fmtTime(s) {
+      if (s == null || s <= 0) return '—';
+      const h = Math.floor(s/3600), m = Math.floor((s%3600)/60), sec = Math.floor(s%60);
+      return h>0 ? `${h}:${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}` : `${m}:${String(sec).padStart(2,'0')}`;
+    }
+    function posClass(i){ return i===0?'pos-1':i===1?'pos-2':i===2?'pos-3':''; }
+    const FIRST = n => (n||'').split(' ')[0];
+
+    async function loadStandings() {
+      if (!window.db) return;
+      let data;
+      try {
+        const doc = await window.db.collection('standings').doc('current').get();
+        if (!doc.exists) return;
+        data = doc.data();
+      } catch(e){ console.warn('standings load failed', e); return; }
+
+      const riders = data.riders || {};
+      const names = Object.keys(riders).filter(n => riders[n].segments_done > 0);
+      if (!names.length) return;
+
+      // Updated timestamp
+      if (data.computed_at) {
+        document.getElementById('standings-updated').textContent =
+          'Sidst opdateret: ' + new Date(data.computed_at).toLocaleString('da-DK', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+      }
+
+      // 1. Point-matrix (sorted by total desc)
+      const byTotal = [...names].sort((a,b) => riders[b].total - riders[a].total);
+      document.getElementById('matrix-body').innerHTML = byTotal.map((n,i) => {
+        const r = riders[n];
+        return `<tr>
+          <td class="pos ${posClass(i)}">${i+1}</td>
+          <td>${n}</td>
+          <td>${r.team}</td>
+          <td class="num">${r.kom}</td>
+          <td class="num">${r.sprint}</td>
+          <td class="num">${r.descent}</td>
+          <td class="num tot">${r.total}</td>
+        </tr>`;
+      }).join('');
+
+      // 2. GC leaderboard (sorted by gc_seconds asc)
+      const byTime = [...names].sort((a,b) => riders[a].gc_seconds - riders[b].gc_seconds);
+      const leadTime = riders[byTime[0]].gc_seconds;
+      document.getElementById('gc-body').innerHTML = byTime.map((n,i) => {
+        const r = riders[n];
+        const gap = i===0 ? '—' : '+' + fmtTime(r.gc_seconds - leadTime);
+        return `<tr>
+          <td class="pos ${posClass(i)}">${i+1}</td>
+          <td>${n}</td>
+          <td>${r.team}</td>
+          <td class="num">${fmtTime(r.gc_seconds)}</td>
+          <td class="num">${gap}</td>
+          <td class="num">${r.segments_done}</td>
+        </tr>`;
+      }).join('');
+
+      // 3. Jerseys (leaders)
+      const gcLeader = byTime[0];
+      const komLeader = [...names].sort((a,b)=>riders[b].kom-riders[a].kom)[0];
+      const sprintLeader = [...names].sort((a,b)=>riders[b].sprint-riders[a].sprint)[0];
+      document.getElementById('jersey-gc').textContent = FIRST(gcLeader);
+      document.getElementById('jersey-gc-meta').textContent = fmtTime(riders[gcLeader].gc_seconds);
+      document.getElementById('jersey-kom').textContent = FIRST(komLeader);
+      document.getElementById('jersey-kom-meta').textContent = riders[komLeader].kom + ' point';
+      document.getElementById('jersey-sprint').textContent = FIRST(sprintLeader);
+      document.getElementById('jersey-sprint-meta').textContent = riders[sprintLeader].sprint + ' point';
+
+      // 4. Teams
+      const t = data.teams || {};
+      const aPts = (t.A?.points)||0, bPts = (t.B?.points)||0;
+      document.getElementById('team-a-pts').textContent = aPts;
+      document.getElementById('team-b-pts').textContent = bPts;
+      const teamLeader = aPts >= bPts ? 'A' : 'B';
+      document.getElementById('jersey-team').textContent = 'Hold ' + teamLeader;
+      document.getElementById('jersey-team-meta').textContent = Math.max(aPts,bPts) + ' point';
+      document.querySelector('.team-card.team-a').classList.toggle('leading', aPts > bPts);
+      document.querySelector('.team-card.team-b').classList.toggle('leading', bPts > aPts);
+
+      // 5. Segment-tider (expandable per segment)
+      const segs = data.segments || {};
+      const catColor = {HC:'var(--accent)',Cat1:'var(--accent-soft)',Cat2:'var(--brass)',Cat3:'var(--mute)',Sprint:'var(--good)',Descent:'var(--ink)'};
+      const order = Object.keys(segs).sort((a,b)=>(segs[a].stage-segs[b].stage));
+      const html = order.map(sid => {
+        const s = segs[sid];
+        if (!s.entries || !s.entries.length) return '';
+        const rows = s.entries.map(e => `<tr><td>${e.pos}. ${e.name}</td><td></td><td>${fmtTime(e.time)}</td><td>+${e.points} pt</td></tr>`).join('');
+        const winner = s.entries[0];
+        return `<details class="seg-result">
+          <summary><span><span class="seg-cat-tag" style="background:${catColor[s.category]||'var(--mute)'};color:#F5F1E8">${s.category||''}</span>Dag ${s.stage} · ${s.name}</span><span style="font-weight:400;font-size:12px;color:var(--mute)">🥇 ${FIRST(winner.name)} ${fmtTime(winner.time)}</span></summary>
+          <div class="seg-result-body"><table>${rows}</table></div>
+        </details>`;
+      }).join('');
+      document.getElementById('segment-times').innerHTML = html || '<p class="standings-empty" style="text-align:left;">Ingen segment-data endnu.</p>';
+    }
+
     function renderRiders() {
       const grid = document.getElementById('riders-grid');
       grid.innerHTML = RIDERS.map((r, idx) => {
@@ -952,6 +1093,7 @@
     renderRiders();
     // Try Firebase override (no-op if not configured)
     loadRidersFromFirebase();
+    loadStandings();
 
     // ─────────────────────────────────────────────────────────
     // Stages
@@ -1167,21 +1309,6 @@
       table.querySelector('tbody').innerHTML = tbody;
     }
 
-    // ─────────────────────────────────────────────────────────
-    // Tabs
-    // ─────────────────────────────────────────────────────────
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const col = document.getElementById('col-main');
-        const type = tab.dataset.tab;
-        if (type === 'gc') col.textContent = 'Total tid';
-        if (type === 'kom') col.textContent = 'Bjergpoint';
-        if (type === 'sprint') col.textContent = 'Sprint-point';
-        if (type === 'team') col.textContent = 'Hold-tid';
-      });
-    });
   </script>
 
 </body>
