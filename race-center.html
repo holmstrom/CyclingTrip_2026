@@ -890,20 +890,18 @@
     if (syncBtn) {
       syncBtn.addEventListener('click', async () => {
         syncBtn.disabled = true;
-        syncBtn.textContent = '⟳ Synker… (kan tage 30-60 sek)';
-        syncStatus.textContent = 'Henter friske data + beregner stilling…';
+        syncBtn.textContent = '⟳ Synker segment-tider…';
+        syncStatus.textContent = 'Henter segment-tider fra Strava + beregner stilling…';
         const start = Date.now();
         try {
-          // Run profiles + results in sequence
-          await fetch('/api/strava-sync', { method: 'GET' });
+          // Only the results engine — pulls segment efforts + scores. No profiles.
           const res = await fetch('/api/results', { method: 'GET' });
           const data = await res.json();
           const elapsed = Math.round((Date.now() - start) / 1000);
-          syncStatus.textContent = `✓ Opdateret ${data.riders_processed||0} ryttere på ${elapsed} sek.`;
+          syncStatus.textContent = `✓ Stilling opdateret (${data.riders_processed||0} ryttere) på ${elapsed} sek.`;
           syncStatus.style.color = 'var(--good)';
-          // Re-render standings + riders live (no reload needed)
+          // Re-render standings + rider×segment table live (no reload)
           await loadStandings();
-          await loadRidersFromFirebase();
         } catch (e) {
           syncStatus.textContent = '✗ Sync fejlede: ' + (e.message || 'ukendt');
           syncStatus.style.color = 'var(--accent)';
