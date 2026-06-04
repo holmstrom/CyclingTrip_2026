@@ -551,6 +551,14 @@
       padding: 36px 22px; text-align: center;
     }
     .recap-empty-icon { font-size: 32px; opacity: 0.4; margin-bottom: 10px; }
+    .recap-card { background: var(--paper); border: 1px solid var(--line); margin-bottom: 16px; }
+    .recap-card-head { background: linear-gradient(180deg,#3D0F0F,#1A1A1A); color: var(--paper); padding: 14px 18px; }
+    .recap-card-day { font-family:'Archivo Narrow',sans-serif; font-weight:700; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brass); }
+    .recap-card-headline { font-family:'Archivo',sans-serif; font-weight:800; font-size:19px; line-height:1.2; margin-top:4px; }
+    .recap-card-body { padding: 16px 18px; font-size:14px; line-height:1.6; color:var(--ink-2); }
+    .recap-card-body p { margin: 0 0 10px; }
+    .recap-card-body p:last-child { margin-bottom: 0; }
+    .recap-card-meta { font-family:'Archivo Narrow',sans-serif; font-size:10px; letter-spacing:0.08em; color:var(--mute); padding:0 18px 12px; }
     .recap-empty p {
       font-family: 'Archivo Narrow', sans-serif; color: var(--mute);
       font-size: 13px; letter-spacing: 0.06em;
@@ -804,9 +812,11 @@
       <div class="eyebrow">Etape-resumé</div>
       <h2 class="section-h">Dagens kommentar</h2>
       <p class="section-sub">AI-genereret efter hver cykeldag — vinder, taber, interessante observationer.</p>
-      <div class="recap-empty">
-        <div class="recap-empty-icon">🏁</div>
-        <p>Første etape-resumé landes 4. juni aften efter Alpe d'Huez.</p>
+      <div id="recap-container">
+        <div class="recap-empty">
+          <div class="recap-empty-icon">🏁</div>
+          <p>Første etape-resumé landes efter dag 1. Tryk "Sync nu" øverst når turen er uploadet.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -894,14 +904,17 @@
         syncStatus.textContent = 'Henter segment-tider fra Strava + beregner stilling…';
         const start = Date.now();
         try {
-          // Only the results engine — pulls segment efforts + scores. No profiles.
+          // 1) Results engine — segment efforts + scores. 2) Recaps — AI per day.
           const res = await fetch('/api/results', { method: 'GET' });
           const data = await res.json();
+          syncStatus.textContent = '✓ Stilling opdateret — genererer dagens kommentar…';
+          await fetch('/api/recap', { method: 'GET' });
           const elapsed = Math.round((Date.now() - start) / 1000);
-          syncStatus.textContent = `✓ Stilling opdateret (${data.riders_processed||0} ryttere) på ${elapsed} sek.`;
+          syncStatus.textContent = `✓ Alt opdateret (${data.riders_processed||0} ryttere) på ${elapsed} sek.`;
           syncStatus.style.color = 'var(--good)';
-          // Re-render standings + rider×segment table live (no reload)
+          // Re-render everything live (no reload)
           await loadStandings();
+          await loadRecaps();
         } catch (e) {
           syncStatus.textContent = '✗ Sync fejlede: ' + (e.message || 'ukendt');
           syncStatus.style.color = 'var(--accent)';
@@ -960,6 +973,31 @@
     }
     function posClass(i){ return i===0?'pos-1':i===1?'pos-2':i===2?'pos-3':''; }
     const FIRST = n => (n||'').split(' ')[0];
+
+    // ── Load AI stage-recaps from Firebase recaps/{day} ──
+    async function loadRecaps() {
+      if (!window.db) return;
+      try {
+        const snap = await window.db.collection('recaps').get();
+        if (snap.empty) return;
+        const recaps = [];
+        snap.forEach(doc => recaps.push(doc.data()));
+        recaps.sort((a,b) => (b.day||0) - (a.day||0)); // newest day first
+        const html = recaps.filter(r => r.body).map(r => {
+          const bodyHtml = String(r.body).split(/\n+/).map(p => `<p>${p}</p>`).join('');
+          const when = r.generated_at ? new Date(r.generated_at).toLocaleString('da-DK',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '';
+          return `<div class="recap-card">
+            <div class="recap-card-head">
+              <div class="recap-card-day">${r.stage_name || ('Dag '+r.day)}</div>
+              <div class="recap-card-headline">${r.headline || ''}</div>
+            </div>
+            <div class="recap-card-body">${bodyHtml}</div>
+            ${when ? `<div class="recap-card-meta">AI-genereret ${when}</div>` : ''}
+          </div>`;
+        }).join('');
+        if (html) document.getElementById('recap-container').innerHTML = html;
+      } catch(e){ console.warn('recaps load failed', e); }
+    }
 
     let _standingsData = null;
     async function loadStandings() {
@@ -1096,6 +1134,7 @@
     // Try Firebase override (no-op if not configured)
     loadRidersFromFirebase();
     loadStandings();
+    loadRecaps();
 
     // ─────────────────────────────────────────────────────────
     // Stages
