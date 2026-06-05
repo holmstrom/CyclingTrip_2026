@@ -80,11 +80,11 @@ const websiteContent = {
             difficulty: "HC + Cat 1"
         },
         galibier: {
-            name: "Col du Galibier",
-            description: "Dag 2 — dagens monster. Via Col du Lautaret op til 2 598 m. Den længste dag og den højeste top — luften bliver tynd over 2 000 m.",
-            distance: "99,3 km",
-            elevation: "2 790 hm",
-            difficulty: "HC"
+            name: "Galibier + Auris Balconies",
+            description: "Dag 2 — turens hårdeste dag. Først Balcons d'Auris (Cat 1, 8,3 km @ 7,1%), så Col du Galibier op til 2 628 m. To store bjerge, 2 919 hm — luften bliver tynd over 2 000 m.",
+            distance: "102 km",
+            elevation: "2 919 hm",
+            difficulty: "HC + Cat 1"
         }
     },
 

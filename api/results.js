@@ -35,6 +35,7 @@ const SCORED = {
   '23087194': { stage: 1, kind: 'descent', name: 'Petite descente',       points: [5,3,2,1] },
   // Dag 2
   '18328881': { stage: 2, kind: 'climb',   name: 'Col du Galibier',       points: [25,20,16,14,12,10] },
+  '17295489': { stage: 2, kind: 'climb',   name: 'Balcons d\'Auris',      points: [15,12,10,8,6,4] },
   '13218585': { stage: 2, kind: 'climb',   name: 'Galibier Tunnel-finale',points: [10,8,6,4,2,1] },
   '18239632': { stage: 2, kind: 'sprint',  name: 'Galibier 1ère Partie',  points: [5,3,2,1] },
   '18325341': { stage: 2, kind: 'descent', name: 'Galibier→Lautaret',     points: [5,3,2,1] },

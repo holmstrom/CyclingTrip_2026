@@ -125,10 +125,10 @@
     },
     {
       "name": "Dag 2: Col du Galibier",
-      "route_id": "3486425940246209816",
-      "distance_km": 99.3,
-      "elevation_gain_m": 2790,
-      "estimated_time_h": 3.2,
+      "route_id": "newday2_route_3497674681898303884",
+      "distance_km": 102.0,
+      "elevation_gain_m": 2919,
+      "estimated_time_h": 3.4,
       "climbs": [
         {
           "name": "Col du Galibier",
@@ -149,6 +149,26 @@
             10
           ],
           "strava_url": "https://www.strava.com/segments/18328881"
+        },
+        {
+          "name": "Balcons d'Auris",
+          "strava_segment_name": "Balcons d'Auris - West",
+          "strava_segment_id": 17295489,
+          "distance_km": 8.34,
+          "avg_gradient_pct": 7.1,
+          "peak_elevation_m": 1325.0,
+          "starts_at_m": 731.8,
+          "elevation_gain_m": 593,
+          "category": "Cat1",
+          "points": [
+            15,
+            12,
+            10,
+            8,
+            6,
+            4
+          ],
+          "strava_url": "https://www.strava.com/segments/17295489"
         },
         {
           "name": "Galibier Tunnel-finale",

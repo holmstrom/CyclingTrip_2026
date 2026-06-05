@@ -22,9 +22,9 @@ ROUTES = [
         'day': 1,
     },
     {
-        'id': '3486425940246209816',
+        'id': 'newday2_route_3497674681898303884',
         'slug': 'dag2-galibier',
-        'short': 'Dag 2 — Col du Galibier',
+        'short': 'Dag 2 — Galibier + Auris Balconies',
         'day': 2,
     },
     {
@@ -92,7 +92,8 @@ def write_gpx(points: list[tuple[float, float]], name: str, path: Path) -> None:
 map_overlay = {'routes': []}
 
 for r in ROUTES:
-    src = DATA / (f"{r['id']}.json" if r['id'].startswith('dijon_route_') else f"route_{r['id']}.json")
+    _cand = DATA / f"{r['id']}.json"
+    src = _cand if _cand.exists() else DATA / f"route_{r['id']}.json"
     if not src.exists():
         print(f"⚠️  missing {src.name}")
         continue
@@ -117,7 +118,7 @@ for r in ROUTES:
         'distance_km': round(rj.get('distance', 0) / 1000, 1),
         'elevation_gain_m': round(rj.get('elevation_gain', 0)),
         'gpx_url': f"routes/{r['slug']}.gpx",
-        'strava_route_url': f"https://www.strava.com/routes/{r['id'].replace('dijon_route_','')}",
+        'strava_route_url': f"https://www.strava.com/routes/{r['id'].replace('dijon_route_','').replace('newday2_route_','')}",
         'points': [[lat, lng] for lat, lng in overlay_points],
     })
 

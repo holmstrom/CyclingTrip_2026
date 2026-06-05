@@ -11,7 +11,7 @@ DATA = Path(__file__).parent / 'data'
 # (lavere risiko, nul store veje, naturskøn kanalsti + Combe Lavaux).
 ROUTE_FILES = {
     'dijon_route_3496922123103851710': 'Dag 1: Voie Verte du Canal de Bourgogne',
-    '3486425940246209816': 'Dag 2: Col du Galibier',
+    'newday2_route_3497674681898303884': 'Dag 2: Col du Galibier',
     '3486430726403184920': 'Dag 3: Croix de Fer + Glandon',
 }
 
@@ -30,6 +30,8 @@ PICKS = {
     ],
     'Dag 2: Col du Galibier': [
         ('KOM:HC',    'Col du Galibier',                 'Col du Galibier (par Col du Lautaret)'),
+        # Ny på Auris Balconies-ruten: en ægte Cat 1-klatre (8,3 km @ 7,1%).
+        ('KOM:Cat1',  'Balcons d\'Auris',                'Balcons d\'Auris - West'),
         # Tunnel-til-top er en brutal 0,86 km @ 9,2% finale — ægte klatre-point, ikke sprint.
         ('KOM:Cat2',  'Galibier Tunnel-finale',          'GALIBIER: FROM THE TUNNEL TO THE TOP'),
         ('SPRINT',    'Galibier 1ère Partie (Opener)',   'Galibier 1ère Partie'),
@@ -57,9 +59,10 @@ POINTS = {
 output = {'stages': []}
 
 for rid, stage_name in ROUTE_FILES.items():
-    # Dijon routes are saved as dijon_route_<id>.json; alpine as route_<id>.json
-    fname = f'{rid}.json' if rid.startswith('dijon_route_') else f'route_{rid}.json'
-    rp = DATA / fname
+    # Prefer a file literally named <rid>.json (custom-saved routes like
+    # dijon_route_* / newday2_route_*); fall back to route_<rid>.json (alpine).
+    cand = DATA / f'{rid}.json'
+    rp = cand if cand.exists() else DATA / f'route_{rid}.json'
     r = json.loads(rp.read_text(encoding='utf-8'))
     picks = PICKS.get(stage_name, [])
     stage_data = {
