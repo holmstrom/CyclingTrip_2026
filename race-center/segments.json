@@ -336,26 +336,7 @@
           "strava_url": "https://www.strava.com/segments/12738518"
         }
       ],
-      "descents": [
-        {
-          "name": "Glandon Descent",
-          "strava_segment_name": "Glandon Descent ",
-          "strava_segment_id": 10058561,
-          "distance_km": 11.55,
-          "avg_gradient_pct": -5.1,
-          "peak_elevation_m": 1923.8,
-          "starts_at_m": 1333.4,
-          "elevation_gain_m": 590,
-          "category": "Descent",
-          "points": [
-            5,
-            3,
-            2,
-            1
-          ],
-          "strava_url": "https://www.strava.com/segments/10058561"
-        }
-      ]
+      "descents": []
     }
   ]
 }

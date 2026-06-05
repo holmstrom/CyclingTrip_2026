@@ -43,7 +43,6 @@ PICKS = {
         ('SPRINT',    'Croix de Fer Final 1k',           'Final 1k'),
         ('SPRINT',    'Lac du Verney Flat TT',           'Lac du Verney sprint'),
         ('SPRINT',    'Glandon Final Push',              'Glandon Final Push'),
-        ('DESCENT',   'Glandon Descent',                 'Glandon Descent'),
     ],
 }
 

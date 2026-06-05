@@ -45,7 +45,6 @@ const SCORED = {
   '12632508': { stage: 3, kind: 'sprint',  name: 'Croix de Fer Final 1k', points: [5,3,2,1] },
   '2485038':  { stage: 3, kind: 'sprint',  name: 'Lac du Verney TT',      points: [5,3,2,1] },
   '12738518': { stage: 3, kind: 'sprint',  name: 'Glandon Final Push',    points: [5,3,2,1] },
-  '10058561': { stage: 3, kind: 'descent', name: 'Glandon Descent',       points: [5,3,2,1] },
 };
 
 // Team assignment
