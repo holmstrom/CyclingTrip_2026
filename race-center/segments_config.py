@@ -41,7 +41,6 @@ PICKS = {
         ('KOM:HC',    'Col de la Croix de Fer',          'Col de la Croix de Fer (par Barrage du Verney)'),
         ('KOM:Cat1',  'Glandon (Second Ramp)',           'Second ramp up South of Glandon to Café'),
         ('SPRINT',    'Croix de Fer Final 1k',           'Final 1k'),
-        ('SPRINT',    'Lac du Verney Flat TT',           'Lac du Verney sprint'),
         ('SPRINT',    'Glandon Final Push',              'Glandon Final Push'),
     ],
 }

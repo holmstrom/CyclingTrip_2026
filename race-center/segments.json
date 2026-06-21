@@ -300,24 +300,6 @@
           "strava_url": "https://www.strava.com/segments/12632508"
         },
         {
-          "name": "Lac du Verney Flat TT",
-          "strava_segment_name": "Lac du Verney sprint",
-          "strava_segment_id": 2485038,
-          "distance_km": 2.9,
-          "avg_gradient_pct": -1.1,
-          "peak_elevation_m": 793.7,
-          "starts_at_m": 740.9,
-          "elevation_gain_m": 53,
-          "category": "Sprint",
-          "points": [
-            5,
-            3,
-            2,
-            1
-          ],
-          "strava_url": "https://www.strava.com/segments/2485038"
-        },
-        {
           "name": "Glandon Final Push",
           "strava_segment_name": "Glandon Final Push (Lac - Restaurant)",
           "strava_segment_id": 12738518,

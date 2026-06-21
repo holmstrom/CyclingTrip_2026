@@ -43,8 +43,18 @@ const SCORED = {
   '37857789': { stage: 3, kind: 'climb',   name: 'Col de la Croix de Fer',points: [25,20,16,14,12,10] },
   '10033700': { stage: 3, kind: 'climb',   name: 'Glandon (Second Ramp)', points: [15,12,10,8,6,4] },
   '12632508': { stage: 3, kind: 'sprint',  name: 'Croix de Fer Final 1k', points: [5,3,2,1] },
-  '2485038':  { stage: 3, kind: 'sprint',  name: 'Lac du Verney TT',      points: [5,3,2,1] },
   '12738518': { stage: 3, kind: 'sprint',  name: 'Glandon Final Push',    points: [5,3,2,1] },
+};
+
+// Manual time copies — rider X gets rider Y's time on a segment when X is
+// missing it (e.g. GPS paused). Applied after pulling Strava efforts, only if
+// the rider has no own time. Sebastian paused his GPS on the 3 Galibier segs.
+const COPY_IF_MISSING = {
+  'Sebastian P. Carlsen': {
+    '18239632': 'Tobias Kragh', // Galibier 1ère Partie
+    '18325341': 'Tobias Kragh', // Galibier→Lautaret
+    '18328881': 'Tobias Kragh', // Col du Galibier
+  },
 };
 
 // Team assignment
@@ -117,6 +127,16 @@ module.exports = async (req, res) => {
     for (const r of riders) {
       try { effortsByRider[r.name] = await riderEfforts(r); }
       catch (e) { effortsByRider[r.name] = {}; console.warn('rider efforts fail', r.name, e.message); }
+    }
+
+    // 1b. Apply manual time copies (GPS-paused riders inherit another's time)
+    for (const [rider, segMap] of Object.entries(COPY_IF_MISSING)) {
+      effortsByRider[rider] = effortsByRider[rider] || {};
+      for (const [sid, sourceRider] of Object.entries(segMap)) {
+        const own = effortsByRider[rider][sid];
+        const src = effortsByRider[sourceRider] && effortsByRider[sourceRider][sid];
+        if (own == null && src != null) effortsByRider[rider][sid] = src;
+      }
     }
 
     // 2. Per segment: rank + award points
